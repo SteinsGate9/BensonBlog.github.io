@@ -139,7 +139,7 @@
 <meta property="og:description" content="OverviewC++ 程序可以定义为对象的集合，这些对象通过调用彼此的方法进行交互。现在让我们简要地看一下什么是类、对象，方法、即时变量。对象和变量其实一回事，只不过从不同角度来看。  数据类型 - 其实不是类，无法继承，没有成员函数，但可以看作最基础的类  类 - 类可以定义为描述对象行为&#x2F;状态的模板&#x2F;蓝图。  对象&#x2F;变量 - 对象当作类的实体化；变量是一样的，只不过变量强调的是内存的分配">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;.io&#x2F;&#x2F;i1.png">
-<meta property="og:updated_time" content="2019-11-19T16:38:04.117Z">
+<meta property="og:updated_time" content="2019-11-19T16:44:19.941Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;.io&#x2F;&#x2F;i1.png">
 
@@ -537,7 +537,7 @@
 <li><p>const int *p = x</p>
 <p>const修饰*p, *p的值不能赋值，p可以赋值。</p>
 <p>或者等价写法：</p>
-<figure class="highlight plain"><figcaption><span>const *p </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int const *p = NULL;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> <span class="keyword">const</span> *p = <span class="literal">NULL</span>;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -546,20 +546,25 @@
 <ul>
 <li><p>const int &amp;p = x</p>
 <p>此时修饰的是引用y，y不能再赋值，x可以赋值</p>
-<pre><code>int x = 3;
-const int &amp;y = x;</code></pre><p>被const修饰过的形参a和b不能改变其值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">void fun(const int &amp;a,const int &amp;b)&#123;</span><br><span class="line">	// 被const修饰过的形参a和b不能改变其值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> &amp;y = x;</span><br></pre></td></tr></table></figure>
+
+
 
 
 
 </li>
 </ul>
+<p>  被const修饰过的形参a和b不能改变其值</p>
+  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> &amp;a,<span class="keyword">const</span> <span class="keyword">int</span> &amp;b)</span></span>&#123;</span><br><span class="line">	<span class="comment">// 被const修饰过的形参a和b不能改变其值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
 <h4 id="const-class"><a href="#const-class" class="headerlink" title="const class"></a>const class</h4><ul>
 <li><p><strong>Def</strong>: const object </p>
 <ul>
 <li><p><strong>Qua</strong>: </p>
 <p>在定义对象时必须进行初始化; </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const int a = 1;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> a = <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
 
 <p>const 对象 or 成员变量是const，要求成员变量必须有初始值，因为事后无法赋值</p>
 <p>只能调用它的常成员函数，而不能调用普通的成员函数。常成员函数是常对象的唯一的对外接口。</p>
@@ -577,7 +582,7 @@ const int &amp;y = x;</code></pre><p>被const修饰过的形参a和b不能改变
 <ul>
 <li><p><strong>Qua</strong>: </p>
 <p>const是函数类型的组成部分，所以在函数的实现部分也要带关键字const。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">void showDate() const;       // 声明</span><br><span class="line">void showDate() const       // 实现</span><br><span class="line">&#123;</span><br><span class="line">    printf(“year”);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">showDate</span><span class="params">()</span> <span class="keyword">const</span></span>;       <span class="comment">// 声明</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">showDate</span><span class="params">()</span> <span class="keyword">const</span>       <span class="comment">// 实现</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(“year”);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>常成员函数不能更新对象的数据成员，也不能调用该类中的普通成员函数，这就保证了在常成员函数中绝对不会更新数据成员的值。</p>
 </li>
@@ -586,7 +591,7 @@ const int &amp;y = x;</code></pre><p>被const修饰过的形参a和b不能改变
 </ul>
 <h3 id="auto-decoration"><a href="#auto-decoration" class="headerlink" title="auto decoration"></a>auto decoration</h3><ul>
 <li><p>init </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">auto f1=3.14; //自动推导类型，在C++11中已删除这一用法</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> f1=<span class="number">3.14</span>; <span class="comment">//自动推导类型，在C++11中已删除这一用法</span></span><br></pre></td></tr></table></figure>
 
 
 
@@ -604,7 +609,7 @@ const int &amp;y = x;</code></pre><p>被const修饰过的形参a和b不能改变
 </ul>
 <ul>
 <li><p>example </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">extern void fun();</span><br><span class="line">int num=10;</span><br><span class="line">int main()&#123;</span><br><span class="line">    </span><br><span class="line">    while (num&gt;0)</span><br><span class="line">    &#123;</span><br><span class="line">        fun();</span><br><span class="line">        num--;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    system(&quot;pause&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void fun()&#123;</span><br><span class="line">    static int index=5; //程序的生命周期内保持局部变量的存在</span><br><span class="line">    index++;</span><br><span class="line">    cout&lt;&lt;&quot;index=&quot;&lt;&lt;index&lt;&lt;endl;</span><br><span class="line">    cout&lt;&lt;&quot;count=&quot;&lt;&lt;num&lt;&lt;endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">extern</span> <span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span></span>;</span><br><span class="line"><span class="keyword">int</span> num=<span class="number">10</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span> (num&gt;<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        fun();</span><br><span class="line">        num--;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    system(<span class="string">"pause"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> index=<span class="number">5</span>; <span class="comment">//程序的生命周期内保持局部变量的存在</span></span><br><span class="line">    index++;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"index="</span>&lt;&lt;index&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"count="</span>&lt;&lt;num&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">输出：</span><br><span class="line">index=6</span><br><span class="line">count=10</span><br><span class="line">index=7</span><br><span class="line">count=9</span><br><span class="line">index=8</span><br><span class="line">count=8</span><br><span class="line">index=9</span><br><span class="line">count=7</span><br><span class="line">index=10</span><br><span class="line">count=6</span><br><span class="line">index=11</span><br><span class="line">count=5</span><br><span class="line">index=12</span><br><span class="line">count=4</span><br><span class="line">index=13</span><br><span class="line">count=3</span><br><span class="line">index=14</span><br><span class="line">count=2</span><br><span class="line">index=15</span><br><span class="line">count=1</span><br></pre></td></tr></table></figure>
 
@@ -632,7 +637,7 @@ const int &amp;y = x;</code></pre><p>被const修饰过的形参a和b不能改变
 <p>int &amp;b = a; //必须要初始化引用</p>
 </li>
 <li><p>example  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 用C++引用交换两个数</span><br><span class="line">void fun(int &amp;a, int &amp;b) &#123;</span><br><span class="line">	int c = 0;</span><br><span class="line">	c = a;</span><br><span class="line">	a = b;</span><br><span class="line">	b = c;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 用C++引用交换两个数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">int</span> &amp;a, <span class="keyword">int</span> &amp;b)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> c = <span class="number">0</span>;</span><br><span class="line">	c = a;</span><br><span class="line">	a = b;</span><br><span class="line">	b = c;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -645,7 +650,7 @@ const int &amp;y = x;</code></pre><p>被const修饰过的形参a和b不能改变
 <p>see int* as whole, meaning the reference of pointer variable</p>
 </li>
 <li><p>example </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">//	3、指针类型的引用</span><br><span class="line">//	类型  *&amp;指针引用名  = 指针变量</span><br><span class="line">int x = 10;</span><br><span class="line">int *p = &amp;x; //必须要初始化引用</span><br><span class="line">int *&amp;q = p; // 这边赋值的仍然是一个地址，即是q是一个地址</span><br><span class="line">*q = 20;</span><br><span class="line">cout &lt;&lt; &quot;q = &quot; &lt;&lt; q &lt;&lt; endl;</span><br><span class="line">cout &lt;&lt; &quot;x = &quot; &lt;&lt; x &lt;&lt; endl;</span><br><span class="line">*p = 30;</span><br><span class="line">cout &lt;&lt; &quot;p = &quot; &lt;&lt; p &lt;&lt; endl; // p代表的是地址</span><br><span class="line">cout &lt;&lt; &quot;*p = &quot; &lt;&lt; *p &lt;&lt; endl; // *p代表的是指向这个内存地址的值</span><br><span class="line"></span><br><span class="line">int v = 15, f = 10;</span><br><span class="line">fun(&amp;v, &amp;f);</span><br><span class="line">cout &lt;&lt; &quot;v = &quot; &lt;&lt; v &lt;&lt; endl;</span><br><span class="line">cout &lt;&lt; &quot;f = &quot; &lt;&lt; f &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">fun(v, f);</span><br><span class="line">cout &lt;&lt; &quot;v = &quot; &lt;&lt; v &lt;&lt; endl;</span><br><span class="line">cout &lt;&lt; &quot;f = &quot; &lt;&lt; f &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">fun1(v, f);</span><br><span class="line">cout &lt;&lt; &quot;v = &quot; &lt;&lt; v &lt;&lt; endl;</span><br><span class="line">cout &lt;&lt; &quot;f = &quot; &lt;&lt; f &lt;&lt; endl;</span><br><span class="line">return 0;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//3、指针类型的引用</span></span><br><span class="line"><span class="comment">//类型  *&amp;指针引用名  = 指针变量</span></span><br><span class="line"><span class="keyword">int</span> x = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> *p = &amp;x; <span class="comment">//必须要初始化引用</span></span><br><span class="line"><span class="keyword">int</span> *&amp;q = p; <span class="comment">// 这边赋值的仍然是一个地址，即是q是一个地址</span></span><br><span class="line">*q = <span class="number">20</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"q = "</span> &lt;&lt; q &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"x = "</span> &lt;&lt; x &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">*p = <span class="number">30</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"p = "</span> &lt;&lt; p &lt;&lt; <span class="built_in">endl</span>; <span class="comment">// p代表的是地址</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"*p = "</span> &lt;&lt; *p &lt;&lt; <span class="built_in">endl</span>; <span class="comment">// *p代表的是指向这个内存地址的值</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> v = <span class="number">15</span>, f = <span class="number">10</span>;</span><br><span class="line">fun(&amp;v, &amp;f);</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"v = "</span> &lt;&lt; v &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"f = "</span> &lt;&lt; f &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">fun(v, f);</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"v = "</span> &lt;&lt; v &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"f = "</span> &lt;&lt; f &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">fun1(v, f);</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"v = "</span> &lt;&lt; v &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"f = "</span> &lt;&lt; f &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -653,7 +658,7 @@ const int &amp;y = x;</code></pre><p>被const修饰过的形参a和b不能改变
 </ul>
 <h3 id="pointer-decoration"><a href="#pointer-decoration" class="headerlink" title="pointer decoration"></a>pointer decoration</h3><h4 id="pointer-of-varibale"><a href="#pointer-of-varibale" class="headerlink" title="pointer of varibale"></a>pointer of varibale</h4><ul>
 <li><p>init </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 用指针交换两个数</span><br><span class="line">void fun(int *a, int *b) &#123;</span><br><span class="line">	int c = 0;</span><br><span class="line">	c = *a;</span><br><span class="line">	*a = *b;</span><br><span class="line">	*b = c;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 用指针交换两个数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">int</span> *a, <span class="keyword">int</span> *b)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> c = <span class="number">0</span>;</span><br><span class="line">	c = *a;</span><br><span class="line">	*a = *b;</span><br><span class="line">	*b = c;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
@@ -662,7 +667,7 @@ const int &amp;y = x;</code></pre><p>被const修饰过的形参a和b不能改变
 <p>a array of pointer, every element is a pointer. basically is an array.</p>
 </li>
 <li><p>init</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">char * n [3]=&#123;&quot;gain&quot;,&quot;much&quot;,&quot;strong&quot;&#125;; // 不加括号就是指针数组</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> * n [<span class="number">3</span>]=&#123;<span class="string">"gain"</span>,<span class="string">"much"</span>,<span class="string">"strong"</span>&#125;; <span class="comment">// 不加括号就是指针数组</span></span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
@@ -672,11 +677,11 @@ const int &amp;y = x;</code></pre><p>被const修饰过的形参a和b不能改变
 <p>pointer points to array. basically is a pointer </p>
 </li>
 <li><p>init </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">char (*p) [4];</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> (*p) [<span class="number">4</span>];</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">char c[] [4] = &#123;&quot;哥&quot;, &quot;哥&quot;, &quot;我&quot;, &quot;岸&quot;, &quot;上&quot;, &quot;走&quot;&#125;;    //UTF－8：一个汉字=3个字节</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> c[] [<span class="number">4</span>] = &#123;<span class="string">"哥"</span>, <span class="string">"哥"</span>, <span class="string">"我"</span>, <span class="string">"岸"</span>, <span class="string">"上"</span>, <span class="string">"走"</span>&#125;;    <span class="comment">//UTF－8：一个汉字=3个字节</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int *a = new int[10]; // 申请10个int的空间，返回指向第一个int的指针。所以它其实不是数组指针，数组指针指向一个数组，他指向数组的第一个数。</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 申请10个int的空间，返回指向第一个int的指针。所以它其实不是数组指针，数组指针指向一个数组，他指向数组的第一个数。</span></span><br><span class="line"><span class="keyword">int</span> *a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>opertation</p>
 <ul>
@@ -686,7 +691,7 @@ const int &amp;y = x;</code></pre><p>被const修饰过的形参a和b不能改变
 </ul>
 <h3 id="array-decoration"><a href="#array-decoration" class="headerlink" title="array decoration"></a>array decoration</h3><ul>
 <li><p><strong>Def</strong> </p>
-<p><strong>Def</strong>ina a array of elements</p>
+<p>define an array of elements</p>
 </li>
 <li><p>qua <strong>指针和数组并不是相等的，</strong></p>
 <ul>
@@ -702,7 +707,7 @@ const int &amp;y = x;</code></pre><p>被const修饰过的形参a和b不能改变
 </ul>
 <h3 id="enum-type"><a href="#enum-type" class="headerlink" title="enum type"></a>enum type</h3><ul>
 <li><p>init </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">enum color</span><br><span class="line">&#123;</span><br><span class="line">    blue,</span><br><span class="line">    red,</span><br><span class="line">    white</span><br><span class="line">&#125;; //默认值从0开始</span><br><span class="line">int main()&#123;</span><br><span class="line">    color c=red;</span><br><span class="line">    cout&lt;&lt;c&lt;&lt;endl;</span><br><span class="line">    system(&quot;pause&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">enum</span> color</span><br><span class="line">&#123;</span><br><span class="line">    blue,</span><br><span class="line">    red,</span><br><span class="line">    white</span><br><span class="line">&#125;; <span class="comment">//默认值从0开始</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    color c=red;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;c&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    system(<span class="string">"pause"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -728,19 +733,19 @@ const int &amp;y = x;</code></pre><p>被const修饰过的形参a和b不能改变
 <ul>
 <li><p>append</p>
 <p>from int </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1 vector&lt;int&gt; a;</span><br><span class="line">2 for(int i=0;i&lt;10;i++)</span><br><span class="line">3 a.push_back(i);</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)</span><br><span class="line">	a.push_back(i);</span><br></pre></td></tr></table></figure>
 
 <p>from array</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int a[6]=&#123;1,2,3,4,5,6&#125;;</span><br><span class="line">vector&lt;int&gt; b；</span><br><span class="line">for(int i=1;i&lt;=4;i++)</span><br><span class="line">b.push_back(a[i]);</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">6</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; b；</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">4</span>;i++)</span><br><span class="line">	b.push_back(a[i]);</span><br></pre></td></tr></table></figure>
 
 <p>from vector </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int a[6]=&#123;1,2,3,4,5,6&#125;;</span><br><span class="line">vector&lt;int&gt; b;</span><br><span class="line">vector&lt;int&gt; c(a,a+4);</span><br><span class="line">for(vector&lt;int&gt;::iterator it=c.begin();it&lt;c.end();it++)</span><br><span class="line">b.push_back(*it);</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">6</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; b;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; c(a,a+<span class="number">4</span>);</span><br><span class="line"><span class="keyword">for</span>(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator it=c.<span class="built_in">begin</span>();it&lt;c.<span class="built_in">end</span>();it++)</span><br><span class="line">	b.push_back(*it);</span><br></pre></td></tr></table></figure>
 
 <p>from txt </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ifstream in(&quot;data.txt&quot;);</span><br><span class="line">vector&lt;int&gt; a;</span><br><span class="line">for(int i; in&gt;&gt;i)</span><br><span class="line">    a.push_back(i);</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ifstream <span class="title">in</span><span class="params">(<span class="string">"data.txt"</span>)</span></span>;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i; in&gt;&gt;i)</span><br><span class="line">    a.push_back(i);</span><br></pre></td></tr></table></figure>
 
 <p>mistake: do not assign vector without init </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;int&gt; a;</span><br><span class="line">for(int i=0;i&lt;10;i++)</span><br><span class="line">    a[i]=i;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)</span><br><span class="line">    a[i]=i;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -750,7 +755,7 @@ const int &amp;y = x;</code></pre><p>被const修饰过的形参a和b不能改变
 </ul>
 <ul>
 <li><p>sorting</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">（1）sort(a.begin(),a.end()); //对a中的从a.begin()（包括它）到a.end()（不包括它）的元素进行从小到大排列</span><br><span class="line">（2）reverse(a.begin(),a.end()); //对a中的从a.begin()（包括它）到a.end()（不包括它）的元素倒置，但不排列，如a中元素为1,3,2,4,倒置后为4,2,3,1</span><br><span class="line">（3）copy(a.begin(),a.end(),b.begin()+1); //把a中的从a.begin()（包括它）到a.end()（不包括它）的元素复制到b中，从b.begin()+1的位置（包括它）开        始复制，覆盖掉原有元素</span><br><span class="line">（4）find(a.begin(),a.end(),10); //在a中的从a.begin()（包括它）到a.end()（不包括它）的元素中查找10，若存在返回其在向量中的位置</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//对a中的从a.begin()（包括它）到a.end()（不包括它）的元素进行从小到大排列</span></span><br><span class="line">sort(a.<span class="built_in">begin</span>(),a.<span class="built_in">end</span>()); </span><br><span class="line"></span><br><span class="line"><span class="comment">//对a中的从a.begin()（包括它）到a.end()（不包括它）的元素倒置，但不排列，如a中元素为1,3,2,4,倒置后为4,2,3,1</span></span><br><span class="line">reverse(a.<span class="built_in">begin</span>(),a.<span class="built_in">end</span>()); </span><br><span class="line"></span><br><span class="line"><span class="comment">//把a中的从a.begin()（包括它）到a.end()（不包括它）的元素复制到b中，从b.begin()+1的位置（包括它）开        始复制，覆盖掉原有元素</span></span><br><span class="line">copy(a.<span class="built_in">begin</span>(),a.<span class="built_in">end</span>(),b.<span class="built_in">begin</span>()+<span class="number">1</span>); </span><br><span class="line"></span><br><span class="line"><span class="comment">//在a中的从a.begin()（包括它）到a.end()（不包括它）的元素中查找10，若存在返回其在向量中的位置</span></span><br><span class="line"><span class="built_in">find</span>(a.<span class="built_in">begin</span>(),a.<span class="built_in">end</span>(),<span class="number">10</span>);</span><br></pre></td></tr></table></figure>
 
 
 
@@ -827,7 +832,7 @@ const int &amp;y = x;</code></pre><p>被const修饰过的形参a和b不能改变
 </ul>
 <h2 id="declaration"><a href="#declaration" class="headerlink" title="declaration"></a>declaration</h2><ul>
 <li><p><strong>Def</strong> </p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> k = <span class="number">5</span>, <span class="keyword">int</span> j = <span class="number">10</span>)</span></span>;</span><br><span class="line"> <span class="comment">//void fun(int i,int k = 5, int j);// 编译出错</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//void fun(int i,int k = 5, int j);// 编译出错</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> k = <span class="number">5</span>, <span class="keyword">int</span> j = <span class="number">10</span>)</span></span>;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -835,7 +840,7 @@ const int &amp;y = x;</code></pre><p>被const修饰过的形参a和b不能改变
 </ul>
 <h2 id="definition"><a href="#definition" class="headerlink" title="definition"></a>definition</h2><ul>
 <li><p><strong>Def</strong> </p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> k, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; i &lt;&lt; k &lt;&lt; j &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> k, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; i &lt;&lt; k &lt;&lt; j &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -846,7 +851,7 @@ const int &amp;y = x;</code></pre><p>被const修饰过的形参a和b不能改变
 <p>在相同作用域内，函数名称相同，参数个数，参数类型或者返回值不同的称之为函数重载</p>
 </li>
 <li><p>example:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">int getMax(int i, int j) &#123;</span><br><span class="line">	// to do</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">float getMax(float i, float j) &#123;</span><br><span class="line">	// to do</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">double getMax(double i, double j) &#123;</span><br><span class="line">	// to do</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getMax</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// to do</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">getMax</span><span class="params">(<span class="keyword">float</span> i, <span class="keyword">float</span> j)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// to do</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">getMax</span><span class="params">(<span class="keyword">double</span> i, <span class="keyword">double</span> j)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// to do</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
@@ -886,7 +891,7 @@ const int &amp;y = x;</code></pre><p>被const修饰过的形参a和b不能改变
 <p>建立一些互相分隔的作用域，把一些全局实体分隔开来。</p>
 </li>
 <li><p>example </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;string&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">namespace myNameSpace &#123;</span><br><span class="line">int A;</span><br><span class="line"></span><br><span class="line">class Liu&#123;</span><br><span class="line">public:</span><br><span class="line">	void setA()&#123;</span><br><span class="line">		A = 20;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">void print()&#123;</span><br><span class="line">	cout &lt;&lt; &quot;A ：&quot; &lt;&lt; A &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int getMax(int num) &#123;</span><br><span class="line">	return num;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">using namespace myNameSpace;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">	myNameSpace::A = 10;</span><br><span class="line">	myNameSpace::print();</span><br><span class="line">	myNameSpace::Liu liu;</span><br><span class="line">	liu.setA();</span><br><span class="line">	print();</span><br><span class="line">	std::cout &lt;&lt; &quot;命名空间的使用：&quot; &lt;&lt; myNameSpace::getMax(9) &lt;&lt; std::endl;</span><br><span class="line"></span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> myNameSpace &#123;</span><br><span class="line"><span class="keyword">int</span> A;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Liu</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">setA</span><span class="params">()</span></span>&#123;</span><br><span class="line">		A = <span class="number">20</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"A ："</span> &lt;&lt; A &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getMax</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> num;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> myNameSpace;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	myNameSpace::A = <span class="number">10</span>;</span><br><span class="line">	myNameSpace::<span class="built_in">print</span>();</span><br><span class="line">	myNameSpace::Liu liu;</span><br><span class="line">	liu.setA();</span><br><span class="line">	<span class="built_in">print</span>();</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"命名空间的使用："</span> &lt;&lt; myNameSpace::getMax(<span class="number">9</span>) &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -920,23 +925,23 @@ const int &amp;y = x;</code></pre><p>被const修饰过的形参a和b不能改变
 </ul>
 <h3 id="array-like"><a href="#array-like" class="headerlink" title="array like"></a>array like</h3><ul>
 <li><p>c based </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">char a []= &#123;sa,a,a&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> a []= &#123;sa,a,a&#125;;</span><br></pre></td></tr></table></figure>
 
 <p>in stack </p>
 </li>
 <li><p>string</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string a ;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> a ;</span><br></pre></td></tr></table></figure>
 
 <p>in stack and heap</p>
 </li>
 <li><p>vector</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;Type&gt; vect;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;Type&gt; vect;</span><br></pre></td></tr></table></figure>
 
 <p>will allocate the <code>vector</code>, i.e. the header info, on the stack, but the elements on heap</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;Type&gt; *vect = new vector&lt;Type&gt;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;Type&gt; *vect = <span class="keyword">new</span> <span class="built_in">vector</span>&lt;Type&gt;;</span><br></pre></td></tr></table></figure>
 
 <p>allocates everything on the heap</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;Type*&gt; vect;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;Type*&gt; vect;</span><br></pre></td></tr></table></figure>
 
 <p>will allocate the <code>vector</code> on the stack and a bunch of pointers on the free store, but where these point is determined by how you use them (you could point element 0 to the free store and element 1 to the stack, say).</p>
 </li>
@@ -954,71 +959,17 @@ const int &amp;y = x;</code></pre><p>被const修饰过的形参a和b不能改变
 </ul>
 <h2 id="heap-storage"><a href="#heap-storage" class="headerlink" title="heap storage"></a>heap storage</h2><ul>
 <li><p>example in c </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">int main() &#123;</span><br><span class="line">	/**</span><br><span class="line">	 * 	C语言内存申请和释放</span><br><span class="line">	 * 	void *malloc(size_t size)</span><br><span class="line">	 * 	void free(void *memblock)</span><br><span class="line">	 */</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 	C语言内存申请和释放</span></span><br><span class="line"><span class="comment">	 * 	void *malloc(size_t size)</span></span><br><span class="line"><span class="comment">	 * 	void free(void *memblock)</span></span><br><span class="line"><span class="comment">	 */</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>example1 in c++</p>
-<pre><code>/**
- * C++中内存申请和释放使用关键字new和delete，需要配套使用
- */
-//申请
-int *p = new int(10); 初始化指针，分配一块4的内存，初始化值为10
-if (NULL == p) {
-    system(&quot;pause&quot;);
-    return 0;
-}
-//释放
-delete p;
-p = NULL;
-
-//如何申请和释放内存块？
-int *arr = new int[1000]; 创建一个10个大小的int指针数组。
-//假设内存申请失败
-if (NULL == arr) {
-    system(&quot;pause&quot;);
-    return 0;
-}
-delete[] arr;//如果不加[]，则只会释放arr[0]的内存
-arr = NULL;
-
-cout &lt;&lt; &quot;C++内存管理&quot; &lt;&lt; endl;
-return 0;}</code></pre></li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//C++中内存申请和释放使用关键字new和delete，需要配套使用</span></span><br><span class="line"><span class="comment">//申请初始化指针，分配一块4的内存，初始化值为10</span></span><br><span class="line"><span class="keyword">int</span> *p = <span class="keyword">new</span> <span class="keyword">int</span>(<span class="number">10</span>); </span><br><span class="line"><span class="keyword">if</span> (<span class="literal">NULL</span> == p) &#123;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//释放</span></span><br><span class="line"><span class="keyword">delete</span> p;</span><br><span class="line">p = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//如何申请和释放内存块？</span></span><br><span class="line"><span class="keyword">int</span> *arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">1000</span>]; 创建一个<span class="number">10</span>个大小的<span class="keyword">int</span>指针数组。</span><br><span class="line"><span class="comment">//假设内存申请失败</span></span><br><span class="line"><span class="keyword">if</span> (<span class="literal">NULL</span> == arr) &#123;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">delete</span>[] arr;<span class="comment">//如果不加[]，则只会释放arr[0]的内存</span></span><br><span class="line">arr = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"C++内存管理"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>example2 in c++ </p>
-<pre><code>using namespace std;
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Tv</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="keyword">int</span> x = <span class="number">10</span>;</span><br><span class="line">	<span class="keyword">int</span> y = <span class="number">20</span>;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">px</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; x &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">py</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; y &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	Tv tv;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; tv.x &lt;&lt; <span class="built_in">endl</span>; <span class="comment">//在内存开辟一块栈空间，不需要主动释放</span></span><br><span class="line">tv.px();</span><br><span class="line">tv.py();</span><br><span class="line"><span class="comment">//	Tv *tvNew;</span></span><br><span class="line">Tv *tvNew = <span class="keyword">new</span> Tv(); <span class="comment">// 向内存申请一块堆空间</span></span><br><span class="line"><span class="keyword">if</span> (<span class="literal">NULL</span> == tvNew) &#123;</span><br><span class="line">system(<span class="string">"pause"</span>);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 类似于C语言的写法</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; (*tvNew).x &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">(*tvNew).px();</span><br><span class="line">(*tvNew).py();</span><br><span class="line"><span class="comment">// 类似于NDK编程的写法</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; tvNew-&gt;x &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">tvNew-&gt;px();</span><br><span class="line">tvNew-&gt;py();</span><br><span class="line"><span class="keyword">delete</span> tvNew; <span class="comment">// 在内存中申请的堆空间，需要主动释放</span></span><br><span class="line">tvNew = <span class="literal">NULL</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
 
-class Tv {
-public:
-    int x = 10;
-    int y = 20;
-    void px() {
-        cout &lt;&lt; x &lt;&lt; endl;
-    }
-    void py() {
-        cout &lt;&lt; y &lt;&lt; endl;
-    }
-};
 
-int main() {
-    Tv tv;
-cout &lt;&lt; tv.x &lt;&lt; endl; //在内存开辟一块栈空间，不需要主动释放
-tv.px();
-tv.py();
-//    Tv *tvNew;
-Tv *tvNew = new Tv(); // 向内存申请一块堆空间
-if (NULL == tvNew) {
-system(&quot;pause&quot;);
-return 0;
-}
-// 类似于C语言的写法
-cout &lt;&lt; (*tvNew).x &lt;&lt; endl;
-(*tvNew).px();
-(*tvNew).py();
-// 类似于NDK编程的写法
-cout &lt;&lt; tvNew-&gt;x &lt;&lt; endl;
-tvNew-&gt;px();
-tvNew-&gt;py();
-delete tvNew; // 在内存中申请的堆空间，需要主动释放
-tvNew = NULL;
-return 0;</code></pre></li>
+
+</li>
 </ul>
 <h2 id="segment-fault"><a href="#segment-fault" class="headerlink" title="segment fault"></a>segment fault</h2><ul>
 <li><p><strong>Def</strong> </p>
@@ -1120,15 +1071,15 @@ return 0;</code></pre></li>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/19/Statistical%20Theory/" rel="next" title="Statistical Learning Theory">
-                <i class="fa fa-chevron-left"></i> Statistical Learning Theory
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/11/19/Statistical%20Theory/" rel="prev" title="Statistical Learning Theory">
+                Statistical Learning Theory <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
