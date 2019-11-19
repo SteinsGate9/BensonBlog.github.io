@@ -2098,7 +2098,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #50c4b4;
+  background: #947800;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2193,7 +2193,6 @@ img:hover {
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: justify;
-  white-space: nowrap;
   line-height: 1.8;
 }
 .post-toc .nav .nav-child {
@@ -3313,4 +3312,10 @@ hr {
     width: auto;
     text-align: center;
   }
+}
+.post-toc .nav .nav-child {
+  display: block;
+}
+.post-toc ol {
+  font-size: 13px;
 }
