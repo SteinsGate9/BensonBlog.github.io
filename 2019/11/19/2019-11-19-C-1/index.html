@@ -27,7 +27,7 @@
 <meta property="og:description" content="C++ 基础知识和语法">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;2019-11-19-C-1&#x2F;2019-11-19-C-1&#x2F;i1.png">
-<meta property="og:updated_time" content="2019-11-19T11:54:55.077Z">
+<meta property="og:updated_time" content="2019-11-19T11:55:13.976Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;2019-11-19-C-1&#x2F;2019-11-19-C-1&#x2F;i1.png">
   <!-- Canonical links -->
@@ -371,10 +371,6 @@
 
 <p>用可变的*y去操作不可变的x，权限大-权限小 编译器出错</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> x = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">int</span> *y = &amp;x;</span><br></pre></td></tr></table></figure>
-
-
-
-
 
 
 
@@ -988,6 +984,34 @@ return 0;</code></pre></li>
 
 
 
+
+<!-- 目录内容 -->
+
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+    <div id="toc-article" class="toc-article">
+        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+        <strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Overview"><span class="toc-number">1.</span> <span class="toc-text">1. Overview</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Variable"><span class="toc-number">2.</span> <span class="toc-text">2. Variable</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#data-type"><span class="toc-number">2.1.</span> <span class="toc-text">2.1. data type</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#basic-type"><span class="toc-number">2.1.1.</span> <span class="toc-text">2.1.1. basic type</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#const-decoration"><span class="toc-number">2.1.2.</span> <span class="toc-text">2.1.2. const decoration</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#const-class"><span class="toc-number">2.1.2.1.</span> <span class="toc-text">2.1.2.1. const class</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#auto"><span class="toc-number">2.1.2.2.</span> <span class="toc-text">2.1.2.2. auto</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#register"><span class="toc-number">2.1.2.3.</span> <span class="toc-text">2.1.2.3. register</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#static"><span class="toc-number">2.1.2.4.</span> <span class="toc-text">2.1.2.4. static</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#extern"><span class="toc-number">2.1.2.5.</span> <span class="toc-text">2.1.2.5. extern</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mutable"><span class="toc-number">2.1.2.6.</span> <span class="toc-text">2.1.2.6. mutable</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#thread-local"><span class="toc-number">2.1.2.7.</span> <span class="toc-text">2.1.2.7. thread_local</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#reference-decoration"><span class="toc-number">2.1.3.</span> <span class="toc-text">2.1.3. reference decoration</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#reference-of-variable-int-amp-xxx"><span class="toc-number">2.1.3.1.</span> <span class="toc-text">2.1.3.1. reference of variable   (int &amp;xxx)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#reference-of-pointer-int-amp-xxx"><span class="toc-number">2.1.3.2.</span> <span class="toc-text">2.1.3.2. reference of pointer (int* &amp; xxx)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pointer-decoration"><span class="toc-number">2.1.4.</span> <span class="toc-text">2.1.4. pointer decoration</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#pointer-of-varibale"><span class="toc-number">2.1.4.1.</span> <span class="toc-text">2.1.4.1. pointer of varibale</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#array-of-pointer-指针数组）"><span class="toc-number">2.1.4.2.</span> <span class="toc-text">2.1.4.2. array of pointer (指针数组）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#pointer-of-array（数组指针）"><span class="toc-number">2.1.4.3.</span> <span class="toc-text">2.1.4.3. pointer of array（数组指针）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#array-decoration"><span class="toc-number">2.1.5.</span> <span class="toc-text">2.1.5. array decoration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#enum-type"><span class="toc-number">2.1.6.</span> <span class="toc-text">2.1.6. enum type</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#string-type"><span class="toc-number">2.1.7.</span> <span class="toc-text">2.1.7. string type</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vector-type"><span class="toc-number">2.1.8.</span> <span class="toc-text">2.1.8. vector type</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Class"><span class="toc-number">3.</span> <span class="toc-text">3. Class</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#compiling-sequence"><span class="toc-number">3.1.</span> <span class="toc-text">3.1. compiling sequence</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#construction-function"><span class="toc-number">3.1.1.</span> <span class="toc-text">3.1.1. construction function</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#destruction-function"><span class="toc-number">3.1.2.</span> <span class="toc-text">3.1.2. destruction function</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#static-function"><span class="toc-number">3.1.3.</span> <span class="toc-text">3.1.3. static function</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Function"><span class="toc-number">4.</span> <span class="toc-text">4. Function</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#function-type"><span class="toc-number">4.1.</span> <span class="toc-text">4.1. function type</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#basic-type-1"><span class="toc-number">4.1.1.</span> <span class="toc-text">4.1.1. basic type</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#inline-decoration"><span class="toc-number">4.1.2.</span> <span class="toc-text">4.1.2. inline decoration</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#declaration"><span class="toc-number">4.2.</span> <span class="toc-text">4.2. declaration</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Definition"><span class="toc-number">4.3.</span> <span class="toc-text">4.3. Definition</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#overload-重载"><span class="toc-number">4.4.</span> <span class="toc-text">4.4. overload(重载)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#override-重写"><span class="toc-number">4.5.</span> <span class="toc-text">4.5. override (重写)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#affect-field"><span class="toc-number">5.</span> <span class="toc-text">5. affect field</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#namespace"><span class="toc-number">5.1.</span> <span class="toc-text">5.1. namespace</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#decoration"><span class="toc-number">5.1.1.</span> <span class="toc-text">5.1.1. decoration.</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#class"><span class="toc-number">5.2.</span> <span class="toc-text">5.2. class</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#memory"><span class="toc-number">6.</span> <span class="toc-text">6. memory</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#allocation"><span class="toc-number">6.1.</span> <span class="toc-text">6.1. allocation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#allocation-ways"><span class="toc-number">6.1.1.</span> <span class="toc-text">6.1.1. allocation ways</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#array-like"><span class="toc-number">6.1.2.</span> <span class="toc-text">6.1.2. array like</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#class-1"><span class="toc-number">6.1.3.</span> <span class="toc-text">6.1.3. class</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#memory-storage"><span class="toc-number">6.2.</span> <span class="toc-text">6.2. memory storage</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#heap-storage"><span class="toc-number">6.3.</span> <span class="toc-text">6.3. heap storage</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#segment-fault"><span class="toc-number">6.4.</span> <span class="toc-text">6.4. segment fault</span></a></li></ol></li></ol>
+         </div>
+   <script type="text/javascript">
+    function showToc(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:block");
+        show_toc_btn.setAttribute("style","display:none");
+        };
+    function showBtn(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:none");
+        show_toc_btn.setAttribute("style","display:block");
+        };
+   </script>
+      
+<!-- 目录内容结束 -->
 
 
 </main>
