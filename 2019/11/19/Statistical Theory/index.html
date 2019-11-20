@@ -130,19 +130,88 @@
 
 
 
-<meta name="description" content="1. expected risk1.1. original risk (1-1, 3-1)1.1.1. df Def: learning algorithm ![image-20191015163859719](&#x2F;Users&#x2F;huangbenson&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20191015163859719.">
+<meta name="description" content="1. generalized expected risk1.1. learning algorithm &amp;amp; loss functions (1-1, 3-1) Def: learning algorithm (3-1)   Def: weakly consistent &#x2F; strongly consistent  Note:        Def: loss (loss funct">
 <meta name="keywords" content="stats">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Statistical Learning Theory">
 <meta property="og:url" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Statistical%20Theory&#x2F;index.html">
 <meta property="og:site_name" content="BeNsoN">
-<meta property="og:description" content="1. expected risk1.1. original risk (1-1, 3-1)1.1.1. df Def: learning algorithm ![image-20191015163859719](&#x2F;Users&#x2F;huangbenson&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20191015163859719.">
+<meta property="og:description" content="1. generalized expected risk1.1. learning algorithm &amp;amp; loss functions (1-1, 3-1) Def: learning algorithm (3-1)   Def: weakly consistent &#x2F; strongly consistent  Note:        Def: loss (loss funct">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="file:&#x2F;&#x2F;&#x2F;Users&#x2F;huangbenson&#x2F;Library&#x2F;Application%20Support&#x2F;typora-user-images&#x2F;image-20191031151811891.png?lastModify=1572526701">
-<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;.io&#x2F;&#x2F;huangbenson&#x2F;Desktop&#x2F;image-20191031152419354.png">
-<meta property="og:updated_time" content="2019-11-19T16:49:18.668Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;VqdvoazPSMInTQ2.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;OyqKboHkSQNDn75.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;HMS9BAGx8XZPTyQ.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;WEKaf4uoeIAlkc7.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;x7kQeKi8ybTrHwd.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;QrMq8YUoezv5lfF.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;nkh94C5FBHaPKdV.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;qYFxsHPloQND5w7.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;29vwoHBuIPEygGZ.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;3hfPieqtNvQcYol.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;31ckzfgGZ5vUaQm.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;QPOR4bGDZgHcIwM.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;WQcTBePXsGjtoEV.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94lqs6o72j30p602kwem.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94lrsn8ebj315g03iwes.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94o1xyvb9j30qq08g3zb.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94nwmwcxkj30rg04m3z2.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94o4i1hlkj30r001u0t2.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94nxbw79oj30ri02et8v.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94qbhcivdj31570u07bt.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94qc9fbg5j315u046aaj.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94qc3sof4j316q046mya.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94qcjj6jij315006aaaq.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;eJ6NBMAcbIR9mFO.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;Qpn3gXHzTPF2aZY.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;tgpQOvDowBsfxHN.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;q68lQbYzNG9xjSs.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;NcJWjmECne4zbg1.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;5goRmWdDwpyv8hK.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;MtqP29VGAsvCU6B.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;VqbT2vfYJE9oSH3.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;zdSptJbWMUu9DQm.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;OzXTrZA4jmY9hVx.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;HR7Fxa9ZECuMVeS.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;h8gfUSourM4qYQw.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;11&#x2F;20&#x2F;MWp8JJ.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;11&#x2F;20&#x2F;MWpAiQ.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;11&#x2F;20&#x2F;MWpfw8.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;11&#x2F;20&#x2F;MWpOmV.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;pzyisx7Ag5mFQGv.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;qVtT6Qz1an5b3mK.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;UbqFniyShgl627Y.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;Jg5KwYC4clsp1LO.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;SwgJqitobc2Xvku.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;IrRWNKDMTS9mn6l.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;WFjVfnO7pPeCmqd.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;H13oW6M2znwQlKY.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;ksrwUoluGiF7jMI.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;eJiRtwo5M9AEkDN.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;oYLf9tT3VOjEwUW.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;IyrRtMfzo4mJelU.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;Wbrua1oidJILVPp.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;8CZfKqxytmOoYih.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;WUvX9rTzie2xRn4.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94kd7xe38j30sc024jrf.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94kdj455cj30ok02q3ym.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94kdp69btj30rs046aac.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94kemgiihj30rk08gdgt.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94kev03x5j30pg036t8v.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94kfc3xu7j30ni03oq35.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94l67o489j314q088wgp.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94l6l7zfcj316e0380tf.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94llq6xidj315w03ct92.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94lf89bzoj314a05gwey.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94lfwvlcxj315607y0tg.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94lgbmkh1j30wi03oglu.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94lgoido3j30y208oq3v.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94lhpmmmmj316804wt9z.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94litz5uxj316604g3zx.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94ljbz53fj316o02gt99.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94ljika20j317a0lon06.jpg">
+<meta property="og:updated_time" content="2019-11-20T11:53:26.747Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="file:&#x2F;&#x2F;&#x2F;Users&#x2F;huangbenson&#x2F;Library&#x2F;Application%20Support&#x2F;typora-user-images&#x2F;image-20191031151811891.png?lastModify=1572526701">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;VqdvoazPSMInTQ2.png">
 
 
 
@@ -442,7 +511,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  2.6k
+                  2.4k
                 </span>
               
 
@@ -458,7 +527,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  15
+                  14
                 </span>
               
             </div>
@@ -483,30 +552,34 @@
 
 
 
-<h1 id="expected-risk">1. expected risk</h1><h2 id="original-risk-1-1-3-1">1.1. original risk (1-1, 3-1)</h2><h3 id="df">1.1.1. df</h3><ul>
-<li><p><strong>Def</strong>: learning algorithm</p>
-<p>![image-20191015163859719](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191015163859719.png)</p>
+<h1 id="generalized-expected-risk">1. generalized expected risk</h1><h2 id="learning-algorithm-amp-loss-functions-1-1-3-1">1.1. learning algorithm &amp; loss functions (1-1, 3-1)</h2><ul>
+<li><p><strong>Def</strong>: learning algorithm (3-1)</p>
+<p><img src="https://i.loli.net/2019/11/20/VqdvoazPSMInTQ2.png" alt="image.png"></p>
 <ul>
 <li><p><strong>Def</strong>: weakly consistent / strongly consistent</p>
-<p>![image-20191015163804732](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191015163804732.png)</p>
-<p>![image-20191015163917046](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191015163917046.png)</p>
+<p><img src="https://i.loli.net/2019/11/20/OyqKboHkSQNDn75.png" alt="image.png"></p>
+<p><strong>Note</strong>: </p>
+<p><img src="https://i.loli.net/2019/11/20/HMS9BAGx8XZPTyQ.png" alt="image.png"></p>
 </li>
 </ul>
 </li>
 </ul>
 <ul>
-<li><p><strong>Def</strong>: loss function</p>
-<p><img src="file:///Users/huangbenson/Library/Application%20Support/typora-user-images/image-20191031151811891.png?lastModify=1572526701" alt="image-20191031151811891"></p>
+<li><p><strong>Def</strong>: loss (loss function)</p>
+<p><img src="https://i.loli.net/2019/11/20/WEKaf4uoeIAlkc7.png" alt="image.png"></p>
 </li>
-<li><p><strong>Def</strong>: E loss function </p>
-<p>![image-20191031205933451](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191031205933451.png)</p>
+</ul>
+<p>##E-f-loss (1-1, 1-2,  1-3, 1-7, 3-2)</p>
+<h3 id="E-f-loss">1.1.1. E-f-loss</h3><ul>
+<li><p><strong>Def</strong>: E-f-loss  (generalized expected risk)</p>
+<p><img src="https://i.loli.net/2019/11/20/x7kQeKi8ybTrHwd.png" alt="image.png"></p>
 </li>
-<li><p><strong>Def</strong>: min E loss function </p>
-<p>![image-20191031151832355](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191031151832355.png)</p>
+<li><p><strong>Def</strong>: min-E-f-loss (minimal generalized expected risk)</p>
+<p><img src="https://i.loli.net/2019/11/20/QrMq8YUoezv5lfF.png" alt="image.png"></p>
 <ul>
-<li><p><strong>Theorm</strong>: </p>
+<li><p><strong>Theorm</strong>: min-E-f-loss for binary classification </p>
 <p>1-1</p>
-<p>![image-20191031151946497](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191031151946497.png)</p>
+<p><img src="https://i.loli.net/2019/11/20/nkh94C5FBHaPKdV.png" alt="image.png"></p>
 <p>3-2</p>
 <p>![image-20191031153103125](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191031153103125.png)</p>
 <p>![image-20191031153115435](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191031153115435.png)</p>
@@ -522,101 +595,102 @@
 </li>
 </ul>
 <ul>
-<li><p><strong>Def</strong>: bayes classifier </p>
-<p>![image-20191031153437993](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191031153437993.png)</p>
-</li>
-</ul>
-<p>##f-loss (1-1, 1-2,  1-3, 1-7, 3-2)</p>
-<h3 id="f-loss">1.1.2. f-loss</h3><ul>
-<li><p><strong>Def1.6</strong>: f-loss</p>
-<ul>
-<li><p><strong>Theorm</strong>: f-loss - f*-loss (1-2, 3-1) </p>
-<p>usage: replace the whole f </p>
-<p>1-1</p>
-<p>![image-20191031152106132](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191031152106132.png)</p>
+<li><p><strong>Theorm</strong>: E-f-loss - min-E-f-loss (1-2, 3-1) </p>
+<p><strong>Usage</strong>: find f to estimate f* </p>
 <p>3-2</p>
 <p>![image-20191031153249270](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191031153249270.png)</p>
-<p>note:</p>
+<p><strong>Note</strong>:</p>
 <p>![image-20191031153310730](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191031153310730.png)</p>
 </li>
 </ul>
+<p>  1-1</p>
+<p>  <img src="https://i.loli.net/2019/11/20/qYFxsHPloQND5w7.png" alt="image.png"></p>
+<p>  <strong>Proof</strong>:</p>
+<p>  <img src="https://i.loli.net/2019/11/20/29vwoHBuIPEygGZ.png" alt="image.png"></p>
+<p>  <strong>Note</strong>: we can see that $\eta$ is what we what to estimate, the goal turns to find a better $\eta$.</p>
+<p>  <img src="https://i.loli.net/2019/11/20/3hfPieqtNvQcYol.png" alt="image.png"></p>
+<ul>
+<li><p><strong>Corollary</strong>: E-$f_\hat{\eta}$-loss - min-E-f-loss​</p>
+<p><strong>Usage</strong>: when using $\hat{\eta}$ to find $f^<em>$, instead of directly finding $f^</em>$, what’s the bound?</p>
+<p><img src="https://i.loli.net/2019/11/20/31ckzfgGZ5vUaQm.png" alt="image.png"></p>
+<p><strong>Proof</strong>: </p>
+<p><img src="https://i.loli.net/2019/11/20/QPOR4bGDZgHcIwM.png" alt="image.png"></p>
+<p><strong>Note</strong>: figure / pros &amp; cons to use $\hat{\eta}$ to minimize E loss </p>
+<p><img src="https://i.loli.net/2019/11/20/WQcTBePXsGjtoEV.png" alt=" "></p>
 </li>
 </ul>
 <ul>
-<li><p><strong>Corollary</strong>:  f_u-loss - f*-loss</p>
-<p>![image-20191031152128808](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191031152128808.png)</p>
-<p>Usage: replace part of f, namely u.</p>
-<p>Figure:</p>
-<p>![image-20191009081747700](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191009081747700.png)</p>
-<p>note:</p>
-<p>![image-20191031210705583](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191031210705583.png)</p>
-<p>![image-20191031210825017](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191031210825017.png)</p>
-</li>
-</ul>
-<ul>
-<li><p><strong>Theorm</strong>: f_u-loss - f*-loss</p>
+<li><p><strong>Theorm</strong>: f_u-loss - f*-loss (3-1)</p>
 <p>![image-20191031150358387](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191031150358387.png)</p>
 <p>note:</p>
 <p>![image-20191031150408817](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191031150408817.png)</p>
 </li>
 </ul>
 <ul>
-<li><p><strong>Theorm</strong>:  E(f-loss)</p>
-<p><img src="/.io//huangbenson/Desktop/image-20191031152419354.png" alt="image-20191031152419354"></p>
-<p>note:</p>
-<p>![image-20191031152449245](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191031152449245.png)</p>
-</li>
+<li><strong>Theorm</strong>:  E(f-loss)</li>
 </ul>
-<pre><code>-  **Corollary**: for perceptron specific
-
-  ![image-20191031152618174](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191031152618174.png)
-
-- **Corollary**: stricter condition, better bound 
-
-  ![image-20191031152654991](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191031152654991.png)</code></pre><h3 id="f-newloss">1.1.3. f-newloss</h3><ul>
-<li><p><strong>Def</strong>: f-newloss</p>
-<p>![image-20191023003244136](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023003244136.png)</p>
+<p>  note:</p>
+<p>  ![image-20191031152449245](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191031152449245.png)</p>
 <ul>
-<li><p><strong>Qua</strong>:  =&gt; 展开</p>
-<p>![image-20191022210618569](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191022210618569.png)</p>
+<li><p><strong>Corollary</strong>: for perceptron specific</p>
+<p>![image-20191031152618174](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191031152618174.png)</p>
+</li>
+<li><p><strong>Corollary</strong>: stricter condition, better bound </p>
+<p>![image-20191031152654991](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191031152654991.png)</p>
 </li>
 </ul>
+<h2 id="E-f-newloss-1-6-1-7">1.2. E-f-newloss (1-6, 1-7)</h2><ul>
+<li><p><strong>Def</strong>: E-f-newloss</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94lqs6o72j30p602kwem.jpg" alt></p>
+<p><strong>Note</strong>: SVM </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94lrsn8ebj315g03iwes.jpg" alt></p>
 </li>
 </ul>
 <ul>
-<li><p><strong>Def</strong>:  f-newloss-min</p>
-<p>![image-20191022211213436](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191022211213436.png)</p>
-<p>![image-20191022211743955](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191022211743955.png)</p>
-<ul>
-<li><p><strong>Qua</strong>:  =&gt; H- = phi 0 </p>
-<p>![image-20191022212609400](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191022212609400.png)</p>
-</li>
-</ul>
+<li><p><strong>Qua</strong>:  =&gt; elaboration</p>
+<p><strong>Usage</strong>: we can minimize E-f-newloss by minimizing the follows at every x/</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94o1xyvb9j30qq08g3zb.jpg" alt></p>
 </li>
 </ul>
 <ul>
-<li><p><strong>Def</strong>: classification -calibrated</p>
-<p>![image-20191022213002688](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191022213002688.png)</p>
+<li><p><strong>Def</strong>: new elements to compute min-E-f-newloss, $H(\eta)$ means the lowest point of all f, all x.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94nwmwcxkj30rg04m3z2.jpg" alt></p>
+<p><strong>Note</strong>: SVM</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94o4i1hlkj30r001u0t2.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94nxbw79oj30ri02et8v.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: when $\phi$ is convex =&gt; $H ^{-}(\eta)$ = $\phi(0)$ </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94qbhcivdj31570u07bt.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: classification - calibrated </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94qc9fbg5j315u046aaj.jpg" alt></p>
+<p><strong>Example</strong>:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94qc3sof4j316q046mya.jpg" alt></p>
 <ul>
 <li><p><strong>Qua</strong>:  necc &amp; suff </p>
-<p>![image-20191022213038431](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191022213038431.png)</p>
-<p>proof:</p>
-<p>![image-20191022213047457](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191022213047457.png)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94qcjj6jij315006aaaq.jpg" alt></p>
+<p><strong>Proof</strong>: too long</p>
 </li>
 </ul>
 </li>
 </ul>
-<pre><code>- **Qua**:  =&gt; upper bound 
+<pre><code>- **Qua**:  real gap is bounded by E-f-newcalibratedloss
 
-  ![image-20191022213239590](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191022213239590.png)
+  ![](https://tva1.sinaimg.cn/large/006y8mN6ly1g94qmpvb92j311e0bkmyh.jpg)
 
-  proof: 
+  **Proof**: too long 
 
-  ![image-20191022213404942](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191022213404942.png)
+  **Example**: in the case of SVM, $\phi$ is a given convex function, therefore we can conpute $H(\phi)$ and yield a upper bound for the real gap. which means when training performs good, the result will most likely be the same. 
 
-  Example:
+  ![](https://tva1.sinaimg.cn/large/006y8mN6ly1g94qpmgeaij317a0aajsy.jpg)
 
-  ![image-20191022213443958](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191022213443958.png)</code></pre><h2 id="f-emloss-3-3">1.2. f-emloss (3-3)</h2><h3 id="f-emloss">1.2.1. f-emloss</h3><ul>
+  **Example**: Adaboost is the same, $\phi(a)$ is convex and we can again use theorem 2.2
+
+  ![](https://tva1.sinaimg.cn/large/006y8mN6ly1g94qpy0kq6j315k07wabg.jpg)</code></pre><h2 id="f-emloss-3-3">1.3. f-emloss (3-3)</h2><h3 id="f-emloss">1.3.1. f-emloss</h3><ul>
 <li><p><strong>Def</strong>:  f-emloss (f changed &amp; loss changed)</p>
 <p>1-2</p>
 <p>![image-20191023003905929](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023003905929.png)</p>
@@ -680,7 +754,7 @@
 <p>![image-20191031230308646](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191031230308646.png)</p>
 </li>
 </ul>
-<h3 id="histogram-classifier-3-4">1.2.2. histogram classifier (3-4)</h3><ul>
+<h3 id="histogram-classifier-3-4">1.3.2. histogram classifier (3-4)</h3><ul>
 <li><p><strong>Def</strong>: histo </p>
 <p>![image-20191023001938977](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023001938977.png)</p>
 <ul>
@@ -692,12 +766,12 @@
 </ul>
 </li>
 </ul>
-<h3 id="PAC-learning-amp-sample-complexity-3-4">1.2.3. PAC learning &amp; sample complexity (3-4)</h3><ul>
+<h3 id="PAC-learning-amp-sample-complexity-3-4">1.3.3. PAC learning &amp; sample complexity (3-4)</h3><ul>
 <li><p><strong>Def</strong>: pac </p>
 <p>![image-20191023002030562](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023002030562.png)</p>
 </li>
 </ul>
-<h3 id="zero-error-case-3-4">1.2.4. zero error case (3-4)</h3><ul>
+<h3 id="zero-error-case-3-4">1.3.4. zero error case (3-4)</h3><ul>
 <li><p><strong>Def</strong>: zero error </p>
 <p>![image-20191023002105958](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023002105958.png)</p>
 <ul>
@@ -709,7 +783,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="consistency-risk-3-6">1.3. consistency risk(3-6)</h2><ul>
+<h2 id="consistency-risk-3-6">1.4. consistency risk(3-6)</h2><ul>
 <li><p><strong>Def</strong>: decomposition </p>
 <p>![image-20191029152610501](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191029152610501.png)</p>
 <p>decomposite into 2 terms( estimation + approximation), esti means given a wide range of functions, the hn empirical can how effiencitly estimate the thing, and approximate is apparentl.</p>
@@ -757,127 +831,196 @@
 </li>
 </ul>
 <p>#perceptron algorithm</p>
-<h2 id="perceptron-algorithim">1.4. perceptron algorithim</h2><ul>
-<li><p><strong>Def2.1</strong>: The perceptron algorithm performs pattern classification when F is the class of linear threshold functions.<br>$$<br>(1) Percep = F ={x􏰓→sign(w⊤x):w∈Rd} \<br> \begin{align}<br>(2) sign(\alpha) &amp;= 1 &amp;w ^{T}x&gt;0\</p>
-<p>&amp;= 0&amp;w ^{T}x=0\</p>
-<p>&amp;= -1&amp;w ^{T}x&lt;0 \</p>
-</li>
-</ul>
-<p>  \end{align}<br>  $$</p>
-<ul>
-<li><p><strong>Algo2.2</strong>: </p>
+<h2 id="perceptron-algorithim">1.5. perceptron algorithim</h2><ul>
+<li><p><strong>Def</strong>: The perceptron algorithm performs pattern classification when F is the class of linear threshold functions.</p>
+<p><img src="https://i.loli.net/2019/11/20/eJ6NBMAcbIR9mFO.png" alt></p>
+<p><strong>Algo</strong>: algorithm of perceptron</p>
 <p>![image-20191009213935259](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191009213935259.png)</p>
+<p><strong>Note</strong>: figure of perceptron</p>
+<p>![image-20191120091807966](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191120091807966.png)</p>
 </li>
 </ul>
 <ul>
-<li><p><strong>Theorem2.3</strong>: complexity of the algorithm to converge.</p>
-<p>Usage: how even when the data are separable, the Perceptron Algorithm does not necessarily run in time linear to the number of input points. In fact, this results shows us that it is possible to select a small set of points that make δ exponentially small (i.e. xi arbitrarily close to w).</p>
-<p>s.t. If some $w ∈ Rd$ with $ ∥w∥ = 1 $ .correctly classifies all data points$ yi = sign(w⊤xi) ; ∀i = 1, …, n$<br>$$<br>(1) \text{the algo terminates}\<br>(2) \text{terminate time = t<em>} \<br>t ^{</em>} \leq \frac{R ^{2}}{\sigma ^{2}}, R= \max \limits_{i} \left | x <em>{i}  \right | ,\sigma = \min \limits</em>{i}w ^{T}x_i y_i<br>$$<br>Proof: </p>
-<p>![image-20191009215222828](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191009215222828.png)</p>
-<p>![image-20191009215255612](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191009215255612.png)</p>
+<li><p><strong>Theorem</strong>: complexity of the algorithm to converge.</p>
+<p><strong>Usage</strong>: result gives a bound on the number of steps in terms of some properties of the data. </p>
+<p><img src="https://i.loli.net/2019/11/20/Qpn3gXHzTPF2aZY.png" alt="image.png"></p>
+<p><strong>Proof</strong>: too long </p>
+<p><strong>Note</strong>: perceptron complexity may not be linear, it is possible it do not terminate after a long time </p>
+<p>![image-20191120092111523](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191120092111523.png)</p>
 </li>
 </ul>
 <ul>
-<li><p><strong>Qua2.4</strong>: One important feature of this algorithm is that it only uses inner products of the data points. The update step of the algorithm produces a wt which is a linear combination of the xi, so we write it as $wt = 􏰐nj=1 αjxj$ for $αj ∈ R$ and $∥α∥1 = 􏰐nj=1 |αj| ≤ t$. For this choice of $w t$, the prediction rule becomes</p>
-</li>
-<li><p>$$<br>\hat{y}<em>i = sign(w_t ^{T}x _{i}) = sign( \sum</em>{j}^{}a _{j}x _{j} ^{T} x _{i})<br>$$</p>
-<p>updates become (i is one of the misclassified points)<br>$$<br>a _{i} ^{(t+1)} = a _{i} ^{(t)} + y _{i}<br>$$<br>![image-20191009221728322](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191009221728322.png)</p>
+<li><p><strong>Qua</strong>: One important feature of this algorithm is that it only uses inner products of the data points. </p>
+<p>The update step of the algorithm produces a wt which is a linear combination of the xi, so we write it as $wt = 􏰐nj=1 αjxj$ for $αj ∈ R$ and $∥α∥1 = 􏰐nj=1 |αj| ≤ t$. For this choice of $w t$, the prediction rule becomes</p>
 </li>
 </ul>
 <ul>
-<li><p><strong>Theorm2.5</strong>: upper bound for risk of perceptron algorithm</p>
-<p>s.t. $\exist w ∈ R ^{d},∥w∥ = 1,δ &gt; 0,$ we have almost surely $∥X∥ ≤ R$ and$ w ^{T} XY &gt; δ$.<br>$$<br>fn(X;X1,Y1,…,Xn,Yn) = f _{P,M}(X;X1,Y1,…,XM,YM)\ \text{where M is chosen uniformly from }{1, . . . , n}.\<br>EL(fn) ≤ R2<br>$$<br>Proof: </p>
+<li><p>$$<br>  \hat{y}<em>i = sign(w_t ^{T}x _{i}) = sign( \sum</em>{j}^{}a _{j}x _{j} ^{T} x _{i})<br>$$</p>
+<p>updates become (i is one of the misclassified points)<br>  $$<br>a _{i} ^{(t+1)} = a _{i} ^{(t)} + y _{i}<br>  $$<br><img src="https://i.loli.net/2019/11/20/tgpQOvDowBsfxHN.png" alt="image.png"></p>
+<p>  <strong>Note</strong>:  from this quality we can see the inspiration of kernel, that we only need the inner product of xixj, with the quality of readiness of computing inner product after projection, we can use kernel to get a more complex model</p>
+<p><img src="https://i.loli.net/2019/11/20/q68lQbYzNG9xjSs.png" alt="image.png"></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Lemma</strong>: linearly independent =&gt; seperatable data </p>
+<p><img src="https://i.loli.net/2019/11/20/NcJWjmECne4zbg1.png" alt="image.png"></p>
+<p><strong>Proof</strong>:</p>
+<p>  <img src="https://i.loli.net/2019/11/20/5goRmWdDwpyv8hK.png" alt="image.png"></p>
+<ul>
+<li><p><strong>Theorem</strong> : The main theorem in this section shows that for any prediction rule (from the class of linear threshold functions), there is a probability distribution that is linearly separable, but for which the prediction rule does poorly when averaged over all training data sets. </p>
+<p><strong>Usage</strong>: we can compute this lower bound, to estimate the risk for this threshold function.</p>
+<p><img src="https://i.loli.net/2019/11/20/MtqP29VGAsvCU6B.png" alt="image.png"></p>
+<p><strong>Proof</strong>: too long</p>
+<p><strong>Note</strong> 1: see this bound as minimax lower bound, meaning that whatever $f _{n}$ you choose, there exists some part of the training dataset that yield result with lower bound.</p>
+<p><img src="https://i.loli.net/2019/11/20/VqbT2vfYJE9oSH3.png" alt="image.png"></p>
+<p><strong>Note</strong> 2: generalization using VC dimension.</p>
+<p><img src="https://i.loli.net/2019/11/20/zdSptJbWMUu9DQm.png" alt="image.png"></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorem</strong>: If we restrict our attention to probability distributions that have a large margin, we can prove an upper bound for the risk of the perceptron algorithm: </p>
+<p><img src="https://i.loli.net/2019/11/20/OzXTrZA4jmY9hVx.png" alt="image.png"></p>
+<p><strong>Proof</strong>:</p>
 <p>![image-20191009223458219](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191009223458219.png)</p>
 </li>
 </ul>
 <ul>
-<li><p><strong>Theorm2.6</strong>: better lower bound for risk of perceptron algorithm</p>
-<p>s.t. $\forall  f ,δ &gt; 0,R &gt; 0,d &gt; 0$, $\frac{R^2}{\alpha ^2} ≤ min(n,d) $</p>
-</li>
-<li><p>$$<br>(1)\exists ; P ;on ; R ^{d} x\left{ \pm1 \right} that  ; some ; w \in R^d, \left | w \right | = 1,\<br>w ^{T}XY \geq \alpha, \left | X \right | \leq R\<br>(2)EL(f _{n})\geq \frac{ \frac{R ^{2}}{\alpha ^{2}}-1}{2n}(1- \frac{1}{n})^{2}<br>$$</p>
-<p>Proof:</p>
-<p>![image-20191009225235277](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191009225235277.png)</p>
+<li><p><strong>Theorm</strong>: In the above theorem, we were maximizing over all probability distributions.  If we restrict the maximization to be over those probability distributions having a large margin we can obtain a better lower bound: </p>
+<p><img src="https://i.loli.net/2019/11/20/HR7Fxa9ZECuMVeS.png" alt="image.png"></p>
+<p><strong>Proof</strong>: </p>
+<p><img src="https://i.loli.net/2019/11/20/h8gfUSourM4qYQw.png" alt="image.png"></p>
 </li>
 </ul>
-<h2 id="support-vector-machine">1.5. support vector machine</h2><h3 id="basic-SVM">1.5.1. basic SVM</h3><ul>
-<li><p><strong>Def2.7</strong>: support vector machine</p>
-<p>Usage: special form of perceptron where the distance is maximized </p>
-</li>
-<li><p>$$<br>(1) SVM =F={x􏰓→sign(w⊤x):w∈Rd} \<br>(2) \max \limits_{y,w} y\<br>so ; that \frac{y_i w ^{T} x _{i}}{\left | w \right |}\geq y,i \in \left{ 1…n \right}<br>$$</p>
-<ul>
-<li><p>Fig:</p>
-<p>![image-20191009230446151](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191009230446151.png)</p>
-</li>
-</ul>
+<h2 id="support-vector-machine">1.6. support vector machine</h2><h3 id="basic-SVM">1.6.1. basic SVM</h3><ul>
+<li><p><strong>Def</strong>: support vector machine</p>
+<p><strong>Usage</strong>: special form of perceptron where the distance is maximized </p>
+<p><img src="https://s2.ax1x.com/2019/11/20/MWp8JJ.png" alt="MWp8JJ.png"></p>
+<p><strong>Note</strong>: </p>
+<img src="https://s2.ax1x.com/2019/11/20/MWpAiQ.png" alt="MWpAiQ.png" style="zoom:67%;">
+
+
+
 </li>
 </ul>
 <ul>
-<li><p><strong>Qua2.8</strong>: basic transformations</p>
-<p>trans: other form $\left |  w\right |=1$</p>
-<p>![image-20191009230638216](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191009230638216.png)</p>
-<p>trans: other form  $\left |  w\right |=1/y$</p>
-<p>![image-20191009230646122](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191009230646122.png)</p>
+<li><p><strong>Qua</strong>: basic transformations</p>
+<p>trans: other form $\left |  w\right |=1$ </p>
+<p><img src="https://s2.ax1x.com/2019/11/20/MWpfw8.png" alt="MWpfw8.png"></p>
+<p>trans: other form  $\left |  w\right |=1/ \gamma$</p>
+<p><img src="https://s2.ax1x.com/2019/11/20/MWpOmV.png" alt="MWpOmV.png"></p>
 <p>lagrange function</p>
-<p>![image-20191009230807210](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191009230807210.png)</p>
-<p>![image-20191009230912094](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191009230912094.png)</p>
+<p><img src="https://i.loli.net/2019/11/20/pzyisx7Ag5mFQGv.png" alt="image.png"></p>
+<p>get lagrange dual function</p>
+<p><img src="https://i.loli.net/2019/11/20/qVtT6Qz1an5b3mK.png" alt="image.png"></p>
+<p>![image-20191120133633037](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191120133633037.png)</p>
 <p>interpret lagrange function</p>
 <p>![image-20191009230940148](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191009230940148.png)</p>
 <p>![image-20191009230616511](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191009230616511.png)</p>
+<p>lagrange dual function </p>
+<p><img src="https://i.loli.net/2019/11/20/UbqFniyShgl627Y.png" alt="image.png"></p>
+<p>dual problem </p>
+<p><img src="https://i.loli.net/2019/11/20/Jg5KwYC4clsp1LO.png" alt="image.png"></p>
+<p>recall slackenss for dual problem, this show that the those with ai(penalty loss) $\neq$ 0, are exactly those in the margins.</p>
+<p><img src="https://i.loli.net/2019/11/20/SwgJqitobc2Xvku.png" alt="image.png"></p>
+<p>recall the kernel stuff, we can use kernel to efficientlly solve this, for more kernel stuff turn to 2.2.2</p>
+<p><img src="https://i.loli.net/2019/11/20/IrRWNKDMTS9mn6l.png" alt="image.png"></p>
 </li>
 </ul>
-<ul>
-<li><p><strong>Qua2.9</strong>:  other transformations</p>
-<p>trans: more natural</p>
-<p>![image-20191010004608571](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010004608571.png)</p>
-<p>lagrangian</p>
-<p>![image-20191010004646544](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010004646544.png)</p>
-<p>![image-20191010004728380](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010004728380.png)</p>
-<p>dual lagrangain</p>
-<p>![image-20191010004756307](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010004756307.png)</p>
-<p>dual problem</p>
-<p>![image-20191010004826035](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010004826035.png)</p>
-<p>solve $\beta = \sqrt{1/4 \left | \sum_{i}^{}\lambda _{i}y _{i } x _{i}\right |}$</p>
-<p>![image-20191010004914050](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010004914050.png)</p>
-<p>![image-20191010005212280](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010005212280.png)</p>
-<p>interpret </p>
-<p>![image-20191010005302144](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010005302144.png)</p>
-</li>
-</ul>
-<h3 id="kernel-SVM">1.5.2. kernel SVM</h3><ul>
-<li><p><strong>Def</strong>: another definition: dual problem of qua2.8</p>
+<h3 id="kernel-SVM">1.6.2. kernel SVM</h3><ul>
+<li><p><strong>Def</strong>: dual problem &amp; kernel function</p>
 <p>dual problem (only inner products determines solution)</p>
 <p>![image-20191010000854451](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010000854451.png)</p>
 </li>
 </ul>
 <ul>
-<li><p><strong>Qua2.11</strong> kernel function</p>
-<p>Usage: 由此看出，即使没有kernel，只要找到映射关系，我们仍然可以实现低维空间映射到高维空间，进而通过高维向量内积运算来寻找最佳分割超平面。但是，kernel的引入，降低了向量内积运算的计算复杂度。无论我们映射到几维空间，我们只要把原有维度代入核函数，就能等价于高维上的内积运算。极端的情况下，特征空间映射到了无穷维度空间，如果没有核函数，根本无法计算出映射后的向量内积。</p>
+<li><p><strong>Qua</strong>: kernel function can reduce complexity of dual problem.</p>
+<p><strong>Usage</strong>: 由此看出，即使没有kernel，只要找到映射关系，我们仍然可以实现低维空间映射到高维空间，进而通过高维向量内积运算来寻找最佳分割超平面。但是，kernel的引入，降低了向量内积运算的计算复杂度。无论我们映射到几维空间，我们只要把原有维度代入核函数，就能等价于高维上的内积运算。极端的情况下，特征空间映射到了无穷维度空间，如果没有核函数，根本无法计算出映射后的向量内积。</p>
 <p>（映射到新的特征空间后的内积=原空间核函数）</p>
 <p><a href="https://blog.csdn.net/zhangjun2915/article/details/79261368" target="_blank" rel="noopener">https://blog.csdn.net/zhangjun2915/article/details/79261368</a></p>
 <p>k(xi, xj) is the kernel function of inner product of xi, xj</p>
 <p>![image-20191010001914432](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010001914432.png)</p>
 </li>
-</ul>
-<h3 id="soft-SVM">1.5.3. soft SVM</h3><ul>
-<li><p><strong>Def2.12</strong>:  soft SVM</p>
-<p>![image-20191010005522438](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010005522438.png)</p>
-<ul>
-<li><p><strong>Qua2.11</strong>: basic transform</p>
-<p>trans: change |x&lt;1| to (1-x)+ , basiclly is the same .</p>
-<p>![image-20191010005548899](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010005548899.png)</p>
-<p>trans: slack variable </p>
-<p>![image-20191010005641869](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010005641869.png)</p>
-<p>lagranrian function </p>
-<p>![image-20191010005719489](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010005719489.png) </p>
-<p>![image-20191010005736705](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010005736705.png)</p>
-<p>dual lagranrian </p>
-<p>![image-20191010005747250](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010005747250.png)</p>
-<p>dual problem </p>
-<p>![image-20191010005849909](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010005849909.png)</p>
-<p>solve: kkt </p>
-<p>![image-20191010005901591](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010005901591.png)</p>
+<li><p><strong>Example</strong>: polynomial kernel</p>
+<p><img src="https://i.loli.net/2019/11/20/WFjVfnO7pPeCmqd.png" alt="image.png"></p>
+</li>
+<li><p><strong>Example</strong>: gaussian kernel </p>
+<p><img src="https://i.loli.net/2019/11/20/H13oW6M2znwQlKY.png" alt="image.png"></p>
 </li>
 </ul>
+<h3 id="primal-SVM">1.6.3. primal SVM</h3><ul>
+<li><p><strong>Def</strong>:  primal SVM, more natural way</p>
+<p><img src="https://i.loli.net/2019/11/20/ksrwUoluGiF7jMI.png" alt="image.png"></p>
+<p>lagrangian functiion </p>
+<p><img src="https://i.loli.net/2019/11/20/eJiRtwo5M9AEkDN.png" alt="image.png"></p>
+<p>getting lagranian dual function </p>
+<p><img src="https://i.loli.net/2019/11/20/oYLf9tT3VOjEwUW.png" alt="image.png"></p>
+<p>lagrangain dual function </p>
+<p><img src="https://i.loli.net/2019/11/20/IyrRtMfzo4mJelU.png" alt="image.png"></p>
+<p>dual problem</p>
+<p><img src="https://i.loli.net/2019/11/20/Wbrua1oidJILVPp.png" alt="image.png"></p>
+<p>this problem can actually be solved by hand: first solve $\beta = \sqrt{1/4 \left | \sum_{i}^{}\lambda _{i}y _{i } x _{i}\right |}$, then we get the following </p>
+<p><img src="https://i.loli.net/2019/11/20/8CZfKqxytmOoYih.png" alt="image.png"></p>
+<p>interpreting results</p>
+<p><img src="https://i.loli.net/2019/11/20/WUvX9rTzie2xRn4.png" alt="image.png"></p>
+</li>
+</ul>
+<h3 id="soft-C-SVM">1.6.4. soft C-SVM</h3><ul>
+<li><p><strong>Def</strong>:  soft SVM</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94kd7xe38j30sc024jrf.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: basic transform</p>
+<p>trans: change |x&lt;1| to (1-x)+ , basiclly is the same .</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94kdj455cj30ok02q3ym.jpg" alt></p>
+<p>trans: slack variable </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94kdp69btj30rs046aac.jpg" alt></p>
+<p>lagranrian function =&gt; dual lagranian function  </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94kemgiihj30rk08gdgt.jpg" alt></p>
+<p>dual problem </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94kev03x5j30pg036t8v.jpg" alt></p>
+<p>complementary slackness conditions : This implies that all the support vectors with y = 1 lie in the half-plane {x : xT w ≤ 1}. </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94kfc3xu7j30ni03oq35.jpg" alt></p>
+<p>insights from above: </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94l67o489j314q088wgp.jpg" alt></p>
+<p>choose c</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94l6l7zfcj316e0380tf.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: interpreting in another way( loss function + regularization)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94llq6xidj315w03ct92.jpg" alt></p>
+</li>
+</ul>
+<h3 id="soft-nu-SVM">1.6.5. soft $\nu$-SVM</h3><ul>
+<li><p><strong>Def</strong>: a more interpretable way, since $\nu$ is more easy to set.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94lf89bzoj314a05gwey.jpg" alt></p>
+<ul>
+<li><p><strong>Qua</strong>: basic transition </p>
+<p>slack variables </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94lfwvlcxj315607y0tg.jpg" alt></p>
+<p>lagrange dual function </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94lgbmkh1j30wi03oglu.jpg" alt></p>
+<p>dual problem </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94lgoido3j30y208oq3v.jpg" alt></p>
+<p>insights for slackness</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94lhpmmmmj316804wt9z.jpg" alt></p>
+</li>
+<li><p><strong>Qua</strong>: interpretation of $\nu$ : we can interpret $nu$ as being approximately the fraction of data that are margin errors. </p>
+<p>![image-20191120164148468](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191120164148468.png)</p>
+<p><strong>Proof</strong>:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94litz5uxj316604g3zx.jpg" alt></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: $\nu$ and C SVM are the same </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94ljbz53fj316o02gt99.jpg" alt></p>
+<p><strong>Proof</strong>:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94ljika20j317a0lon06.jpg" alt></p>
 </li>
 </ul>
 <h1 id="bayes-algorithm">2. bayes algorithm</h1><ul>
@@ -924,7 +1067,7 @@
   <p><span>本文标题:</span><a href="/2019/11/19/Statistical%20Theory/">Statistical Learning Theory</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Benson 的个人博客">Benson</a></p>
   <p><span>发布时间:</span>2019年11月19日 - 12:11</p>
-  <p><span>最后更新:</span>2019年11月20日 - 00:11</p>
+  <p><span>最后更新:</span>2019年11月20日 - 19:11</p>
   <p><span>原始链接:</span><a href="/2019/11/19/Statistical%20Theory/" title="Statistical Learning Theory">https://steinsgate9.github.io/2019/11/19/Statistical%20Theory/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://steinsgate9.github.io/2019/11/19/Statistical%20Theory/"  aria-label="复制成功！"></i></span>
   </p>
@@ -999,15 +1142,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/11/19/2019-11-19-C-1/" rel="next" title="C++">
+                <i class="fa fa-chevron-left"></i> C++
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/11/19/2019-11-19-C-1/" rel="prev" title="C++">
-                C++ <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -1212,7 +1355,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#expected-risk"><span class="nav-text">1. expected risk</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#original-risk-1-1-3-1"><span class="nav-text">1.1. original risk (1-1, 3-1)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#df"><span class="nav-text">1.1.1. df</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#f-loss"><span class="nav-text">1.1.2. f-loss</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#f-newloss"><span class="nav-text">1.1.3. f-newloss</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#f-emloss-3-3"><span class="nav-text">1.2. f-emloss (3-3)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#f-emloss"><span class="nav-text">1.2.1. f-emloss</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#histogram-classifier-3-4"><span class="nav-text">1.2.2. histogram classifier (3-4)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PAC-learning-amp-sample-complexity-3-4"><span class="nav-text">1.2.3. PAC learning &amp; sample complexity (3-4)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#zero-error-case-3-4"><span class="nav-text">1.2.4. zero error case (3-4)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#consistency-risk-3-6"><span class="nav-text">1.3. consistency risk(3-6)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#perceptron-algorithim"><span class="nav-text">1.4. perceptron algorithim</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#support-vector-machine"><span class="nav-text">1.5. support vector machine</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#basic-SVM"><span class="nav-text">1.5.1. basic SVM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kernel-SVM"><span class="nav-text">1.5.2. kernel SVM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#soft-SVM"><span class="nav-text">1.5.3. soft SVM</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#bayes-algorithm"><span class="nav-text">2. bayes algorithm</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#regression-algorithm"><span class="nav-text">3. regression algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#kernel-regression"><span class="nav-text">3.1. kernel regression</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#insensitive-loss-regression"><span class="nav-text">3.2. insensitive loss regression</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#generalized-expected-risk"><span class="nav-text">1. generalized expected risk</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#learning-algorithm-amp-loss-functions-1-1-3-1"><span class="nav-text">1.1. learning algorithm &amp; loss functions (1-1, 3-1)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#E-f-loss"><span class="nav-text">1.1.1. E-f-loss</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#E-f-newloss-1-6-1-7"><span class="nav-text">1.2. E-f-newloss (1-6, 1-7)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#f-emloss-3-3"><span class="nav-text">1.3. f-emloss (3-3)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#f-emloss"><span class="nav-text">1.3.1. f-emloss</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#histogram-classifier-3-4"><span class="nav-text">1.3.2. histogram classifier (3-4)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PAC-learning-amp-sample-complexity-3-4"><span class="nav-text">1.3.3. PAC learning &amp; sample complexity (3-4)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#zero-error-case-3-4"><span class="nav-text">1.3.4. zero error case (3-4)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#consistency-risk-3-6"><span class="nav-text">1.4. consistency risk(3-6)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#perceptron-algorithim"><span class="nav-text">1.5. perceptron algorithim</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#support-vector-machine"><span class="nav-text">1.6. support vector machine</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#basic-SVM"><span class="nav-text">1.6.1. basic SVM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kernel-SVM"><span class="nav-text">1.6.2. kernel SVM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#primal-SVM"><span class="nav-text">1.6.3. primal SVM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#soft-C-SVM"><span class="nav-text">1.6.4. soft C-SVM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#soft-nu-SVM"><span class="nav-text">1.6.5. soft $\nu$-SVM</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#bayes-algorithm"><span class="nav-text">2. bayes algorithm</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#regression-algorithm"><span class="nav-text">3. regression algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#kernel-regression"><span class="nav-text">3.1. kernel regression</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#insensitive-loss-regression"><span class="nav-text">3.2. insensitive loss regression</span></a></li></ol></li></ol></div>
             
 
           </div>
