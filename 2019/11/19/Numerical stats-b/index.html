@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.jpg?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.ico?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="stats," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Numerical Statistics Notes">
+<meta name="keywords" content="stats">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Numerical Statistics">
+<meta property="og:url" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical%20stats-b&#x2F;index.html">
+<meta property="og:site_name" content="BeNsoN">
+<meta property="og:description" content="Numerical Statistics Notes">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g95x9jz3nrj30ol047jrq.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g95x9qjbkfj30ny0150sp.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g95xaozw09j30op07at98.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g95xbtzujnj30oc0ezjsv.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g95xc3byf1j30p509jmy2.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g95xcipd6bj30o90fo75r.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g95xiljdmjj30nq02g74c.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g95xhgpmz4j30nh04f0t5.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g95xhy15u4j30nj09l402.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g95xi9uehdj30o10ahab5.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g95xj4l7tbj316i04y0tf.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g95xjuo8t7j30ne03r0sz.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g962fhhpvyj30oi0jiq4s.jpg">
+<meta property="og:image" content="file:&#x2F;&#x2F;&#x2F;Users&#x2F;huangbenson&#x2F;Library&#x2F;Application%20Support&#x2F;typora-user-images&#x2F;image-20191010153802247.png?lastModify=1570782793">
+<meta property="og:updated_time" content="2019-11-21T15:14:52.119Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g95x9jz3nrj30ol047jrq.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: 'FV65T83Q2V',
+      apiKey: '5008cf0478de4ac53102baceee722a4d',
+      indexName: 'steinsgate9',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://SteinsGate9.github.io/2019/11/19/Numerical stats-b/"/>
+
+
+
+
+
+  <title>Numerical Statistics | BeNsoN</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/SteinsGate9" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">BeNsoN</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Live Long, Play Hard.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" target="_blank" rel="noopener" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://SteinsGate9.github.io/2019/11/19/Numerical%20stats-b/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Benson">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BeNsoN">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Numerical Statistics</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-19T12:50:43+08:00">
+                2019-11-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/statistics/" itemprop="url" rel="index">
+                    <span itemprop="name">statistics</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">total read
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>times
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  2k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  12
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Numerical Statistics Notes</p>
+<a id="more"></a>
+
+<h1 id="sample-space">1. sample space</h1><h2 id="sample-space-1">1.1. sample space</h2><ul>
+<li><p><strong>Def</strong>: sample space</p>
+<p>![image-20191010143827039](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010143827039.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: duality </p>
+<p>![image-20191010143954142](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010143954142.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: iid </p>
+<p>![image-20191010144046242](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010144046242.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: hoeffding bound </p>
+<p>![image-20191015154207828](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191015154207828.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: parameter space </p>
+<p>![image-20191010144135511](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010144135511.png)</p>
+</li>
+<li><p><strong>Def</strong>: distribution group </p>
+<p>![image-20191010144216160](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010144216160.png)</p>
+</li>
+</ul>
+<h2 id="statistic">1.2. statistic</h2><ul>
+<li><p><strong>Def</strong>: statistic </p>
+<p>![image-20191010144317619](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010144317619.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: 无偏性</p>
+<p>![image-20191029130931360](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191029130931360.png)</p>
+</li>
+<li><p><strong>Def</strong>: 有效性</p>
+<p>![image-20191029131025082](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191029131025082.png)</p>
+<p>![image-20191029131123090](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191029131123090.png)</p>
+</li>
+<li><p><strong>Def</strong>: 相合性</p>
+<p>![image-20191029131216125](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191029131216125.png)</p>
+<p>![image-20191029131224462](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191029131224462.png)</p>
+<p>![image-20191029131246953](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191029131246953.png)</p>
+</li>
+</ul>
+<h3 id="sample-mean">1.2.1. sample mean</h3><ul>
+<li><p><strong>Def</strong>: sample mean</p>
+<p>![image-20191010144444316](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010144444316.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: mean &amp; sum</p>
+<p>![image-20191010144710291](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010144710291.png)</p>
+</li>
+<li><p><strong>Qua</strong>: mean is the best for real mean</p>
+<p>![image-20191010144833983](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010144833983.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="sample-variance">1.2.2. sample variance</h3><ul>
+<li><p><strong>Def</strong>: sample variance</p>
+<p>![image-20191010144616721](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010144616721.png)</p>
+<p>![image-20191010144632287](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010144632287.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: quatratic </p>
+<p>![image-20191010144758110](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010144758110.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="sample-covariance">1.2.3. sample covariance</h3><ul>
+<li><p><strong>Def</strong>: sample covariance </p>
+<p>![image-20191010145253624](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010145253624.png)</p>
+</li>
+</ul>
+<h3 id="sample-moment">1.2.4. sample moment</h3><ul>
+<li><p><strong>Def</strong>:  sample moment</p>
+<p>![image-20191010145015754](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010145015754.png)</p>
+</li>
+</ul>
+<h3 id="U-stats">1.2.5. U-stats</h3><ul>
+<li><p><strong>Def</strong>: U-stats (2-2)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95x9jz3nrj30ol047jrq.jpg" alt></p>
+<p><strong>Note</strong>:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95x9qjbkfj30ny0150sp.jpg" alt></p>
+<p><strong>Example</strong>:  (2-2)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xaozw09j30op07at98.jpg" alt></p>
+<p><strong>Example</strong>: (2-3)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xbtzujnj30oc0ezjsv.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xc3byf1j30p509jmy2.jpg" alt></p>
+<p><strong>Example</strong>: novel u stats (2-3)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xcipd6bj30o90fo75r.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: two-sample U-stats (2-3)</p>
+<p>![image-20191015150621422](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191015150621422.png)</p>
+<p><strong>Example</strong>:</p>
+<p>![image-20191015150632967](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191015150632967.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; variance of U-stats (2-3)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xiljdmjj30nq02g74c.jpg" alt></p>
+<p><strong>Proof</strong>:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xhgpmz4j30nh04f0t5.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xhy15u4j30nj09l402.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xi9uehdj30o10ahab5.jpg" alt></p>
+<p>(2-4)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xj4l7tbj316i04y0tf.jpg" alt></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; Var upper bound (2-4)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xjuo8t7j30ne03r0sz.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; asympototc normality (2-4)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g962fhhpvyj30oi0jiq4s.jpg" alt></p>
+</li>
+</ul>
+<h3 id="M-stats-and-Z-stats-2-9">1.2.6. M-stats and Z stats(2-9)</h3><p><strong>Def</strong>: ULLN ![image-20191029125510647](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191029125510647.png)</p>
+<h4 id="M-stats">1.2.6.1. M-stats</h4><ul>
+<li><p><strong>Def</strong>: M-stats</p>
+<p>![image-20191029125541592](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191029125541592.png)</p>
+<p>note:</p>
+<p>![image-20191029130526333](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191029130526333.png)</p>
+<p>这个点不可微，所以z函数没有，但是m函数在这个点取最大值，所以不等价。</p>
+<ul>
+<li><p><strong>Theorm</strong>:  =&gt; lim</p>
+<p>![image-20191029132426208](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191029132426208.png)</p>
+<p>note:</p>
+<p>![image-20191029132600249](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191029132600249.png)</p>
+<p>proof:</p>
+<p>![image-20191029132947443](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191029132947443.png)</p>
+<p>![image-20191029132954013](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191029132954013.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="Z-stats">1.2.6.2. Z-stats</h4><ul>
+<li><p><strong>Def</strong>:</p>
+<p>![image-20191029125610374](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191029125610374.png)</p>
+<p>![image-20191029125618614](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191029125618614.png)</p>
+</li>
+</ul>
+<h3 id="order-statistics">1.2.7. order statistics</h3><ul>
+<li><p><strong>Def</strong>: order statistics</p>
+<p>![image-20191010145434837](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010145434837.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: distribution </p>
+<p>![image-20191010151523869](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010151523869.png)</p>
+<p>Proof:</p>
+<p>![image-20191010151538473](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010151538473.png)</p>
+<p>special: when uniform(0, 1)</p>
+<p>![image-20191010152012795](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010152012795.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: joint distribution </p>
+<p>![image-20191010151725871](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010151725871.png)</p>
+<p>Proof:</p>
+<p>![image-20191010151735805](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010151735805.png)</p>
+<p>special: when uniform(0, 1):</p>
+<p>![image-20191010152039818](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010152039818.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: sample median </p>
+<p>![image-20191010145455458](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010145455458.png)</p>
+</li>
+<li><p><strong>Def</strong>: extremum of sample </p>
+<p>![image-20191010145513445](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010145513445.png)</p>
+</li>
+<li><p><strong>Def</strong>: sample p-fractile </p>
+<p>![image-20191010145535029](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010145535029.png)</p>
+</li>
+<li><p><strong>Def</strong>: sample range </p>
+<p>![image-20191010145558787](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010145558787.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: distribution </p>
+<p>![image-20191010151816523](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010151816523.png)</p>
+<p>Proof:</p>
+<p>![image-20191010151827895](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010151827895.png)</p>
+<p>Special: when uniform (0, 1):</p>
+<p>![image-20191010152113135](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010152113135.png)</p>
+<p>Proof:</p>
+<p>![image-20191010152123258](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010152123258.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: sample coefficient of variation </p>
+<p>![image-20191010145643877](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010145643877.png)</p>
+</li>
+<li><p><strong>Def</strong>: sample skeness</p>
+<p>![image-20191010145717267](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010145717267.png)</p>
+</li>
+<li><p><strong>Def</strong>: sample kurtosis</p>
+<p>![image-20191010145744586](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010145744586.png)</p>
+</li>
+</ul>
+<h3 id="sufficient-stats">1.2.8. sufficient stats</h3><ul>
+<li><p>Why:</p>
+<p>![image-20191010154903166](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010154903166.png)</p>
+<p>![image-20191010155004768](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010155004768.png)</p>
+<p><strong>Def</strong>: suff stats</p>
+<p>![image-20191010155025368](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010155025368.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: element break, sufficient and necess condition </p>
+<p>![image-20191010155135035](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010155135035.png)</p>
+</li>
+<li><p><strong>Qua</strong>: function of suff stats </p>
+<p>![image-20191010155216966](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010155216966.png)</p>
+</li>
+</ul>
+<h3 id="complete-stats">1.2.9. complete stats</h3><ul>
+<li><p><strong>Def</strong>: complete stats</p>
+<p>![image-20191010155317423](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010155317423.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: function of comp stats</p>
+<p>![image-20191010155335844](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010155335844.png)</p>
+</li>
+<li><p><strong>Qua</strong>: exp family &amp; comp stats</p>
+<p>![image-20191010155500685](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010155500685.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: indepence &amp; comp stats</p>
+<p>![image-20191010155630429](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010155630429.png)</p>
+<p>![image-20191010155537024](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010155537024.png)</p>
+</li>
+</ul>
+<h1 id="useful-stats">2. useful stats</h1><h2 id="exp">2.1. exp</h2><ul>
+<li><p><strong>Qua</strong>: exp =&gt; x2 </p>
+<p>![image-20191010154048384](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010154048384.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: vc subgraph</p>
+<p>![image-20191015161517486](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191015161517486.png)</p>
+</li>
+</ul>
+<h2 id="gaussian">2.2. gaussian</h2><h3 id="single">2.2.1. single</h3><h4 id="distribution">2.2.1.1. distribution</h4><ul>
+<li><p><strong>Qua</strong>: N2 =&gt; X2 </p>
+<p><img src="file:///Users/huangbenson/Library/Application%20Support/typora-user-images/image-20191010153802247.png?lastModify=1570782793" alt="image-20191010153802247"></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: operation</p>
+<p>![image-20191010151026259](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010151026259.png)</p>
+</li>
+</ul>
+<h3 id="stats">2.2.2. stats</h3><ul>
+<li><p><strong>Qua</strong>: mean &amp; variance </p>
+<p>![image-20191010151400739](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010151400739.png)</p>
+<p>Proof: </p>
+<p>![image-20191010151420722](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010151420722.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: Mean/Variance =&gt; distri</p>
+<p>![image-20191010153841085](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010153841085.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: Mean-Mean/Variance =&gt; distri</p>
+<p>![image-20191010153921784](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010153921784.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: Variance/ Variance =&gt; distri </p>
+<p>![image-20191010153946999](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010153946999.png)</p>
+</li>
+</ul>
+<h2 id="X2">2.3. X2</h2><ul>
+<li><p><strong>Def</strong>: central X2 distribution ![image-20191010152204693](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010152204693.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: pdf </p>
+<p>![image-20191010152229389](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010152229389.png)</p>
+<p>Proof:</p>
+<p>![image-20191010152242711](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010152242711.png)</p>
+<p>![image-20191010152251044](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010152251044.png)</p>
+<p>![image-20191010152309447](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010152309447.png)</p>
+<p>Fig:</p>
+<p>![image-20191010152317297](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010152317297.png)</p>
+<p>Interpre fig :</p>
+<p>![image-20191010152353907](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010152353907.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; special &amp; operation </p>
+<p>![image-20191010152629002](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010152629002.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: non-central X2</p>
+<p>![image-20191010152709668](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010152709668.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: pdf</p>
+<p>![image-20191010152744142](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010152744142.png)</p>
+<p>Proof:</p>
+<p>![image-20191010152756712](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010152756712.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; distri &amp; operation</p>
+<p>![image-20191010152816301](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010152816301.png)</p>
+</li>
+</ul>
+<h2 id="gamma">2.4. gamma</h2><ul>
+<li><p><strong>Def</strong>: gamma distribution </p>
+<p>![image-20191010152459377](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010152459377.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: gamma =&gt; X2</p>
+<p>![image-20191010152540424](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010152540424.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="t">2.5. t</h2><ul>
+<li><p><strong>Def</strong>: central t distribution </p>
+<p>![image-20191010152852142](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010152852142.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: pdf</p>
+<p>![image-20191010152914721](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010152914721.png)</p>
+<p>Proof:</p>
+<p>![image-20191010152925622](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010152925622.png)</p>
+<p>Fig:</p>
+<p>![image-20191010152945976](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010152945976.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; E &amp; Cauchy</p>
+<p>![image-20191010153015985](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010153015985.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: non-central t distribution </p>
+<p>![image-20191010153110142](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010153110142.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: pdf </p>
+<p>![image-20191010153121829](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010153121829.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; E, D </p>
+<p>![image-20191010153141951](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010153141951.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="F">2.6. F</h2><ul>
+<li><p><strong>Def</strong>: </p>
+<p>![image-20191010153334858](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010153334858.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: pdf </p>
+<p>![image-20191010153350093](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010153350093.png)</p>
+<p>Proof:</p>
+<p>![image-20191010153357306](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010153357306.png)</p>
+<p>Fig:</p>
+<p>![image-20191010153406377](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010153406377.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; special &amp; operation </p>
+<p>![image-20191010153523265](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010153523265.png)</p>
+<p>Proof:</p>
+<p>![image-20191010153533299](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010153533299.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: non-central F</p>
+<p>![image-20191010153627044](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010153627044.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: pdf </p>
+<p>![image-20191010153643200](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010153643200.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; special &amp; X2 </p>
+<p>![image-20191010153655678](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010153655678.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="exponential-family">2.7. exponential family</h2><ul>
+<li><p><strong>Def</strong>: exponential family </p>
+<p>(Gaussian, +-Bio, Posson, Exp, Gamma)</p>
+<p>![image-20191010154259373](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010154259373.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: all distribution have same support set </p>
+<p>![image-20191010154322251](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010154322251.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: natural form &amp; natrual space </p>
+<p>![image-20191010154602169](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010154602169.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: under natural form , natural space is Convex Set </p>
+<p>![image-20191010154644808](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010154644808.png)</p>
+</li>
+<li><p><strong>Qua</strong>: analytical stuff </p>
+<p>![image-20191010154703218](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010154703218.png)</p>
+</li>
+</ul>
+<h1 id="parameter-estimation-usage-of-stats">3. parameter estimation (usage of stats)</h1><h2 id="point-estimation">3.1. point estimation</h2><h3 id="moment">3.1.1. moment</h3><h3 id="mle">3.1.2. mle</h3><ul>
+<li><p><strong>Def</strong>: MLE （参数）</p>
+<p>![image-20191029142041616](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191029142041616.png)</p>
+<p>![image-20191029142102386](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191029142102386.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: MLE （非参数）</p>
+<p>![image-20191029141712555](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191029141712555.png)</p>
+<p>因为是非参，所以需要求积分。</p>
+<p>![image-20191029135539302](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191029135539302.png)</p>
+<p>小于等于0因为这是KL散度的形式p0其实和p一回事。</p>
+<ul>
+<li><p><strong>Qua</strong>: p0 and MLE(pn)’s KL distance </p>
+<p>![image-20191029142607000](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191029142607000.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="umvue">3.1.3. umvue</h3><h2 id="range-estimation">3.2. range estimation</h2>
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2019/11/19/Numerical%20stats-b/">Numerical Statistics</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Benson 的个人博客">Benson</a></p>
+  <p><span>发布时间:</span>2019年11月19日 - 12:11</p>
+  <p><span>最后更新:</span>2019年11月21日 - 23:11</p>
+  <p><span>原始链接:</span><a href="/2019/11/19/Numerical%20stats-b/" title="Numerical Statistics">https://steinsgate9.github.io/2019/11/19/Numerical%20stats-b/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://steinsgate9.github.io/2019/11/19/Numerical%20stats-b/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script>
+
+      
+    </div>
+    
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Benson WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Benson Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/stats/" rel="tag"># stats</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/19/c++-b/" rel="next" title="C++">
+                <i class="fa fa-chevron-left"></i> C++
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/11/19/Probability-b/" rel="prev" title="Probability Theory">
+                Probability Theory <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5dd409321289b452" async = "async" ></script>
+</div>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NzYxNi8yNDExNA"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Benson</p>
+              <p class="site-description motion-element" itemprop="description">Benson's personal blog, including stats, cs, math, among others.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/SteinsGate9" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="bensonuouououow@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-globe"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/bensonuouououo" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.instagram.com/bensonuouououo/" target="_blank" title="Instagram">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Instagram</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.alloyteam.com/nav/" title="Web前端导航" target="_blank">Web前端导航</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.chuangzaoshi.com/code" title="创造狮导航" target="_blank">创造狮导航</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.36zhen.com/t?id=3448" title="前端书籍资料" target="_blank">前端书籍资料</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://e.xitu.io/" title="掘金酱" target="_blank">掘金酱</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.v2ex.com/" title="V2EX" target="_blank">V2EX</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.v2ex.com/" title="印记中文" target="_blank">印记中文</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#sample-space"><span class="nav-text">1. sample space</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#sample-space-1"><span class="nav-text">1.1. sample space</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#statistic"><span class="nav-text">1.2. statistic</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sample-mean"><span class="nav-text">1.2.1. sample mean</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sample-variance"><span class="nav-text">1.2.2. sample variance</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sample-covariance"><span class="nav-text">1.2.3. sample covariance</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sample-moment"><span class="nav-text">1.2.4. sample moment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#U-stats"><span class="nav-text">1.2.5. U-stats</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#M-stats-and-Z-stats-2-9"><span class="nav-text">1.2.6. M-stats and Z stats(2-9)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#M-stats"><span class="nav-text">1.2.6.1. M-stats</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Z-stats"><span class="nav-text">1.2.6.2. Z-stats</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#order-statistics"><span class="nav-text">1.2.7. order statistics</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sufficient-stats"><span class="nav-text">1.2.8. sufficient stats</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#complete-stats"><span class="nav-text">1.2.9. complete stats</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#useful-stats"><span class="nav-text">2. useful stats</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#exp"><span class="nav-text">2.1. exp</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gaussian"><span class="nav-text">2.2. gaussian</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#single"><span class="nav-text">2.2.1. single</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#distribution"><span class="nav-text">2.2.1.1. distribution</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stats"><span class="nav-text">2.2.2. stats</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#X2"><span class="nav-text">2.3. X2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gamma"><span class="nav-text">2.4. gamma</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#t"><span class="nav-text">2.5. t</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#F"><span class="nav-text">2.6. F</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#exponential-family"><span class="nav-text">2.7. exponential family</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#parameter-estimation-usage-of-stats"><span class="nav-text">3. parameter estimation (usage of stats)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#point-estimation"><span class="nav-text">3.1. point estimation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#moment"><span class="nav-text">3.1.1. moment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mle"><span class="nav-text">3.1.2. mle</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#umvue"><span class="nav-text">3.1.3. umvue</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#range-estimation"><span class="nav-text">3.2. range estimation</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Benson</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      total visitors
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      people
+    </span>
+  
+
+  
+    <span class="site-pv">
+      total read
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      times
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
