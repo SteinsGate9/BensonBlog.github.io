@@ -1,0 +1,1830 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.jpg?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.ico?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="calculus," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Mathematical Analysis Notes">
+<meta name="keywords" content="calculus">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mathematical Analysis">
+<meta property="og:url" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Math%20analysis-b&#x2F;index.html">
+<meta property="og:site_name" content="BeNsoN">
+<meta property="og:description" content="Mathematical Analysis Notes">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;Users&#x2F;huangbenson&#x2F;Library&#x2F;Application%20Support&#x2F;typora-user-images&#x2F;image-20191010194459001.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;Users&#x2F;huangbenson&#x2F;Library&#x2F;Application%20Support&#x2F;typora-user-images&#x2F;image-20191010212341115.png">
+<meta property="og:updated_time" content="2019-11-21T16:47:27.702Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;Users&#x2F;huangbenson&#x2F;Library&#x2F;Application%20Support&#x2F;typora-user-images&#x2F;image-20191010194459001.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: 'FV65T83Q2V',
+      apiKey: '5008cf0478de4ac53102baceee722a4d',
+      indexName: 'steinsgate9',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://SteinsGate9.github.io/2019/11/19/Math analysis-b/"/>
+
+
+
+
+
+  <title>Mathematical Analysis | BeNsoN</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/SteinsGate9" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">BeNsoN</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Live Long, Play Hard.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" target="_blank" rel="noopener" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://SteinsGate9.github.io/2019/11/19/Math%20analysis-b/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Benson">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BeNsoN">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Mathematical Analysis</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-19T12:50:43+08:00">
+                2019-11-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/mathematics/" itemprop="url" rel="index">
+                    <span itemprop="name">mathematics</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">total read
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>times
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  3.8k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  23
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Mathematical Analysis Notes</p>
+<a id="more"></a>
+
+<h1 id="real-number-set">1. real number set</h1><h2 id="real-number">1.1. real number</h2><ul>
+<li><p><strong>Def</strong>: real number </p>
+<p>![image-20191010161809333](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010161809333.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: real number basic quality </p>
+<p>![image-20191010161851221](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010161851221.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; real number absolute quality</p>
+<p>![image-20191010162004504](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010162004504.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>:complex number </p>
+<p>![image-20191023101546626](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023101546626.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; </p>
+<p>![image-20191023101622528](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023101622528.png)</p>
+<p>![image-20191023101644212](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023101644212.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: complex conjugate </p>
+<p>![image-20191023153209319](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023153209319.png)</p>
+</li>
+<li><p><strong>Def</strong>: absolute value </p>
+<p>![image-20191023153227684](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023153227684.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: operation </p>
+<p>![image-20191023153240453](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023153240453.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="range-amp-neibor-amp-bound-of-set">1.2. range &amp; neibor &amp; bound of set</h2><ul>
+<li><p><strong>Def</strong>: range &amp; neibor of set </p>
+<p>![image-20191010162230107](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010162230107.png)</p>
+</li>
+<li><p><strong>Def</strong>: exact bound of set</p>
+<p>![image-20191010162940906](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010162940906.png)</p>
+<p>![image-20191010163146363](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010163146363.png)</p>
+<ul>
+<li><p><strong>Qua</strong>:  =&gt; exact bound </p>
+<p>![image-20191010163226005](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010163226005.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="function">2. function</h1><h2 id="one-variable-function">2.1. one variable function</h2><ul>
+<li><p><strong>Def</strong>: function![image-20191010163516580](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010163516580.png)</p>
+<p>Note:</p>
+<p>![image-20191010163531006](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010163531006.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: bound &amp; function </p>
+<p>![image-20191010163710677](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010163710677.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: mono function </p>
+<p>![image-20191010163740876](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010163740876.png)</p>
+<ul>
+<li><strong>Theorm</strong>: mono =&gt; inverse mono![image-20191010163757723](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010163757723.png)</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: odd &amp; function </p>
+<p>![image-20191010163843610](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010163843610.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: periodic &amp; function</p>
+<p>![image-20191010163924243](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010163924243.png)</p>
+</li>
+</ul>
+<h3 id="limit">2.1.1. limit</h3><h4 id="limit-1">2.1.1.1. limit</h4><ul>
+<li><p><strong>Def</strong>: limit of function to inf![image-20191010164517971](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010164517971.png)</p>
+<p>Fig:</p>
+<p>![image-20191010164608734](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010164608734.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: limit of function to number </p>
+<p>![image-20191010164730460](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010164730460.png)</p>
+<p>Fig:</p>
+<p>![image-20191010164746098](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010164746098.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: 2 other functions larger &amp; smaller  =&gt; liim</p>
+<p>![image-20191010165114909](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010165114909.png)</p>
+</li>
+<li><p><strong>Qua</strong>:  ~ =&gt; liim</p>
+<p>![image-20191010170143536](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010170143536.png)</p>
+</li>
+<li><p><strong>Qua</strong>: array =&gt; liim</p>
+<p>![image-20191010165251609](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010165251609.png)</p>
+<p>Note: </p>
+<p>![image-20191010165313277](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010165313277.png)</p>
+</li>
+<li><p><strong>Qua</strong>: f =&gt; liim </p>
+<p>![image-20191010165537563](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010165537563.png)</p>
+<p>![image-20191010165549144](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010165549144.png)</p>
+</li>
+<li><p>Example:</p>
+<p>![image-20191010165621701](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010165621701.png)</p>
+</li>
+<li><p>Example2 </p>
+<p>![image-20191010165642104](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010165642104.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: liim =&gt; only one </p>
+<p>![image-20191010164926852](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010164926852.png)</p>
+</li>
+<li><p>Qua: liim =&gt; bounded within a small range </p>
+<p>![image-20191010164939314](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010164939314.png)</p>
+</li>
+<li><p><strong>Qua</strong>: liim =&gt; sign not change within a small range </p>
+<p>![image-20191010165016662](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010165016662.png)</p>
+</li>
+<li><p><strong>Qua</strong>: liim =&gt; keep order within a small range </p>
+<p>![image-20191010165046675](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010165046675.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: operation </p>
+<p>![image-20191010165228236](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010165228236.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: half way limit to number </p>
+<p>![image-20191010164834435](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010164834435.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: mono =&gt; lim</p>
+<p>![image-20191010165348511](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010165348511.png)</p>
+</li>
+<li><p><strong>Qua</strong>: mono =&gt; lim</p>
+<p>![image-20191010165435592](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010165435592.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="O-amp-o">2.1.1.2. O &amp; o</h4><ul>
+<li><p><strong>Def</strong>: inf small </p>
+<p>![image-20191010165826657](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010165826657.png)</p>
+<ul>
+<li><strong>Qua</strong>: operation ![image-20191010165844909](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010165844909.png)</li>
+</ul>
+</li>
+<li><p><strong>Def</strong>: o </p>
+<p>![image-20191010165944843](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010165944843.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: –</p>
+<p>![image-20191010170003834](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010170003834.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: O</p>
+<p>![image-20191010170103041](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010170103041.png)</p>
+<p>![image-20191010170037521](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010170037521.png)</p>
+</li>
+</ul>
+<ul>
+<li><p>Def: ~</p>
+<p>![image-20191010170126817](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010170126817.png)</p>
+</li>
+</ul>
+<h3 id="continuous">2.1.2. continuous</h3><h4 id="continuous-1">2.1.2.1. continuous</h4><ul>
+<li><p><strong>Def</strong>: continuous at one point </p>
+<p>1) continuous = limit exist + (limit = value)</p>
+<p>![image-20191010185247377](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010185247377.png)</p>
+<p>2)</p>
+<p>![image-20191010185714413](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010185714413.png)</p>
+<p>3) </p>
+<p>![image-20191010185725402](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010185725402.png)</p>
+<ul>
+<li><p><strong>Qua</strong>:  func =&gt; conti </p>
+<p>![image-20191010192216535](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010192216535.png)</p>
+</li>
+<li><p><strong>Qua</strong>: func =&gt; conti </p>
+<p>![image-20191010192309881](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010192309881.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: limit &amp; continuous </p>
+<p>Usage: (1) conti =&gt; limit</p>
+<p>​            (2) limit do not require x0, conti does </p>
+<p>​            (3) f and limit can exchange order  </p>
+<p>![image-20191010185920916](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010185920916.png)</p>
+</li>
+<li><p><strong>Qua</strong>: conti =&gt; keep range</p>
+<p>![image-20191010192112605](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010192112605.png)</p>
+</li>
+<li><p><strong>Qua</strong>: conti =&gt; keep sign within range </p>
+<p>![image-20191010192203054](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010192203054.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: left/right continuous </p>
+<p>![image-20191010191209973](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010191209973.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: suff &amp; necc</p>
+<p>![image-20191010191228066](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010191228066.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: break point  ![image-20191010191416484](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010191416484.png)</p>
+<ul>
+<li><p><strong>Def</strong>: can be wiped break point (no def)</p>
+<p>![image-20191010191450103](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010191450103.png)</p>
+</li>
+<li><p><strong>Def</strong>: jump break point (no lim)</p>
+<p>![image-20191010191523135](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010191523135.png)</p>
+</li>
+<li><p><strong>Def</strong>: second break point (have def &amp; lim but not equal)</p>
+<p>![image-20191010191554510](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010191554510.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="continous-function">2.1.2.2. continous function</h4><ul>
+<li><p><strong>Def</strong>: continuous function </p>
+<p>![ ](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010191823024.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: conti =&gt; max/min</p>
+<p>![image-20191010192404730](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010192404730.png)</p>
+</li>
+<li><p><strong>Qua</strong>: conti =&gt; f(x) = k </p>
+<p>![image-20191010192421280](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010192421280.png)</p>
+</li>
+<li><p><strong>Qua</strong>: conti =&gt; inverse conti </p>
+<p>![image-20191010192524465](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010192524465.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: uniform continuous </p>
+<p>Why: some conti func is too steep, like 1/x.</p>
+<p>![image-20191010192730335](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010192730335.png) </p>
+<p>Note: Conti =  choose a sigma(x, e) to make the gap &lt; e  </p>
+<p>​         U-Conti = choose a sigma(e) to make the gap &lt; e</p>
+<p>![image-20191010193040047](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010193040047.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: suff</p>
+<p>![image-20191010193149496](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010193149496.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: several range continuous </p>
+<p>![image-20191010191919422](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010191919422.png)</p>
+</li>
+</ul>
+<h3 id="derivation">2.1.3. derivation</h3><h4 id="def">2.1.3.1. def</h4><ul>
+<li><p><strong>Def</strong>: derivation </p>
+<p>![image-20191010193429086](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010193429086.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: suff and necc </p>
+<p>![image-20191010194039451](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010194039451.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: derble =&gt; some equation![image-20191010193806820](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010193806820.png)</p>
+</li>
+<li><p><strong>Qua</strong>: derble =&gt; conti</p>
+<p>![image-20191010193920590](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010193920590.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: left/right der</p>
+<p>![image-20191010194027288](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010194027288.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: second order der </p>
+<p>![image-20191010195120959](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010195120959.png)</p>
+<p>![image-20191010195142664](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010195142664.png)</p>
+</li>
+</ul>
+<h4 id="der-function">2.1.3.2. der function</h4><ul>
+<li><p><strong>Def</strong>: der function </p>
+<p>![image-20191010194321851](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010194321851.png)</p>
+<p>Fig:</p>
+<p>![image-20191010194401121](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010194401121.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; der = k </p>
+<p>![image-20191010194827677](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010194827677.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; der = 0 </p>
+<p>![image-20191010194642275](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010194642275.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; der = 0(k)</p>
+<p>![image-20191010202229665](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010202229665.png)</p>
+<p>![image-20191010203554228](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010203554228.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; der = g(x)</p>
+<p>![image-20191010203709389](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010203709389.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; der = c </p>
+<p>![image-20191010203643532](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010203643532.png)</p>
+</li>
+<li><p><strong>Qua</strong>: mono =&gt; der &gt;=0 </p>
+<p>![image-20191010203745427](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010203745427.png)</p>
+<p>![image-20191010203806093](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010203806093.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; der = c </p>
+<p>![image-20191010203926303](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010203926303.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; liim der = c</p>
+<p>![image-20191010204046916](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010204046916.png)</p>
+<p>![image-20191010204100697](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010204100697.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: operation </p>
+<p>![image-20191010195002299](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010195002299.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: max/ min </p>
+<p>![image-20191010194535216](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010194535216.png)</p>
+<img src="/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010194459001.png" alt="image-20191010194459001" style="zoom:50%;">
+
+<ul>
+<li><p><strong>Qua</strong>: =&gt; min/max</p>
+<p>![image-20191010204404462](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010204404462.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; min/max </p>
+<p>![image-20191010204425945](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010204425945.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; min/max </p>
+<p>![image-20191010204452426](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010204452426.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="differential">2.1.3.3. differential</h4><ul>
+<li><p><strong>Def</strong>: differential </p>
+<p>![image-20191010195351415](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010195351415.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: derible + (A=f’) = diffble</p>
+<p>![image-20191010195508697](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010195508697.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: 恒成立的等式</p>
+<p>![image-20191010200029660](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010200029660.png)</p>
+</li>
+<li><p><strong>Qua</strong>: operation(ddx=0 from deltadeltax = 0)( 可微情况下 dx = deltax)</p>
+<p>![image-20191010200147484](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010200147484.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: high order diff </p>
+<p>![image-20191010200503499](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010200503499.png)</p>
+</li>
+</ul>
+<h4 id="taylor-expansion">2.1.3.4. taylor expansion</h4><ul>
+<li><p><strong>Def</strong>: </p>
+<p>![image-20191010204211833](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010204211833.png)</p>
+<ul>
+<li><p><strong>Qua</strong>:  =&gt; taylor </p>
+<p>![image-20191010204228091](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010204228091.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; taylor </p>
+<p>![image-20191010204318095](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010204318095.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; taylor </p>
+<p>![image-20191010211218428](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010211218428.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; taylor </p>
+<p>![image-20191010211233121](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010211233121.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="integration">2.1.4. integration</h3><h4 id="def-1">2.1.4.1. def</h4><ul>
+<li><p><strong>Def</strong>: origin </p>
+<p>![image-20191010204632531](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010204632531.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: conti =&gt; origin</p>
+<p>![image-20191010204742499](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010204742499.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: operation</p>
+<p>![image-20191010204803254](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010204803254.png)</p>
+</li>
+</ul>
+<h4 id="non-fixed-integration">2.1.4.2. non fixed integration</h4><ul>
+<li><p><strong>Def</strong>: not fixed integration </p>
+<p>![image-20191010204841670](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010204841670.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; integration </p>
+<p>![image-20191010205002085](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010205002085.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; integration </p>
+<p>![image-20191010205046518](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010205046518.png)</p>
+</li>
+<li><p><strong>Qua</strong>: devotion =&gt; integration </p>
+<p>![image-20191010205133901](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010205133901.png)</p>
+<p>![image-20191010205138797](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010205138797.png)</p>
+</li>
+<li><p><strong>Qua</strong>: sin =&gt; integration </p>
+<p>![image-20191010205202077](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010205202077.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; integration ![image-20191010205220854](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010205220854.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: operation </p>
+<p>![image-20191010204920133](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010204920133.png)</p>
+</li>
+</ul>
+<h4 id="fixed-integration">2.1.4.3. fixed integration</h4><ul>
+<li><p><strong>Def</strong>:</p>
+<p>![image-20191010205830306](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010205830306.png)</p>
+<p>![image-20191010205840492](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010205840492.png)</p>
+<p>Note:</p>
+<p>![image-20191010205953280](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010205953280.png)</p>
+<p>![image-20191010205958061](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010205958061.png)</p>
+<p>![image-20191010210004178](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010210004178.png)</p>
+<p>Fig </p>
+<p>![image-20191010205924037](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010205924037.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; integration </p>
+<p>![image-20191010210036598](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010210036598.png)</p>
+<p>Note:</p>
+<p>![image-20191010210056982](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010210056982.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; integration </p>
+<p>![image-20191010210630271](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010210630271.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; integration </p>
+<p>![image-20191010210724382](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010210724382.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; integration </p>
+<p>![image-20191010211107693](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010211107693.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; integration![image-20191010211124480](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010211124480.png)</p>
+<p>![image-20191010211141300](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010211141300.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; intble</p>
+<p>![image-20191010210213124](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010210213124.png)</p>
+<p>![image-20191010210219918](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010210219918.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; intble </p>
+<p>![image-20191010210237939](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010210237939.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; intble </p>
+<p>![image-20191010210259781](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010210259781.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; intble </p>
+<p>![image-20191010210311653](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010210311653.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; intble </p>
+<p>![image-20191010210326019](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010210326019.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: intble =&gt; bounded</p>
+<p>![image-20191010210139244](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010210139244.png)</p>
+</li>
+<li><p><strong>Qua</strong>: intble =&gt; </p>
+<p>![image-20191010210532669](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010210532669.png)</p>
+<p>![image-20191010210543957](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010210543957.png)</p>
+</li>
+<li><p><strong>Qua</strong>: intble =&gt;</p>
+<p>![image-20191010210922910](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010210922910.png)</p>
+</li>
+<li><p><strong>Qua</strong>: intble =&gt; </p>
+<p>![image-20191010211001361](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010211001361.png)</p>
+</li>
+<li><p><strong>Qua</strong>: intble =&gt; </p>
+<p>![image-20191010211030993](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010211030993.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: operation</p>
+<p>![image-20191010210355403](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010210355403.png)</p>
+<p>![image-20191010210401119](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010210401119.png)</p>
+<p>![image-20191010210405932](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010210405932.png)</p>
+<p>![image-20191010210415066](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010210415066.png)</p>
+<p>![image-20191010210603642](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010210603642.png)</p>
+</li>
+</ul>
+<h4 id="abnormal-integration">2.1.4.4. abnormal integration</h4><ul>
+<li><p><strong>Def</strong>: inf abnormal </p>
+<p>![image-20191010211359162](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010211359162.png)</p>
+<p>![image-20191010211408626](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010211408626.png)</p>
+<p>Note:</p>
+<p>![image-20191010211418616](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010211418616.png)</p>
+<p>Fig: </p>
+<p>![image-20191010211425163](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010211425163.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: suff &amp; necc of convergence </p>
+<p>![image-20191010211622297](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010211622297.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; convergecy</p>
+<p>![image-20191010212142065](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010212142065.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; convergency</p>
+<p>![image-20191010212156822](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010212156822.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: operation</p>
+<p>![image-20191010212003168](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010212003168.png)</p>
+<p>![image-20191010212008207](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010212008207.png)</p>
+<p>![image-20191010212022096](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010212022096.png)</p>
+<p>![image-20191010212052073](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010212052073.png)</p>
+<p>![image-20191010212106141](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010212106141.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: break point abnormal integration</p>
+<p>![image-20191010211547095](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010211547095.png)</p>
+<p>Note:</p>
+<p>![image-20191010211555255](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010211555255.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: suff &amp; necc </p>
+<p>![image-20191010212222117](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010212222117.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: operation </p>
+<p>![image-20191010212237667](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010212237667.png)</p>
+<p>![image-20191010212303589](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010212303589.png)</p>
+<p>![image-20191010212313551](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010212313551.png)</p>
+<p>![image-20191010212332718](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010212332718.png)</p>
+<img src="/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010212341115.png" alt="image-20191010212341115" style="zoom:50%;">
+
+
+
+</li>
+</ul>
+<h2 id="multi-variable-function">2.2. multi variable function</h2><h3 id="limit-2">2.2.1. limit</h3><h3 id="continuous-2">2.2.2. continuous</h3><h3 id="derivation-1">2.2.3. derivation</h3><p>1 to 1 textbook </p>
+<p>1 to X/M <a href="https://blog.csdn.net/weixin_38278334/article/details/83028794" target="_blank" rel="noopener">https://blog.csdn.net/weixin_38278334/article/details/83028794</a></p>
+<p>X/M to X/M <a href="https://zhuanlan.zhihu.com/p/24863977" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/24863977</a><br>here is to mention that, the definition of 1 to X/M is different from X/M, we are more inclined to refer 1 to X/M as $\triangle$, and the other as derivatives.</p>
+<h3 id="hidden-variable">2.2.4. hidden variable</h3><h3 id="integration-1">2.2.5. integration</h3><h4 id="parameter-nomral-integration">2.2.5.1. parameter nomral integration</h4><ul>
+<li><p><strong>Def</strong>: </p>
+<p>![image-20191010222252244](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010222252244.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; conti</p>
+<p>![image-20191010222330753](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010222330753.png)</p>
+<p>![image-20191010222349792](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010222349792.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; diffble</p>
+<p>![image-20191010222413807](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010222413807.png)</p>
+<p>![image-20191010222422474](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010222422474.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; intble </p>
+<p>![image-20191010222536398](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010222536398.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; order changeble </p>
+<p>![image-20191010222638144](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010222638144.png)</p>
+</li>
+</ul>
+<h4 id="parameter-abnomral-integration">2.2.5.2. parameter abnomral integration</h4><h5 id="def-2">2.2.5.2.1. def</h5><ul>
+<li><p><strong>Def</strong>:![image-20191010222739534](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010222739534.png)</p>
+</li>
+<li><p><strong>Def</strong>: uniform convergency</p>
+<p>![image-20191010222809450](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010222809450.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: suff &amp; necc</p>
+<p>![image-20191010222833104](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010222833104.png)</p>
+<p>![image-20191010222849214](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010222849214.png)</p>
+<p>![image-20191010222905946](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010222905946.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; converge</p>
+<p>![image-20191010222957426](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010222957426.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: converge =&gt; conti</p>
+<p>![image-20191010223038064](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010223038064.png)</p>
+</li>
+<li><p><strong>Qua</strong>: converge =&gt; exchange order(conti) </p>
+<p>![image-20191010223201852](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010223201852.png)</p>
+<p>![image-20191010223501751](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010223501751.png)</p>
+</li>
+<li><p><strong>Qua</strong>: converge =&gt; diffble </p>
+<p>![image-20191010223220828](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010223220828.png)</p>
+<p>![image-20191010223301402](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010223301402.png)</p>
+</li>
+<li><p><strong>Qua</strong>: converge =&gt; intble </p>
+<p>![image-20191010223318260](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010223318260.png)</p>
+</li>
+</ul>
+<h5 id="gamma-amp-beta-integration">2.2.5.2.2. gamma &amp; beta integration</h5><ul>
+<li><p><strong>Def</strong>: gamma </p>
+<p>![image-20191010223722486](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010223722486.png)</p>
+<p>![image-20191010223706234](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010223706234.png)</p>
+<p>Fig:</p>
+<p>![image-20191010223927765](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010223927765.png)</p>
+<p>![image-20191010223919436](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010223919436.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: gamma =&gt; diffble &amp; conti</p>
+<p>![image-20191010223812792](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010223812792.png)</p>
+</li>
+<li><p><strong>Qua</strong>: gamma =&gt; equation</p>
+<p>![image-20191010223851424](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010223851424.png)</p>
+</li>
+<li><p><strong>Qua</strong>: gamma =&gt; tranform </p>
+<p>![image-20191010223953181](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010223953181.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: Beta</p>
+<p>![image-20191010224036152](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010224036152.png)</p>
+<p>![image-20191010224024295](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010224024295.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: beta =&gt; conti </p>
+<p>![image-20191010224051985](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010224051985.png)</p>
+</li>
+<li><p><strong>Qua</strong>: beta =&gt; equatiom</p>
+<p>![image-20191010224113716](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010224113716.png)</p>
+<p>![image-20191010224125147](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010224125147.png)</p>
+</li>
+<li><p><strong>Qua</strong>: beta =&gt; transform </p>
+<p>![image-20191010224141890](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010224141890.png)</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Qua</strong>: beta &amp; gamma </p>
+<p>![image-20191010224218845](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010224218845.png)</p>
+</li>
+</ul>
+<h4 id="curve-integration">2.2.5.3. curve integration</h4><ul>
+<li><p><strong>Def</strong>: first curve integration</p>
+<p>![image-20191010224355839](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010224355839.png)</p>
+<p>Fig:</p>
+<p>![image-20191010224448636](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010224448636.png)</p>
+<p>![image-20191010224502000](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010224502000.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; integration</p>
+<p>![image-20191010224526248](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010224526248.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: intble =&gt;</p>
+<p>![image-20191010224438112](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010224438112.png)</p>
+</li>
+<li><p><strong>Qua</strong>:  intble =&gt; 路线无关性</p>
+<p>![image-20191010225719542](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010225719542.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: second curve integration </p>
+<p>![image-20191010224623398](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010224623398.png)</p>
+<p>![image-20191010224633657](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010224633657.png)</p>
+<p>Note: </p>
+<p>![image-20191010224642853](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010224642853.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; integration </p>
+<p>![image-20191010224726156](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010224726156.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: operation</p>
+<p>![image-20191010224701519](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010224701519.png)</p>
+</li>
+</ul>
+<h4 id="muliple-integrate">2.2.5.4. muliple integrate</h4><ul>
+<li><p><strong>Def</strong>:</p>
+<p>![image-20191010224919480](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010224919480.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: suff &amp; neck</p>
+<p>![image-20191010224940080](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010224940080.png)</p>
+<p>![image-20191010225016655](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010225016655.png)</p>
+<p>![image-20191010224950188](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010224950188.png)</p>
+<p>![image-20191010225028877](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010225028877.png)</p>
+<p>![image-20191010225043308](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010225043308.png)</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Def</strong>: multi integration</p>
+<p>![image-20191010225114777](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010225114777.png)</p>
+<p>Note:</p>
+<p>![image-20191010225136463](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010225136463.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: suff &amp; necc</p>
+<p>![image-20191010225202413](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010225202413.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; intble </p>
+<p>![image-20191010225214774](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010225214774.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: intble =&gt; </p>
+<p>![image-20191010225247210](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010225247210.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; integration</p>
+<p>![image-20191010225419434](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010225419434.png)</p>
+<p>![image-20191010225438005](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010225438005.png)</p>
+</li>
+<li><p><strong>Qua</strong>:Green, =&gt; integration </p>
+<p>![image-20191010225515694](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010225515694.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: operation </p>
+<p>![image-20191010225833577](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010225833577.png)</p>
+<p>![image-20191010225902546](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191010225902546.png)</p>
+</li>
+</ul>
+<h1 id="array">3. array</h1>
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>Title:</span><a href="/2019/11/19/Math%20analysis-b/">Mathematical Analysis</a></p>
+  <p><span>Author:</span><a href="/" title=" Benson 的personal blog">Benson</a></p>
+  <p><span>PTime:</span>2019/11/19 - 12:11</p>
+  <p><span>LUpdate:</span>2019/11/22 - 00:11</p>
+  <p><span>Link:</span><a href="/2019/11/19/Math%20analysis-b/" title="Mathematical Analysis">https://steinsgate9.github.io/2019/11/19/Math%20analysis-b/</a>
+    <span class="copy-path"  title="click to copy link"><i class="fa fa-clipboard" data-clipboard-text="https://steinsgate9.github.io/2019/11/19/Math%20analysis-b/"  aria-label="copy done！"></i></span>
+  </p>
+  <p><span>Protocal:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)</a> Please keep the original link and author.</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: 'copy done',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script>
+
+      
+    </div>
+    
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Benson WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Benson Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/calculus/" rel="tag"># calculus</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/19/Probability-b/" rel="next" title="Probability Theory">
+                <i class="fa fa-chevron-left"></i> Probability Theory
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/11/19/Linear%20Algebra-b/" rel="prev" title="Linear Algebra">
+                Linear Algebra <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5dd409321289b452" async = "async" ></script>
+</div>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NzYxNi8yNDExNA"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Benson</p>
+              <p class="site-description motion-element" itemprop="description">Benson's personal blog, including stats, cs, math, among others.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/SteinsGate9" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="bensonuouououow@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-globe"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/bensonuouououo" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.instagram.com/bensonuouououo/" target="_blank" title="Instagram">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Instagram</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.alloyteam.com/nav/" title="Web前端导航" target="_blank">Web前端导航</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.chuangzaoshi.com/code" title="创造狮导航" target="_blank">创造狮导航</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.36zhen.com/t?id=3448" title="前端书籍资料" target="_blank">前端书籍资料</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://e.xitu.io/" title="掘金酱" target="_blank">掘金酱</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.v2ex.com/" title="V2EX" target="_blank">V2EX</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.v2ex.com/" title="印记中文" target="_blank">印记中文</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#real-number-set"><span class="nav-text">1. real number set</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#real-number"><span class="nav-text">1.1. real number</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#range-amp-neibor-amp-bound-of-set"><span class="nav-text">1.2. range &amp; neibor &amp; bound of set</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#function"><span class="nav-text">2. function</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#one-variable-function"><span class="nav-text">2.1. one variable function</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#limit"><span class="nav-text">2.1.1. limit</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#limit-1"><span class="nav-text">2.1.1.1. limit</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#O-amp-o"><span class="nav-text">2.1.1.2. O &amp; o</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#continuous"><span class="nav-text">2.1.2. continuous</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#continuous-1"><span class="nav-text">2.1.2.1. continuous</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#continous-function"><span class="nav-text">2.1.2.2. continous function</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#derivation"><span class="nav-text">2.1.3. derivation</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#def"><span class="nav-text">2.1.3.1. def</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#der-function"><span class="nav-text">2.1.3.2. der function</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#differential"><span class="nav-text">2.1.3.3. differential</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#taylor-expansion"><span class="nav-text">2.1.3.4. taylor expansion</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#integration"><span class="nav-text">2.1.4. integration</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#def-1"><span class="nav-text">2.1.4.1. def</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#non-fixed-integration"><span class="nav-text">2.1.4.2. non fixed integration</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fixed-integration"><span class="nav-text">2.1.4.3. fixed integration</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#abnormal-integration"><span class="nav-text">2.1.4.4. abnormal integration</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#multi-variable-function"><span class="nav-text">2.2. multi variable function</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#limit-2"><span class="nav-text">2.2.1. limit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#continuous-2"><span class="nav-text">2.2.2. continuous</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#derivation-1"><span class="nav-text">2.2.3. derivation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hidden-variable"><span class="nav-text">2.2.4. hidden variable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#integration-1"><span class="nav-text">2.2.5. integration</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#parameter-nomral-integration"><span class="nav-text">2.2.5.1. parameter nomral integration</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#parameter-abnomral-integration"><span class="nav-text">2.2.5.2. parameter abnomral integration</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#def-2"><span class="nav-text">2.2.5.2.1. def</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#gamma-amp-beta-integration"><span class="nav-text">2.2.5.2.2. gamma &amp; beta integration</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#curve-integration"><span class="nav-text">2.2.5.3. curve integration</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#muliple-integrate"><span class="nav-text">2.2.5.4. muliple integrate</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#array"><span class="nav-text">3. array</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Benson</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      total visitors
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      people
+    </span>
+  
+
+  
+    <span class="site-pv">
+      total read
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      times
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
