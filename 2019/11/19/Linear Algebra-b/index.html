@@ -1,0 +1,2566 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.jpg?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.ico?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="algebra," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Linear Algebra Notes">
+<meta name="keywords" content="algebra">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linear Algebra">
+<meta property="og:url" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Linear%20Algebra-b&#x2F;index.html">
+<meta property="og:site_name" content="BeNsoN">
+<meta property="og:description" content="Linear Algebra Notes">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20180421135151223">
+<meta property="og:image" content="file:&#x2F;&#x2F;&#x2F;Users&#x2F;huangbenson&#x2F;Library&#x2F;Application%20Support&#x2F;typora-user-images&#x2F;image-20191024001129768.png?lastModify=1571846806">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94x74cphkj30s403qglx.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94xdm6rnyj31hg04y3z4.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94xehpi7mj31gq04wq3g.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94xfakoqaj31fk042t92.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94xg45fnlj31fq03i0t0.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94xghpolyj31da08gdgq.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94wvt2k9ij30n403cdfy.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94ww2cvv4j30oi0aojsa.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g95xkb5b22j30nv01bq2x.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94w059pnzj30nx01jdfw.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94w0bzz7ij318i022wfj.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94w100j4fj30nz04xjru.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94v8h0fjdj31ag082ta1.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94xxbios1j30sg04mjs0.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94y4hiat4j30r20473yw.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94wmaflvqj31og0bowhd.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94wnyylj9j31j80dkdhv.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94v975nx1j31dc05emxj.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94v9ldnh5j31co0c2wg8.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6gy1g95j1ff44ij31ay0hywh7.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6gy1g95j28k1oij315n0u0n4b.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6gy1g95j2fhq5rj31b40b2q4u.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94wp89msej31ny08sac7.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94wqmojlwj31oe09mtbi.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94wqz5ow0j31o808cgnv.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94wsdfbapj31o40hsgp3.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94yxkns2gj30rl00z0sp.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94y2w86zbj30rc04xdgc.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94y1l6kwdj30s802naa7.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94y267ywlj30p90770ti.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94ykd1j98j30rs03qq30.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94yj3jlexj30r4020jrd.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94yjlrotqj30ry047glx.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94yll0fayj30sd04smxq.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94yvg7cvgj30rb034q2z.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94z1x5mqvj30r8032jrk.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94z21gjupj30rr029glr.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94z6jg6flj30si0c4my8.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94w2h5qsej318s0d0gq2.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6gy1g95i46ygczj318i0e6q7q.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94vww0agmj30mg00n748.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6gy1g95i8f46o4j31b80hutbd.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6gy1g95icq9zpnj31c40mi427.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6gy1g95iu2m5soj30zt0u0n61.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6gy1g95iuajmfej319207caby.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6gy1g95iqdfe8fj318g0a8jtf.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6gy1g95ivqiyz3j31ag0iedi8.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6gy1g95j03lhgcj31au07a3z4.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6gy1g95j0eh3ygj316i0u0q88.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6gy1g95j2uuju1j31bo03ut9c.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6gy1g95j11vb5xj317m04q404.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6gy1g95j3oankaj31bg09q3zn.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6gy1g95j3w6m0pj31cq0n0776.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94xpqnhl6j30ra037t8q.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94xr6tq15j30rm030dg3.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g94xsl8hmpj30q7098mxv.jpg">
+<meta property="og:updated_time" content="2019-11-21T16:47:04.618Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20180421135151223">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: 'FV65T83Q2V',
+      apiKey: '5008cf0478de4ac53102baceee722a4d',
+      indexName: 'steinsgate9',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://SteinsGate9.github.io/2019/11/19/Linear Algebra-b/"/>
+
+
+
+
+
+  <title>Linear Algebra | BeNsoN</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/SteinsGate9" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">BeNsoN</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Live Long, Play Hard.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" target="_blank" rel="noopener" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://SteinsGate9.github.io/2019/11/19/Linear%20Algebra-b/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Benson">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BeNsoN">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Linear Algebra</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-19T12:50:43+08:00">
+                2019-11-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/mathematics/" itemprop="url" rel="index">
+                    <span itemprop="name">mathematics</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">total read
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>times
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  6k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  36
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Linear Algebra Notes</p>
+<a id="more"></a>
+
+
+
+
+
+<h1 id="space">1. space</h1><p><img src="https://img-blog.csdn.net/20180421135151223" alt="这里写图片描述"></p>
+<p>![image-20191031115448662](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191031115448662.png)</p>
+<h2 id="vector-space-（linear-space）">1.1. vector space （linear space）</h2><ul>
+<li><p><strong>Def</strong>: vector space ( V on F ) </p>
+<p>![image-20191024003909748](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024003909748.png)</p>
+<p>![image-20191023102047004](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023102047004.png)</p>
+<p>note:</p>
+<p>![image-20191023102106588](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023102106588.png)</p>
+<p>example</p>
+<p>![image-20191022234903893](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191022234903893.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt;</p>
+<p>![image-20191024004049175](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024004049175.png)</p>
+<p>![image-20191024004054679](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024004054679.png)</p>
+<p>![image-20191024004058073](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024004058073.png)</p>
+<p>![image-20191024004103097](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024004103097.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt;</p>
+<p>![image-20191023102209657](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023102209657.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; </p>
+<p>![image-20191023102225505](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023102225505.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; </p>
+<p>![image-20191023102248815](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023102248815.png)</p>
+</li>
+<li><p><strong>Qua</strong>:  =&gt; </p>
+<p>![image-20191023102259550](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023102259550.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; </p>
+<p>![image-20191023102316263](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023102316263.png)</p>
+</li>
+</ul>
+<h3 id="subspace-amp-sum-直和">1.1.1. subspace &amp; sum (直和)</h3><h4 id="subspace">1.1.1.1. subspace</h4><ul>
+<li><p><strong>Def</strong>: subspace </p>
+<p>![image-20191023102521335](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023102521335.png)</p>
+<ul>
+<li><p><strong>Qua</strong>:  3 conditions =&gt;</p>
+<p>![image-20191023102551072](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023102551072.png)</p>
+<p>note:</p>
+<p>![image-20191023102607609](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023102607609.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>:  =&gt; finite</p>
+<p>![image-20191023141559894](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023141559894.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; dimension </p>
+<p>![image-20191023142315373](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023142315373.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; dimension </p>
+<p>![image-20191023142638118](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023142638118.png)</p>
+</li>
+</ul>
+<h4 id="sum">1.1.1.2. sum</h4><ul>
+<li><p><strong>Def</strong>: sum </p>
+<p>![image-20191023102727693](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023102727693.png)</p>
+</li>
+<li><p><strong>Def</strong>: direct sum </p>
+<p>![image-20191023102813554](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023102813554.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: necc &amp; suff (multiple)</p>
+<p>![image-20191023102857780](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023102857780.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: necc &amp; suff (2 subspace)</p>
+<p>![image-20191023102917864](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023102917864.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: finite =&gt; </p>
+<p>![image-20191023142039071](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023142039071.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: dimentiosn =&gt; </p>
+<p>![image-20191023142702985](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023142702985.png)</p>
+</li>
+</ul>
+<h3 id="linear-combination-amp-span">1.1.2. linear combination &amp; span</h3><ul>
+<li><p><strong>Def</strong>: linear combination</p>
+<p>![image-20191023103126206](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023103126206.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: necc &amp; suff</p>
+<p>![image-20191024000810939](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024000810939.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>:  necc &amp; duff</p>
+<p>![image-20191024000849408](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024000849408.png)</p>
+<ul>
+<li><p><strong>Corollary</strong> </p>
+<p>![image-20191024000915631](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024000915631.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: necc &amp; suff </p>
+<p>![image-20191024001708109](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024001708109.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; rank</p>
+<p>![image-20191024000929135](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024000929135.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: span </p>
+<p>![image-20191023103327168](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023103327168.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: be spanned by </p>
+<p>![image-20191023103435119](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023103435119.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: linear independent </p>
+<p>![image-20191024001014422](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024001014422.png)</p>
+<ul>
+<li><p><strong>Theorm</strong>: necc &amp; suff of dependent</p>
+<p>![image-20191024001044612](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024001044612.png)</p>
+</li>
+<li><p><strong>Theorm</strong>:  rank =&gt; </p>
+<p><img src="file:///Users/huangbenson/Library/Application%20Support/typora-user-images/image-20191024001129768.png?lastModify=1571846806" alt="image-20191024001129768"></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Lemma</strong> :  =&gt; span</p>
+<p>![image-20191023103623639](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023103623639.png)</p>
+</li>
+<li><p><strong>Theorm</strong>: =&gt; lent</p>
+<p>![image-20191023103705555](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023103705555.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: largest indepent group</p>
+<p>![image-20191024001550097](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024001550097.png)</p>
+<p>![image-20191024001611247](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024001611247.png)</p>
+</li>
+</ul>
+<h3 id="basis">1.1.3. basis</h3><h4 id="basic">1.1.3.1. basic</h4><ul>
+<li><p><strong>Def</strong>: basis</p>
+<p>1</p>
+<p>![image-20191023141647215](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023141647215.png)</p>
+<p>2</p>
+<p>![image-20191024004329962](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024004329962.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: necc &amp; suff </p>
+<p>![image-20191023141756114](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023141756114.png)</p>
+</li>
+<li><p><strong>Qua</strong>: every spanned group =&gt;</p>
+<p>![image-20191023141908397](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023141908397.png)</p>
+<ul>
+<li><strong>Corollary</strong>: ![image-20191023141922254](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023141922254.png)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: every independent =&gt; </p>
+<p>![image-20191023141954744](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023141954744.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: every length spanned group =&gt; </p>
+<p>![image-20191023142505807](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023142505807.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: every length independent =&gt; </p>
+<p>![image-20191023142600862](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023142600862.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: dimension </p>
+<p>![image-20191023142237305](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023142237305.png)</p>
+<ul>
+<li><p><strong>Qua</strong>:  finite =&gt;  </p>
+<p>![image-20191023142152889](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023142152889.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>- **Theorm**:  how to compute =&gt; 
+
+  ![image-20191023144812757](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023144812757.png)
+
+  - **Corollary**: 
+
+    ![image-20191023145440236](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023145440236.png)
+
+  - **Corollary**:
+
+    ![image-20191023145604879](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023145604879.png)
+
+  - **Corollary**:
+
+    ![image-20191023145805161](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023145805161.png)
+
+
+
+- **Theorm**: special dimension =&gt; 
+
+  ![image-20191023152452036](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023152452036.png)
+
+
+
+- **Theorm**: relationship with matrix 
+
+  ![image-20191024111021246](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024111021246.png)</code></pre><h4 id="othonomal-basis">1.1.3.2. othonomal basis</h4><ul>
+<li><p><strong>Def</strong>: othonomal </p>
+<p>![image-20191023175702619](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023175702619.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; independent </p>
+<p>![image-20191023175716677](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023175716677.png)</p>
+<p>![image-20191024001930500](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024001930500.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: othonomal basis </p>
+<p>![image-20191023175752449](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023175752449.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; xxx</p>
+<p>![image-20191023175850649](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023175850649.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>:  Gram-Schmdt convert to otho =&gt;</p>
+<p>![image-20191023175955344](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023175955344.png)</p>
+<p>algorithm:</p>
+<p>![image-20191023180107884](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023180107884.png)</p>
+<p>![image-20191023180116744](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023180116744.png)</p>
+</li>
+</ul>
+<h2 id="inner-product-space">1.2. inner product space</h2><h3 id="inner-product">1.2.1. inner product</h3><ul>
+<li><p><strong>Def</strong>: norm </p>
+<p>![image-20191023174004643](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023174004643.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: inner product：The inner product operator measures the similarity between vectors</p>
+<p>![image-20191022222814654](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191022222814654.png)</p>
+<p><strong>Example</strong>: very important, we see f, g as very long vectors(infinite), and &lt;f, g&gt; is basiclly the sum of infinite vectors.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94x74cphkj30s403qglx.jpg" alt></p>
+<p><strong>Example</strong>: very important example here, fourier function </p>
+<p>define infinite basis functions</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94xdm6rnyj31hg04y3z4.jpg" alt></p>
+<p>prove that basis function are orthogonal</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94xehpi7mj31gq04wq3g.jpg" alt></p>
+<p>any f can be written as linear combination of basis functions (proof: using orthogonal)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94xfakoqaj31fk042t92.jpg" alt></p>
+<p>compute coefficient : use orthogonal </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94xg45fnlj31fq03i0t0.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94xghpolyj31da08gdgq.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: necc &amp; suff </p>
+<p>![image-20191023174152998](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023174152998.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; quality</p>
+<p>![image-20191023174729705](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023174729705.png)</p>
+<p>![image-20191023174735166](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023174735166.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; quality </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94wvt2k9ij30n403cdfy.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94ww2cvv4j30oi0aojsa.jpg" alt></p>
+</li>
+</ul>
+<h4 id="1-2-3-norm">1.2.1.1. 1.2.3 norm</h4><ul>
+<li><p><strong>Def</strong>: norm </p>
+<p>![](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023175111480.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: </p>
+<p>![image-20191024001813103](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024001813103.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: cauchy </p>
+<p>![image-20191023175249742](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023175249742.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: Triangle </p>
+<p>![image-20191023175320394](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023175320394.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: Parallelogram</p>
+<p>![image-20191023175413807](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023175413807.png)</p>
+<p>![image-20191023175405320](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023175405320.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: orthogonal </p>
+<p>![image-20191023175148346](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023175148346.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: Pythangorean </p>
+<p>![image-20191023175206410](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023175206410.png)</p>
+</li>
+</ul>
+<h4 id="1-2-4-inner-product-space">1.2.1.2. 1.2.4 inner product space</h4><ul>
+<li><p><strong>Def</strong>: inner product space </p>
+<p>![image-20191023174426327](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023174426327.png)</p>
+<p>example:</p>
+<p>![image-20191022235015626](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191022235015626.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt;</p>
+<p>![image-20191023181945246](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023181945246.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt;</p>
+<p>![image-20191022235101049](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191022235101049.png)    </p>
+</li>
+</ul>
+<h4 id="1-2-5-orthogonal-complement">1.2.1.3. 1.2.5 orthogonal complement</h4><ul>
+<li><p><strong>Def</strong>: orthogonal complement </p>
+<p>![image-20191023180819012](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023180819012.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; </p>
+<p>![image-20191023180842094](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023180842094.png)</p>
+<ul>
+<li><p><strong>Corollary</strong>:</p>
+<p>![image-20191023180856049](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023180856049.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: orthogonal projection </p>
+<p>![image-20191023181046025](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023181046025.png)</p>
+<ul>
+<li><p><strong>Qua</strong>:  =&gt; ![image-20191023181114318](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023181114318.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt;</p>
+<p>![image-20191023181130021](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023181130021.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="1-2-6-linear-functional-amp-adjoint">1.2.1.4. 1.2.6 linear functional &amp; adjoint</h4><ul>
+<li><p><strong>Def</strong>: linaer funcitonal </p>
+<p>![image-20191023181354498](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023181354498.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; </p>
+<p>![image-20191023181407709](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023181407709.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: adjoint </p>
+<p>![image-20191023181433210](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023181433210.png)</p>
+<ul>
+<li><p><strong>Qua</strong>:  =&gt; </p>
+<p>![image-20191023181506409](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023181506409.png)</p>
+<p>![image-20191023181512726](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023181512726.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; </p>
+<p>![image-20191023181530039](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023181530039.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt;??</p>
+<p>![image-20191023181600264](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023181600264.png)</p>
+</li>
+</ul>
+<h4 id="1-2-7-self-adjoint-function-amp-normal-function">1.2.1.5. 1.2.7 self-adjoint function &amp; normal function</h4><h5 id="1-2-7-1-basic">1.2.1.5.1. 1.2.7.1 basic</h5><ul>
+<li><p><strong>Def</strong>: self-adjoint function </p>
+<p>![image-20191023181815573](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023181815573.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: necc &amp; suff </p>
+<p>![image-20191023182040531](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023182040531.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>:  =&gt; egenvalue </p>
+<p>![image-20191023181833455](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023181833455.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; T = 0 </p>
+<p>![image-20191023182123448](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023182123448.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: normal function </p>
+<p>![image-20191023182239981](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023182239981.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: necc &amp; suff </p>
+<p>![image-20191023182249008](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023182249008.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>:  =&gt; egenvalue </p>
+<p>![image-20191023182332394](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023182332394.png)</p>
+<ul>
+<li><p><strong>Corollary</strong>: </p>
+<p>![image-20191023182403950](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023182403950.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="1-2-7-2-complex-space">1.2.1.5.2. 1.2.7.2 complex space</h5><ul>
+<li><p><strong>Theorm</strong>: complex spectral theorm, necc &amp; duff</p>
+<p>![image-20191023182729404](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023182729404.png)</p>
+<ul>
+<li><p><strong>Corollary</strong>: =&gt; invertible </p>
+<p>![image-20191023182820180](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023182820180.png)</p>
+</li>
+<li><p><strong>Corollary</strong>: =&gt; egvalue </p>
+<p>![image-20191023182854670](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023182854670.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="1-2-7-3-real-space">1.2.1.5.3. 1.2.7.3 real space</h5><ul>
+<li><p><strong>Theorm</strong>: real special thoemr, necc &amp; suff </p>
+<p>![image-20191023182913431](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023182913431.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; direct sum </p>
+<p>![image-20191023182950405](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023182950405.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>:  necc &amp; duff of [norm but not self]</p>
+<p>![image-20191023183226537](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023183226537.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: necc &amp; suff of [norm]</p>
+<p>![image-20191023183419646](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023183419646.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: necc &amp; suff of [norm]</p>
+<p>![image-20191023191342416](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023191342416.png)</p>
+</li>
+</ul>
+<h5 id="1-2-7-4-positive-function">1.2.1.5.4. 1.2.7.4 positive function</h5><ul>
+<li><p><strong>Def</strong>:positive function </p>
+<p>![image-20191023191528977](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023191528977.png)</p>
+<ul>
+<li><p><strong>Theorm</strong>: necc &amp; suff </p>
+<p>![image-20191023191942695](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023191942695.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: =&gt; root </p>
+<p>![image-20191023192022920](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023192022920.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: square root </p>
+<p>![image-20191023191925021](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023191925021.png)</p>
+</li>
+</ul>
+<h5 id="1-2-7-5-isometry-function">1.2.1.5.5. 1.2.7.5 isometry function</h5><ul>
+<li><p><strong>Def</strong>: isometry</p>
+<p>![image-20191023192118177](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023192118177.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: necc &amp; suff </p>
+<p>![image-20191023192131994](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023192131994.png)</p>
+<p>![image-20191023192139904](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023192139904.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: necc &amp; suff </p>
+<p>![image-20191023192217263](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023192217263.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: necc &amp; suff </p>
+<p>![image-20191023192236845](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023192236845.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: polar decomposition</p>
+<p>![image-20191023192425574](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023192425574.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: singular value </p>
+<p>![image-20191023192515019](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023192515019.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: singular value decomposition </p>
+<p>![image-20191023192542137](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023192542137.png)</p>
+</li>
+</ul>
+<h3 id="distance-space（度量空间）">1.2.2. distance space（度量空间）</h3><ul>
+<li><p><strong>Def</strong>: distance space </p>
+<p>![image-20191022235036543](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191022235036543.png)</p>
+</li>
+</ul>
+<h3 id="separable">1.2.3. separable</h3><ul>
+<li><p><strong>Def</strong>: separable</p>
+<p>![image-20191112111239008](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191112111239008.png)</p>
+<ul>
+<li><p><strong>Lemma</strong>: separa =&gt; Borel = Borel0</p>
+<p>![image-20191112111345050](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191112111345050.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: Borel set </p>
+<p>![image-20191112111252436](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191112111252436.png)</p>
+<ul>
+<li><p><strong>Def</strong>: Borel 0 set </p>
+<p>![image-20191112111314067](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191112111314067.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: measurable map </p>
+<p>![image-20191112111503582](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191112111503582.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Lemma</strong>: 可测的充要条件</p>
+<p>![image-20191112111612905](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191112111612905.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: RCLL function </p>
+<p>![image-20191112111712998](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191112111712998.png)</p>
+<p>![image-20191112111725175](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191112111725175.png)</p>
+<p>note:</p>
+<p>![image-20191112111743261](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191112111743261.png)</p>
+</li>
+</ul>
+<ul>
+<li>![image-20191112111827978](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191112111827978.png)</li>
+</ul>
+<h2 id="L2-space">1.3. L2 space</h2><ul>
+<li><p><strong>Def</strong>:  (2-4)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xkb5b22j30nv01bq2x.jpg" alt></p>
+</li>
+</ul>
+<h2 id="hilbert-space">1.4. hilbert space</h2><ul>
+<li><p><strong>Def</strong>: hilbert space</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94w059pnzj30nx01jdfw.jpg" alt></p>
+<ul>
+<li><p><strong>Def</strong>: complete space</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94w0bzz7ij318i022wfj.jpg" alt></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>  <strong>Example</strong>: of hibert space </p>
+<p>  <img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94w100j4fj30nz04xjru.jpg" alt></p>
+<h3 id="kernel-1-8-amp-web">1.4.1. kernel (1-8 &amp; web)</h3><ul>
+<li><p><strong>Def</strong>: kernel (1-8)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94v8h0fjdj31ag082ta1.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: kernel (web)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94xxbios1j30sg04mjs0.jpg" alt></p>
+<p><strong>Example</strong>:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94y4hiat4j30r20473yw.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: kernel</p>
+<p>defiinition 3: web </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94wmaflvqj31og0bowhd.jpg" alt></p>
+<p><strong>Example</strong>: of  $\phi$ </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94wnyylj9j31j80dkdhv.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>:  =&gt; quality of kernels</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94v975nx1j31dc05emxj.jpg" alt></p>
+<p><strong>Proof</strong>:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94v9ldnh5j31co0c2wg8.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Operation</strong>: (1-9), below are all kernels.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g95j1ff44ij31ay0hywh7.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g95j28k1oij315n0u0n4b.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g95j2fhq5rj31b40b2q4u.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Operation</strong>: (web)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94wp89msej31ny08sac7.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94wqmojlwj31oe09mtbi.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94wqz5ow0j31o808cgnv.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94wsdfbapj31o40hsgp3.jpg" alt></p>
+</li>
+</ul>
+<h3 id="reproducing-kernel-hilbert-space-1-8-amp-web">1.4.2. reproducing kernel hilbert space (1-8 &amp; web)</h3><ul>
+<li><p><strong>Def</strong>: reproducing kernel hilbert space ( web )</p>
+<p>rkhp is a hilbert space with reproducing property, which the basis eigen function form the basis of it . Given kernel function-X space, we can get eigen basis-rkhp( - means that it is one on one); it may be confusing that hilbert space can be function space / vector space , but here we only consider function space.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94yxkns2gj30rl00z0sp.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorem</strong>: Mercer theorem(web), kernel related to X space, eigenfunc/vec related to L(x) function space. kernel function can be expressed in combinition of eigen functions.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94y2w86zbj30rc04xdgc.jpg" alt="image-20191120235659269"></p>
+<p><strong>Proof</strong>:</p>
+<p>from eigen value, get the following (see K(x,y) as infinite matrix, x implies column, y is row.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94y1l6kwdj30s802naa7.jpg" alt></p>
+<p>prove orthogonal, them we can use eigen decomp to prove the theorem.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94y267ywlj30p90770ti.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: reproducing property (web)</p>
+<p>for this type of inner product, we have reproducing property</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94ykd1j98j30rs03qq30.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94yj3jlexj30r4020jrd.jpg" alt></p>
+<p><strong>Proof</strong>:</p>
+<p>present f as combinition of eig functions</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94yjlrotqj30ry047glx.jpg" alt="s"></p>
+<p>from mercy theorem, we get (there should be a T at the end)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94yll0fayj30sd04smxq.jpg" alt></p>
+<p>therefore, from definition, we get</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94yvg7cvgj30rb034q2z.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: kernel trick( web)</p>
+<p>now that we have get kernel-X and eigen function-rkhp, we define a rkhp-mapping: $\phi(x)$ is a function X-&gt; H, K(x, .) may seem confusing but it is a function from X-&gt; H as well,  the dot means that the place </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94z1x5mqvj30r8032jrk.jpg" alt></p>
+<p>then we get </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94z21gjupj30rr029glr.jpg" alt></p>
+<p><strong>Example</strong>: in this example,  $\phi(x)$ is the coordinate of feature space(which is a function hilbert space), there should be a H at the end of $(x1, x2, x1x2)^{T}_{H}$;  the function space basis functions are:$\psi _{1}(.) = e1(.)$, $\psi _{2}(.)=e1(.)$ , $\psi3(.)=e1(.)*e2(.)$, but we do not need to know the exact hilbert space it is projected to in most cases.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94z6jg6flj30si0c4my8.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: reproducing kernel hilbert space (1-8)</p>
+<p>this is the same. rkhs is here have to be a function space(X-&gt;R), which every element satisfy reproducing property.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94w2h5qsej318s0d0gq2.jpg" alt></p>
+</li>
+<li><p><strong>Def</strong>: reproducing kernel hilbert space (1-8)</p>
+<p>same thing .</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g95i46ygczj318i0e6q7q.jpg" alt></p>
+</li>
+<li><p><strong>Def</strong>: kernel trick (1-8)</p>
+<p> kernel(x, y) = &lt;$\phi(x)$, $\phi(y)$ &gt;, very important stuff here!!</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94vww0agmj30mg00n748.jpg" alt></p>
+<p><strong>Proof</strong>: </p>
+<p>the thing here is different from web version. we change hilbert space basis function to k(., xi), $i=1…n$, I imagine that this is merely a change of basis. $\phi(x):X\to R ^{X}( R^X\text{  means function from X to R} )$</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g95i8f46o4j31b80hutbd.jpg" alt></p>
+</li>
+<li><p><strong>Theorem</strong>:  Mercer theorem(1-8)</p>
+<p><strong>Usage</strong>: we can get something more from this version. we can approximate $\phi$ by a finite dimensional map. </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g95icq9zpnj31c40mi427.jpg" alt></p>
+<p><strong>Proof</strong>: none</p>
+<p><strong>Note</strong>: 这个是mercy定理的直观证明：</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g95iu2m5soj30zt0u0n61.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g95iuajmfej319207caby.jpg" alt></p>
+<p><strong>Example</strong>: SVM</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g95iqdfe8fj318g0a8jtf.jpg" alt></p>
+</li>
+</ul>
+<h3 id="representing-therom-1-9">1.4.3. representing therom (1-9)</h3><ul>
+<li><p><strong>Theorm</strong>: representer, which shows that even in an infinite dimensional reproducing kernel Hilbert space, the minimizer f∗ can be repre- sented as an (at most) n-dimensional linear combination of kernel functions. </p>
+<p><strong>Usage</strong>: We can generalize this and prove a simple but powerful theorem called the “Representer Theorem,” which shows that even in an infinite dimensional reproducing kernel Hilbert space, the minimizer f∗ can be repre- sented as an (at most) n-dimensional linear combination of kernel functions. </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g95ivqiyz3j31ag0iedi8.jpg" alt></p>
+<p><strong>Proof</strong>:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g95j03lhgcj31au07a3z4.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g95j0eh3ygj316i0u0q88.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: translation-invariant kernel</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g95j2uuju1j31bo03ut9c.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g95j11vb5xj317m04q404.jpg" alt></p>
+<p><strong>Example</strong>: fourier expansion, we define a invariant k(x), then we see what the original kernel is.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g95j3oankaj31bg09q3zn.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g95j3w6m0pj31cq0n0776.jpg" alt></p>
+</li>
+</ul>
+<h1 id="linear-map">2. linear map</h1><h2 id="linear-map-1">2.1. linear map</h2><ul>
+<li><p><strong>Def</strong>: linear map </p>
+<p>1</p>
+<p>![image-20191023142936484](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023142936484.png)</p>
+<p>2</p>
+<p>![image-20191024101425114](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024101425114.png)</p>
+</li>
+</ul>
+<ul>
+<li><h4 id="Qua-gt">2.1.0.1. Qua: =&gt;</h4><p>![image-20191023143815155](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023143815155.png)</p>
+<p>![image-20191024101457452](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024101457452.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; dimension </p>
+<p>![image-20191023152428151](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023152428151.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: injective, （单射，两个变量不能得到同一个结果）</p>
+<p>![image-20191023144344834](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023144344834.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: surjective ， （漫射，值域被完全覆盖）</p>
+<p>![image-20191023144540493](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023144540493.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: orthotal map </p>
+<p>![image-20191024002128663](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024002128663.png)</p>
+</li>
+</ul>
+<h2 id="null-space-amp-range">2.2. null space &amp; range</h2><h3 id="null-space">2.2.1. null space</h3><ul>
+<li><p><strong>Def</strong>: null space </p>
+<p>![image-20191023144121785](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023144121785.png</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>:  necc &amp; suff </p>
+<p>![image-20191023144410730](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023144410730.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>:  =&gt; subspace </p>
+<p>![image-20191023144310815](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023144310815.png)</p>
+</li>
+</ul>
+<h3 id="range-space">2.2.2. range space</h3><ul>
+<li><p><strong>Def</strong>: range space </p>
+<p>![image-20191023144443763](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023144443763.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; subspace </p>
+<p>![image-20191023144459866](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023144459866.png)</p>
+</li>
+</ul>
+<h2 id="matrix">2.3. matrix</h2><h3 id="basic-1">2.3.1. basic</h3><ul>
+<li><p><strong>Def</strong>: from V(n) -&gt; W(m) = m x n </p>
+<p>![image-20191023150304929](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023150304929.png)</p>
+<p>![image-20191023150310102](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023150310102.png)</p>
+<ul>
+<li><p><strong>Def</strong>: matrix of particular vector （坐标）</p>
+<p>![image-20191023151241830](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023151241830.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: 变基 =〉 基与基的关系</p>
+<p>![image-20191024100740416](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024100740416.png)</p>
+<p>![image-20191024100746147](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024100746147.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>:  变基 =》坐标与坐标的关系</p>
+<p>![image-20191024100824733](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024100824733.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: 变换 =》 坐标与坐标的关系</p>
+<p>![image-20191024102230376](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024102230376.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: 变换 + 换基 =》坐标与坐标的关系</p>
+<p>![image-20191023151312841](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023151312841.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: 变换+变基 =》 各种矩阵的关系</p>
+<p>![image-20191024101716755](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024101716755.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: operation </p>
+<p>![image-20191023151112948](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023151112948.png)</p>
+<p>![image-20191023151117740](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023151117740.png)</p>
+<p>![image-20191023151131065](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023151131065.png)</p>
+<p>![image-20191023220654923](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023220654923.png)</p>
+</li>
+</ul>
+<h3 id="invertible">2.3.2. invertible</h3><ul>
+<li><p><strong>Def</strong>: invertible </p>
+<p>![image-20191023151746044](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023151746044.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: necc &amp; suff </p>
+<p>![image-20191023151822313](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023151822313.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: necc &amp; suff </p>
+<p>![image-20191023152522295](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023152522295.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: necc &amp; suff </p>
+<p>![image-20191023225111453](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023225111453.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; only one </p>
+<p>![image-20191023151809290](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023151809290.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>:  special =&gt;</p>
+<p>![image-20191023152328839](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023152328839.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: isnorphic </p>
+<p>![image-20191023151928129](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023151928129.png)</p>
+<ul>
+<li><p><strong>Def</strong>: necc &amp; suff </p>
+<p>![image-20191023151951464](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023151951464.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: operation </p>
+<p>![image-20191023235246552](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023235246552.png)</p>
+<p>![image-20191023235301940](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023235301940.png)</p>
+</li>
+</ul>
+<h3 id="change-of-basis">2.3.3. change of basis</h3><ul>
+<li><p>Theorm**: change from u to v (with in V) =&gt; </p>
+<p>![image-20191023215725969](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023215725969.png)</p>
+</li>
+<li><p><strong>Theorm</strong>: change from u to v (with in V)=&gt; </p>
+<p>![image-20191023220121071](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023220121071.png)</p>
+</li>
+</ul>
+<h3 id="trace">2.3.4. trace</h3><ul>
+<li><p><strong>Def</strong>: trace of function </p>
+<p>![image-20191023224154233](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023224154233.png)</p>
+<ul>
+<li><p><strong>Qua</strong>:  =&gt; sum of egvalue </p>
+<p>![image-20191023224408895](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023224408895.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: trace of function = trace of matrix </p>
+<p>![image-20191023224609046](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023224609046.png)</p>
+<ul>
+<li><p><strong>Corollary</strong>: </p>
+<p>![image-20191023224449612](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023224449612.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: operation</p>
+<p>![image-20191023223724603](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023223724603.png)</p>
+<ul>
+<li><p><strong>Corollary</strong>:</p>
+<p>![image-20191023223923649](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023223923649.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="determinant">2.3.5. determinant</h3><ul>
+<li><p><strong>Def</strong>: d of function</p>
+<p>![image-20191023224931908](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023224931908.png)</p>
+<p>d of matrix</p>
+<p>![image-20191023225623894](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023225623894.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; inver</p>
+<p>![image-20191023225049390](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023225049390.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; same </p>
+<p>![image-20191023225917371](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023225917371.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Lemma</strong>: </p>
+<p>![image-20191023225240076](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023225240076.png)</p>
+</li>
+<li><p><strong>Theorm</strong>: =&gt; p(T)</p>
+<p>![image-20191023225323409](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023225323409.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: Karamo =&gt; equation </p>
+<p>![image-20191023234243469](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023234243469.png)</p>
+<p>![image-20191023234315224](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023234315224.png)</p>
+<ul>
+<li><p><strong>Corollary</strong> </p>
+<p>![image-20191023234323234](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023234323234.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: operation </p>
+<p>![image-20191023233454846](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023233454846.png)</p>
+<p>![image-20191023233522789](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023233522789.png)</p>
+<p>![image-20191023233536844](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023233536844.png)</p>
+<p>![image-20191023233542981](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023233542981.png)</p>
+<p>![image-20191023233548285](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023233548285.png)</p>
+<p>![image-20191023235125721](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023235125721.png)</p>
+</li>
+</ul>
+<pre><code>![image-20191023225704207](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023225704207.png)
+
+![image-20191023225713199](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023225713199.png)
+
+![image-20191023225720796](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023225720796.png)
+
+![image-20191023225817074](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023225817074.png)
+
+- **Corollary**
+
+  ![image-20191023225830982](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023225830982.png)
+
+- **Corollary**
+
+  ![image-20191023225932703](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023225932703.png)</code></pre><h3 id="rank">2.3.6. rank</h3><ul>
+<li><p><strong>Def</strong>: k </p>
+<p>![image-20191024000252071](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024000252071.png)</p>
+</li>
+<li><p><strong>Def</strong>: rank </p>
+<p>![image-20191024000303080](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024000303080.png)</p>
+<ul>
+<li><p><strong>Theorm</strong>: rank = rank</p>
+<p>![image-20191024001348584](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024001348584.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; AX=0</p>
+<p>![image-20191024000551555](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024000551555.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; AX=bequatins</p>
+<p>![image-20191024000513542](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024000513542.png)</p>
+<p>![image-20191024000556541](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024000556541.png)</p>
+</li>
+<li><p>![image-20191024000604901](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024000604901.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>:  operations</p>
+<p>![image-20191024000417577](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024000417577.png)</p>
+</li>
+</ul>
+<h3 id="variations-amp-relations">2.3.7. variations &amp; relations</h3><h4 id="equivalence">2.3.7.1. equivalence</h4><ul>
+<li><p><strong>Def</strong>: variations </p>
+<p>![image-20191023235908835](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023235908835.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: equivalence</p>
+<p>![image-20191023235918534](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023235918534.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: necc &amp; suff </p>
+<p>![image-20191023235958528](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023235958528.png)</p>
+<ul>
+<li><p><strong>Corollary</strong> </p>
+<p>![image-20191024000050279](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024000050279.png)</p>
+<p>![image-20191024000054070](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024000054070.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>:  =&gt; rank</p>
+<p>![image-20191024000344961](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024000344961.png)</p>
+</li>
+</ul>
+<h4 id="similar">2.3.7.2. similar</h4><ul>
+<li><p><strong>Def</strong>: similar</p>
+<p>![image-20191024002548382](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024002548382.png)</p>
+<ul>
+<li><p><strong>Theorm</strong>: necc &amp; suff of similar to diag</p>
+<p>![image-20191024002817875](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024002817875.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; same egvalue </p>
+<p>![image-20191024002303415](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024002303415.png)</p>
+</li>
+</ul>
+<h4 id="congruent">2.3.7.3. congruent</h4><ul>
+<li><p><strong>Def</strong>: 二次型 &amp; 标准型</p>
+<p>![image-20191024003258258](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024003258258.png)</p>
+<p>![image-20191024003316942](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024003316942.png)</p>
+<p>![image-20191024003330526](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024003330526.png)</p>
+<ul>
+<li><p><strong>Theorm</strong>: same way=&gt;</p>
+<p>![image-20191024003556125](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024003556125.png)</p>
+</li>
+<li><p><strong>Theorm</strong>:  =&gt; xxx</p>
+<p>![image-20191024003646378](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024003646378.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: congruent</p>
+<p>![image-20191024003534554](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024003534554.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: positive </p>
+<p>![image-20191024003708657](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024003708657.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: necc &amp; suff </p>
+<p>![image-20191024003722116](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024003722116.png)</p>
+<p>![image-20191024003728250](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024003728250.png)</p>
+<p>![image-20191024003747138](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024003747138.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="orthotal">2.3.8. orthotal</h3><ul>
+<li><p><strong>Def</strong>: </p>
+<p>![image-20191024002029721](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024002029721.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: necc &amp; suff </p>
+<p>![image-20191024003728250](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024003728250.png)</p>
+<p>![image-20191024003747138](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024003747138.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>:  =&gt; </p>
+<p>![image-20191024002046171](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024002046171.png)</p>
+</li>
+</ul>
+<h3 id="symmetry">2.3.9. symmetry</h3><ul>
+<li><p><strong>Theorm</strong>:  =&gt; egvalue </p>
+<p>![image-20191024003005634](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024003005634.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: =&gt; ortho</p>
+<p>![image-20191024003020997](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024003020997.png)</p>
+</li>
+<li><p><strong>Theorm</strong>: =&gt; decomposition </p>
+<p>![image-20191024003052696](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024003052696.png)</p>
+<ul>
+<li><p><strong>Corollary</strong> </p>
+<p>![image-20191024003114153](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024003114153.png)</p>
+</li>
+<li><p>algorithm </p>
+<p>![image-20191024003131337](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024003131337.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="eigenvalue">2.4. eigenvalue</h2><h3 id="eigenvalue-1">2.4.1. eigenvalue</h3><ul>
+<li><p><strong>Def</strong>: invariant </p>
+<p>![image-20191023153809265](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023153809265.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: eigenvalue (就是寻找1维不变子空间，一个子空间对应一个eigvector和valu</p>
+<p>![image-20191023154101237](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023154101237.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: necc &amp; suff </p>
+<p>![image-20191023154453735](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023154453735.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; same matrix and function </p>
+<p>![image-20191023230444061](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023230444061.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; independent </p>
+<p>![image-20191023154708499](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023154708499.png)</p>
+<p>![image-20191024002233755](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024002233755.png)</p>
+<ul>
+<li><p><strong>Corollary</strong>: </p>
+<p>![image-20191023154725666](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023154725666.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; every one has </p>
+<p>![image-20191023161711463](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023161711463.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>:  operation </p>
+<p>![image-20191024002219823](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191024002219823.png)</p>
+</li>
+</ul>
+<h3 id="upper-matrix">2.4.2. upper matrix</h3><ul>
+<li><p><strong>Def</strong>:…</p>
+<ul>
+<li><p><strong>Theorm</strong>: necc &amp; duff</p>
+<p>![image-20191023160012237](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023160012237.png)</p>
+</li>
+<li><p><strong>Theorm</strong>: =&gt; inverisible </p>
+<p>![image-20191023160503300](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023160503300.png)</p>
+</li>
+<li><p><strong>Theorm</strong>: =&gt; eigvalue </p>
+<p>![image-20191023160549776](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023160549776.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: =&gt; otho basis</p>
+<p>![image-20191023180523005](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023180523005.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: some basis =&gt;</p>
+<p>![image-20191023160303869](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023160303869.png)</p>
+</li>
+</ul>
+<h3 id="diagonal-matrix">2.4.3. diagonal matrix</h3><ul>
+<li><p><strong>Def</strong>:…</p>
+<ul>
+<li><p><strong>Qua</strong>: necc &amp; suff </p>
+<p>![image-20191023161917319](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023161917319.png)</p>
+<p>![image-20191023161922993](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023161922993.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: necc &amp; suff </p>
+<p>![image-20191023162142896](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023162142896.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: necc &amp; suff </p>
+<p>![image-20191023162205412](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023162205412.png)</p>
+</li>
+</ul>
+<ul>
+<li><h3 id="same-egenvalue">2.4.4. same egenvalue</h3></li>
+</ul>
+<h4 id="generalized-egvalue">2.4.4.1. generalized egvalue</h4><ul>
+<li><p><strong>Def</strong>: generalized egvalue </p>
+<p>![image-20191023192715142](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023192715142.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: about null space</p>
+<p>![image-20191023192833006](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023192833006.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: about null space </p>
+<p>![image-20191023192850297](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023192850297.png)</p>
+<ul>
+<li><p><strong>Corollary</strong> : egvalue =&gt;</p>
+<p>![image-20191023192917938](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023192917938.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: about range space </p>
+<p>![image-20191023193057817](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023193057817.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: nilpotent </p>
+<p>![image-20191023192950512](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023192950512.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; </p>
+<p>![image-20191023193002181](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023193002181.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="characteristic-polynomial">2.4.4.2. characteristic polynomial</h4><ul>
+<li><p><strong>Theorm</strong>: important! </p>
+<p>![image-20191023194835644](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023194835644.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: multiplicity</p>
+<p>![image-20191023194926151](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023194926151.png)</p>
+<ul>
+<li><p><strong>Theorm</strong>: =&gt; sum</p>
+<p>![image-20191023195654549](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023195654549.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: characteristic polynomial qt </p>
+<p>![image-20191023195934995](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023195934995.png)</p>
+<ul>
+<li><p><strong>Theorm</strong>:  =&gt; qt= 0 </p>
+<p>![image-20191023200145514](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023200145514.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="decomposition">2.4.4.3. decomposition</h4><ul>
+<li><p><strong>Theorm</strong>: </p>
+<p>![image-20191023211622051](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023211622051.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: princliple structure decomposition </p>
+<p>![image-20191023211649256](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023211649256.png)</p>
+<ul>
+<li><p><strong>Corollary</strong>:</p>
+<p>![image-20191023211710390](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023211710390.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Lemma</strong>:</p>
+<p>![image-20191023211754732](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023211754732.png)</p>
+</li>
+<li><p><strong>Theorm</strong>:  important </p>
+<p>![image-20191023211808107](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023211808107.png)</p>
+</li>
+<li><p>square root ( application of 2.4.7.1)</p>
+</li>
+<li><p><strong>Lemma</strong>:</p>
+<p>![image-20191023212333823](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023212333823.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: inver =&gt; square root </p>
+<p>![image-20191023212356816](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023212356816.png)</p>
+</li>
+</ul>
+<h4 id="minimal-polynomial">2.4.4.4. minimal polynomial</h4><ul>
+<li><p><strong>Def</strong>: </p>
+<p>![image-20191023212941469](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023212941469.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>:  =&gt; 包含q(T)</p>
+<p>![image-20191023212951541](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023212951541.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: =&gt; egvalue （和特征多相似根相同，但是重数不同；特征多项式重根数对应特征值重数，极小多项式对应最大jordan块的介数）（所以我们可以认为一个特征值重数= 特征多项式重数 = jordan块 + jordan块 ，其中最大Jordan块介数 = 极小多项式重数）</p>
+<p>![image-20191023221400906](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023221400906.png)</p>
+</li>
+</ul>
+<p>  ![image-20191023213023765](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023213023765.png)</p>
+<h4 id="jordan-basis">2.4.4.5. jordan basis</h4><ul>
+<li><p><strong>Lemma</strong> </p>
+<p>![image-20191023214247543](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023214247543.png)</p>
+</li>
+<li><p><strong>Def</strong>: jordan basis</p>
+<p>![image-20191023214346988](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023214346988.png)</p>
+<ul>
+<li><p><strong>Theorm</strong>: any =&gt;</p>
+<p>![e](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023214359642.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="real-vector-space">2.4.5. real vector space</h3><h4 id="basic-2">2.4.5.1. basic</h4><ul>
+<li><p><strong>Theorm</strong>: </p>
+<p>![image-20191023162512701](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023162512701.png)</p>
+</li>
+<li><p><strong>Theorm</strong>: </p>
+<p>![image-20191023162710253](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023162710253.png)</p>
+</li>
+</ul>
+<h4 id="block-upper-matrix">2.4.5.2. block upper matrix</h4><ul>
+<li><p><strong>Def</strong>:</p>
+<ul>
+<li><p><strong>Theorm</strong>: </p>
+<p>![image-20191023231404399](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023231404399.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="pt">2.4.5.3. pt</h4><ul>
+<li><p><strong>Theorm</strong>: </p>
+<p>![image-20191023232544475](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023232544475.png)</p>
+</li>
+<li><p>![image-20191023232805805](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023232805805.png)</p>
+</li>
+<li><p><strong>Def</strong>:</p>
+<p>![image-20191023232826990](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023232826990.png)</p>
+<ul>
+<li><p><strong>Theorm</strong>: </p>
+<p>![image-20191023232836201](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023232836201.png)</p>
+</li>
+<li><p>![image-20191023232844927](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023232844927.png)</p>
+</li>
+<li><p>![image-20191023232850904](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023232850904.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="eigen-decomposition-web">2.4.6. eigen decomposition (web)</h3><ul>
+<li><p><strong>Def</strong>: eigen decomposition </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94xpqnhl6j30ra037t8q.jpg" alt></p>
+<p>x1, x2 are orthogonal </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94xr6tq15j30rm030dg3.jpg" alt></p>
+<p>decomposition, no proof</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g94xsl8hmpj30q7098mxv.jpg" alt></p>
+</li>
+</ul>
+<h1 id="multi-function">3. multi function</h1><ul>
+<li><p><strong>Def</strong>: 多项式</p>
+<p>![image-20191023152716010](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023152716010.png)</p>
+</li>
+</ul>
+<h2 id="root">3.1. root</h2><ul>
+<li><p><strong>Def</strong>: 次数</p>
+<p>![image-20191023152745970](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023152745970.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: root </p>
+<p>![image-20191023152800355](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023152800355.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: necc &amp; suff </p>
+<p>![image-20191023152811757](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023152811757.png)</p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; number of roots </p>
+<p>![image-20191023152832703](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023152832703.png)</p>
+<ul>
+<li><p><strong>Corollary</strong>: </p>
+<p>![image-20191023152845165](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023152845165.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: division algorithm </p>
+<p>![image-20191023152913816](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023152913816.png)</p>
+</li>
+</ul>
+<h2 id="complex-coefficient">3.2. complex coefficient</h2><ul>
+<li><p><strong>Theorm</strong>: fundamental theorm of algebra </p>
+<p>![image-20191023153003005](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023153003005.png)</p>
+<ul>
+<li><p><strong>Corollary</strong>: </p>
+<p>![image-20191023153014419](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023153014419.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="real-coefficient">3.3. real coefficient</h2><ul>
+<li><p><strong>Theorm</strong>:  =&gt; root </p>
+<p>![image-20191023153300761](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023153300761.png)</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Lemma</strong>: to prove the below </p>
+<p>![image-20191023153338022](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023153338022.png)</p>
+</li>
+<li><p><strong>Theorm</strong>: 分解定理</p>
+<p>![image-20191023153401382](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023153401382.png)</p>
+</li>
+</ul>
+<h2 id="multi-linear-function">3.4. multi linear function</h2><ul>
+<li><p><strong>Def</strong>: 多项式算子</p>
+<p>![image-20191023154902206](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023154902206.png)</p>
+<ul>
+<li><p><strong>Qua</strong>: operation </p>
+<p>![image-20191023154928958](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023154928958.png)</p>
+<p>![image-20191023154950894](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023154950894.png)</p>
+<p>![image-20191023155013645](/Users/huangbenson/Library/Application Support/typora-user-images/image-20191023155013645.png)</p>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>Title:</span><a href="/2019/11/19/Linear%20Algebra-b/">Linear Algebra</a></p>
+  <p><span>Author:</span><a href="/" title=" Benson 的personal blog">Benson</a></p>
+  <p><span>PTime:</span>2019/11/19 - 12:11</p>
+  <p><span>LUpdate:</span>2019/11/22 - 00:11</p>
+  <p><span>Link:</span><a href="/2019/11/19/Linear%20Algebra-b/" title="Linear Algebra">https://steinsgate9.github.io/2019/11/19/Linear%20Algebra-b/</a>
+    <span class="copy-path"  title="click to copy link"><i class="fa fa-clipboard" data-clipboard-text="https://steinsgate9.github.io/2019/11/19/Linear%20Algebra-b/"  aria-label="copy done！"></i></span>
+  </p>
+  <p><span>Protocal:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)</a> Please keep the original link and author.</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: 'copy done',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script>
+
+      
+    </div>
+    
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Benson WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Benson Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/algebra/" rel="tag"># algebra</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/11/19/c++-b/" rel="prev" title="C++">
+                C++ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5dd409321289b452" async = "async" ></script>
+</div>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NzYxNi8yNDExNA"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Benson</p>
+              <p class="site-description motion-element" itemprop="description">Benson's personal blog, including stats, cs, math, among others.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/SteinsGate9" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="bensonuouououow@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-globe"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/bensonuouououo" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.instagram.com/bensonuouououo/" target="_blank" title="Instagram">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Instagram</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.alloyteam.com/nav/" title="Web前端导航" target="_blank">Web前端导航</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.chuangzaoshi.com/code" title="创造狮导航" target="_blank">创造狮导航</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.36zhen.com/t?id=3448" title="前端书籍资料" target="_blank">前端书籍资料</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://e.xitu.io/" title="掘金酱" target="_blank">掘金酱</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.v2ex.com/" title="V2EX" target="_blank">V2EX</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.v2ex.com/" title="印记中文" target="_blank">印记中文</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#space"><span class="nav-text">1. space</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#vector-space-（linear-space）"><span class="nav-text">1.1. vector space （linear space）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#subspace-amp-sum-直和"><span class="nav-text">1.1.1. subspace &amp; sum (直和)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#subspace"><span class="nav-text">1.1.1.1. subspace</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sum"><span class="nav-text">1.1.1.2. sum</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linear-combination-amp-span"><span class="nav-text">1.1.2. linear combination &amp; span</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#basis"><span class="nav-text">1.1.3. basis</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#basic"><span class="nav-text">1.1.3.1. basic</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#othonomal-basis"><span class="nav-text">1.1.3.2. othonomal basis</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#inner-product-space"><span class="nav-text">1.2. inner product space</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#inner-product"><span class="nav-text">1.2.1. inner product</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-3-norm"><span class="nav-text">1.2.1.1. 1.2.3 norm</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-4-inner-product-space"><span class="nav-text">1.2.1.2. 1.2.4 inner product space</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-5-orthogonal-complement"><span class="nav-text">1.2.1.3. 1.2.5 orthogonal complement</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-6-linear-functional-amp-adjoint"><span class="nav-text">1.2.1.4. 1.2.6 linear functional &amp; adjoint</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-7-self-adjoint-function-amp-normal-function"><span class="nav-text">1.2.1.5. 1.2.7 self-adjoint function &amp; normal function</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-7-1-basic"><span class="nav-text">1.2.1.5.1. 1.2.7.1 basic</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-7-2-complex-space"><span class="nav-text">1.2.1.5.2. 1.2.7.2 complex space</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-7-3-real-space"><span class="nav-text">1.2.1.5.3. 1.2.7.3 real space</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-7-4-positive-function"><span class="nav-text">1.2.1.5.4. 1.2.7.4 positive function</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-7-5-isometry-function"><span class="nav-text">1.2.1.5.5. 1.2.7.5 isometry function</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#distance-space（度量空间）"><span class="nav-text">1.2.2. distance space（度量空间）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#separable"><span class="nav-text">1.2.3. separable</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#L2-space"><span class="nav-text">1.3. L2 space</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hilbert-space"><span class="nav-text">1.4. hilbert space</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#kernel-1-8-amp-web"><span class="nav-text">1.4.1. kernel (1-8 &amp; web)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reproducing-kernel-hilbert-space-1-8-amp-web"><span class="nav-text">1.4.2. reproducing kernel hilbert space (1-8 &amp; web)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#representing-therom-1-9"><span class="nav-text">1.4.3. representing therom (1-9)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#linear-map"><span class="nav-text">2. linear map</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#linear-map-1"><span class="nav-text">2.1. linear map</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Qua-gt"><span class="nav-text">2.1.0.1. Qua: =&gt;</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null-space-amp-range"><span class="nav-text">2.2. null space &amp; range</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#null-space"><span class="nav-text">2.2.1. null space</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#range-space"><span class="nav-text">2.2.2. range space</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#matrix"><span class="nav-text">2.3. matrix</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#basic-1"><span class="nav-text">2.3.1. basic</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#invertible"><span class="nav-text">2.3.2. invertible</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#change-of-basis"><span class="nav-text">2.3.3. change of basis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#trace"><span class="nav-text">2.3.4. trace</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#determinant"><span class="nav-text">2.3.5. determinant</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rank"><span class="nav-text">2.3.6. rank</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#variations-amp-relations"><span class="nav-text">2.3.7. variations &amp; relations</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#equivalence"><span class="nav-text">2.3.7.1. equivalence</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#similar"><span class="nav-text">2.3.7.2. similar</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#congruent"><span class="nav-text">2.3.7.3. congruent</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orthotal"><span class="nav-text">2.3.8. orthotal</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#symmetry"><span class="nav-text">2.3.9. symmetry</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#eigenvalue"><span class="nav-text">2.4. eigenvalue</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#eigenvalue-1"><span class="nav-text">2.4.1. eigenvalue</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#upper-matrix"><span class="nav-text">2.4.2. upper matrix</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#diagonal-matrix"><span class="nav-text">2.4.3. diagonal matrix</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#same-egenvalue"><span class="nav-text">2.4.4. same egenvalue</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#generalized-egvalue"><span class="nav-text">2.4.4.1. generalized egvalue</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#characteristic-polynomial"><span class="nav-text">2.4.4.2. characteristic polynomial</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#decomposition"><span class="nav-text">2.4.4.3. decomposition</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#minimal-polynomial"><span class="nav-text">2.4.4.4. minimal polynomial</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jordan-basis"><span class="nav-text">2.4.4.5. jordan basis</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#real-vector-space"><span class="nav-text">2.4.5. real vector space</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#basic-2"><span class="nav-text">2.4.5.1. basic</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#block-upper-matrix"><span class="nav-text">2.4.5.2. block upper matrix</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pt"><span class="nav-text">2.4.5.3. pt</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eigen-decomposition-web"><span class="nav-text">2.4.6. eigen decomposition (web)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#multi-function"><span class="nav-text">3. multi function</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#root"><span class="nav-text">3.1. root</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#complex-coefficient"><span class="nav-text">3.2. complex coefficient</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#real-coefficient"><span class="nav-text">3.3. real coefficient</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#multi-linear-function"><span class="nav-text">3.4. multi linear function</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Benson</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      total visitors
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      people
+    </span>
+  
+
+  
+    <span class="site-pv">
+      total read
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      times
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
