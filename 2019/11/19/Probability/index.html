@@ -130,13 +130,13 @@
 
 
 
-<meta name="description" content="&amp;apos;Probability Theory&amp;apos; by Zhonggen Su">
+<meta name="description" content="‘Probability Theory’ by Zhonggen Su">
 <meta name="keywords" content="stats">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Probability Theory">
 <meta property="og:url" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Probability&#x2F;index.html">
 <meta property="og:site_name" content="BeNsoN">
-<meta property="og:description" content="&amp;apos;Probability Theory&amp;apos; by Zhonggen Su">
+<meta property="og:description" content="‘Probability Theory’ by Zhonggen Su">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Probability&#x2F;image-20191123012700721.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Probability&#x2F;image-20191122215759710.png">
@@ -612,7 +612,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  2.5k
+                  951
                 </span>
               
 
@@ -628,7 +628,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  15
+                  5
                 </span>
               
             </div>
@@ -649,789 +649,902 @@
       
 
       
-        <p><strong>'Probability Theory'</strong> by Zhonggen Su</p>
+        <p><strong>‘Probability Theory’</strong> by Zhonggen Su</p>
 <a id="more"></a>
-<h1 id="frequency-probability">1. frequency &amp; probability</h1>
-<h2 id="probability-space">1.1. probability space</h2>
-<h3 id="general-definition">1.1.1. general definition</h3>
-<ul>
+<h1 id="frequency-amp-probability">1. frequency &amp; probability</h1><h2 id="probability-space">1.1. probability space</h2><h3 id="general-definition">1.1.1. general definition</h3><ul>
 <li><p><strong>Def1.7:</strong> space = {samplespace + eventspace + P}</p>
-<p>​ samplespace = {sample1, sample2 ... sampleN}</p>
-<p>​ eventsspace = {event1, event2,... eventN }</p>
-<p>​ event1 = {sample2, sample5...} (if 1sample happens, then event happens)</p>
-<p>​ experiment = {1 of the samples from sample 1~N }</p></li>
+<p>​            samplespace = {sample1, sample2 … sampleN}</p>
+<p>​            eventsspace = {event1, event2,… eventN }    </p>
+<p>​            event1 = {sample2, sample5…} (if 1sample happens, then event happens)</p>
+<p>​            experiment = {1 of the samples from sample 1~N }</p>
+</li>
+</ul>
+<ul>
 <li><p><strong>Def1.8</strong>: P = F (eventspace to R)</p>
 <ul>
-<li><p><strong>Qua1.9</strong>: =&gt; Non zero</p></li>
-<li><p><strong>Qua2.0</strong>: =&gt; P(must) =1</p></li>
+<li><p><strong>Qua1.9</strong>: =&gt; Non zero</p>
+</li>
+<li><p><strong>Qua2.0</strong>: =&gt; P(must) =1 </p>
+</li>
 <li><p><strong>Qua2.1</strong>: =&gt; linear</p>
 <p>s.t AB does not overlap:</p>
-<p>​ P(A+B) =P(A)+P(B)</p></li>
-</ul></li>
+<p>​            P(A+B) =P(A)+P(B)</p>
+</li>
 </ul>
-<h3 id="special-probability-spaces">1.1.2. special probability spaces</h3>
-<h4 id="frequency-norm">1.1.2.1. frequency norm</h4>
-<ul>
-<li><p><strong>Def1.1</strong>: frequency of A (A is a 0-1 variable), frequency is a way to depict clasiical probability <span class="math display">\[
-F _{N}(X) = \frac{n}{N}
-\]</span></p>
-<ul>
-<li><strong>Qua1.2</strong>: =&gt; non-negative:</li>
+</li>
 </ul>
-<p><span class="math display">\[
-F _{N}(X) \geq 0
-\]</span></p>
-<ul>
-<li><p><strong>Qua1.3</strong>: =&gt; regularity:</p>
-<p>s.t. X must happen</p></li>
+<h3 id="special-probability-spaces">1.1.2. special probability spaces</h3><h4 id="frequency-norm">1.1.2.1. frequency norm</h4><ul>
+<li><strong>Def1.1</strong>: frequency of A (A is a 0-1 variable), frequency is a way to depict clasiical probability <script type="math/tex; mode=display">
+F _{N}(X) = \frac{n}{N}</script></li>
 </ul>
-<p><span class="math display">\[
-F _{N}(X) = 1
-\]</span></p>
 <ul>
+<li><p><strong>Qua1.2</strong>: =&gt; non-negative: </p>
+<script type="math/tex; mode=display">
+F _{N}(X) \geq 0</script></li>
+</ul>
+<ul>
+<li><p><strong>Qua1.3</strong>: =&gt; regularity: </p>
+<p>s.t. X must happen</p>
+<script type="math/tex; mode=display">
+F _{N}(X) = 1</script></li>
 <li><p><strong>Qua1.4</strong>: =&gt; addable:</p>
-<p>s.t. A B doesnot happen at once ( A B does not equal 1 at once)</p></li>
+<p>s.t. A B doesnot happen at once ( A B does not equal 1 at once)</p>
+<script type="math/tex; mode=display">
+F _{N}(A+B) = F _{N}(A) + F _{N}(B)</script></li>
 </ul>
-<p><span class="math display">\[
-F _{N}(A+B) = F _{N}(A) + F _{N}(B)
-\]</span></p></li>
-</ul>
-<h4 id="classic-norm">1.1.2.2. classic norm</h4>
-<ul>
+<h4 id="classic-norm">1.1.2.2. classic norm</h4><ul>
 <li><strong>Def1.5</strong>: classic norm is a way to depict classical probability</li>
 </ul>
-<h4 id="geometry-norm">1.1.2.3. geometry norm</h4>
-<ul>
-<li><strong>Def1.6</strong>: same</li>
+<h4 id="geometry-norm">1.1.2.3. geometry norm</h4><ul>
+<li><strong>Def1.6</strong>: same </li>
 </ul>
-<h4 id="bernoulli-norm">1.1.2.4. Bernoulli norm</h4>
-<ul>
+<h4 id="Bernoulli-norm">1.1.2.4. Bernoulli norm</h4><ul>
 <li><p><strong>Def1.7</strong>: sample = {w1~n} (n-times-bernoulli)</p>
-<p>​ samplespace = {<span class="math inline">\(2 ^{n}个sample\)</span>}</p>
-<p>​ event i={sample i}</p></li>
+<p>​             samplespace = {$2 ^{n}个sample$} </p>
+<p>​             event i={sample i}</p>
+</li>
 </ul>
-<h2 id="conditional-probability">1.2. conditional probability</h2>
-<h3 id="conditional-prob">1.2.1. conditional prob</h3>
-<ul>
+<h2 id="conditional-probability">1.2. conditional probability</h2><h3 id="conditional-prob">1.2.1. conditional prob</h3><ul>
 <li><p><strong>Def1.7</strong>: conditional prob</p>
-<p>s.t $P(B) 0 $ <span class="math display">\[
-P(A|B) = \frac{P(AB)}{P(B)}
-\]</span></p></li>
+<p>s.t $P(B) \ne 0 $</p>
+<script type="math/tex; mode=display">
+P(A|B) = \frac{P(AB)}{P(B)}</script></li>
 </ul>
-<h3 id="all-prob-equation-bayes-equation">1.2.2. all prob equation &amp; bayes equation</h3>
-<ul>
-<li><p><strong>Def1.8</strong>: complete event group <span class="math inline">\(\left\{ A1, A2,...An \right\}\)</span> <span class="math display">\[
+<h3 id="all-prob-equation-amp-bayes-equation">1.2.2. all prob equation &amp; bayes equation</h3><ul>
+<li><p><strong>Def1.8</strong>: complete event group  $\left\{ A1, A2,…An \right\}$</p>
+<script type="math/tex; mode=display">
 (1) Ai \; not \; overlap  \\
-(2) P(Ai) &gt;0 \\
-(3) \sum_{n = 1}^{\infty}Ai = ALL
-\]</span></p></li>
+(2) P(Ai) >0 \\
+(3) \sum_{n = 1}^{\infty}Ai = ALL</script></li>
 <li><p><strong>Theorm1.8</strong>: all prob equation</p>
-<p>s.t. <span class="math inline">\(\left\{ A1, A2,...An \right\}\)</span> is complete event group <span class="math display">\[
-P(B) = \sum_{n = 1}^{\infty}P(A_i)P(B|A_i)
-\]</span></p></li>
+<p>s.t. $\left\{ A1, A2,…An \right\}$ is complete event group </p>
+<script type="math/tex; mode=display">
+P(B) = \sum_{n = 1}^{\infty}P(A_i)P(B|A_i)</script></li>
 <li><p><strong>Theorm1.9</strong>: bayes equation</p>
-<p>s.t. <span class="math inline">\(\left\{ A1, A2,...An \right\}\)</span> is complete event group <span class="math display">\[
-P(A_i|B) = \frac{P(A_i).P(B|A_i)}{\sum_{k = 1}^{\infty}P(A_k).P(B|A_k)}
-\]</span></p></li>
-<li><p><strong>Def1.10</strong>: priori prob <span class="math display">\[
-P(A_i)
-\]</span></p></li>
-<li><p><strong>Def1.11</strong>: posteriori prob <span class="math display">\[
-P(A_i|B)
-\]</span></p></li>
+<p>s.t. $\left\{ A1, A2,…An \right\}$ is complete event group </p>
+<script type="math/tex; mode=display">
+P(A_i|B) = \frac{P(A_i).P(B|A_i)}{\sum_{k = 1}^{\infty}P(A_k).P(B|A_k)}</script></li>
+<li><p><strong>Def1.10</strong>: priori prob</p>
+<script type="math/tex; mode=display">
+P(A_i)</script></li>
+<li><p><strong>Def1.11</strong>: posteriori prob</p>
+<script type="math/tex; mode=display">
+P(A_i|B)</script></li>
 </ul>
-<h3 id="independence-of-event">1.2.3. independence (of event)</h3>
-<ul>
-<li><strong>Def1.12</strong>: dependence <span class="math display">\[
+<h3 id="independence-of-event">1.2.3. independence (of event)</h3><ul>
+<li><strong>Def1.12</strong>: dependence<script type="math/tex; mode=display">
 1) P(A|B) = P(A) \\
 2) P(A)P(B) = P(AB) \\
 3) P(ABC)一切组合都独立 （多个事件的独立性）\\
-4) P(A ^{(1)}A ^{(2)}) = ...（试验的独立性）
-\]</span></li>
+4) P(A ^{(1)}A ^{(2)}) = ...（试验的独立性）</script></li>
 </ul>
-<h2 id="l2-space">1.3. L2 space</h2>
+<h2 id="L2-space">1.3. L2 space</h2><ul>
+<li><p><strong>Def</strong>:l2 space </p>
+<p><img src="/2019/11/19/Probability/image-20191123012700721.png" alt></p>
+</li>
+</ul>
 <ul>
-<li><p><strong>Def</strong>:l2 space</p>
-<p><img src="/2019/11/19/Probability/image-20191123012700721.png"></p>
-<ul>
-<li><p><strong>Qua</strong>: =&gt; hilbert</p>
-<p><img src="/2019/11/19/Probability/image-20191122215759710.png"></p>
+<li><p><strong>Qua</strong>: =&gt; hilbert </p>
+<p><img src="/2019/11/19/Probability/image-20191122215759710.png" alt></p>
 <p><strong>Proof</strong>:</p>
-<p><img src="/2019/11/19/Probability/image-20191122215812578.png"></p></li>
-</ul></li>
+<p><img src="/2019/11/19/Probability/image-20191122215812578.png" alt></p>
+</li>
 </ul>
-<h1 id="random-variables">2. random variables</h1>
-<h2 id="distributions">2.1. distributions</h2>
-<ul>
+<h1 id="random-variables">2. random variables</h1><h2 id="distributions">2.1. distributions</h2><ul>
 <li><p><strong>Def2.1</strong>: random variable X is F(samplespace to R)</p>
-<p>Usage: imagine c samples to 1 value and 1 value to 1 prob <span class="math display">\[
+<p>Usage: imagine c samples to 1 value and 1 value to 1 prob</p>
+<script type="math/tex; mode=display">
 (1) X is F(samplespace to R) \\
-(2) X ^{-1}(B) = \left\{ w:X(w) \in B \right\} \in ev entspace for any B
-\]</span></p></li>
-<li><p><strong>Def2.2</strong>: Cumulative Distribution Function of X(w) <span class="math display">\[
-F _{X} (k) = P(X \leq k) = \int_{- \infty}^{k}p_{X} (y)dy 
-\]</span></p>
-<ul>
+(2) X ^{-1}(B) = \left\{ w:X(w) \in B \right\} \in ev entspace for any B</script></li>
+<li><p><strong>Def2.2</strong>: Cumulative Distribution Function of X(w)</p>
+<script type="math/tex; mode=display">
+F _{X} (k) = P(X \leq k) = \int_{- \infty}^{k}p_{X} (y)dy</script><ul>
 <li><p><strong>Qua2.3</strong>: =&gt; mono</p>
-<p>s.t. a &lt; b <span class="math display">\[
-F(b)-F(a) \geq 0 
-\]</span></p></li>
-<li><p><strong>Qua2.4</strong>: =&gt; limit <span class="math display">\[
+<p>s.t. a &lt; b</p>
+<script type="math/tex; mode=display">
+F(b)-F(a) \geq 0</script></li>
+<li><p><strong>Qua2.4</strong>: =&gt; limit</p>
+<script type="math/tex; mode=display">
 \lim_{k \to -\infty}F(k) =0 \\
-\lim_{k \to \infty} F(k) = 1 
-\]</span></p></li>
-<li><p><strong>Qua2.5</strong>: =&gt; right-continuous <span class="math display">\[
-F(k+0) = F(k)
-\]</span></p></li>
-</ul></li>
-<li><p><strong>Def2.6</strong>: Probability Density Function of X(w) <span class="math display">\[
-p _{X}(k) = F _{X}&#39;(k)
-\]</span></p>
-<ul>
-<li><p><strong>Qua2.7</strong>: =&gt; single point $$ <span class="math display">\[\begin{align}
-
-P(X=k)  &amp;= F(k)-F(k-0) \\
-
-&amp;= \lim_{h \to 0+} \int_{k-h}^{k}p(y)dy  \\
-
-
-\end{align}\]</span> $$</p></li>
-<li><p><strong>Qua2.8</strong>: =&gt; non-negative <span class="math display">\[
-p _{X}(k) \geq 0
-\]</span></p></li>
-<li><p><strong>Qua2.9</strong>: =&gt; regularity <span class="math display">\[
-\int_{n = - \infty}^{\infty}p_{X}(y)dy =1
-\]</span></p></li>
-</ul></li>
+\lim_{k \to \infty} F(k) = 1</script></li>
+<li><p><strong>Qua2.5</strong>: =&gt; right-continuous</p>
+<script type="math/tex; mode=display">
+F(k+0) = F(k)</script></li>
 </ul>
-<h2 id="special-functions">2.2. special functions</h2>
-<h3 id="expectation">2.2.1. expectation</h3>
+</li>
+</ul>
 <ul>
+<li><p><strong>Def2.6</strong>: Probability Density Function of X(w)</p>
+<script type="math/tex; mode=display">
+p _{X}(k) = F _{X}'(k)</script><ul>
+<li><p><strong>Qua2.7</strong>: =&gt; single point<br>$$<br>\begin{align}</p>
+<p>P(X=k)  &amp;= F(k)-F(k-0) \\</p>
+<p>&amp;= \lim_{h \to 0+} \int_{k-h}^{k}p(y)dy  \\</p>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>\end{align}
+$$
+</code></pre><ul>
+<li><p><strong>Qua2.8</strong>: =&gt; non-negative</p>
+<script type="math/tex; mode=display">
+p _{X}(k) \geq 0</script></li>
+<li><p><strong>Qua2.9</strong>: =&gt; regularity</p>
+<script type="math/tex; mode=display">
+\int_{n = - \infty}^{\infty}p_{X}(y)dy =1</script></li>
+</ul>
+<h2 id="special-functions">2.2. special functions</h2><h3 id="expectation">2.2.1. expectation</h3><ul>
 <li><p><strong>Def1.1</strong>: expectation of random variable</p>
-<p>s.t. (1) <span class="math display">\[\sum_{k}^{} |k|*P_(X=k) &lt; \infty\]</span> <span class="math display">\[
+<p>s.t. (1) <script type="math/tex">\sum_{k}^{} |k|*P_(X=k) < \infty</script></p>
+<script type="math/tex; mode=display">
 Func(X)=E(X)=\sum_{k}^{} k*P_(X=k) \\
-Func(X)=E(X)=\int_{k} k*p_X(k)
-\]</span></p>
-<ul>
+Func(X)=E(X)=\int_{k} k*p_X(k)</script><ul>
 <li><p><strong>Qua1.2:</strong> some useful expectations</p>
-<figure>
-<img src="/2019/11/19/Probability/image-20191123105118560.png" alt><figcaption>image-20191123105118560</figcaption>
-</figure></li>
-</ul></li>
+<p><img src="/2019/11/19/Probability/image-20191123105118560.png" alt="image-20191123105118560"></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
 <li><p><strong>Qua1.3</strong>: =&gt; monotonicity</p>
-<p>s.t. $ a X b $ <span class="math display">\[
+<p>s.t. $ a \leq X \leq b $</p>
+<script type="math/tex; mode=display">
 (1) E(X) \exists \\
-  (2) a \leq E(X) \leq b
-\]</span></p>
-<p>s.t. (1) <span class="math inline">\(|X| \leq Y\)</span></p>
-<p>​ (2) $E(Y) $</p></li>
+  (2) a \leq E(X) \leq b</script></li>
 </ul>
-<p><span class="math display">\[
-  E(|X|) \exists
-\]</span></p>
-<ul>
+<pre><code>s.t. (1) $|X| \leq Y$
+
+​        (2) $E(Y) \exists $
+</code></pre><script type="math/tex; mode=display">
+  E(|X|) \exists</script><ul>
 <li><p><strong>Qua1.4</strong>: =&gt; linearity (E into sumation)</p>
-<p>s.t.$Ex1, Ex2...Exn $ <span class="math display">\[
-E( \sum_{n = 1}^{\infty}ciXi+b) =ci \sum_{n = 1}^{\infty}E(Xi)+b
-\]</span></p></li>
+<p>s.t.$Ex1, Ex2…Exn \exists $</p>
+<script type="math/tex; mode=display">
+E( \sum_{n = 1}^{\infty}ciXi+b) =ci \sum_{n = 1}^{\infty}E(Xi)+b</script></li>
+</ul>
+<ul>
 <li><p><strong>Qua1.6</strong>: =&gt; limitation (bound and convergence)</p>
-<p>s.t. (1) <span class="math inline">\(\lim_{n \to \infty}X _{n}(w)=X(w)\)</span></p>
-<p>​ (2) for all <span class="math inline">\(n \geq 1\)</span>, <span class="math inline">\(|X _{ n}| \leq M\)</span></p></li>
+<p>s.t. (1) $\lim_{n \to \infty}X _{n}(w)=X(w)$</p>
+<p>​        (2) for all $n \geq 1$, $|X _{ n}| \leq M$</p>
+</li>
 </ul>
-<p><span class="math display">\[
-  \lim_{n \to \infty}E(X _{n}) = E(X)
-\]</span></p>
-<ul>
+<script type="math/tex; mode=display">
+  \lim_{n \to \infty}E(X _{n}) = E(X)</script><ul>
 <li><p><strong>Qua1.11:</strong> operation</p>
-<p>s.t. (1) g(x) is borel function</p></li>
+<p>s.t. (1) g(x) is borel function</p>
+</li>
 </ul>
-<p><span class="math display">\[
-  Eg(X) = \int_{- \infty}^{\infty} g(k)p_X(k)dk
-\]</span></p>
-<ul>
+<script type="math/tex; mode=display">
+  Eg(X) = \int_{- \infty}^{\infty} g(k)p_X(k)dk</script><ul>
 <li><p><strong>Qua1.12:</strong> =&gt; steins theroy</p>
 <p>s.t. (1) X~N(0,1)</p>
-<p>​ (2) g is continuous &amp; derivable</p>
-<p>​ (3) <span class="math inline">\(E|g(X)X|&lt; \infty\)</span></p>
-<p>​ (4)<span class="math inline">\(E|g&#39;(X)|&lt; \infty\)</span> <span class="math display">\[
-E|g(X)X|=Eg&#39;(X)
-\]</span></p></li>
+<p>​        (2) g is continuous &amp; derivable</p>
+<p>​        (3) $E|g(X)X|&lt; \infty$</p>
+<p>​        (4)$E|g’(X)|&lt; \infty$</p>
+<script type="math/tex; mode=display">
+E|g(X)X|=Eg'(X)</script></li>
 </ul>
-<h3 id="variance">2.2.2. variance</h3>
-<ul>
-<li><p><strong>Def</strong>: Bias ( is a metric of approximation X to a ) <span class="math display">\[
-Bias( \hat{X},a )= E( \hat{X})- a
-\]</span></p></li>
-<li><p><strong>Def</strong>: MSE ( is a metrics of approximation) <span class="math display">\[
-MSE(\hat{X} ) =E(\hat{ X} - a) = V(\hat{X})+Bias^{2}(\hat{X},X ) 
-\]</span></p></li>
-<li><p><strong>Def1.13</strong>: deviation <span class="math display">\[
-D(X) = X-E(X)=randonvariable(X)
-\]</span></p></li>
+<h3 id="variance">2.2.2. variance</h3><ul>
+<li><p><strong>Def</strong>: Bias ( is a metric of approximation X to a )</p>
+<script type="math/tex; mode=display">
+Bias( \hat{X},a )= E( \hat{X})- a</script></li>
+<li><p><strong>Def</strong>: MSE ( is a metrics of approximation)</p>
+<script type="math/tex; mode=display">
+MSE(\hat{X} ) =E(\hat{ X} - a) = V(\hat{X})+Bias^{2}(\hat{X},X )</script></li>
+<li><p><strong>Def1.13</strong>: deviation</p>
+<script type="math/tex; mode=display">
+D(X) = X-E(X)=randonvariable(X)</script></li>
 <li><p><strong>Def1.14</strong>: variance</p>
-<p>s.t. abs &lt; inf</p></li>
-<li><p><span class="math display">\[
-V(X) = E(D(X)^{2})=E(X-E(X)) ^{2}= number(X)
-\]</span></p></li>
-<li><p><strong>Qua1.16</strong>: =&gt; var = 0 means degenerate</p></li>
-<li><p><strong>Qua1.17</strong>: =&gt; quadratic <span class="math display">\[
-  V(cX+b) = c ^{2}V(X)
-\]</span></p>
-<ul>
+<p>s.t. abs &lt; inf</p>
+</li>
+<li><script type="math/tex; mode=display">
+V(X) = E(D(X)^{2})=E(X-E(X)) ^{2}= number(X)</script></li>
+<li><p><strong>Qua1.16</strong>: =&gt; var = 0 means degenerate</p>
+</li>
+<li><p><strong>Qua1.17</strong>: =&gt; quadratic</p>
+<script type="math/tex; mode=display">
+  V(cX+b) = c ^{2}V(X)</script><ul>
 <li><p><strong>Qua1.18</strong>: =&gt; sup</p>
-<p>s.t. <span class="math inline">\(c \ne E(X)\)</span> <span class="math display">\[
-V(X) &lt; E(X-c)^{2}
-\]</span></p></li>
-<li><p><strong>Qua1.19</strong>: =&gt; double linearity</p></li>
-</ul></li>
-<li><p><span class="math display">\[
-  V( \sum_{n = 1}^{\infty}Xi)= \sum_{n = 1}^{\infty}V(Xi)+2\sum_{1 \leq i&lt;j \leq n}^{}E(Xi-EXi)E(Xj-E(Xj))
-  \]</span></p></li>
+<p>s.t. $c \ne E(X)$ </p>
+<script type="math/tex; mode=display">
+V(X) < E(X-c)^{2}</script></li>
+<li><p><strong>Qua1.19</strong>: =&gt; double linearity</p>
+</li>
 </ul>
-<h3 id="moment">2.2.3. moment</h3>
-<ul>
+</li>
+<li><script type="math/tex; mode=display">
+  V( \sum_{n = 1}^{\infty}Xi)= \sum_{n = 1}^{\infty}V(Xi)+2\sum_{1 \leq i<j \leq n}^{}E(Xi-EXi)E(Xj-E(Xj))</script></li>
+</ul>
+<h3 id="moment">2.2.3. moment</h3><ul>
 <li><p><strong>Def</strong>: moment, 原点/中心</p>
-<p><img src="/2019/11/19/Probability/image-20191122215907024.png"></p>
-<p><img src="/2019/11/19/Probability/image-20191122215913484.png"></p>
+<p><img src="/2019/11/19/Probability/image-20191122215907024.png" alt></p>
+<p><img src="/2019/11/19/Probability/image-20191122215913484.png" alt></p>
 <ul>
 <li><p><strong>Qua</strong>: =&gt; relationship between different moments</p>
-<p><img src="/2019/11/19/Probability/image-20191122215922656.png"></p>
-<p><img src="/2019/11/19/Probability/image-20191122215933255.png"></p></li>
+<p><img src="/2019/11/19/Probability/image-20191122215922656.png" alt></p>
+<p><img src="/2019/11/19/Probability/image-20191122215933255.png" alt></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
 <li><p><strong>Qua</strong>: =&gt; equatiom</p>
-<p><img src="/2019/11/19/Probability/image-20191122215947979.png"></p></li>
-<li><p><strong>Qua</strong>: =&gt; moment &amp; cmf</p>
-<p><img src="/2019/11/19/Probability/image-20191122215955554.png"></p></li>
-</ul></li>
+<p><img src="/2019/11/19/Probability/image-20191122215947979.png" alt></p>
+</li>
+<li><p><strong>Qua</strong>:  =&gt; moment &amp; cmf </p>
+<p><img src="/2019/11/19/Probability/image-20191122215955554.png" alt></p>
+</li>
 </ul>
-<h3 id="characteristic-function">2.2.4. characteristic function</h3>
-<ul>
+<h3 id="characteristic-function">2.2.4. characteristic function</h3><ul>
 <li><p><strong>Def</strong>: characteristic function</p>
-<p><img src="/2019/11/19/Probability/image-20191122220107264.png"></p>
+<p><img src="/2019/11/19/Probability/image-20191122220107264.png" alt></p>
 <ul>
-<li><p><strong>Qua2.29</strong>: =&gt; 1 on 1</p>
-<p><img src="/2019/11/19/Probability/image-20191122220121136.png"></p>
+<li><p><strong>Qua2.29</strong>: =&gt; 1 on 1 </p>
+<p><img src="/2019/11/19/Probability/image-20191122220121136.png" alt></p>
 <p><strong>Proof</strong>:</p>
-<p><img src="/2019/11/19/Probability/image-20191122220131120.png"></p>
-<p><img src="/2019/11/19/Probability/image-20191122220138371.png"></p></li>
-<li><p><strong>Qua2.30</strong>: =&gt; 0 is the largest</p>
-<p><img src="/2019/11/19/Probability/image-20191122220146200.png"></p>
+<p><img src="/2019/11/19/Probability/image-20191122220131120.png" alt></p>
+<p><img src="/2019/11/19/Probability/image-20191122220138371.png" alt></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua2.30</strong>: =&gt; 0 is the largest </p>
+<p><img src="/2019/11/19/Probability/image-20191122220146200.png" alt></p>
 <p><strong>Proof</strong>:</p>
-<p><img src="/2019/11/19/Probability/image-20191122220156411.png"></p></li>
-<li><p><strong>Qua2.31</strong>: =&gt; 一致continuous <span class="math display">\[
-f(t) \to  -\infty\ , \infty)一致 continuous
-\]</span> <strong>Proof</strong>:</p>
-<p><img src="/2019/11/19/Probability/image-20191122220208157.png"></p>
-<p><img src="/2019/11/19/Probability/image-20191122220220047.png"></p></li>
+<p><img src="/2019/11/19/Probability/image-20191122220156411.png" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua2.31</strong>: =&gt; 一致continuous</p>
+<script type="math/tex; mode=display">
+f(t) \to  -\infty\ , \infty)一致 continuous</script><p><strong>Proof</strong>:</p>
+<p><img src="/2019/11/19/Probability/image-20191122220208157.png" alt></p>
+<p><img src="/2019/11/19/Probability/image-20191122220220047.png" alt></p>
+</li>
+</ul>
+<ul>
 <li><p><strong>Qua2.32</strong>: =&gt; 非负定</p>
-<p><img src="/2019/11/19/Probability/image-20191122220229035.png"></p>
+<p><img src="/2019/11/19/Probability/image-20191122220229035.png" alt></p>
 <p><strong>Proof</strong>:</p>
-<p><img src="/2019/11/19/Probability/image-20191122220238613.png"></p></li>
+<p><img src="/2019/11/19/Probability/image-20191122220238613.png" alt></p>
+</li>
+</ul>
+<ul>
 <li><p><strong>Theorm2.33</strong>: Bochner-K, <a href="http://www.baidu.com/link?url=f1d910VOpWlAeKeQkOhBWq1sSJXj4vMVZbG9NdIHo5s62hwxTO4oG2GnzZU3gjvQpYKtC4dRVmIqsciFtni82scjYq6-tq_5XVGLaX5qvDCGqAEccG3YpUOTZijARR0OfD3x_WEhPAIHXRJSzcDuia" target="_blank" rel="noopener"></a>;</p>
-<p><img src="/2019/11/19/Probability/image-20191122220259472.png"></p></li>
+<p><img src="/2019/11/19/Probability/image-20191122220259472.png" alt></p>
+</li>
+</ul>
+<ul>
 <li><p><strong>Qua2.34</strong>: =&gt; Cf &amp; moment</p>
-<p><img src="/2019/11/19/Probability/image-20191122220306270.png"></p>
+<p><img src="/2019/11/19/Probability/image-20191122220306270.png" alt></p>
 <p><strong>Proof</strong>:</p>
-<p><img src="/2019/11/19/Probability/image-20191122220316890.png"></p>
-<p><img src="/2019/11/19/Probability/image-20191122220326188.png"></p>
-<p><img src="/2019/11/19/Probability/image-20191122220337432.png"></p></li>
-<li><p><strong>Qua2.35</strong>: =&gt; linearity</p>
-<p><img src="/2019/11/19/Probability/image-20191122220348417.png"></p></li>
+<p><img src="/2019/11/19/Probability/image-20191122220316890.png" alt></p>
+<p><img src="/2019/11/19/Probability/image-20191122220326188.png" alt></p>
+<p><img src="/2019/11/19/Probability/image-20191122220337432.png" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua2.35</strong>: =&gt; linearity </p>
+<p><img src="/2019/11/19/Probability/image-20191122220348417.png" alt></p>
+</li>
+</ul>
+<ul>
 <li><p><strong>Qua2.36</strong>: =&gt; cf &amp; cmf</p>
-<p><img src="/2019/11/19/Probability/image-20191122220355405.png"></p>
-<p><strong>Proof</strong>:</p>
-<p><img src="/2019/11/19/Probability/image-20191122220406175.png"></p>
-<p><img src="/2019/11/19/Probability/image-20191122220415048.png"></p>
-<p><img src="/2019/11/19/Probability/image-20191122220422319.png"></p></li>
+<p><img src="/2019/11/19/Probability/image-20191122220355405.png" alt></p>
+<p><strong>Proof</strong>: </p>
+<p><img src="/2019/11/19/Probability/image-20191122220406175.png" alt></p>
+<p><img src="/2019/11/19/Probability/image-20191122220415048.png" alt></p>
+<p><img src="/2019/11/19/Probability/image-20191122220422319.png" alt></p>
+</li>
+</ul>
+<ul>
 <li><p><strong>Qua2.37</strong>: =&gt; cf &amp; cmf</p>
-<p><img src="/2019/11/19/Probability/image-20191122220437334.png"></p>
+<p><img src="/2019/11/19/Probability/image-20191122220437334.png" alt></p>
 <p><strong>Proof</strong>:</p>
-<p><img src="/2019/11/19/Probability/image-20191122220452874.png"></p>
-<p><img src="/2019/11/19/Probability/image-20191122220504953.png"></p>
-<p><img src="/2019/11/19/Probability/image-20191122220514046.png"></p></li>
-</ul></li>
+<p><img src="/2019/11/19/Probability/image-20191122220452874.png" alt></p>
+<p><img src="/2019/11/19/Probability/image-20191122220504953.png" alt></p>
+<p><img src="/2019/11/19/Probability/image-20191122220514046.png" alt></p>
+</li>
 </ul>
-<h3 id="generating-function">2.2.5. generating function</h3>
+<h3 id="generating-function">2.2.5. generating function</h3><ul>
+<li><p><strong>Def2.38</strong>: generating function </p>
+<p><img src="/2019/11/19/Probability/image-20191122220554254.png" alt></p>
 <ul>
-<li><strong>Def2.38</strong>: generating function</li>
+<li><p><strong>Qua2.39~2.42</strong>: =&gt; </p>
+<p><img src="/2019/11/19/Probability/image-20191122220602992.png" alt></p>
+</li>
+<li><p><strong>Qua2.43</strong>: =&gt; gf &amp; cf </p>
+<p><img src="/2019/11/19/Probability/image-20191122220610825.png" alt></p>
+</li>
 </ul>
-<p><img src="/2019/11/19/Probability/image-20191122220554254.png"></p>
-<ul>
-<li><p><strong>Qua2.39~2.42</strong>: =&gt;</p>
-<p><img src="/2019/11/19/Probability/image-20191122220602992.png"></p></li>
-<li><p><strong>Qua2.43</strong>: =&gt; gf &amp; cf</p>
-<p><img src="/2019/11/19/Probability/image-20191122220610825.png"></p></li>
+</li>
 </ul>
-<h3 id="yang">2.2.6. yang</h3>
-<ul>
+<h3 id="yang">2.2.6. yang</h3><ul>
 <li><p><strong>Def</strong>: yang</p>
-<p><img src="/2019/11/19/Probability/image-20191122220625606.png"></p></li>
-<li><p><strong>Qua</strong>: =&gt;</p>
-<p><img src="/2019/11/19/Probability/image-20191122220635247.png"></p></li>
+<p><img src="/2019/11/19/Probability/image-20191122220625606.png" alt></p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; </p>
+<p><img src="/2019/11/19/Probability/image-20191122220635247.png" alt></p>
+</li>
 </ul>
-<h1 id="relationships-of-random-variables">3. relationships of random variables</h1>
-<h2 id="condition">3.1. condition</h2>
-<h3 id="conditional-distribution">3.1.1. conditional distribution</h3>
-<ul>
-<li><p><strong>Def</strong>: conditional cumulative function <span class="math display">\[
+<h1 id="relationships-of-random-variables">3. relationships of random variables</h1><h2 id="condition">3.1. condition</h2><h3 id="conditional-distribution">3.1.1. conditional distribution</h3><ul>
+<li><p><strong>Def</strong>: conditional cumulative function</p>
+<script type="math/tex; mode=display">
 F _{X|Y}(c|b)=P(X \leq c|Y=b) = \sum_{x_i \leq c}^{}p _{X|Y}(x_i|b)=number(c,b,X,Y) \\
-F _{X|Y}(c|b)==P(X \leq c|Y=b) = \int_{- \infty}^{c} \frac{p_{X,Y}(v,b)}{p _{Y}(b)}dv=number(c,b,X,Y)
-\]</span></p></li>
-<li><p><strong>Def</strong>: conditional density function <span class="math display">\[
+F _{X|Y}(c|b)==P(X \leq c|Y=b) = \int_{- \infty}^{c} \frac{p_{X,Y}(v,b)}{p _{Y}(b)}dv=number(c,b,X,Y)</script></li>
+<li><p><strong>Def</strong>: conditional density function </p>
+<script type="math/tex; mode=display">
 P _{X|Y}(c|b) = \frac{P(X=c, Y=b)}{P(Y=b)}=number(c,b,X,Y) \\
-P _{X|Y}(c|b) = \frac{p_{X,Y}(c,b)}{p _{Y}(b)} =number(c,b,X,Y)
-\]</span></p></li>
-<li><p><strong>Def</strong> conditional probability of a event A given random variable X <span class="math display">\[
-not important
-\]</span></p></li>
+P _{X|Y}(c|b) = \frac{p_{X,Y}(c,b)}{p _{Y}(b)} =number(c,b,X,Y)</script></li>
+<li><p><strong>Def</strong> conditional probability of a event A given random variable X</p>
+<script type="math/tex; mode=display">
+not important</script></li>
 </ul>
-<h3 id="conditional-expectation-projection">3.1.2. conditional expectation (projection)</h3>
+<h3 id="conditional-expectation-projection">3.1.2. conditional expectation (projection)</h3><ul>
+<li><strong>Def</strong>: conditional expectation (book)<br><script type="math/tex">E(X|Y=a)= \int_{- \infty}^{c} p _{(X|Y)}(v|a) dv \\
+E(X|Y) =randomvariable(X,Y)</script> { }</li>
+</ul>
 <ul>
-<li><p><strong>Def</strong>: conditional expectation (book) <span class="math display">\[
-E(X|Y=a)= \int_{- \infty}^{c} p _{(X|Y)}(v|a) dv \\
-E(X|Y) =randomvariable(X,Y)
-\]</span> { }</p></li>
 <li><p><strong>Def</strong>: projection (2-4)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xle2bcjj30nu01cgll.jpg"></p>
-<ul>
-<li><strong>Qua</strong>: =&gt; all probability equation (web)</li>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xle2bcjj30nu01cgll.jpg" alt></p>
+</li>
 </ul>
-<p><span class="math display">\[
-E(E(X|Y)) = E(X)
-\]</span></p>
 <ul>
-<li><p><strong>Qua</strong>: =&gt; projection (2-4)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xn50f9vj30ow05idgi.jpg"></p></li>
-<li><p><strong>Theorem</strong>: (2-4)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xljraugj30nv012t8o.jpg"></p></li>
-<li><p><strong>Theorem</strong>: (2-4)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xmirobtj30oe03xt91.jpg"></p></li>
-<li><p><strong>Lemma</strong>: ? (2-4)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g9623x3n8zj30nq0arjsh.jpg"></p></li>
-</ul></li>
+<li><p><strong>Qua</strong>:  =&gt; all probability equation (web)</p>
+<script type="math/tex; mode=display">
+E(E(X|Y)) = E(X)</script></li>
 </ul>
-<h2 id="special-functions-1">3.2. special functions</h2>
-<h3 id="covariance">3.2.1. covariance</h3>
 <ul>
+<li><p><strong>Qua</strong>:  =&gt; projection  (2-4)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xn50f9vj30ow05idgi.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorem</strong>: (2-4)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xljraugj30nv012t8o.jpg" alt></p>
+</li>
+<li><p><strong>Theorem</strong>: (2-4)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xmirobtj30oe03xt91.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Lemma</strong>: ?  (2-4)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g9623x3n8zj30nq0arjsh.jpg" alt></p>
+</li>
+</ul>
+<h2 id="special-functions-1">3.2. special functions</h2><h3 id="covariance">3.2.1. covariance</h3><ul>
 <li><p><strong>Def1.20</strong>: co-variance</p>
-<p>s.t. abs &lt; inf <span class="math display">\[
-Cov(X,Y)=E _{X,Y}(X-E(X))(Y-E(Y)) = number(X,Y)
-\]</span></p>
-<ul>
-<li><strong>Qua1.21</strong>: =&gt; <span class="math inline">\(Cov(X,Y) = EXY -EXEY\)</span></li>
-<li><strong>Qua1.22</strong>: =&gt; <span class="math inline">\(Cov(aX,bY)=abConv(X,Y)\)</span></li>
-<li><strong>Qua1.23</strong>: =&gt; <span class="math inline">\(Cov( \sum_{n = 1}^{\infty}Xi,Y)= \sum_{n = 1}^{\infty}Cov(Xi,Y)\)</span></li>
-</ul></li>
+<p>s.t. abs &lt; inf</p>
+<script type="math/tex; mode=display">
+Cov(X,Y)=E _{X,Y}(X-E(X))(Y-E(Y)) = number(X,Y)</script><ul>
+<li><strong>Qua1.21</strong>: =&gt; $Cov(X,Y) = EXY -EXEY$</li>
+<li><strong>Qua1.22</strong>: =&gt; $Cov(aX,bY)=abConv(X,Y)$</li>
+<li><strong>Qua1.23</strong>: =&gt; $Cov( \sum_{n = 1}^{\infty}Xi,Y)= \sum_{n = 1}^{\infty}Cov(Xi,Y)$</li>
 </ul>
-<h3 id="correlation-coefficient">3.2.2. correlation coefficient</h3>
-<ul>
+</li>
+</ul>
+<h3 id="correlation-coefficient">3.2.2. correlation coefficient</h3><ul>
 <li><p><strong>Def2.24</strong>: correlation coefficient</p>
-<p><img src="/2019/11/19/Probability/image-20191122220649807.png"></p>
+<p><img src="/2019/11/19/Probability/image-20191122220649807.png" alt></p>
 <ul>
-<li><p><strong>Qua2.25</strong>: =&gt; when r = 1 or -1</p>
-<p><img src="/2019/11/19/Probability/image-20191122220657466.png"></p>
-<p><strong>Proof</strong>:</p>
-<p><img src="/2019/11/19/Probability/image-20191122220708222.png"></p></li>
+<li><p><strong>Qua2.25</strong>: =&gt; when r = 1 or -1 </p>
+<p><img src="/2019/11/19/Probability/image-20191122220657466.png" alt></p>
+<p><strong>Proof</strong>: </p>
+<p><img src="/2019/11/19/Probability/image-20191122220708222.png" alt></p>
+</li>
 <li><p><strong>Qua2.26</strong>: =&gt; relationship with E &amp; Cov</p>
-<p><img src="/2019/11/19/Probability/image-20191122220726433.png"></p></li>
-</ul></li>
+<p><img src="/2019/11/19/Probability/image-20191122220726433.png" alt></p>
+</li>
 </ul>
-<h3 id="conditional-expectation">3.2.3. conditional expectation</h3>
-<ul>
-<li><p><strong>Def1.7</strong>: conditional expectation <span class="math display">\[
+</li>
+</ul>
+<h3 id="conditional-expectation">3.2.3. conditional expectation</h3><ul>
+<li><p><strong>Def1.7</strong>: conditional expectation </p>
+<script type="math/tex; mode=display">
 E(X|Y=k)= \sum_{v}^{} v*p _{X|Y}(v|k)=number(k,X,Y) \\
   E(X|Y=k)= \int_{- \infty}^{\infty} v*p _{X|Y}(v|k)dv =number(k,X,Y)\\
-  E(X|Y) = randomvariable(Y)
-\]</span> <img src="/2019/11/19/Probability/image-20191122220735156.png"></p>
+  E(X|Y) = randomvariable(Y)</script><p><img src="/2019/11/19/Probability/image-20191122220735156.png" alt></p>
 <p><strong>Example</strong>:</p>
-<p><img src="/2019/11/19/Probability/image-20191122220742987.png"></p>
-<ul>
-<li><p><strong>Qua1.8</strong>: =&gt; total expectation fomula <span class="math display">\[
-E(E(X|Y)) = E(X)\\E _{Y}(E(X|Y))  = \sum_{k}^{}E(X|Y=k)P(Y=k)= E(X)
-\]</span></p></li>
-<li><p><strong>Qua1.9</strong>: =&gt; take out the known <span class="math display">\[
-E  (g(X)Y|X)=g(X)E (Y|X)
-\]</span></p></li>
-<li><p><strong>Qua1.10</strong>: =&gt; Caughty <span class="math display">\[
-|E(XY|Z)| \leq \sqrt{E(X ^{2}|Z)} \sqrt{E(Y ^{2}|Z)} \\
-|EXY|^{2} \leq E X ^{2} EY ^{2}
-\]</span> <strong>Proof</strong>:</p>
-<p><img src="/2019/11/19/Probability/image-20191122220751827.png"></p></li>
-</ul></li>
+<p><img src="/2019/11/19/Probability/image-20191122220742987.png" alt></p>
+</li>
 </ul>
-<h3 id="kl-divergence-2-9">3.2.4. KL divergence (2-9)</h3>
 <ul>
-<li><p><strong>Def</strong>: a group of function</p>
-<p><img src="/2019/11/19/Probability/image-20191122220845572.png"></p></li>
+<li><p><strong>Qua1.8</strong>: =&gt; total expectation fomula </p>
+<script type="math/tex; mode=display">
+E(E(X|Y)) = E(X)\\E _{Y}(E(X|Y))  = \sum_{k}^{}E(X|Y=k)P(Y=k)= E(X)</script></li>
+<li><p><strong>Qua1.9</strong>: =&gt; take out the known</p>
+<script type="math/tex; mode=display">
+E  (g(X)Y|X)=g(X)E (Y|X)</script></li>
+<li><p><strong>Qua1.10</strong>: =&gt; Caughty </p>
+<script type="math/tex; mode=display">
+|E(XY|Z)| \leq \sqrt{E(X ^{2}|Z)} \sqrt{E(Y ^{2}|Z)} \\
+|EXY|^{2} \leq E X ^{2} EY ^{2}</script><p><strong>Proof</strong>:</p>
+<p><img src="/2019/11/19/Probability/image-20191122220751827.png" alt></p>
+</li>
+</ul>
+<h3 id="KL-divergence-2-9">3.2.4. KL divergence (2-9)</h3><ul>
+<li><p><strong>Def</strong>: a group of function </p>
+<p><img src="/2019/11/19/Probability/image-20191122220845572.png" alt></p>
+</li>
+</ul>
+<ul>
 <li><p><strong>Def</strong>: KL divergence</p>
-<p><img src="/2019/11/19/Probability/image-20191122220852570.png"></p>
+<p><img src="/2019/11/19/Probability/image-20191122220852570.png" alt></p>
 <ul>
 <li><p><strong>Qua</strong>: accutually not a formal distance, but can be used to metric the distance between distributions.</p>
-<p><img src="/2019/11/19/Probability/image-20191122220908425.png"></p></li>
-</ul></li>
+<p><img src="/2019/11/19/Probability/image-20191122220908425.png" alt></p>
+</li>
 </ul>
-<h3 id="hellinger-distance-2-9">3.2.5. Hellinger distance (2-9)</h3>
+</li>
+</ul>
+<h3 id="Hellinger-distance-2-9">3.2.5. Hellinger distance (2-9)</h3><ul>
+<li><p><strong>Def</strong>: a group of function </p>
+<p><img src="/2019/11/19/Probability/image-20191122220923782.png" alt></p>
+</li>
+</ul>
 <ul>
-<li><p><strong>Def</strong>: a group of function</p>
-<p><img src="/2019/11/19/Probability/image-20191122220923782.png"></p></li>
-<li><p><strong>Def</strong>: Hellinger distance</p></li>
+<li><strong>Def</strong>: Hellinger distance</li>
 </ul>
-<p><img src="/2019/11/19/Probability/image-20191122220938194.png"></p>
+<p><img src="/2019/11/19/Probability/image-20191122220938194.png" alt></p>
 <ul>
-<li><strong>Qua</strong>: =&gt; KL distance</li>
-</ul>
-<p><img src="/2019/11/19/Probability/image-20191122220944544.png"></p>
+<li><p><strong>Qua</strong>: =&gt; KL distance </p>
+<p><img src="/2019/11/19/Probability/image-20191122220944544.png" alt></p>
 <p><strong>Proof</strong>:</p>
-<p><img src="/2019/11/19/Probability/image-20191122220958773.png"></p>
-<ul>
-<li><p><strong>Qua</strong>: =&gt; upper bound</p>
-<p><img src="/2019/11/19/Probability/image-20191122221006484.png"></p>
-<p><strong>Proof</strong>:</p>
-<p><img src="/2019/11/19/Probability/image-20191122221020021.png"><strong>Note</strong>: acctually from MLE definition and KL and He relationship</p>
-<p><img src="/2019/11/19/Probability/image-20191122221028791.png"></p></li>
-<li><p><strong>Theorm</strong>: relation ship between above two group of function</p>
-<p><img src="/2019/11/19/Probability/image-20191122221037326.png"></p>
-<p><strong>Example</strong>:</p>
-<p><img src="/2019/11/19/Probability/image-20191122221055250.png"></p>
+<p><img src="/2019/11/19/Probability/image-20191122220958773.png" alt></p>
+</li>
+<li><p><strong>Qua</strong>:  =&gt; upper bound </p>
+<p><img src="/2019/11/19/Probability/image-20191122221006484.png" alt></p>
+<p>  <strong>Proof</strong>:</p>
+<p>  <img src="/2019/11/19/Probability/image-20191122221020021.png" alt><strong>Note</strong>: acctually from MLE definition and KL and He relationship </p>
+<p>  <img src="/2019/11/19/Probability/image-20191122221028791.png" alt></p>
+</li>
+<li><p><strong>Theorm</strong>: relation ship between above two group of function </p>
+<p><img src="/2019/11/19/Probability/image-20191122221037326.png" alt></p>
+<p><strong>Example</strong>: </p>
+<p><img src="/2019/11/19/Probability/image-20191122221055250.png" alt></p>
 <p><strong>Note</strong>: this distribution satisfy the <strong>Theorm</strong>, thus the empirical is very useful.</p>
-<p><img src="/2019/11/19/Probability/image-20191122221108392.png"></p></li>
+<p><img src="/2019/11/19/Probability/image-20191122221108392.png" alt></p>
+</li>
 </ul>
-<h2 id="indepence-correlation">3.3. indepence &amp; correlation</h2>
-<h3 id="indepence">3.3.1. indepence</h3>
+<h2 id="indepence-amp-correlation">3.3. indepence &amp; correlation</h2><h3 id="indepence">3.3.1. indepence</h3><ul>
+<li><p><strong>Def3.1</strong>: independence (of variable)</p>
+<script type="math/tex; mode=display">
+F_{XY} () =F _{X }()F _{Y}() \\p _{XY} = p _{X} p _{Y}</script><ul>
+<li><p><strong>Qua3.1</strong>: Gaussian =&gt; ind </p>
+<p>s.t. X1, X2 is variable gaussian</p>
+<script type="math/tex; mode=display">
+X1,X2 \text{ is uncorrelated = X1,X2 is independent}</script></li>
+</ul>
+</li>
+</ul>
 <ul>
-<li><p><strong>Def3.1</strong>: independence (of variable) <span class="math display">\[
-F_{XY} () =F _{X }()F _{Y}() \\p _{XY} = p _{X} p _{Y}
-\]</span></p>
-<ul>
-<li><p><strong>Qua3.1</strong>: Gaussian =&gt; ind</p>
-<p>s.t. X1, X2 is variable gaussian <span class="math display">\[
-X1,X2 \text{ is uncorrelated = X1,X2 is independent}
-\]</span></p></li>
 <li><p><strong>Qua3.2</strong>: ind =&gt; E</p>
-<p>s.t. X1, X2 independence <span class="math display">\[
-E(X1X2) = E(X1)E(X2)
-\]</span></p></li>
+<p>s.t. X1, X2 independence</p>
+<script type="math/tex; mode=display">
+E(X1X2) = E(X1)E(X2)</script></li>
 <li><p><strong>Qua3.3</strong>: ind =&gt; uncorrelation</p>
 <p>s.t. （1）X1, X2 independence</p>
-<p>​ （2）X1 X2 var not inf <span class="math display">\[
-X1,X2 \text{ is uncorrelated}
-\]</span></p></li>
-<li><p><strong>Qua3.5</strong>: ind =&gt; character function</p>
-<p><img src="/2019/11/19/Probability/image-20191122221121036.png"></p></li>
+<p>​        （2）X1 X2 var not inf</p>
+<script type="math/tex; mode=display">
+X1,X2 \text{ is uncorrelated}</script></li>
+<li><p><strong>Qua3.5</strong>: ind =&gt; character function </p>
+<p><img src="/2019/11/19/Probability/image-20191122221121036.png" alt></p>
+</li>
 <li><p><strong>Qua3.6</strong>: ind =&gt; conditional expectation</p>
-<p><img src="/2019/11/19/Probability/image-20191122221127851.png"></p>
+<p><img src="/2019/11/19/Probability/image-20191122221127851.png" alt></p>
 <p><strong>Proof</strong>:</p>
-<p><img src="/2019/11/19/Probability/image-20191122221136473.png"></p></li>
-</ul></li>
+<p><img src="/2019/11/19/Probability/image-20191122221136473.png" alt></p>
+</li>
 </ul>
-<h3 id="correlation">3.3.2. correlation</h3>
-<ul>
-<li><strong>Def3.2</strong>: correlated <span class="math display">\[
+<h3 id="correlation">3.3.2. correlation</h3><ul>
+<li><strong>Def3.2</strong>: correlated<script type="math/tex; mode=display">
 r _{XY} = \pm 1 \Rightarrow XY\text{ is probability 1 linear} \\
-r _{XY} = 0 \Rightarrow XY \text{ is uncorrelated}
-\]</span></li>
+r _{XY} = 0 \Rightarrow XY \text{ is uncorrelated}</script></li>
 </ul>
-<h2 id="transformation">3.4. transformation</h2>
-<ul>
+<h2 id="transformation">3.4. transformation</h2><ul>
 <li><p><strong>Theorm2.</strong>: transformation of continuous to continuous</p>
-<p>s.t. (1) <span class="math inline">\(g(x)\)</span> strictly mono</p>
-<p>​ (2) <span class="math inline">\(g ^{-1}(y)\)</span> has continuous derivation <span class="math display">\[
+<p>s.t. (1) $g(x)$ strictly mono</p>
+<p>​        (2) $g ^{-1}(y)$ has continuous derivation</p>
+<script type="math/tex; mode=display">
 (1) Y=g(X) \text{ is continuous random variable}\\
 (2) g _{Y}(k) = \begin{cases}
-p(f ^{-1}(y))|f ^{-1}(y)&#39;| &amp; k \in f(x)值域\\
-0&amp; otherwise
-\end{cases}
-\]</span></p></li>
-<li><p><strong>Theorm2.</strong>: transformation of continuous to continuous +</p>
-<p>s.t. (1) <span class="math inline">\(g(x)\)</span> strictly mono in non-overlap areas. And areas add up to <span class="math inline">\(\infty\)</span></p>
-<p>​ (2) $ g ^{-1}(y)$ has continuous derivation in non-overlap areas. <span class="math display">\[
-same
-\]</span></p></li>
-<li><p><strong>Therom</strong>: transformation of continuous vector(x1,x2..xn is continuous) to continuous <span class="math display">\[
+p(f ^{-1}(y))|f ^{-1}(y)'| & k \in f(x)值域\\
+0& otherwise
+\end{cases}</script></li>
+<li><p><strong>Theorm2.</strong>: transformation of continuous to continuous + </p>
+<p>s.t. (1) $g(x)$ strictly mono in non-overlap areas. And areas add up to $\infty$</p>
+<p>​        (2) $ g ^{-1}(y)$ has continuous derivation in non-overlap areas.</p>
+<script type="math/tex; mode=display">
+same</script></li>
+<li><p><strong>Therom</strong>: transformation of continuous vector(x1,x2..xn is continuous) to continuous</p>
+<script type="math/tex; mode=display">
 (1) Y=f(x1,x2,...,xn)\\
-(2)F _{Y}(k) = \int \limits_{Y \leq k}p_{X1...Xn}(x1,...xn)dx1...dxn
-\]</span></p></li>
+(2)F _{Y}(k) = \int \limits_{Y \leq k}p_{X1...Xn}(x1,...xn)dx1...dxn</script></li>
 <li><p><strong>Theorm</strong>: transformation of continuous vector(x1,x2..xn is continuous) to continuos vector</p>
 <p>s.t. (1) m = n</p>
-<p>​ (2) ... <span class="math display">\[
-...
-\]</span></p></li>
-<li><p><strong>Theorm2.1</strong>x**: convolution equation <span class="math display">\[
+<p>​        (2) …</p>
+<script type="math/tex; mode=display">
+...</script></li>
+<li><p><strong>Theorm2.1</strong>x**: convolution equation</p>
+<script type="math/tex; mode=display">
 P(X+Y=c) = \sum_{k = 0}^{r}P(X=k)P(Y=c-k)\\
-P_{X+Y}(c) = \int_{- \infty}^{\infty}p _{X}(k)p _{Y}(c-k)dk  \\
-\]</span></p></li>
+P_{X+Y}(c) = \int_{- \infty}^{\infty}p _{X}(k)p _{Y}(c-k)dk  \\</script></li>
 </ul>
-<h2 id="classic-bounds">3.5. classic bounds</h2>
-<h3 id="markov-bound">3.5.1. markov bound</h3>
-<ul>
-<li><p><strong>Theorm</strong>: markov bound</p>
+<h2 id="classic-bounds">3.5. classic bounds</h2><h3 id="markov-bound">3.5.1. markov bound</h3><ul>
+<li><p><strong>Theorm</strong>: markov bound </p>
 <p><strong>Usage</strong>: measure the prob that of deviation will larger than e</p>
-<p>s.t. V(X)  <span class="math display">\[
-P(|X-E(X)| \geq e) \leq \frac{V(X)}{e ^{2}}
-\]</span> <img src="/2019/11/19/Probability/image-20191122221148949.png"></p>
+<p>s.t. V(X) \exists  </p>
+<script type="math/tex; mode=display">
+P(|X-E(X)| \geq e) \leq \frac{V(X)}{e ^{2}}</script><p><img src="/2019/11/19/Probability/image-20191122221148949.png" alt></p>
+<p>1-14 </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qafsa8aj318204e3zd.jpg" alt></p>
+<p><strong>Example</strong>: that markov’s only a very weak bound (1-14)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qdxoi8bj318q0ien2k.jpg" alt></p>
+</li>
+</ul>
+<h3 id="chebshev-bound">3.5.2. chebshev bound</h3><ul>
+<li><p><strong>Corollary</strong> : =&gt; chebshev bound </p>
+<p><img src="/2019/11/19/Probability/image-20191122221205900.png" alt></p>
 <p>1-14</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qafsa8aj318204e3zd.jpg"></p>
-<p><strong>Example</strong>: that markov's only a very weak bound (1-14)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qdxoi8bj318q0ien2k.jpg"></p></li>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qast0ufj317g04oq3v.jpg" alt></p>
+</li>
 </ul>
-<h3 id="chebshev-bound">3.5.2. chebshev bound</h3>
-<ul>
-<li><p><strong>Corollary</strong> : =&gt; chebshev bound</p>
-<p><img src="/2019/11/19/Probability/image-20191122221205900.png"></p>
-<p>1-14</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qast0ufj317g04oq3v.jpg"></p></li>
+<h3 id="chernoff-bound">3.5.3. chernoff bound</h3><ul>
+<li><p><strong>Corollary</strong>: =&gt; chernoff bound </p>
+<p><img src="https://i.imgur.com/VZaNMVN.png" alt="image-20191123103719293"></p>
+</li>
 </ul>
-<h3 id="chernoff-bound">3.5.3. chernoff bound</h3>
-<ul>
-<li><p><strong>Corollary</strong>: =&gt; chernoff bound</p>
-<figure>
-<img src="https://i.imgur.com/VZaNMVN.png" alt><figcaption>image-20191123103719293</figcaption>
-</figure></li>
-</ul>
-<h3 id="hoeffding-bound">3.5.4. hoeffding bound</h3>
-<h4 id="heffding-bound">3.5.4.1. heffding bound</h4>
-<ul>
+<h3 id="hoeffding-bound">3.5.4. hoeffding bound</h3><h4 id="heffding-bound">3.5.4.1. heffding bound</h4><ul>
 <li><p><strong>Intro</strong>: insights of hoeffding bound</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qfo8lnij317s0r2gqn.jpg"></p></li>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qfo8lnij317s0r2gqn.jpg" alt></p>
+</li>
 <li><p><strong>Lemma</strong>: =&gt; bounds (used to prove hoeffding) (1-14)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qeyfegwj317e04omxo.jpg"></p>
-<p><img src="/2019/11/19/Probability/image-20191122221223288.png"></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qeyfegwj317e04omxo.jpg" alt></p>
+<p><img src="/2019/11/19/Probability/image-20191122221223288.png" alt></p>
 <p><strong>Proof</strong>:</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qg93dfhj317o0d2ju1.jpg"></p></li>
-<li><p><strong>Theorm</strong>:: =&gt; hoeffding's inequality (1-14)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qgtyz78j31580daq4s.jpg"></p>
-<p><img src="/2019/11/19/Probability/image-20191122221234286.png"></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qg93dfhj317o0d2ju1.jpg" alt></p>
+</li>
+<li><p><strong>Theorm</strong>:: =&gt; hoeffding’s inequality (1-14)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qgtyz78j31580daq4s.jpg" alt></p>
+<p><img src="/2019/11/19/Probability/image-20191122221234286.png" alt></p>
 <p>(2-5)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g962pn0w2ij30o008sab1.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g962pn0w2ij30o008sab1.jpg" alt></p>
 <p><strong>Proof</strong>:</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qh58rnoj31820ewwgx.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qh58rnoj31820ewwgx.jpg" alt></p>
 <p><strong>Example</strong>:</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qhvca36j316y0ew0wc.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qhvca36j316y0ew0wc.jpg" alt></p>
+</li>
+</ul>
 <ul>
 <li><p><strong>Corollary</strong>: =&gt; more bounds</p>
-<p><img src="/2019/11/19/Probability/image-20191122221246638.png"></p></li>
-</ul></li>
+<p><img src="/2019/11/19/Probability/image-20191122221246638.png" alt></p>
+</li>
 </ul>
-<h4 id="bound-differences-in-equlity-1-15-1-16">3.5.4.2. bound differences in equlity (1-15, 1-16)</h4>
-<ul>
+<h4 id="bound-differences-in-equlity-1-15-1-16">3.5.4.2. bound differences in equlity (1-15, 1-16)</h4><ul>
 <li><p><strong>Theorem</strong>: bound differences inequality (1-15)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qi2cgdnj317s0nm78j.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qi2cgdnj317s0nm78j.jpg" alt></p>
 <p>(1-16)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qxdvps6j317c07kgn4.jpg"></p>
-<p><strong>Proof</strong>:</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qjejbh6j317s02omxj.jpg"></p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qjofl95j318e0ga0v8.jpg"></p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qk4tswzj30zk0u0n3o.jpg"></p>
-<p><strong>Example</strong>: (1-16)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qyt07l7j316q08ijt0.jpg"></p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qz49zqvj317i07idge.jpg"></p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qz9wi5uj315h0u0gr5.jpg"></p>
-<p><strong>Example</strong> 2 : (1-16)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qzs36dlj31800bwjti.jpg"></p>
-<p><strong>Note</strong>:</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95r0zkg12j30we06o3z4.jpg"></p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95r15a1gdj31300natbn.jpg"></p></li>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qxdvps6j317c07kgn4.jpg" alt></p>
+</li>
 </ul>
-<h2 id="limit-theory">3.6. limit theory</h2>
-<ul>
-<li><p><strong>Def</strong>: tight &amp; uniformly tight</p>
-<p><img src="/2019/11/19/Probability/image-20191122221307310.png"></p>
+<p>  <strong>Proof</strong>:</p>
+<p>  <img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qjejbh6j317s02omxj.jpg" alt></p>
+<p>  <img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qjofl95j318e0ga0v8.jpg" alt></p>
+<p>  <img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qk4tswzj30zk0u0n3o.jpg" alt></p>
+<p>  <strong>Example</strong>: (1-16)</p>
+<p>  <img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qyt07l7j316q08ijt0.jpg" alt></p>
+<p>  <img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qz49zqvj317i07idge.jpg" alt></p>
+<p>  <img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qz9wi5uj315h0u0gr5.jpg" alt></p>
+<p>  <strong>Example</strong> 2 : (1-16)</p>
+<p>  <img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95qzs36dlj31800bwjti.jpg" alt></p>
+<p>  <strong>Note</strong>:</p>
+<p>  <img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95r0zkg12j30we06o3z4.jpg" alt></p>
+<p>  <img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95r15a1gdj31300natbn.jpg" alt></p>
+<h2 id="limit-theory">3.6. limit theory</h2><ul>
+<li><p><strong>Def</strong>: tight &amp; uniformly tight </p>
+<p><img src="/2019/11/19/Probability/image-20191122221307310.png" alt></p>
 <ul>
 <li><p><strong>Qua</strong>: suff &amp; neck</p>
-<p><img src="/2019/11/19/Probability/image-20191122221314737.png"></p></li>
-</ul></li>
-<li><p><strong>Theorm</strong>:: mono limit</p>
-<p><img src="/2019/11/19/Probability/image-20191122221323385.png"></p>
-<p><img src="/2019/11/19/Probability/image-20191122221329987.png"></p></li>
-<li><p><strong>Theorm</strong>: control limit</p>
-<p><img src="/2019/11/19/Probability/image-20191122221345498.png"></p></li>
-<li><p><strong>Theorm</strong>: different converges</p>
-<p><img src="/2019/11/19/Probability/image-20191122221352952.png"></p>
-<p><img src="/2019/11/19/Probability/image-20191122221403109.png"></p></li>
-<li><p><strong>Theorm</strong>: BC(3-6)</p>
-<p><img src="/2019/11/19/Probability/image-20191122221410897.png"></p></li>
+<p><img src="/2019/11/19/Probability/image-20191122221314737.png" alt></p>
+</li>
 </ul>
-<h3 id="converges-in-distribution">3.6.1. converges in distribution</h3>
+</li>
+</ul>
 <ul>
+<li><p><strong>Theorm</strong>:: mono limit </p>
+<p><img src="/2019/11/19/Probability/image-20191122221323385.png" alt></p>
+<p><img src="/2019/11/19/Probability/image-20191122221329987.png" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: control limit</p>
+<p><img src="/2019/11/19/Probability/image-20191122221345498.png" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: different converges</p>
+<p><img src="/2019/11/19/Probability/image-20191122221352952.png" alt></p>
+<p><img src="/2019/11/19/Probability/image-20191122221403109.png" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: BC(3-6)</p>
+<p><img src="/2019/11/19/Probability/image-20191122221410897.png" alt></p>
+</li>
+</ul>
+<h3 id="converges-in-distribution">3.6.1. converges in distribution</h3><ul>
 <li><p><strong>Def</strong>: convergence in d</p>
-<p>(2-1)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95v6cnzotj30nq03vaaf.jpg"></p>
+<p> (2-1)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95v6cnzotj30nq03vaaf.jpg" alt></p>
 <p>(2-10)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95v7ve4mej318g0bgjvk.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95v7ve4mej318g0bgjvk.jpg" alt></p>
 <p>(2-10)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wg28sgkj318w0fmjxu.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wg28sgkj318w0fmjxu.jpg" alt></p>
 <p>(book)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wgbqrinj319007w0yj.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wgbqrinj319007w0yj.jpg" alt></p>
 <p><strong>Note</strong>:</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wggvzsuj316w08i77g.jpg"></p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wgnn5tnj31940ha7dh.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wggvzsuj316w08i77g.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wgnn5tnj31940ha7dh.jpg" alt></p>
 <ul>
 <li><p><strong>Qua</strong>: suff &amp; necc</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95vrft2yrj316s0gogvv.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95vrft2yrj316s0gogvv.jpg" alt></p>
 <p>(2-1)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95w9v8dvmj30p707vjs6.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95w9v8dvmj30p707vjs6.jpg" alt></p>
 <p>(2-1)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wa2z2msj30oa02e3yj.jpg"></p></li>
-<li><p><strong>Qua</strong>: pn converge =&gt;</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95vsvcpmzj315m09y0wr.jpg"></p></li>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wa2z2msj30oa02e3yj.jpg" alt></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: pn converge =&gt; </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95vsvcpmzj315m09y0wr.jpg" alt></p>
+</li>
+</ul>
+<ul>
 <li><p><strong>Qua</strong>: operation</p>
 <p>(book)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wh8mwimj316g0p6k6h.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wh8mwimj316g0p6k6h.jpg" alt></p>
 <p>(2-1)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95vfu7ylvj30ov012q2s.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95vfu7ylvj30ov012q2s.jpg" alt></p>
 <p>(2-1)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wj15esaj316s0i2gqf.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wj15esaj316s0i2gqf.jpg" alt></p>
 <p>(2-2)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95x8kq0y1j30of054aam.jpg"></p></li>
-</ul></li>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95x8kq0y1j30of054aam.jpg" alt></p>
+</li>
 </ul>
-<h4 id="helly-theorem">3.6.1.1. Helly theorem</h4>
-<ul>
-<li><p><strong>Theorm</strong>: Helly, existence (book)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wjlsqjbj318a05gn0v.jpg"></p>
-<p><strong>Proof</strong>: long</p></li>
-<li><p><strong>Theorm</strong>: Helly2, whether function still converge (book)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wjr9whtj318g0e8qa7.jpg"></p></li>
+<h4 id="Helly-theorem">3.6.1.1. Helly theorem</h4><ul>
+<li><p><strong>Theorm</strong>: Helly, existence  (book)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wjlsqjbj318a05gn0v.jpg" alt></p>
+<p><strong>Proof</strong>: long</p>
+</li>
 </ul>
-<h4 id="levy-theorem">3.6.1.2. Levy theorem</h4>
 <ul>
+<li><p><strong>Theorm</strong>: Helly2, whether function still converge  (book)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wjr9whtj318g0e8qa7.jpg" alt></p>
+</li>
+</ul>
+<h4 id="Levy-theorem">3.6.1.2. Levy theorem</h4><ul>
 <li><p><strong>Theorm</strong>: Levy, converge and cf (book)</p>
-<p><strong>Usage</strong>: special function &amp; density one on one</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wk19vwtj318s05iwho.jpg"></p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wk85s8yj317c0cowjq.jpg"></p></li>
+<p><strong>Usage</strong>: special function &amp; density one on one </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wk19vwtj318s05iwho.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wk85s8yj317c0cowjq.jpg" alt></p>
+</li>
 <li><p><strong>Theorm</strong>: Levy backwards (book)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wkgtsa5j319a044n0o.jpg"></p></li>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wkgtsa5j319a044n0o.jpg" alt></p>
+</li>
 </ul>
-<h4 id="centrol-limit-theorem">3.6.1.3. centrol limit theorem</h4>
-<ul>
-<li><p><strong>Def</strong>: centrol limit theorem (sum of x --d--&gt; gaussian) (book)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95vnmgmeqj318i07kgp0.jpg"></p></li>
-<li><p><strong>Theorm</strong>: sum of iid gaussain --d--&gt; gaussian (book)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wksoe9vj318c0gs7cm.jpg"></p>
+<h4 id="centrol-limit-theorem">3.6.1.3. centrol limit theorem</h4><ul>
+<li><p><strong>Def</strong>: centrol limit theorem (sum of x —d—&gt; gaussian) (book)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95vnmgmeqj318i07kgp0.jpg" alt></p>
+</li>
+<li><p><strong>Theorm</strong>: sum of iid gaussain —d—&gt; gaussian (book)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wksoe9vj318c0gs7cm.jpg" alt></p>
 <p><strong>Note</strong> :</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wl5qfz9j318m0h8k3q.jpg"></p></li>
-<li><p><strong>Theorm</strong>: sum of iid --d--&gt; Gaussian (book)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wljnntgj318q07ejus.jpg"></p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wloatjwj318004mgnc.jpg"></p>
-<p><strong>Proof</strong>:</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wm3srxej31820ew7c9.jpg"></p></li>
-<li><p><strong>Theorm</strong>: sum of independent --d--&gt; Gaussian (less strict condition) (book)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wmbi7lqj317y0fkn3n.jpg"></p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wmhzmjxj318i0ccdib.jpg"></p></li>
-<li><p><strong>Theorm</strong>: sum of independent --d--&gt; gaussian (less strict condition) (book)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wmumg24j319408i0we.jpg"></p></li>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wl5qfz9j318m0h8k3q.jpg" alt></p>
+</li>
 </ul>
-<h3 id="converges-in-probabilty">3.6.2. converges in probabilty</h3>
 <ul>
-<li><p><strong>Def</strong>: converges in probability</p>
+<li><p><strong>Theorm</strong>: sum of iid —d—&gt; Gaussian (book)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wljnntgj318q07ejus.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wloatjwj318004mgnc.jpg" alt></p>
+<p><strong>Proof</strong>:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wm3srxej31820ew7c9.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: sum of independent —d—&gt; Gaussian (less strict condition) (book)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wmbi7lqj317y0fkn3n.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wmhzmjxj318i0ccdib.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: sum of independent —d—&gt; gaussian (less strict condition) (book)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wmumg24j319408i0we.jpg" alt></p>
+</li>
+</ul>
+<h3 id="converges-in-probabilty">3.6.2. converges in probabilty</h3><ul>
+<li><p><strong>Def</strong>: converges in probability </p>
 <p>(2-1)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95v83p1f1j30np01k0ss.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95v83p1f1j30np01k0ss.jpg" alt></p>
 <p>(book)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wn3xt1lj318o070wgk.jpg"></p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wnf1nwlj316c06oq4i.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wn3xt1lj318o070wgk.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wnf1nwlj316c06oq4i.jpg" alt></p>
 <p><strong>Note</strong>: why distribution not enough so include probability is nemeses</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wns74qcj317y0ta4de.jpg"></p></li>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wns74qcj317y0ta4de.jpg" alt></p>
+</li>
+</ul>
+<ul>
 <li><p><strong>Qua</strong>: necc &amp; suff (book)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wo2djf3j318u05at9u.jpg"></p></li>
-<li><p><strong>Qua</strong>: E(zn-z) =&gt; (book)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wo6ybijj318g05q75t.jpg"></p></li>
-<li><p><strong>Qua</strong>: =&gt; d</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wo2djf3j318u05at9u.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>:  E(zn-z) =&gt; (book)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wo6ybijj318g05q75t.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; d </p>
 <p>(2-1)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95vbu8m17j30p6015mx2.jpg"></p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95vd5kkhsj30pg013jra.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95vbu8m17j30p6015mx2.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95vd5kkhsj30pg013jra.jpg" alt></p>
 <p>(book)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wpex914j3188072ju4.jpg"></p></li>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wpex914j3188072ju4.jpg" alt></p>
+</li>
+</ul>
+<ul>
 <li><p><strong>Qua</strong>: operation</p>
 <p>(2-1)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95vh8739mj30pz00xq2s.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95vh8739mj30pz00xq2s.jpg" alt></p>
 <p>(2-2)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95x8kq0y1j30of054aam.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95x8kq0y1j30of054aam.jpg" alt></p>
 <p>(book)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95vzlgrcsj312i076426.jpg"></p></li>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95vzlgrcsj312i076426.jpg" alt></p>
+</li>
 </ul>
-<h4 id="tight-variables">3.6.2.1. tight variables</h4>
-<ul>
+<h4 id="tight-variables">3.6.2.1. tight variables</h4><ul>
 <li><p><strong>Def</strong>: tight variables (2-1)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95w96it89j30nv02st90.jpg"></p></li>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95w96it89j30nv02st90.jpg" alt></p>
+</li>
 </ul>
-<h4 id="oh-pee">3.6.2.2. oh-pee</h4>
-<ul>
+<h4 id="oh-pee">3.6.2.2. oh-pee</h4><ul>
 <li><p><strong>Def</strong>: Op,op (2-1)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95vy8let2j30nz02l3yx.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95vy8let2j30nz02l3yx.jpg" alt></p>
 <ul>
 <li><p><strong>Qua</strong>: operation</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95vydeji1j317i06ctao.jpg"></p></li>
-</ul></li>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95vydeji1j317i06ctao.jpg" alt></p>
+</li>
 </ul>
-<h4 id="weak-law-of-large-numbers">3.6.2.3. weak law of large numbers</h4>
-<ul>
+</li>
+</ul>
+<h4 id="weak-law-of-large-numbers">3.6.2.3. weak law of large numbers</h4><ul>
 <li><p><strong>Def</strong>; law of large numbers (book)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95w0ifdzoj318e0960wx.jpg"></p></li>
-<li><p><strong>Theorm</strong>: sum of iid Bernoulli --p--&gt; E (book)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95w0q2zotj318a09adjt.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95w0ifdzoj318e0960wx.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: sum of iid Bernoulli —p—&gt; E (book)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95w0q2zotj318a09adjt.jpg" alt></p>
 <p>(2-2)</p>
-<p><img src="/Users/huangbenson/Library/Application%20Support/typora-user-images/image-20191015143703877.png"></p></li>
-<li><p><strong>Theorm</strong>: sum --p--&gt; E (less strict)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95w229uotj319208ygph.jpg"></p>
+<p><img src="/Users/huangbenson/Library/Application Support/typora-user-images/image-20191015143703877.png" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: sum —p—&gt; E (less strict)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95w229uotj319208ygph.jpg" alt></p>
 <p><strong>Proof</strong>:</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95w1u96trj31820gswju.jpg"></p></li>
-<li><p><strong>Theorm</strong>: sum of invariant --p--&gt; number (less strict ) (book)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wrr5smcj318405uq7r.jpg"></p></li>
-<li><p><strong>Theorm</strong>: sum of iid --p--&gt; number( more strict )(book)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wrm922lj318006sgoz.jpg"></p></li>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95w1u96trj31820gswju.jpg" alt></p>
+</li>
 </ul>
-<h3 id="converges-in-probabilty-1-almost">3.6.3. converges in probabilty 1 / almost</h3>
 <ul>
-<li><p><strong>Def</strong>:converge in probability.1</p>
+<li><p><strong>Theorm</strong>: sum of invariant —p—&gt; number (less strict ) (book)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wrr5smcj318405uq7r.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: sum of iid —p—&gt; number( more strict )(book)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wrm922lj318006sgoz.jpg" alt></p>
+</li>
+</ul>
+<h3 id="converges-in-probabilty-1-almost">3.6.3. converges in probabilty 1 / almost</h3><ul>
+<li><p><strong>Def</strong>:converge in probability.1 </p>
 <p>(2-1)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95v9220cmj30ns01jgln.jpg">(book)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wr8gbo0j317y0bo7bm.jpg"></p>
-<p><strong>Note</strong>:</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wrfs9vfj318u03qn0b.jpg"></p></li>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95v9220cmj30ns01jgln.jpg" alt>(book)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wr8gbo0j317y0bo7bm.jpg" alt></p>
+<p><strong>Note</strong>: </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wrfs9vfj318u03qn0b.jpg" alt></p>
+</li>
+</ul>
+<ul>
 <li><p><strong>Qua</strong>: necc &amp; suff (book)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wcfcgcnj319e03y0u0.jpg"></p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wcn8e8pj317c0lq44y.jpg"></p></li>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wcfcgcnj319e03y0u0.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wcn8e8pj317c0lq44y.jpg" alt></p>
+</li>
+</ul>
+<ul>
 <li><p><strong>Qua</strong>:P(a-b) =&gt; (book)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wd2uzl9j318w06g0uv.jpg"></p></li>
-<li><p><strong>Qua</strong>: =&gt; P (2-1)<img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95vbc8rapj30lu018a9y.jpg"></p></li>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wd2uzl9j318w06g0uv.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; P (2-1)<img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95vbc8rapj30lu018a9y.jpg" alt></p>
+</li>
 <li><p><strong>Qua</strong>: =&gt; lim(E|Xn-X|) (2-1)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95waqz5bxj30oj01lmxc.jpg"></p></li>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95waqz5bxj30oj01lmxc.jpg" alt></p>
+</li>
 <li><p><strong>Qua</strong>: =&gt; lowerbound(lim inf E|Xn|) (2-2)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wbhwk87j30o202cwej.jpg"></p></li>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wbhwk87j30o202cwej.jpg" alt></p>
+</li>
 <li><p><strong>Qua</strong>: =&gt; lim(E|Xn|) (2-2)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wbzgn7dj30ns03jglu.jpg"></p></li>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wbzgn7dj30ns03jglu.jpg" alt></p>
+</li>
 <li><p><strong>Qua</strong> =&gt;lim(EXn) (2-2)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wt9jc31j30mk029dfw.jpg"></p></li>
-<li><p><strong>Qua</strong>: operation (2-1)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95vhpv9irj30q4010wec.jpg"></p></li>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95wt9jc31j30mk029dfw.jpg" alt></p>
+</li>
 </ul>
-<h4 id="strong-law-of-large-numbers">3.6.3.1. strong law of large numbers</h4>
 <ul>
+<li><p><strong>Qua</strong>: operation  (2-1)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95vhpv9irj30q4010wec.jpg" alt></p>
+</li>
+</ul>
+<h4 id="strong-law-of-large-numbers">3.6.3.1. strong law of large numbers</h4><ul>
 <li><p><strong>Def</strong>: strong law of large numebrs (book)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95w6mffbuj318m0c4q9p.jpg"></p></li>
-<li><p><strong>Theorm</strong>:sum of bernolli --as--&gt; number (book)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95w6x4hipj318a0cuk0d.jpg"></p>
-<p><strong>Proof</strong>: too long</p></li>
-<li><p><strong>Therom</strong> : sum of iid --as--&gt; E. (book)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95w683zybj318c0ayn2t.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95w6mffbuj318m0c4q9p.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>:sum of bernolli —as—&gt; number  (book)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95w6x4hipj318a0cuk0d.jpg" alt></p>
+<p><strong>Proof</strong>: too long</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Therom</strong> : sum of iid —as—&gt; E. (book)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95w683zybj318c0ayn2t.jpg" alt></p>
 <p>(2-2)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95w5rqgvpj319m04kdh1.jpg"></p></li>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95w5rqgvpj319m04kdh1.jpg" alt></p>
+</li>
 </ul>
-<h4 id="uniform-law-of-large-numbers">3.6.3.2. uniform law of large numbers</h4>
-<ul>
-<li><p><strong>Def</strong>: sum of f(bernoll) --as--&gt; number</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g9635r5ilij31wq0iq7a3.jpg"></p></li>
+<h4 id="uniform-law-of-large-numbers">3.6.3.2. uniform law of large numbers</h4><ul>
+<li><p><strong>Def</strong>: sum of f(bernoll)   —as—&gt; number</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g9635r5ilij31wq0iq7a3.jpg" alt></p>
+</li>
 </ul>
-<h3 id="convergence-in-r-th-mean">3.6.4. convergence in r th mean</h3>
-<ul>
+<h3 id="convergence-in-r-th-mean">3.6.4. convergence in r th mean</h3><ul>
 <li><p><strong>Def</strong>: converge in rth means</p>
-<p>(2-1)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95v8sp3axj30nj00y749.jpg"></p>
+<p> (2-1)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95v8sp3axj30nj00y749.jpg" alt></p>
 <p>(book)</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95w4xgaymj316w0c8grh.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95w4xgaymj316w0c8grh.jpg" alt></p>
 <ul>
 <li><p><strong>Qua</strong>: =&gt; p</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95vbo6z6nj30or010wee.jpg"></p></li>
-</ul></li>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95vbo6z6nj30or010wee.jpg" alt></p>
+</li>
+</ul>
+</li>
 </ul>
 
       
@@ -1527,8 +1640,8 @@ P(|X-E(X)| \geq e) \leq \frac{V(X)}{e ^{2}}
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/19/c++/" rel="next" title="C++">
-                <i class="fa fa-chevron-left"></i> C++
+              <a href="/2019/11/19/Linear_Algebra/" rel="next" title="Linear Algebra">
+                <i class="fa fa-chevron-left"></i> Linear Algebra
               </a>
             
           </div>
@@ -1537,8 +1650,8 @@ P(|X-E(X)| \geq e) \leq \frac{V(X)}{e ^{2}}
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/19/Numerical_stats/" rel="prev" title="Numerical Statistics">
-                Numerical Statistics <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/19/Math_analysis/" rel="prev" title="Mathematical Analysis">
+                Mathematical Analysis <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -1748,7 +1861,7 @@ P(|X-E(X)| \geq e) \leq \frac{V(X)}{e ^{2}}
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#frequency-probability"><span class="nav-text">1. frequency &amp; probability</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#probability-space"><span class="nav-text">1.1. probability space</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#general-definition"><span class="nav-text">1.1.1. general definition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#special-probability-spaces"><span class="nav-text">1.1.2. special probability spaces</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#frequency-norm"><span class="nav-text">1.1.2.1. frequency norm</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#classic-norm"><span class="nav-text">1.1.2.2. classic norm</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#geometry-norm"><span class="nav-text">1.1.2.3. geometry norm</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bernoulli-norm"><span class="nav-text">1.1.2.4. Bernoulli norm</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#conditional-probability"><span class="nav-text">1.2. conditional probability</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#conditional-prob"><span class="nav-text">1.2.1. conditional prob</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#all-prob-equation-bayes-equation"><span class="nav-text">1.2.2. all prob equation &amp; bayes equation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#independence-of-event"><span class="nav-text">1.2.3. independence (of event)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#l2-space"><span class="nav-text">1.3. L2 space</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#random-variables"><span class="nav-text">2. random variables</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#distributions"><span class="nav-text">2.1. distributions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#special-functions"><span class="nav-text">2.2. special functions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#expectation"><span class="nav-text">2.2.1. expectation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#variance"><span class="nav-text">2.2.2. variance</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#moment"><span class="nav-text">2.2.3. moment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#characteristic-function"><span class="nav-text">2.2.4. characteristic function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#generating-function"><span class="nav-text">2.2.5. generating function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#yang"><span class="nav-text">2.2.6. yang</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#relationships-of-random-variables"><span class="nav-text">3. relationships of random variables</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#condition"><span class="nav-text">3.1. condition</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#conditional-distribution"><span class="nav-text">3.1.1. conditional distribution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conditional-expectation-projection"><span class="nav-text">3.1.2. conditional expectation (projection)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#special-functions-1"><span class="nav-text">3.2. special functions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#covariance"><span class="nav-text">3.2.1. covariance</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#correlation-coefficient"><span class="nav-text">3.2.2. correlation coefficient</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conditional-expectation"><span class="nav-text">3.2.3. conditional expectation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kl-divergence-2-9"><span class="nav-text">3.2.4. KL divergence (2-9)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hellinger-distance-2-9"><span class="nav-text">3.2.5. Hellinger distance (2-9)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#indepence-correlation"><span class="nav-text">3.3. indepence &amp; correlation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#indepence"><span class="nav-text">3.3.1. indepence</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#correlation"><span class="nav-text">3.3.2. correlation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#transformation"><span class="nav-text">3.4. transformation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#classic-bounds"><span class="nav-text">3.5. classic bounds</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#markov-bound"><span class="nav-text">3.5.1. markov bound</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chebshev-bound"><span class="nav-text">3.5.2. chebshev bound</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chernoff-bound"><span class="nav-text">3.5.3. chernoff bound</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hoeffding-bound"><span class="nav-text">3.5.4. hoeffding bound</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#heffding-bound"><span class="nav-text">3.5.4.1. heffding bound</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bound-differences-in-equlity-1-15-1-16"><span class="nav-text">3.5.4.2. bound differences in equlity (1-15, 1-16)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#limit-theory"><span class="nav-text">3.6. limit theory</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#converges-in-distribution"><span class="nav-text">3.6.1. converges in distribution</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#helly-theorem"><span class="nav-text">3.6.1.1. Helly theorem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#levy-theorem"><span class="nav-text">3.6.1.2. Levy theorem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#centrol-limit-theorem"><span class="nav-text">3.6.1.3. centrol limit theorem</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#converges-in-probabilty"><span class="nav-text">3.6.2. converges in probabilty</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#tight-variables"><span class="nav-text">3.6.2.1. tight variables</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#oh-pee"><span class="nav-text">3.6.2.2. oh-pee</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#weak-law-of-large-numbers"><span class="nav-text">3.6.2.3. weak law of large numbers</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#converges-in-probabilty-1-almost"><span class="nav-text">3.6.3. converges in probabilty 1 / almost</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#strong-law-of-large-numbers"><span class="nav-text">3.6.3.1. strong law of large numbers</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#uniform-law-of-large-numbers"><span class="nav-text">3.6.3.2. uniform law of large numbers</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#convergence-in-r-th-mean"><span class="nav-text">3.6.4. convergence in r th mean</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#frequency-amp-probability"><span class="nav-text">1. frequency &amp; probability</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#probability-space"><span class="nav-text">1.1. probability space</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#general-definition"><span class="nav-text">1.1.1. general definition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#special-probability-spaces"><span class="nav-text">1.1.2. special probability spaces</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#frequency-norm"><span class="nav-text">1.1.2.1. frequency norm</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#classic-norm"><span class="nav-text">1.1.2.2. classic norm</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#geometry-norm"><span class="nav-text">1.1.2.3. geometry norm</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Bernoulli-norm"><span class="nav-text">1.1.2.4. Bernoulli norm</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#conditional-probability"><span class="nav-text">1.2. conditional probability</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#conditional-prob"><span class="nav-text">1.2.1. conditional prob</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#all-prob-equation-amp-bayes-equation"><span class="nav-text">1.2.2. all prob equation &amp; bayes equation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#independence-of-event"><span class="nav-text">1.2.3. independence (of event)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#L2-space"><span class="nav-text">1.3. L2 space</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#random-variables"><span class="nav-text">2. random variables</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#distributions"><span class="nav-text">2.1. distributions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#special-functions"><span class="nav-text">2.2. special functions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#expectation"><span class="nav-text">2.2.1. expectation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#variance"><span class="nav-text">2.2.2. variance</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#moment"><span class="nav-text">2.2.3. moment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#characteristic-function"><span class="nav-text">2.2.4. characteristic function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#generating-function"><span class="nav-text">2.2.5. generating function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#yang"><span class="nav-text">2.2.6. yang</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#relationships-of-random-variables"><span class="nav-text">3. relationships of random variables</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#condition"><span class="nav-text">3.1. condition</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#conditional-distribution"><span class="nav-text">3.1.1. conditional distribution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conditional-expectation-projection"><span class="nav-text">3.1.2. conditional expectation (projection)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#special-functions-1"><span class="nav-text">3.2. special functions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#covariance"><span class="nav-text">3.2.1. covariance</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#correlation-coefficient"><span class="nav-text">3.2.2. correlation coefficient</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conditional-expectation"><span class="nav-text">3.2.3. conditional expectation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#KL-divergence-2-9"><span class="nav-text">3.2.4. KL divergence (2-9)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hellinger-distance-2-9"><span class="nav-text">3.2.5. Hellinger distance (2-9)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#indepence-amp-correlation"><span class="nav-text">3.3. indepence &amp; correlation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#indepence"><span class="nav-text">3.3.1. indepence</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#correlation"><span class="nav-text">3.3.2. correlation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#transformation"><span class="nav-text">3.4. transformation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#classic-bounds"><span class="nav-text">3.5. classic bounds</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#markov-bound"><span class="nav-text">3.5.1. markov bound</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chebshev-bound"><span class="nav-text">3.5.2. chebshev bound</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chernoff-bound"><span class="nav-text">3.5.3. chernoff bound</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hoeffding-bound"><span class="nav-text">3.5.4. hoeffding bound</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#heffding-bound"><span class="nav-text">3.5.4.1. heffding bound</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bound-differences-in-equlity-1-15-1-16"><span class="nav-text">3.5.4.2. bound differences in equlity (1-15, 1-16)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#limit-theory"><span class="nav-text">3.6. limit theory</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#converges-in-distribution"><span class="nav-text">3.6.1. converges in distribution</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Helly-theorem"><span class="nav-text">3.6.1.1. Helly theorem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Levy-theorem"><span class="nav-text">3.6.1.2. Levy theorem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#centrol-limit-theorem"><span class="nav-text">3.6.1.3. centrol limit theorem</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#converges-in-probabilty"><span class="nav-text">3.6.2. converges in probabilty</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#tight-variables"><span class="nav-text">3.6.2.1. tight variables</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#oh-pee"><span class="nav-text">3.6.2.2. oh-pee</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#weak-law-of-large-numbers"><span class="nav-text">3.6.2.3. weak law of large numbers</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#converges-in-probabilty-1-almost"><span class="nav-text">3.6.3. converges in probabilty 1 / almost</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#strong-law-of-large-numbers"><span class="nav-text">3.6.3.1. strong law of large numbers</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#uniform-law-of-large-numbers"><span class="nav-text">3.6.3.2. uniform law of large numbers</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#convergence-in-r-th-mean"><span class="nav-text">3.6.4. convergence in r th mean</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
