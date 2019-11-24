@@ -1,0 +1,1931 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.jpg?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.ico?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="stats," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Numerical Statistics Course Slides Notes">
+<meta name="keywords" content="stats">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Numerical Statistics">
+<meta property="og:url" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;index.html">
+<meta property="og:site_name" content="BeNsoN">
+<meta property="og:description" content="Numerical Statistics Course Slides Notes">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96q4leittj3190038djc.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96q4qiwjlj317a08qdr2.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96q51xjxsj31980fwndw.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96q5f47shj31820le4os.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96q5k76lfj318s0a249n.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96q6bnsdaj318e0r84qp.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96q8rs8u9j3186070n2f.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96s6thjuxj317209wqd1.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96s70qopcj317o08ktfp.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96s786ma3j319604m0wx.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96s7nc7axj31660a215d.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96s7t46zfj318u04a41h.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96s7ziojaj318s0d4qd7.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124122756031.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g95x9jz3nrj30ol047jrq.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g95x9qjbkfj30ny0150sp.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g95xaozw09j30op07at98.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g95xbtzujnj30oc0ezjsv.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g95xc3byf1j30p509jmy2.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g95xcipd6bj30o90fo75r.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96s8gyj50j318y084414.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96s8nlxwqj319g066mz0.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g95xiljdmjj30nq02g74c.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g95xhgpmz4j30nh04f0t5.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g95xhy15u4j30nj09l402.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g95xi9uehdj30o10ahab5.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g95xj4l7tbj316i04y0tf.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g95xjuo8t7j30ne03r0sz.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g962fhhpvyj30oi0jiq4s.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;Users&#x2F;huangbenson&#x2F;Library&#x2F;Application%20Support&#x2F;typora-user-images&#x2F;image-20191029125510647.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191123154911981.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191123155057526.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191123155303941.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;Users&#x2F;huangbenson&#x2F;Library&#x2F;Application%20Support&#x2F;typora-user-images&#x2F;image-20191029132600249.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;Users&#x2F;huangbenson&#x2F;Library&#x2F;Application%20Support&#x2F;typora-user-images&#x2F;image-20191029132947443.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;Users&#x2F;huangbenson&#x2F;Library&#x2F;Application%20Support&#x2F;typora-user-images&#x2F;image-20191029132954013.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191123154931543.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;Users&#x2F;huangbenson&#x2F;Library&#x2F;Application%20Support&#x2F;typora-user-images&#x2F;image-20191029125618614.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96s90z9f2j318o05ogrv.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96s94od7dj315u0mqav2.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96s9gj8hxj31010u04qp.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96s9laij7j316q074gsk.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96s9yr5juj31110u07wh.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96sabp5djj31430u04qp.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96saibp2vj31760ekdts.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96saqi43ej317o0b8tka.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96sawm1sdj318w05an3j.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96sb0g5nmj319q0540yy.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96sb71eizj318c04cn1c.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96sbeq4pij317c0ekanh.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96sbmygzkj316a0oqe3y.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96sc1q038j316s0gitof.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96sc8gdfej31780b012x.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96scgcvhsj317q0d8k3t.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96sclmp1jj31820fc4dz.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96sgsww9uj31880ggarc.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96si3gejaj318s07gk1f.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96si9m0b5j317q0s87wh.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96sigj40rj318805cjxm.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96sip6uaxj316g0eak5h.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96siynqgdj317403sn0w.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96sj506gkj318g0coake.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96sjrs7gsj316k0amwp6.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96slp5trvj31720iu4he.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96sjlc52nj317q03e77s.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96sm68yr0j31900rw7v0.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96smps03gj317w0cgn82.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96sn31kbsj3194044n0i.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96sn7m5hlj3186078dlo.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96t8xbjf4j318u0byk2r.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96t9u9l43j31940eqqgn.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96ta5sr1qj30xt0u0b29.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tae2lqjj318y0kadys.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tajzl7yj318q0a611x.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tasflidj317g080qao.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tbej3pfj317k0msh5e.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tbnmgitj318008wk2e.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tbsflgyj315e09u488.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tbzf17aj318s0a2dq2.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tc7ik9cj317q0gi17a.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tch1p1tj317k084qbp.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tct4ntzj316g0c6gxp.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tkc80adj317o07w45a.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tkigl90j315y02w41c.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tkqvgeuj319a09swni.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tkz0pudj317m07otfq.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tl5fvn5j316u054q8v.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tlf8z6lj31740qkaz7.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tlmasw7j316w0ja1av.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tls7wkcj317c09u480.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tlwfp8qj317i0bgwps.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tm325naj316q0ecgxu.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tmc2h23j317y09a46h.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tmjgse7j315e07iq8u.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tmqp00gj317u03edka.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tn1095zj316s0pmha4.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tncugxvj30u00yrb29.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tnm9efuj317w08sgwg.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tnshbsoj317006mn2w.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tnxc1f7j3180048gq7.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96to3tufcj31880d815i.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tpce65lj315m0d4tk5.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tpuchynj318u0eaapu.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tq4cz7mj316w06s478.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tqds92bj31760p07te.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tvhpbpyj316008ewop.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96ts5b2p5j316s07sn48.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tv5iv8mj316u0b0dom.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124120342837.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124120456375.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124121024700.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124121050760.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96q82adlsj318u0oqgqs.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96q8efem9j319k04awgh.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124123352379.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124123418122.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124121216642.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124122437435.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124123017017.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124123039657.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124123131490.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124123230443.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124123239430.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124123247272.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124123510324.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124123533511.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124143109015.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124143139033.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124143245533.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124143609252.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124144522793.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124144649420.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124144700173.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96twhgczaj318e09cwil.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96twpoez2j317y0cewgx.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96tx7nwsjj316i0ecaeb.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124144859057.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124144735964.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124144742336.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124144946381.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124145504349.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124150147962.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124150409675.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124150624073.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124150846219.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124151005309.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124151011551.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124151104484.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124151227067.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124151305409.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124151335320.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124151451960.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124151504177.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124151747364.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124151814371.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124151625591.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124151707266.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124151859691.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124151958453.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124152014387.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124152430383.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124152527805.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124152558050.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124152719029.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124152739067.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124152813166.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124153000932.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124153305986.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124153357229.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124153447557.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124154012252.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124154041452.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124154330655.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124154355121.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124154405894.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124154440022.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124161923828.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124161941564.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124162254191.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124162931445.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Numerical_stats&#x2F;image-20191124163043179.png">
+<meta property="og:updated_time" content="2019-11-24T08:32:28.014Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g96q4leittj3190038djc.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: 'FV65T83Q2V',
+      apiKey: '5008cf0478de4ac53102baceee722a4d',
+      indexName: 'steinsgate9',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://SteinsGate9.github.io/2019/11/19/Numerical_stats/"/>
+
+
+
+
+
+  <title>Numerical Statistics | BeNsoN</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/SteinsGate9" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">BeNsoN</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Live Long, Play Hard.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" target="_blank" rel="noopener" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://SteinsGate9.github.io/2019/11/19/Numerical_stats/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Benson">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://tva1.sinaimg.cn/large/006y8mN6gy1g96p07mbexj30uf0u0npd.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BeNsoN">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Numerical Statistics</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-19T12:50:43+08:00">
+                2019-11-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/statistics/" itemprop="url" rel="index">
+                    <span itemprop="name">statistics</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">total read
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>times
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  1.2k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  7
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Numerical Statistics Course Slides Notes</p>
+<a id="more"></a>
+<h1 id="sample-space">1. sample space</h1><h2 id="sample-space-1">1.1. sample space</h2><ul>
+<li><p><strong>Def</strong>: sample space</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96q4leittj3190038djc.jpg" alt></p>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; duality of sample space</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96q4qiwjlj317a08qdr2.jpg" alt></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: iid </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96q51xjxsj31980fwndw.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: parameter space </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96q5f47shj31820le4os.jpg" alt></p>
+</li>
+<li><p><strong>Def</strong>: distribution group </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96q5k76lfj318s0a249n.jpg" alt></p>
+</li>
+</ul>
+<h2 id="important-stats">1.2. important stats</h2><ul>
+<li><p><strong>Def</strong>: statistic </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96q6bnsdaj318e0r84qp.jpg" alt></p>
+</li>
+</ul>
+<h3 id="sample-mean">1.2.1. sample mean</h3><ul>
+<li><p><strong>Def</strong>: sample mean</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96q8rs8u9j3186070n2f.jpg" alt></p>
+<ul>
+<li><strong>Qua</strong>: =&gt; mean &amp; sum<script type="math/tex; mode=display">
+\sum_{n=1}^{n}(X_i-\bar{X}) = 0</script></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; mean is the best for real mean</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96s6thjuxj317209wqd1.jpg" alt></p>
+</li>
+</ul>
+<h3 id="sample-variance">1.2.2. sample variance</h3><ul>
+<li><p><strong>Def</strong>: sample variance</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96s70qopcj317o08ktfp.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96s786ma3j319604m0wx.jpg" alt></p>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; quatratic </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96s7nc7axj31660a215d.jpg" alt></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="sample-covariance">1.2.3. sample covariance</h3><ul>
+<li><p><strong>Def</strong>: sample covariance </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96s7t46zfj318u04a41h.jpg" alt></p>
+</li>
+</ul>
+<h3 id="sample-moment">1.2.4. sample moment</h3><ul>
+<li><p><strong>Def</strong>:  sample moment</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96s7ziojaj318s0d4qd7.jpg" alt></p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124122756031.png" alt></p>
+</li>
+</ul>
+<h3 id="U-stats">1.2.5. U-stats</h3><ul>
+<li><p><strong>Def</strong>: U-stats (2-2)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95x9jz3nrj30ol047jrq.jpg" alt></p>
+<p><strong>Note</strong>:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95x9qjbkfj30ny0150sp.jpg" alt></p>
+<p><strong>Example</strong>:  (2-2)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xaozw09j30op07at98.jpg" alt></p>
+<p><strong>Example</strong>: (2-3) </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xbtzujnj30oc0ezjsv.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xc3byf1j30p509jmy2.jpg" alt></p>
+<p><strong>Example</strong>: novel u stats (2-3)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xcipd6bj30o90fo75r.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: two-sample U-stats (2-3)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96s8gyj50j318y084414.jpg" alt></p>
+<p><strong>Example</strong>:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96s8nlxwqj319g066mz0.jpg" alt></p>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; variance of U-stats (2-3)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xiljdmjj30nq02g74c.jpg" alt></p>
+<p><strong>Proof</strong>:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xhgpmz4j30nh04f0t5.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xhy15u4j30nj09l402.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xi9uehdj30o10ahab5.jpg" alt></p>
+<p>(2-4)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xj4l7tbj316i04y0tf.jpg" alt></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; Var upper bound (2-4)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g95xjuo8t7j30ne03r0sz.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; asympototc normality (2-4)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g962fhhpvyj30oi0jiq4s.jpg" alt></p>
+</li>
+</ul>
+<h3 id="M-estimator-and-Z-estimator">1.2.6. M-estimator and Z estimator</h3><p><strong>Def</strong>: ULLN (2-9)<img src="/Users/huangbenson/Library/Application Support/typora-user-images/image-20191029125510647.png" alt></p>
+<h4 id="M-stats">1.2.6.1. M-stats</h4><ul>
+<li><p><strong>Def</strong>: M-stats (2-9)</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191123154911981.png" alt></p>
+<p><strong>Note</strong>: Mstats and Zstats are not the same : use U() to prove,  not differentiable =&gt; z do not exist on this point; but m is the largest on this point, so M &amp; Z not the same.</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191123155057526.png" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>:  =&gt; consistency of M stats</p>
+<p><strong>Usage</strong>: if M is uniformly consistent and have a well-separated maximum point, then we have sequence of $\theta_n$ converge to $\theta_0$</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191123155303941.png" alt></p>
+<p><strong>Note</strong>: figure of the consitions </p>
+<p><img src="/Users/huangbenson/Library/Application Support/typora-user-images/image-20191029132600249.png" alt></p>
+<p><strong>Proof</strong>:</p>
+<p><img src="/Users/huangbenson/Library/Application Support/typora-user-images/image-20191029132947443.png" alt></p>
+<p><img src="/Users/huangbenson/Library/Application Support/typora-user-images/image-20191029132954013.png" alt></p>
+</li>
+</ul>
+<h4 id="Z-stats">1.2.6.2. Z-stats</h4><ul>
+<li><p><strong>Def</strong>: Z-stats (2-9)</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191123154931543.png" alt></p>
+<p><img src="/Users/huangbenson/Library/Application Support/typora-user-images/image-20191029125618614.png" alt></p>
+</li>
+</ul>
+<h3 id="order-statistics">1.2.7. order statistics</h3><ul>
+<li><p><strong>Def</strong>: order statistics</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96s90z9f2j318o05ogrv.jpg" alt></p>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; distribution </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96s94od7dj315u0mqav2.jpg" alt></p>
+<p><strong>Proof</strong>:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96s9gj8hxj31010u04qp.jpg" alt></p>
+<p><strong>Note</strong>: when uniform(0, 1)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96s9laij7j316q074gsk.jpg" alt></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; joint distribution </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96s9yr5juj31110u07wh.jpg" alt></p>
+<p><strong>Proof</strong>:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96sabp5djj31430u04qp.jpg" alt></p>
+<p><strong>Note</strong>: when uniform(0, 1):</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96saibp2vj31760ekdts.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: sample median </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96saqi43ej317o0b8tka.jpg" alt></p>
+</li>
+<li><p><strong>Def</strong>: extremum of sample </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96sawm1sdj318w05an3j.jpg" alt></p>
+</li>
+<li><p><strong>Def</strong>: sample p-fractile </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96sb0g5nmj319q0540yy.jpg" alt></p>
+</li>
+<li><p><strong>Def</strong>: sample range </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96sb71eizj318c04cn1c.jpg" alt></p>
+<ul>
+<li><p><strong>Qua</strong>: distribution </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96sbeq4pij317c0ekanh.jpg" alt></p>
+<p><strong>Proof</strong>: using transformation trick</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96sbmygzkj316a0oqe3y.jpg" alt></p>
+<p><strong>Note</strong>: when uniform (0, 1):</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96sc1q038j316s0gitof.jpg" alt></p>
+<p><strong>Proof</strong>:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96sc8gdfej31780b012x.jpg" alt></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="sample-coefficient-of-variation">1.2.8. sample coefficient of variation</h3><ul>
+<li><p><strong>Def</strong>: sample coefficient of variation </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96scgcvhsj317q0d8k3t.jpg" alt></p>
+</li>
+</ul>
+<h3 id="sample-skeness">1.2.9. sample skeness</h3><ul>
+<li><p><strong>Def</strong>: sample skeness</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96sclmp1jj31820fc4dz.jpg" alt></p>
+</li>
+</ul>
+<h3 id="sample-kurtosis">1.2.10. sample kurtosis</h3><ul>
+<li><p><strong>Def</strong>: sample kurtosis</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96sgsww9uj31880ggarc.jpg" alt></p>
+</li>
+</ul>
+<h2 id="sufficient-stats">1.3. sufficient stats</h2><ul>
+<li><p><strong>Intro</strong>:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96si3gejaj318s07gk1f.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96si9m0b5j317q0s87wh.jpg" alt></p>
+<p><strong>Def</strong>: suff stats</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96sigj40rj318805cjxm.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorm</strong>: element break, sufficient and necess condition </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96sip6uaxj316g0eak5h.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: operation </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96siynqgdj317403sn0w.jpg" alt></p>
+</li>
+</ul>
+<h2 id="complete-stats">1.4. complete stats</h2><ul>
+<li><p><strong>Def</strong>: complete stats</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96sj506gkj318g0coake.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: exp family &amp; comp stats =&gt; </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96sjrs7gsj316k0amwp6.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; indepence &amp; comp stats</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96slp5trvj31720iu4he.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: operation</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96sjlc52nj317q03e77s.jpg" alt></p>
+</li>
+</ul>
+<h1 id="useful-distributions">2. useful distributions</h1><h2 id="exp">2.1. exp</h2><ul>
+<li><p><strong>Qua</strong>:  =&gt; x2 </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96sm68yr0j31900rw7v0.jpg" alt></p>
+</li>
+</ul>
+<h2 id="gaussian">2.2. gaussian</h2><h3 id="single">2.2.1. single</h3><h4 id="distribution">2.2.1.1. distribution</h4><ul>
+<li><p><strong>Qua</strong>:  =&gt; X2 </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96smps03gj317w0cgn82.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: operation</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96sn31kbsj3194044n0i.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96sn7m5hlj3186078dlo.jpg" alt></p>
+</li>
+</ul>
+<h4 id="stats">2.2.1.2. stats</h4><ul>
+<li><p><strong>Qua</strong>: mean &amp; variance =&gt; independent </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96t8xbjf4j318u0byk2r.jpg" alt></p>
+<p><strong>Proof</strong>: see book</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: Mean/Variance =&gt; distri</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96t9u9l43j31940eqqgn.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: Mean-Mean/Variance =&gt; distri</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96ta5sr1qj30xt0u0b29.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: Variance/ Variance =&gt; distri </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tae2lqjj318y0kadys.jpg" alt></p>
+</li>
+</ul>
+<h2 id="X2">2.3. X2</h2><ul>
+<li><p><strong>Def</strong>: central X2 distribution </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tajzl7yj318q0a611x.jpg" alt></p>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; pdf </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tasflidj317g080qao.jpg" alt></p>
+<p><strong>Proof</strong>: transformation, see book</p>
+<p><strong>Note</strong>:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tbej3pfj317k0msh5e.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tbnmgitj318008wk2e.jpg" alt></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; special &amp; operation </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tbsflgyj315e09u488.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: non-central X2</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tbzf17aj318s0a2dq2.jpg" alt></p>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; pdf</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tc7ik9cj317q0gi17a.jpg" alt></p>
+<p><strong>Proof</strong>:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tch1p1tj317k084qbp.jpg" alt></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; distri &amp; operation</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tct4ntzj316g0c6gxp.jpg" alt></p>
+</li>
+</ul>
+<h2 id="gamma">2.4. gamma</h2><ul>
+<li><p><strong>Def</strong>: gamma distribution </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tkc80adj317o07w45a.jpg" alt></p>
+<ul>
+<li><p><strong>Qua</strong>: gamma =&gt; X2</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tkigl90j315y02w41c.jpg" alt></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="t">2.5. t</h2><ul>
+<li><p><strong>Def</strong>: central t distribution </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tkqvgeuj319a09swni.jpg" alt></p>
+<ul>
+<li><p><strong>Qua</strong>: pdf</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tkz0pudj317m07otfq.jpg" alt></p>
+<p><strong>Proof</strong>:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tl5fvn5j316u054q8v.jpg" alt></p>
+<p><strong>Note</strong>:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tlf8z6lj31740qkaz7.jpg" alt></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; E &amp; Cauchy</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tlmasw7j316w0ja1av.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: non-central t distribution </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tls7wkcj317c09u480.jpg" alt></p>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; pdf </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tlwfp8qj317i0bgwps.jpg" alt></p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; E, D </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tm325naj316q0ecgxu.jpg" alt></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="F">2.6. F</h2><ul>
+<li><p><strong>Def</strong>: F stats</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tmc2h23j317y09a46h.jpg" alt></p>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; pdf </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tmjgse7j315e07iq8u.jpg" alt></p>
+<p><strong>Proof</strong>:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tmqp00gj317u03edka.jpg" alt></p>
+<p><strong>Note</strong>:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tn1095zj316s0pmha4.jpg" alt></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; special &amp; operation </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tncugxvj30u00yrb29.jpg" alt></p>
+<p><strong>Proof</strong>:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tnm9efuj317w08sgwg.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: non-central F</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tnshbsoj317006mn2w.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tnxc1f7j3180048gq7.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; pdf </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96to3tufcj31880d815i.jpg" alt></p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; special &amp; X2 </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tpce65lj315m0d4tk5.jpg" alt></p>
+</li>
+</ul>
+<h2 id="exponential-family">2.7. exponential family</h2><ul>
+<li><p><strong>Def</strong>: exponential family </p>
+<p>(Gaussian, +-Bio, Posson, Exp, Gamma)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tpuchynj318u0eaapu.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; all distribution have same support set </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tq4cz7mj316w06s478.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: natural form &amp; natrual space </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tqds92bj31760p07te.jpg" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; under natural form , natural space is Convex Set </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tvhpbpyj316008ewop.jpg" alt></p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; analytical stuff </p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96ts5b2p5j316s07sn48.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tv5iv8mj316u0b0dom.jpg" alt></p>
+</li>
+</ul>
+<h1 id="parameter-estimation-usage-of-stats">3. parameter estimation (usage of stats)</h1><ul>
+<li><p><strong>Def</strong>: parameter estimation</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124120342837.png" alt></p>
+</li>
+</ul>
+<h2 id="point-estimation">3.1. point estimation</h2><ul>
+<li><p><strong>Def</strong>: point estimation</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124120456375.png" alt></p>
+</li>
+</ul>
+<h3 id="quality-of-estimation">3.1.1. quality of estimation</h3><ul>
+<li><p><strong>Def</strong>: unbiased estimation </p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124121024700.png" alt></p>
+</li>
+<li><p><strong>Def</strong>:  efficiency</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124121050760.png" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: consistency </p>
+<p>(book)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96q82adlsj318u0oqgqs.jpg" alt></p>
+<p>(2-?)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96q8efem9j319k04awgh.jpg" alt></p>
+</li>
+<li><p><strong>Def</strong>: consisten asymptotic normal estimation</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124123352379.png" alt></p>
+<p><strong>Note</strong>: both consistent &amp; Gaussian</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124123418122.png" alt></p>
+<p>|        | unbiased | consistent | gaussian(CAN) | f_operation | sufficient | complete |      |      |<br>| ——— | ———— | ————— | ——————- | —————- | ————— | ———— | —— | —— |<br>| moment | cond     | cond       | cond          | yes         | no         | no       |      |      |<br>| mle    | no       | cond       | cond          | yes         | yes        |          |      |      |<br>| umvue  |          |            |               |             | yes        |          |      |      |<br>|        |          |            |               |             |            |          |      |      |<br>|        |          |            |               |             |            |          |      |      |<br>|        |          |            |               |             |            |          |      |      |<br>|        |          |            |               |             |            |          |      |      |<br>|        |          |            |               |             |            |          |      |      |</p>
+</li>
+</ul>
+<p>​        </p>
+<h3 id="moment-estimation">3.1.2. moment estimation</h3><ul>
+<li><p><strong>Def</strong>: moment estimation </p>
+<p><strong>Usage</strong>: estimate $\theta$ =&gt; turn $\theta$ to $f(moment, moment)$ =&gt; turn to $f( \hat{moment}, \hat{moment_est})$</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124121216642.png" alt></p>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; normally biased, sometimes not biased </p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124122437435.png" alt></p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124123017017.png" alt></p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124123039657.png" alt></p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124123131490.png" alt></p>
+</li>
+<li><p><strong>Qua</strong>:  =&gt; strong consistency</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124123230443.png" alt></p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124123239430.png" alt></p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124123247272.png" alt></p>
+</li>
+<li><p><strong>Qua</strong>: =&gt; CAN</p>
+<p><strong>Usage</strong>: normal situation </p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124123510324.png" alt></p>
+</li>
+<li><p><strong>Qua</strong> =&gt; CAN</p>
+<p><strong>Usage</strong>: when $\theta$ can be expressed with 1/2 central moment</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124123533511.png" alt></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="mle-estimation">3.1.3. mle estimation</h3><ul>
+<li><p><strong>Def</strong>: likelihood function</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124143109015.png" alt></p>
+<p><strong>Note</strong>: this is the same as pdf, only in pdf x is variable, in likelihood $\theta$ is variable.</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124143139033.png" alt></p>
+</li>
+</ul>
+<h4 id="parameter">3.1.3.1. parameter</h4><ul>
+<li><p><strong>Def</strong>: MLE （parameter), usage of M-estimator</p>
+<p><strong>Usage</strong>: given x &amp; likelihood function, seek for $\theta$ to make likelihood function the largest .</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124143245533.png" alt></p>
+<ul>
+<li><p><strong>Theorem</strong>: conditions to make MLE solvable =&gt;</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124143609252.png" alt></p>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>- **Corollary**: when distribution is exp family =&gt;
+
+  ![](Numerical_stats/image-20191124143552166.png)
+
+  **Proof**:
+
+  ![](Numerical_stats/image-20191124143644288.png)
+</code></pre><ul>
+<li><p><strong>Qua</strong>: =&gt; sufficient stats</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124144522793.png" alt></p>
+</li>
+<li><p><strong>Qua</strong> =&gt; CAN</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124144649420.png" alt></p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124144700173.png" alt></p>
+</li>
+</ul>
+<h4 id="non-parameter">3.1.3.2. non-parameter</h4><ul>
+<li><p><strong>Def</strong>: MLE （非参数）(2-9)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96twhgczaj318e09cwil.jpg" alt></p>
+<p><strong>Note</strong>: 因为是非参，所以需要求积分。(2-9)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96twpoez2j317y0cewgx.jpg" alt></p>
+<p><strong>Note</strong>:小于等于0因为这是KL散度的形式p0其实和p一回事。</p>
+<ul>
+<li><p><strong>Qua</strong>: p0 and MLE(pn)’s KL distance (2-9)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g96tx7nwsjj316i0ecaeb.jpg" alt></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="umvue">3.1.4. umvue</h3><ul>
+<li><p><strong>Def</strong>: estimatable function </p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124144859057.png" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: min MSE</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124144735964.png" alt></p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124144742336.png" alt></p>
+</li>
+<li><p><strong>Def</strong>: min Var &amp; unbiased (UMVUE)</p>
+<p><strong>Usage</strong>: sometimes we can not find min MSE since the realm is too large, we can make it smaller by constrain it in unbiased family, and min -Var + unbiased = min MSE.</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124144946381.png" alt></p>
+</li>
+<li><p><strong>Lemma</strong>: =&gt; smaller Var</p>
+<p><strong>Usage</strong>: the lemma give us a hint to make Var smaller from an biased estimate by doing a conditional expectation on a sufficient stat. </p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124145504349.png" alt></p>
+<p><strong>Note</strong>:</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124150147962.png" alt></p>
+</li>
+</ul>
+<h4 id="0-unbiased-estimate">3.1.4.1. 0-unbiased estimate</h4><ul>
+<li><p><strong>Theorem</strong>: Cov, E =&gt; </p>
+<p><strong>Usage</strong>: sufficient condition for UMVUE</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124150409675.png" alt></p>
+<p><strong>Note</strong>: we can’t use this to construct a UMVUE, but we can 验证 if it is.</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124150624073.png" alt></p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124150846219.png" alt></p>
+</li>
+</ul>
+<h4 id="sufficient-amp-complete-estimate">3.1.4.2. sufficient &amp; complete estimate</h4><ul>
+<li><p><strong>Theorem</strong>: Lehmann - Scheffe, suff &amp; complete =&gt; </p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124151005309.png" alt></p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124151011551.png" alt></p>
+<ul>
+<li><p><strong>Corollary</strong>: exp family =&gt; </p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124151104484.png" alt></p>
+</li>
+</ul>
+<h4 id="CR-inequality-estimate">3.1.4.3. CR inequality estimate</h4></li>
+</ul>
+<ul>
+<li><p><strong>Intro</strong>: what is and why we need CR: it is a tool to determine if a stat is UMVUE.</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124151227067.png" alt></p>
+<p><strong>Note</strong>: cons of CR </p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124151305409.png" alt></p>
+</li>
+</ul>
+<h5 id="singular-parameter">3.1.4.3.1. singular parameter</h5><ul>
+<li><p><strong>Def</strong>: CR regular family </p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124151335320.png" alt></p>
+</li>
+<li><p><strong>Def</strong>: CR inequality </p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124151451960.png" alt></p>
+<p><strong>Note</strong>: CR can be viewed as a tool for 验证 ·UMVUE.</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124151504177.png" alt></p>
+<ul>
+<li><p><strong>Theorem</strong>: cases of exp family =&gt; </p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124151747364.png" alt></p>
+<p><strong>Note</strong>:</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124151814371.png" alt></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Theorem</strong>: despite exp family, when will C-R reach equation =&gt; </p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124151625591.png" alt></p>
+<p><strong>Note</strong>:</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124151707266.png" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: fisher information function ( for a distribution )</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124151859691.png" alt></p>
+<p><strong>Note</strong>: the larger $I(\theta)$, the easier is X to estimate its parameter, the more information the model itsself provides.</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124151958453.png" alt></p>
+<p><strong>Note</strong>: fisher function in the law of large number.</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124152014387.png" alt></p>
+</li>
+</ul>
+<h5 id="multi-parameter">3.1.4.3.2. multi parameter</h5><p>P120 </p>
+<h2 id="interval-estimation">3.2. interval estimation</h2><ul>
+<li><p><strong>Def</strong>: interval estimation</p>
+<p><strong>Usage</strong>: the range of possible $ \theta $</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124152430383.png" alt></p>
+</li>
+</ul>
+<h3 id="quality-of-invertal-estimation">3.2.1. quality of invertal estimation</h3><ul>
+<li><p><strong>Def</strong>: confidence coefficient</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124152527805.png" alt></p>
+<p><strong>Note</strong>: the larger the better </p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124152558050.png" alt></p>
+</li>
+<li><p><strong>Def</strong>: length (precision)</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124152719029.png" alt></p>
+<p><strong>Note</strong>:</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124152739067.png" alt></p>
+</li>
+<li><p><strong>Def</strong>: condidence interval </p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124152813166.png" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong> : lower confidence limit </p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124153000932.png" alt> </p>
+<p><strong>Note</strong>:</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124153305986.png" alt></p>
+<ul>
+<li><p><strong>Theorem</strong>: relationship with interval</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124153357229.png" alt></p>
+</li>
+</ul>
+</li>
+<li><p><strong>Def</strong>: &gt;1 dimension interval, confidence region</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124153447557.png" alt></p>
+</li>
+</ul>
+<h3 id="Neyman-estimation">3.2.2. Neyman estimation</h3><ul>
+<li><p><strong>Algorithm</strong>: from point estimation to interval estimation </p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124154012252.png" alt></p>
+<p><strong>Note</strong>:</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124154041452.png" alt></p>
+</li>
+</ul>
+<h5 id="small-sample-method">3.2.2.0.1. small sample method</h5><ul>
+<li><p><strong>Example</strong>: Gaussian</p>
+<p>see slides P129</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Example</strong>: exp</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124154330655.png" alt></p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124154355121.png" alt></p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124154405894.png" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Example</strong>: uniform</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124154440022.png" alt></p>
+</li>
+</ul>
+<h5 id="big-data-method">3.2.2.0.2. big data method</h5><p>Using big data distribution estimation to get a Neyman interval estimation.</p>
+<ul>
+<li><p><strong>Example</strong>: Caughy </p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124161923828.png" alt="image-20191124161923828"></p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124161941564.png" alt="image-20191124161941564"></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Example</strong>: bionomial distribution </p>
+<p>P142</p>
+</li>
+<li><p><strong>Example</strong>: Possion distribution </p>
+<p>P143</p>
+</li>
+<li><p><strong>Theorem</strong>: general methods</p>
+<p><strong>Usage</strong> : using MLE &amp; information function to approximate distribution </p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124162254191.png" alt="image-20191124162254191"></p>
+</li>
+<li><p><strong>Theorem</strong> : no parameter case, when we can’t use parameter to construct MLE .</p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124162931445.png" alt="image-20191124162931445"></p>
+<p><img src="/2019/11/19/Numerical_stats/image-20191124163043179.png" alt="image-20191124163043179"></p>
+</li>
+</ul>
+<h3 id="假设检验法">3.2.3. 假设检验法</h3><h3 id="Fisher-estimation">3.2.4. Fisher estimation</h3><p>P143</p>
+<h3 id="容忍-estimation">3.2.5. 容忍 estimation</h3><p>P15</p>
+<h3 id="Bayes-estimation">3.2.6. Bayes estimation</h3>
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>Title:</span><a href="/2019/11/19/Numerical_stats/">Numerical Statistics</a></p>
+  <p><span>Author:</span><a href="/" title=" Benson 的personal blog">Benson</a></p>
+  <p><span>PTime:</span>2019/11/19 - 12:11</p>
+  <p><span>LUpdate:</span>2019/11/24 - 16:11</p>
+  <p><span>Link:</span><a href="/2019/11/19/Numerical_stats/" title="Numerical Statistics">https://steinsgate9.github.io/2019/11/19/Numerical_stats/</a>
+    <span class="copy-path"  title="click to copy link"><i class="fa fa-clipboard" data-clipboard-text="https://steinsgate9.github.io/2019/11/19/Numerical_stats/"  aria-label="copy done！"></i></span>
+  </p>
+  <p><span>Protocal:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)</a> Please keep the original link and author.</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: 'copy done',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script>
+
+      
+    </div>
+    
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Benson WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Benson Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/stats/" rel="tag"># stats</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/19/Linear_Algebra/" rel="next" title="Linear Algebra">
+                <i class="fa fa-chevron-left"></i> Linear Algebra
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/11/19/Convex_Optimization/" rel="prev" title="Convex Optimization">
+                Convex Optimization <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5dd409321289b452" async = "async" ></script>
+</div>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NzYxNi8yNDExNA"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="https://tva1.sinaimg.cn/large/006y8mN6gy1g96p07mbexj30uf0u0npd.jpg"
+                alt="Benson" />
+            
+              <p class="site-author-name" itemprop="name">Benson</p>
+              <p class="site-description motion-element" itemprop="description">Benson's personal blog, including stats, cs, math, among others.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/SteinsGate9" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="bensonuouououow@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-globe"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/bensonuouououo" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.instagram.com/bensonuouououo/" target="_blank" title="Instagram">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Instagram</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.alloyteam.com/nav/" title="Web前端导航" target="_blank">Web前端导航</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.chuangzaoshi.com/code" title="创造狮导航" target="_blank">创造狮导航</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.36zhen.com/t?id=3448" title="前端书籍资料" target="_blank">前端书籍资料</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://e.xitu.io/" title="掘金酱" target="_blank">掘金酱</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.v2ex.com/" title="V2EX" target="_blank">V2EX</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.v2ex.com/" title="印记中文" target="_blank">印记中文</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#sample-space"><span class="nav-text">1. sample space</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#sample-space-1"><span class="nav-text">1.1. sample space</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#important-stats"><span class="nav-text">1.2. important stats</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sample-mean"><span class="nav-text">1.2.1. sample mean</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sample-variance"><span class="nav-text">1.2.2. sample variance</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sample-covariance"><span class="nav-text">1.2.3. sample covariance</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sample-moment"><span class="nav-text">1.2.4. sample moment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#U-stats"><span class="nav-text">1.2.5. U-stats</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#M-estimator-and-Z-estimator"><span class="nav-text">1.2.6. M-estimator and Z estimator</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#M-stats"><span class="nav-text">1.2.6.1. M-stats</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Z-stats"><span class="nav-text">1.2.6.2. Z-stats</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#order-statistics"><span class="nav-text">1.2.7. order statistics</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sample-coefficient-of-variation"><span class="nav-text">1.2.8. sample coefficient of variation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sample-skeness"><span class="nav-text">1.2.9. sample skeness</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sample-kurtosis"><span class="nav-text">1.2.10. sample kurtosis</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sufficient-stats"><span class="nav-text">1.3. sufficient stats</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#complete-stats"><span class="nav-text">1.4. complete stats</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#useful-distributions"><span class="nav-text">2. useful distributions</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#exp"><span class="nav-text">2.1. exp</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gaussian"><span class="nav-text">2.2. gaussian</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#single"><span class="nav-text">2.2.1. single</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#distribution"><span class="nav-text">2.2.1.1. distribution</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#stats"><span class="nav-text">2.2.1.2. stats</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#X2"><span class="nav-text">2.3. X2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gamma"><span class="nav-text">2.4. gamma</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#t"><span class="nav-text">2.5. t</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#F"><span class="nav-text">2.6. F</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#exponential-family"><span class="nav-text">2.7. exponential family</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#parameter-estimation-usage-of-stats"><span class="nav-text">3. parameter estimation (usage of stats)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#point-estimation"><span class="nav-text">3.1. point estimation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#quality-of-estimation"><span class="nav-text">3.1.1. quality of estimation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#moment-estimation"><span class="nav-text">3.1.2. moment estimation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mle-estimation"><span class="nav-text">3.1.3. mle estimation</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#parameter"><span class="nav-text">3.1.3.1. parameter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#non-parameter"><span class="nav-text">3.1.3.2. non-parameter</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#umvue"><span class="nav-text">3.1.4. umvue</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#0-unbiased-estimate"><span class="nav-text">3.1.4.1. 0-unbiased estimate</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sufficient-amp-complete-estimate"><span class="nav-text">3.1.4.2. sufficient &amp; complete estimate</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CR-inequality-estimate"><span class="nav-text">3.1.4.3. CR inequality estimate</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#singular-parameter"><span class="nav-text">3.1.4.3.1. singular parameter</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#multi-parameter"><span class="nav-text">3.1.4.3.2. multi parameter</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#interval-estimation"><span class="nav-text">3.2. interval estimation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#quality-of-invertal-estimation"><span class="nav-text">3.2.1. quality of invertal estimation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Neyman-estimation"><span class="nav-text">3.2.2. Neyman estimation</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#small-sample-method"><span class="nav-text">3.2.2.0.1. small sample method</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#big-data-method"><span class="nav-text">3.2.2.0.2. big data method</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#假设检验法"><span class="nav-text">3.2.3. 假设检验法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fisher-estimation"><span class="nav-text">3.2.4. Fisher estimation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#容忍-estimation"><span class="nav-text">3.2.5. 容忍 estimation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bayes-estimation"><span class="nav-text">3.2.6. Bayes estimation</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Benson</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      total visitors
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      people
+    </span>
+  
+
+  
+    <span class="site-pv">
+      total read
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      times
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.staticfile.org/MathJax/MathJax-2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
