@@ -119,7 +119,7 @@
 
 
 
-  <meta name="keywords" content="complexity," />
+  <meta name="keywords" content="algorithm," />
 
 
 
@@ -131,7 +131,7 @@
 
 
 <meta name="description" content="Complexity Theory Class Notes">
-<meta name="keywords" content="complexity">
+<meta name="keywords" content="algorithm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Complexity Theory">
 <meta property="og:url" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Complexity_Theory&#x2F;index.html">
@@ -208,7 +208,7 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Complexity_Theory&#x2F;image-20191127232016819.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Complexity_Theory&#x2F;image-20191118234137224.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Complexity_Theory&#x2F;image-20191118234253836.png">
-<meta property="og:updated_time" content="2019-12-03T07:42:06.487Z">
+<meta property="og:updated_time" content="2019-12-08T13:00:03.427Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Complexity_Theory&#x2F;image-20191127221252747.png">
 
@@ -267,7 +267,7 @@
 
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
-    <a href="https://github.com/SteinsGate9" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<!--     <a href="https://github.com/SteinsGate9" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style> -->
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
@@ -510,7 +510,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  304
+                  285
                 </span>
               
 
@@ -549,221 +549,241 @@
       
         <p>Complexity Theory Class Notes</p>
 <a id="more"></a>
-<h1 id="algorithms">1. algorithms</h1>
-<ul>
+<h1 id="algorithms">1. algorithms</h1><ul>
 <li><p><strong>Def</strong>: algorithm</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191127221252747.png"></p></li>
-<li><p><strong>Def</strong>: size</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191127230656373.png"></p></li>
-<li><p><strong>Def</strong>: max number</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191127221359397.png"></p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191127221252747.png" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: size </p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191127230656373.png" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Def</strong>: max number </p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191127221359397.png" alt></p>
 <p><strong>Example</strong>: TSP</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191127230534693.png"></p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191127230534693.png" alt></p>
 <p><strong>Example</strong>: graph</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191127230547942.png"></p></li>
-<li><p><strong>Def</strong>: time complexity</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191127231016885.png"></p></li>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191127230547942.png" alt></p>
+</li>
+<li><p><strong>Def</strong>: time complexity </p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191127231016885.png" alt></p>
+</li>
 <li><p><strong>Def</strong>: subproblems</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191127231824594.png"></p></li>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191127231824594.png" alt></p>
+</li>
 </ul>
-<h2 id="turing-machine">1.1. turing machine</h2>
-<ul>
-<li><p><strong>Def</strong>: turing machine</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191127231248086.png"></p>
+<h2 id="turing-machine">1.1. turing machine</h2><ul>
+<li><p><strong>Def</strong>: turing machine </p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191127231248086.png" alt></p>
 <p><strong>Example</strong>:</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191127231259957.png"></p></li>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191127231259957.png" alt></p>
+</li>
 <li><p><strong>Def</strong>: space &amp; time of turing machine</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191127231324827.png"></p></li>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191127231324827.png" alt></p>
+</li>
 </ul>
-<h2 id="precise-algorithms">1.2. precise algorithms</h2>
-<ul>
+<h2 id="precise-algorithms">1.2. precise algorithms</h2><ul>
 <li><p><strong>Def</strong>: seudo-P algorithm</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118233157647.png"></p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118233157647.png" alt></p>
 <p><strong>Note</strong>:</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191201233301210.png"></p></li>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191201233301210.png" alt></p>
+</li>
 </ul>
-<h2 id="approximate-algorithms">1.3. approximate algorithms</h2>
-<ul>
+<h2 id="approximate-algorithms">1.3. approximate algorithms</h2><ul>
 <li><p><strong>Def</strong>: FPTAS</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118234017944.png"></p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118234017944.png" alt></p>
 <ul>
-<li><p><strong>Qua</strong>:</p></li>
-<li><p><img src="/2019/11/19/Complexity_Theory/image-20191118233738692.png"></p></li>
-</ul></li>
+<li><p><strong>Qua</strong>:</p>
+</li>
+<li><p><img src="/2019/11/19/Complexity_Theory/image-20191118233738692.png" alt></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
 <li><p><strong>Def</strong>: constant ratio</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118234030875.png"></p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191202013405468.png"></p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118234030875.png" alt></p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191202013405468.png" alt></p>
 <ul>
 <li><p><strong>Qua</strong>: ways to prove</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191202013355289.png"></p></li>
-<li><p><strong>Qua</strong>:</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118234044699.png"></p></li>
-<li><p><strong>Qua</strong>:</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118234222621.png"></p></li>
-<li><p><strong>Qua</strong>: <img src="/2019/11/19/Complexity_Theory/image-20191118234457121.png"></p></li>
-</ul></li>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191202013355289.png" alt></p>
+</li>
 </ul>
-<h1 id="complexity-class">2. complexity class</h1>
-<p>Fig: classes for desition problems</p>
-<figure>
-<img src="https://jeremykun.files.wordpress.com/2012/02/chp_venn_diagram.jpg" alt><figcaption>“complexity classes”的图片搜索结果</figcaption>
-</figure>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>:</p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118234044699.png" alt></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Qua</strong>:</p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118234222621.png" alt></p>
+</li>
+<li><p><strong>Qua</strong>:<br><img src="/2019/11/19/Complexity_Theory/image-20191118234457121.png" alt></p>
+</li>
+</ul>
+<h1 id="complexity-class">2. complexity class</h1><p>Fig: classes for desition problems</p>
+<p><img src="https://jeremykun.files.wordpress.com/2012/02/chp_venn_diagram.jpg" alt="“complexity classes”的图片搜索结果"></p>
 <p>Fig: classes for optimization problems (can be mixed together)</p>
-<figure>
-<img src="https://i.stack.imgur.com/Jleb6.png" alt><figcaption>“complexity classes fptas &amp; np”的图片搜索结果</figcaption>
-</figure>
-<h2 id="class-for-decision-problems">2.1. class ( for decision problems)</h2>
-<h3 id="p">2.1.1. P</h3>
-<ul>
-<li><p><strong>Def</strong>:</p>
-<p>solvable</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118230653258.png"></p>
+<p><img src="https://i.stack.imgur.com/Jleb6.png" alt="“complexity classes fptas &amp; np”的图片搜索结果"></p>
+<h2 id="class-for-decision-problems">2.1. class ( for decision problems)</h2><h3 id="P">2.1.1. P</h3><ul>
+<li><p><strong>Def</strong>: </p>
+<p>solvable </p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118230653258.png" alt></p>
 <p>DTM</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118231016736.png"></p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191127231352738.png"></p></li>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118231016736.png" alt></p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191127231352738.png" alt></p>
+</li>
 </ul>
-<p>###NP</p>
-<ul>
+<h3 id="NP">2.1.2. NP</h3><ul>
 <li><p><strong>Def</strong>:</p>
 <p>checkable</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118230702842.png"></p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191127231507191.png"></p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118230702842.png" alt></p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191127231507191.png" alt></p>
 <p>NDTM</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118231105240.png"></p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191127231421843.png"></p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118231105240.png" alt></p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191127231421843.png" alt></p>
 <p>checkable 2(given additional information vector Z)</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118232710700.png"></p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118232753163.png"></p></li>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118232710700.png" alt></p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118232753163.png" alt></p>
+</li>
 </ul>
-<h3 id="ep">2.1.2. EP</h3>
-<ul>
+<h3 id="EP">2.1.3. EP</h3><ul>
 <li><p><strong>Def</strong>:</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118231552882.png"></p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118231519347.png"></p></li>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118231552882.png" alt></p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118231519347.png" alt></p>
+</li>
 </ul>
-<h3 id="zpp">2.1.3. ZPP</h3>
-<ul>
+<h3 id="ZPP">2.1.4. ZPP</h3><ul>
 <li><p><strong>Def</strong>:</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118231544600.png"></p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118231538131.png"></p></li>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118231544600.png" alt></p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118231538131.png" alt></p>
+</li>
 </ul>
-<h3 id="bpp">2.1.4. BPP</h3>
-<ul>
+<h3 id="BPP">2.1.5. BPP</h3><ul>
 <li><p><strong>Def</strong>:</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118231621922.png"></p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118231615171.png"></p></li>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118231621922.png" alt></p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118231615171.png" alt></p>
+</li>
 </ul>
-<h3 id="rp">2.1.5. RP</h3>
-<ul>
+<h3 id="RP">2.1.6. RP</h3><ul>
 <li><p><strong>Def</strong>:RP</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118231657885.png"></p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118231650366.png"></p></li>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118231657885.png" alt></p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118231650366.png" alt></p>
+</li>
 <li><p><strong>Def</strong>: co-RP</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118231809380.png"></p></li>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118231809380.png" alt></p>
+</li>
 </ul>
-<p>###NPC</p>
-<h4 id="npc">2.1.5.1. NPC</h4>
-<ul>
+<h3 id="NPC">2.1.7. NPC</h3><h4 id="NPC-1">2.1.7.1. NPC</h4><ul>
 <li><p><strong>Def</strong>:NPC</p>
 <ul>
 <li><p><strong>Qua</strong> necc &amp;suff</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118233018579.png"></p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191127231722075.png"></p></li>
-</ul></li>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118233018579.png" alt></p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191127231722075.png" alt></p>
+</li>
 </ul>
-<h4 id="strong-npc">2.1.5.2. strong NPC</h4>
-<ul>
+</li>
+</ul>
+<h4 id="strong-NPC">2.1.7.2. strong NPC</h4><ul>
 <li><p><strong>Def</strong>: unary NPC (strong NPC)</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118233123312.png"></p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191201233039814.png"></p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118233123312.png" alt></p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191201233039814.png" alt></p>
+</li>
+</ul>
 <ul>
 <li><p><strong>Qua</strong>: =&gt; no pseudo</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118233227402.png"></p></li>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118233227402.png" alt></p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191201233104878.png" alt></p>
+<p><strong>Proof</strong>: set a pseudo algorithm A with respect to MAX(I), then it’s a P algorithm.</p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191201233113659.png" alt></p>
+</li>
 </ul>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191201233104878.png"></p>
-<p><strong>Proof</strong>: set a pseudo algorithm A with respect to MAX(I), then it's a P algorithm.</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191201233113659.png"></p>
 <ul>
-<li><p><strong>Qua</strong>: =&gt; <img src="/2019/11/19/Complexity_Theory/image-20191118233754112.png"></p></li>
+<li><p><strong>Qua</strong>: =&gt;<br><img src="/2019/11/19/Complexity_Theory/image-20191118233754112.png" alt></p>
+</li>
 <li><p><strong>Qua</strong>: pseudo reduction =&gt;</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191201234404932.png"></p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191201234404932.png" alt></p>
 <p><strong>Proof</strong>: first prove NP-C, then prove NP-C strong ( max(I2) is bounded)</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191201234417528.png"></p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191201234454638.png"></p></li>
-</ul></li>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191201234417528.png" alt></p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191201234454638.png" alt></p>
+</li>
 </ul>
-<h3 id="co-np">2.1.6. co-NP</h3>
-<ul>
+<h3 id="co-NP">2.1.8. co-NP</h3><ul>
 <li><p><strong>Def</strong>:</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118233412387.png"></p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118233412387.png" alt></p>
+</li>
+</ul>
 <ul>
 <li><p><strong>Qua</strong>:</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118233505815.png"></p></li>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118233505815.png" alt></p>
+</li>
 <li><p><strong>Qua</strong>:</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118233513063.png"></p></li>
-</ul></li>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118233513063.png" alt></p>
+</li>
 </ul>
-<h3 id="apx">2.1.7. APX</h3>
-<ul>
-<li><p><strong>Def</strong>: <img src="/2019/11/19/Complexity_Theory/image-20191118234113313.png"></p>
+<h3 id="APX">2.1.9. APX</h3><ul>
+<li><p><strong>Def</strong>:<br><img src="/2019/11/19/Complexity_Theory/image-20191118234113313.png" alt></p>
 <ul>
 <li><p><strong>Qua</strong>:</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118234235355.png"></p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118234307238.png"></p></li>
-</ul></li>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118234235355.png" alt></p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118234307238.png" alt></p>
+</li>
 </ul>
-<h3 id="npo">2.1.8. NPO</h3>
-<ul>
-<li><strong>Def</strong>: <img src="/2019/11/19/Complexity_Theory/image-20191118234420416.png"></li>
+</li>
 </ul>
-<h3 id="npo-c">2.1.9. NPO-C</h3>
-<ul>
+<h3 id="NPO">2.1.10. NPO</h3><ul>
+<li><strong>Def</strong>:<br><img src="/2019/11/19/Complexity_Theory/image-20191118234420416.png" alt></li>
+</ul>
+<h3 id="NPO-C">2.1.11. NPO-C</h3><ul>
 <li><p><strong>Def</strong>:</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118234436137.png"></p></li>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118234436137.png" alt></p>
+</li>
 </ul>
-<h2 id="relationship">2.2. relationship</h2>
-<h3 id="hardcomplete">2.2.1. hard/complete</h3>
-<ul>
+<h2 id="relationship">2.2. relationship</h2><h3 id="hard-complete">2.2.1. hard/complete</h3><ul>
 <li><p><strong>Def</strong>: complete can not be extend to algorithmic problems</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118231840560.png"></p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118231358609.png"></p></li>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118231840560.png" alt></p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118231358609.png" alt></p>
+</li>
 </ul>
-<h3 id="equivalence">2.2.2. equivalence</h3>
-<ul>
+<h3 id="equivalence">2.2.2. equivalence</h3><ul>
 <li><p><strong>Def</strong>:</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118232621448.png"></p></li>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118232621448.png" alt></p>
+</li>
 </ul>
-<h3 id="reduction">2.2.3. reduction</h3>
-<h4 id="turing-reduction">2.2.3.1. turing reduction</h4>
-<ul>
-<li><strong>Def</strong>: <img src="/2019/11/19/Complexity_Theory/image-20191118232417511.png"></li>
+<h3 id="reduction">2.2.3. reduction</h3><h4 id="turing-reduction">2.2.3.1. turing reduction</h4><ul>
+<li><strong>Def</strong>:<br><img src="/2019/11/19/Complexity_Theory/image-20191118232417511.png" alt></li>
 </ul>
-<h4 id="polynomial-time-reduction">2.2.3.2. polynomial time reduction</h4>
-<ul>
+<h4 id="polynomial-time-reduction">2.2.3.2. polynomial time reduction</h4><ul>
 <li><p><strong>Def</strong>:</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118232550368.png"></p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191127231609317.png"></p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118232550368.png" alt></p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191127231609317.png" alt></p>
 <p><strong>Note</strong>:</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191127231626502.png"></p></li>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191127231626502.png" alt></p>
+</li>
 </ul>
-<h4 id="sudo-p-time-reduction">2.2.3.3. sudo-p-time reduction</h4>
+<h4 id="sudo-p-time-reduction">2.2.3.3. sudo-p-time reduction</h4><ul>
+<li><p><strong>Def</strong>: </p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191127232006099.png" alt></p>
 <ul>
-<li><p><strong>Def</strong>:</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191127232006099.png"></p>
-<ul>
-<li><p><strong>Qua</strong>:</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191127232016819.png"></p></li>
-</ul></li>
+<li><p><strong>Qua</strong>: </p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191127232016819.png" alt></p>
+</li>
 </ul>
-<h4 id="l-reduction">2.2.3.4. L reduction</h4>
-<ul>
-<li><p><strong>Def</strong>:</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118234137224.png"></p></li>
+</li>
 </ul>
-<h4 id="ptas-reduction">2.2.3.5. PTAS reduction</h4>
-<ul>
+<h4 id="L-reduction">2.2.3.4. L reduction</h4><ul>
 <li><p><strong>Def</strong>:</p>
-<p><img src="/2019/11/19/Complexity_Theory/image-20191118234253836.png"></p></li>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118234137224.png" alt></p>
+</li>
+</ul>
+<h4 id="PTAS-reduction">2.2.3.5. PTAS reduction</h4><ul>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2019/11/19/Complexity_Theory/image-20191118234253836.png" alt></p>
+</li>
 </ul>
 
       
@@ -784,7 +804,7 @@
   <p><span>Title:</span><a href="/2019/11/19/Complexity_Theory/">Complexity Theory</a></p>
   <p><span>Author:</span><a href="/" title=" Benson 的personal blog">Benson</a></p>
   <p><span>PTime:</span>2019/11/19 - 12:11</p>
-  <p><span>LUpdate:</span>2019/12/03 - 15:12</p>
+  <p><span>LUpdate:</span>2019/12/08 - 21:12</p>
   <p><span>Link:</span><a href="/2019/11/19/Complexity_Theory/" title="Complexity Theory">https://steinsgate9.github.io/2019/11/19/Complexity_Theory/</a>
     <span class="copy-path"  title="click to copy link"><i class="fa fa-clipboard" data-clipboard-text="https://steinsgate9.github.io/2019/11/19/Complexity_Theory/"  aria-label="copy done！"></i></span>
   </p>
@@ -846,7 +866,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/complexity/" rel="tag"># complexity</a>
+            <a href="/tags/algorithm/" rel="tag"># algorithm</a>
           
         </div>
       
@@ -859,8 +879,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/19/Math_analysis/" rel="next" title="Math_analysis">
-                <i class="fa fa-chevron-left"></i> Math_analysis
+              <a href="/2019/11/19/Linear_Algebra/" rel="next" title="Linear Algebra">
+                <i class="fa fa-chevron-left"></i> Linear Algebra
               </a>
             
           </div>
@@ -869,8 +889,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/19/combinational-optimization/" rel="prev" title="Combinational Optimization">
-                Combinational Optimization <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/19/datastructure-algorithm/" rel="prev" title="Data Structure and Algorithms">
+                Data Structure and Algorithms <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -963,7 +983,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -997,12 +1017,6 @@
 
           
             <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/SteinsGate9" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
-                  </span>
                 
                   <span class="links-of-author-item">
                     <a href="bensonuouououow@gmail.com" target="_blank" title="E-Mail">
@@ -1080,7 +1094,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#algorithms"><span class="nav-text">1. algorithms</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#turing-machine"><span class="nav-text">1.1. turing machine</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#precise-algorithms"><span class="nav-text">1.2. precise algorithms</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#approximate-algorithms"><span class="nav-text">1.3. approximate algorithms</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#complexity-class"><span class="nav-text">2. complexity class</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#class-for-decision-problems"><span class="nav-text">2.1. class ( for decision problems)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#p"><span class="nav-text">2.1.1. P</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ep"><span class="nav-text">2.1.2. EP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#zpp"><span class="nav-text">2.1.3. ZPP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bpp"><span class="nav-text">2.1.4. BPP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rp"><span class="nav-text">2.1.5. RP</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#npc"><span class="nav-text">2.1.5.1. NPC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#strong-npc"><span class="nav-text">2.1.5.2. strong NPC</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#co-np"><span class="nav-text">2.1.6. co-NP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#apx"><span class="nav-text">2.1.7. APX</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#npo"><span class="nav-text">2.1.8. NPO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#npo-c"><span class="nav-text">2.1.9. NPO-C</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#relationship"><span class="nav-text">2.2. relationship</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hardcomplete"><span class="nav-text">2.2.1. hard/complete</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#equivalence"><span class="nav-text">2.2.2. equivalence</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reduction"><span class="nav-text">2.2.3. reduction</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#turing-reduction"><span class="nav-text">2.2.3.1. turing reduction</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#polynomial-time-reduction"><span class="nav-text">2.2.3.2. polynomial time reduction</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sudo-p-time-reduction"><span class="nav-text">2.2.3.3. sudo-p-time reduction</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#l-reduction"><span class="nav-text">2.2.3.4. L reduction</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ptas-reduction"><span class="nav-text">2.2.3.5. PTAS reduction</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#algorithms"><span class="nav-text">1. algorithms</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#turing-machine"><span class="nav-text">1.1. turing machine</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#precise-algorithms"><span class="nav-text">1.2. precise algorithms</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#approximate-algorithms"><span class="nav-text">1.3. approximate algorithms</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#complexity-class"><span class="nav-text">2. complexity class</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#class-for-decision-problems"><span class="nav-text">2.1. class ( for decision problems)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#P"><span class="nav-text">2.1.1. P</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NP"><span class="nav-text">2.1.2. NP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#EP"><span class="nav-text">2.1.3. EP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ZPP"><span class="nav-text">2.1.4. ZPP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BPP"><span class="nav-text">2.1.5. BPP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RP"><span class="nav-text">2.1.6. RP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NPC"><span class="nav-text">2.1.7. NPC</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#NPC-1"><span class="nav-text">2.1.7.1. NPC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#strong-NPC"><span class="nav-text">2.1.7.2. strong NPC</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#co-NP"><span class="nav-text">2.1.8. co-NP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#APX"><span class="nav-text">2.1.9. APX</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NPO"><span class="nav-text">2.1.10. NPO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NPO-C"><span class="nav-text">2.1.11. NPO-C</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#relationship"><span class="nav-text">2.2. relationship</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hard-complete"><span class="nav-text">2.2.1. hard/complete</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#equivalence"><span class="nav-text">2.2.2. equivalence</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reduction"><span class="nav-text">2.2.3. reduction</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#turing-reduction"><span class="nav-text">2.2.3.1. turing reduction</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#polynomial-time-reduction"><span class="nav-text">2.2.3.2. polynomial time reduction</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sudo-p-time-reduction"><span class="nav-text">2.2.3.3. sudo-p-time reduction</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#L-reduction"><span class="nav-text">2.2.3.4. L reduction</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PTAS-reduction"><span class="nav-text">2.2.3.5. PTAS reduction</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
