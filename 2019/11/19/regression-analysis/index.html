@@ -274,7 +274,7 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;regression-analysis&#x2F;image-20191125125948545.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;regression-analysis&#x2F;image-20191125130009012.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;regression-analysis&#x2F;image-20191125130242984.png">
-<meta property="og:updated_time" content="2019-12-08T13:00:03.402Z">
+<meta property="og:updated_time" content="2019-12-15T11:53:52.548Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;regression-analysis&#x2F;image-20191124185706427.png">
 
@@ -615,457 +615,406 @@
       
         <p>Regression Analysis Course Slides Notes</p>
 <a id="more"></a>
-<h1 id="regression-methods">1. regression methods</h1><h2 id="basic-hypothesis">1.1. basic hypothesis</h2><ul>
-<li><p><strong>Def</strong>: Gaussian Markov Condition </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124185706427.png" alt></p>
-</li>
-</ul>
-<h2 id="basic-least-square">1.2. basic least square</h2><ul>
-<li><p><strong>Def</strong>: basic linear model</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124191045808.png" alt></p>
-</li>
-</ul>
+<h1 id="regression-methods">1. regression methods</h1>
+<h2 id="basic-hypothesis">1.1. basic hypothesis</h2>
 <ul>
-<li><p><strong>Algorithm</strong>: least square </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124191009458.png" alt></p>
-</li>
+<li><p><strong>Def</strong>: Gaussian Markov Condition</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124185706427.png"></p></li>
 </ul>
-<h3 id="expectation-amp-var">1.2.1. expectation &amp; var</h3><ul>
+<h2 id="basic-least-square">1.2. basic least square</h2>
+<ul>
+<li><p><strong>Def</strong>: basic linear model</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124191045808.png"></p></li>
+<li><p><strong>Algorithm</strong>: least square</p></li>
+</ul>
+<p><img src="/2019/11/19/regression-analysis/image-20191124191009458.png"></p>
+<h3 id="expectation-var">1.2.1. expectation &amp; var</h3>
+<ul>
 <li><p><strong>Qua</strong>: =&gt; expectation &amp; var of least square</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124191914999.png" alt></p>
-</li>
-<li><p><strong>Theorem</strong>: =&gt; for all the linear unbiased, least square has least var </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124192005453.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124192026044.png" alt></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124191914999.png"></p></li>
+<li><p><strong>Theorem</strong>: =&gt; for all the linear unbiased, least square has least var</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124192005453.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124192026044.png"></p>
 <p><strong>Note</strong>:</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124192124483.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191124192124483.png"></p></li>
 </ul>
-<h3 id="residual-sum-of-squares-RSS">1.2.2. residual sum of squares ( RSS )</h3><ul>
+<h3 id="residual-sum-of-squares-rss">1.2.2. residual sum of squares ( RSS )</h3>
+<ul>
 <li><p><strong>Def</strong>: RSS</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124192401096.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124192412654.png" alt></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124192401096.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124192412654.png"></p>
 <p><strong>Note</strong>:</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124192420109.png" alt></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124192420109.png"></p>
 <ul>
 <li><p><strong>Qua</strong>: =&gt; expectation of residual vector</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124193921169.png" alt></p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
+<p><img src="/2019/11/19/regression-analysis/image-20191124193921169.png"></p></li>
 <li><p><strong>Qua</strong>; =&gt; expectation of RSS</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124192436751.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191124192436751.png"></p></li>
 <li><p><strong>Qua</strong>: =&gt; generalized RSS</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124192721504.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191124192721504.png"></p></li>
 <li><p><strong>Theorem</strong>: =&gt; important of RSS (independency is the most important when we do hypothesis test)</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125120631578.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191125120631578.png"></p></li>
+</ul></li>
 </ul>
-<h2 id="centralized-least-square">1.3. centralized least square</h2><ul>
-<li><p><strong>Def</strong>: centralized linear model</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124191118933.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124191218631.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124191258926.png" alt></p>
-</li>
-</ul>
+<h2 id="centralized-least-square">1.3. centralized least square</h2>
 <ul>
-<li><p><strong>Algorithm</strong>: centralized least square </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124191322235.png" alt></p>
+<li><p><strong>Def</strong>: centralized linear model</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124191118933.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124191218631.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124191258926.png"></p></li>
+<li><p><strong>Algorithm</strong>: centralized least square</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124191322235.png"></p>
 <p><strong>Note</strong>:</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124191355095.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191124191355095.png"></p></li>
 </ul>
-<h3 id="expectation-amp-var-1">1.3.1. expectation &amp; var</h3><ul>
-<li><p><strong>Qua</strong>: =&gt; expectation </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124192906208.png" alt></p>
-<p><strong>Note</strong>: more about centralization </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124193108014.png" alt></p>
-</li>
-<li><p><strong>Def</strong>: regression coefficient </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124193334120.png" alt></p>
-</li>
+<h3 id="expectation-var-1">1.3.1. expectation &amp; var</h3>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; expectation</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124192906208.png"></p>
+<p><strong>Note</strong>: more about centralization</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124193108014.png"></p></li>
+<li><p><strong>Def</strong>: regression coefficient</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124193334120.png"></p></li>
 </ul>
-<h3 id="MSE">1.3.2. MSE</h3><ul>
+<h3 id="mse">1.3.2. MSE</h3>
+<ul>
 <li><p><strong>Def</strong>: see probability theory</p>
 <ul>
-<li><p><strong>Qua</strong>:  =&gt; MSE of centralized least square </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124223720501.png" alt></p>
+<li><p><strong>Qua</strong>: =&gt; MSE of centralized least square</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124223720501.png"></p>
 <p><strong>Proof</strong>:</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124223734278.png" alt></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124223734278.png"></p>
 <p><strong>Note</strong>: if eigvalue small, then MSE large!</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124223744871.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191124223744871.png"></p></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h2 id="standardized-least-square">1.4. standardized least square</h2><ul>
+<p>## standardized least square</p>
+<ul>
 <li><p><strong>Def</strong>: standardized linear model</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124191628951.png" alt></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124191628951.png"></p>
 <p><strong>Note</strong>: relationship bewteen standardized model and general model.</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124191721609.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124191837820.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191124191721609.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124191837820.png"></p></li>
 </ul>
-<h2 id="constraint-least-square">1.5. constraint least square</h2><ul>
+<h2 id="constraint-least-square">1.4. constraint least square</h2>
+<ul>
 <li><p><strong>Def</strong>: contraint linear model</p>
-<p><strong>Usage</strong>: same model but an additional constraint equation </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124193514578.png" alt></p>
-</li>
+<p><strong>Usage</strong>: same model but an additional constraint equation</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124193514578.png"></p></li>
 <li><p><strong>Algorithm</strong>: constrainde least square</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124193550476.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124193608579.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124193655537.png" alt></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124193550476.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124193608579.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124193655537.png"></p>
 <p><strong>Proof</strong>: prove that the min point does exists</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124193636432.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191124193636432.png"></p></li>
 </ul>
-<h2 id="generalized-least-square">1.6. generalized least square</h2><ul>
+<h2 id="generalized-least-square">1.5. generalized least square</h2>
+<ul>
 <li><p><strong>Def</strong>: generalized linear model</p>
 <p><strong>Usage</strong>: model where covariance matrix is not identical but orthogonal matrix</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124200041588.png" alt></p>
-</li>
-<li><p><strong>Algorithm</strong>: generalized least square </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124200444692.png" alt></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124200041588.png"></p></li>
+<li><p><strong>Algorithm</strong>: generalized least square</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124200444692.png"></p>
 <ul>
-<li><p><strong>Qua</strong>: =&gt; expectations </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124200501426.png" alt></p>
-<p><strong>Note</strong>: apparently generalized model turn a random model to its standardized form, and it become the best via Gaussain-Markov condition </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124201111549.png" alt></p>
+<li><p><strong>Qua</strong>: =&gt; expectations</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124200501426.png"></p>
+<p><strong>Note</strong>: apparently generalized model turn a random model to its standardized form, and it become the best via Gaussain-Markov condition</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124201111549.png"></p>
 <p><strong>Example</strong>: a special form of generalized model</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124201253754.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124201311933.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191124201253754.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124201311933.png"></p></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h2 id="incomplete-data-least-square">1.7. incomplete-data least square</h2><ul>
+<h2 id="incomplete-data-least-square">1.6. incomplete-data least square</h2>
+<ul>
 <li><p><strong>Def</strong>: eliminate some row(s) of the data and see the difference of parameter vector .</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124194656811.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124194702925.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191124194656811.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124194702925.png"></p></li>
 <li><p><strong>Def</strong>: cook stats,</p>
 <p><strong>Usage</strong>: a metric to rank the influence ( when we eliminate certain row of data)</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124194816194.png" alt></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124194816194.png"></p>
 <ul>
-<li><p><strong>Theorem</strong>:  =&gt;  relationship between cook &amp; student residual </p>
-<p><strong>Usage</strong>: we don’t have to actually compute cook every now and then, using the theorem we can reduce the complexity by a large scale.</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124194857854.png" alt></p>
+<li><p><strong>Theorem</strong>: =&gt; relationship between cook &amp; student residual</p>
+<p><strong>Usage</strong>: we don't have to actually compute cook every now and then, using the theorem we can reduce the complexity by a large scale.</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124194857854.png"></p>
 <p><strong>Note</strong>: intuition for cook.</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124195111413.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124195131882.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191124195111413.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124195131882.png"></p></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h2 id="ridge-least-square">1.8. ridge least square</h2><ul>
-<li><p><strong>Def</strong>: model is the basic model</p>
-</li>
-<li><p><strong>Algorithm</strong>: algorithm is different when k $\neq $ 0 </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124225058499.png" alt></p>
+<h2 id="ridge-least-square">1.7. ridge least square</h2>
+<ul>
+<li><p><strong>Def</strong>: model is the basic model</p></li>
+<li><p><strong>Algorithm</strong>: algorithm is different when k $$ 0</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124225058499.png"></p>
 <p><strong>Note</strong>: why we need ridge regression</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124225138466.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191124225138466.png"></p></li>
 <li><p><strong>Def</strong>: regularized linear model</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125111557700.png" alt></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125111557700.png"></p>
 <p><strong>Algorithm</strong>: least square for reguoarized linear model</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125111623591.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125111644262.png" alt></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125111623591.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125111644262.png"></p>
 <ul>
 <li><p><strong>Qua</strong>: =&gt; Var</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125111733886.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191125111733886.png"></p></li>
 <li><p><strong>Qua</strong>: =&gt; relationship with basic model</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125111751361.png" alt></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125111751361.png"></p>
 <p><strong>Note</strong>:</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125111816028.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191125111816028.png"></p></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="MSE-1">1.8.1. MSE</h3><ul>
+<h3 id="mse-1">1.7.1. MSE</h3>
+<ul>
 <li><p><strong>Qua</strong>: =&gt; relationship of MSE with basic model</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125111920959.png" alt></p>
-</li>
-</ul>
-<ul>
+<p><img src="/2019/11/19/regression-analysis/image-20191125111920959.png"></p></li>
 <li><p><strong>Qua</strong>: =&gt; MSE &lt; basic model</p>
-<p><strong>Usage</strong>: this is why we choose ridge regression  </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125111934477.png" alt></p>
+<p><strong>Usage</strong>: this is why we choose ridge regression</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125111934477.png"></p>
 <p><strong>Note</strong>: this is a very important .</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125112118894.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191125112118894.png"></p></li>
 </ul>
-<h3 id="optimal-K">1.8.2. optimal K</h3><ul>
-<li><p><strong>Algorithm</strong>: Hoerl-Kennard equation </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125113544148.png" alt></p>
-</li>
+<h3 id="optimal-k">1.7.2. optimal K</h3>
+<ul>
+<li><p><strong>Algorithm</strong>: Hoerl-Kennard equation</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125113544148.png"></p></li>
 <li><p><strong>Algorithm</strong>: ridge plot</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125113611880.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191125113611880.png"></p></li>
 </ul>
-<h2 id="PCA-regression">1.9. PCA regression</h2><ul>
-<li><p><strong>Def</strong>: PCA linear model </p>
+<h2 id="pca-regression">1.8. PCA regression</h2>
+<ul>
+<li><p><strong>Def</strong>: PCA linear model</p>
 <p><strong>Usage</strong>: same as ridge regression, centralized!!</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125114048060.png" alt></p>
-<p><strong>Def</strong>: first principle </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125114359589.png" alt></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125114048060.png"></p>
+<p><strong>Def</strong>: first principle</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125114359589.png"></p>
 <ul>
-<li><p><strong>Qua</strong>: =&gt; relationship between Z and eigvalue </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125114640824.png" alt></p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
+<li><p><strong>Qua</strong>: =&gt; relationship between Z and eigvalue</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125114640824.png"></p></li>
+</ul></li>
 <li><p><strong>Intro</strong>: intuition for PAC regression: when eigvalue is small we eliminate it.</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125114717665.png" alt></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125114717665.png"></p>
 <p><strong>Algorithm</strong>: PAC regression: similar to regularized model except that we eliminate some part of Z.</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125114808066.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125115254161.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191125114808066.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125115254161.png"></p></li>
 </ul>
-<h3 id="MSE-2">1.9.1. MSE</h3><ul>
-<li><p><strong>Theorem</strong>: we can also decrease MSE by PCA regression</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125120121602.png" alt></p>
-<p><strong>Note</strong>: there’s condition to this theorem</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125120247157.png" alt></p>
-</li>
-</ul>
-<h2 id="imcomplete-feature-least-square">1.10. imcomplete-feature least square</h2><ul>
-<li><p><strong>Def</strong>: model</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125123526052.png" alt></p>
-</li>
-<li><p><strong>Algorithm</strong>: least square (notice the difference here between 1.9, in 1.10 we assume we don’t know which is the correct model, in 1.9 we assume we know which is the correct model.)</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125124519976.png" alt></p>
-</li>
-</ul>
-<h3 id="expectation-amp-var-2">1.10.1. expectation &amp; var</h3><ul>
-<li><p><strong>Theorem</strong>: =&gt; biased E and Var </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125124911855.png" alt></p>
-<p><strong>Proof</strong>: P103</p>
-</li>
-</ul>
-<h3 id="MSE-3">1.10.2. MSE</h3><ul>
-<li><p><strong>Theorem</strong>: =&gt; MSE smaller</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125125010196.png" alt></p>
-<p><strong>Proof</strong>: </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125125020423.png" alt></p>
-<p><strong>Note</strong>: the condition(5.1.14) is not always correct: </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125125101057.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125125110532.png" alt></p>
-</li>
-</ul>
-<h3 id="prediction-problem">1.10.3. prediction problem</h3><ul>
-<li><p><strong>Def</strong>: prediction problem</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125125132487.png" alt></p>
+<h3 id="mse-2">1.8.1. MSE</h3>
 <ul>
-<li><p><strong>Qua</strong>: =&gt; using MSEP we yield this </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125125220719.png" alt></p>
-<p><strong>Proof</strong>: see P108</p>
-</li>
+<li><p><strong>Theorem</strong>: we can also decrease MSE by PCA regression</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125120121602.png"></p>
+<p><strong>Note</strong>: there's condition to this theorem</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125120247157.png"></p></li>
 </ul>
-</li>
+<h2 id="imcomplete-feature-least-square">1.9. imcomplete-feature least square</h2>
+<ul>
+<li><p><strong>Def</strong>: model</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125123526052.png"></p></li>
+<li><p><strong>Algorithm</strong>: least square (notice the difference here between 1.9, in 1.10 we assume we don't know which is the correct model, in 1.9 we assume we know which is the correct model.)</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125124519976.png"></p></li>
 </ul>
-<h3 id="conclusion">1.10.4. conclusion</h3><ul>
+<h3 id="expectation-var-2">1.9.1. expectation &amp; var</h3>
+<ul>
+<li><p><strong>Theorem</strong>: =&gt; biased E and Var</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125124911855.png"></p>
+<p><strong>Proof</strong>: P103</p></li>
+</ul>
+<h3 id="mse-3">1.9.2. MSE</h3>
+<ul>
+<li><p><strong>Theorem</strong>: =&gt; MSE smaller</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125125010196.png"></p>
+<p><strong>Proof</strong>:</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125125020423.png"></p>
+<p><strong>Note</strong>: the condition(5.1.14) is not always correct:</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125125101057.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125125110532.png"></p></li>
+</ul>
+<h3 id="prediction-problem">1.9.3. prediction problem</h3>
+<ul>
+<li><p><strong>Def</strong>: prediction problem</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125125132487.png"></p>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; using MSEP we yield this</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125125220719.png"></p>
+<p><strong>Proof</strong>: see P108</p></li>
+</ul></li>
+</ul>
+<h3 id="conclusion">1.9.4. conclusion</h3>
+<ul>
 <li><p><strong>Note</strong>: conclusion for above 3 sections</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125125259948.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191125125259948.png"></p></li>
 </ul>
-<h1 id="regression-analysis">2. regression analysis</h1><h2 id="cook-distance">2.1. cook distance</h2><ul>
+<h1 id="regression-analysis">2. regression analysis</h1>
+<h2 id="cook-distance">2.1. cook distance</h2>
+<ul>
 <li><p><strong>Def</strong>: introduced in 1.7</p>
-<p><strong>Usage</strong>: strong influence/ outliers</p>
-</li>
+<p><strong>Usage</strong>: strong influence/ outliers</p></li>
 </ul>
-<h2 id="VIF-CI">2.2. VIF/ CI</h2><ul>
+<h2 id="vif-ci">2.2. VIF/ CI</h2>
+<ul>
 <li><p><strong>Intro</strong>: in 1.3.2 we know that MSE is corresponding with eigvalue, now we show that what does eigvalue mean in linear model</p>
 <p><strong>Def</strong>: multicollinearity</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124224627271.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124224814504.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191124224627271.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124224814504.png"></p></li>
 <li><p><strong>Def</strong>: CI</p>
 <p><strong>Usage</strong>: tool to show how severe is multilinear</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124224842749.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191124224842749.png"></p></li>
 <li><p><strong>Def</strong>: VIF</p>
-<p><strong>Usage</strong>: same </p>
-<script type="math/tex; mode=display">
-\frac{1}{1-R_j^2}</script></li>
+<p><strong>Usage</strong>: same <span class="math display">\[
+\frac{1}{1-R_j^2}
+\]</span></p></li>
 </ul>
-<h2 id="student-resitual-map">2.3. student resitual map</h2><ul>
-<li><p><strong>Def</strong>: student residual </p>
-<p><strong>Usage</strong>: a standardized form of residual vector</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124194009701.png" alt></p>
-</li>
-<li><p><strong>Algorithm</strong>: student residual plot </p>
-<p><strong>Usage</strong>: all hypothesis </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124194210609.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124194238364.png" alt></p>
-<p><strong>Note</strong>: 6 types of residual map</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124194247986.png" alt></p>
-</li>
-</ul>
-<h2 id="Box-cox-transformation">2.4. Box-cox transformation</h2><ul>
-<li><p><strong>Def</strong>: Box-cox transformation </p>
-<p><strong>Usage</strong>: all conditions</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124195516522.png" alt></p>
-</li>
-</ul>
+<h2 id="student-resitual-map">2.3. student resitual map</h2>
 <ul>
-<li><p><strong>Algorithm</strong>: mle for optimizing the optimal $\lambda$</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124195558304.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124195622243.png" alt></p>
+<li><p><strong>Def</strong>: student residual</p>
+<p><strong>Usage</strong>: a standardized form of residual vector</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124194009701.png"></p></li>
+<li><p><strong>Algorithm</strong>: student residual plot</p>
+<p><strong>Usage</strong>: all hypothesis</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124194210609.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124194238364.png"></p>
+<p><strong>Note</strong>: 6 types of residual map</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124194247986.png"></p></li>
+</ul>
+<h2 id="box-cox-transformation">2.4. Box-cox transformation</h2>
+<ul>
+<li><p><strong>Def</strong>: Box-cox transformation</p>
+<p><strong>Usage</strong>: all conditions</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124195516522.png"></p></li>
+<li><p><strong>Algorithm</strong>: mle for optimizing the optimal <span class="math inline">\(\lambda\)</span></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124195558304.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124195622243.png"></p>
 <p><strong>Note</strong>: basic tranformation to log maximization problem</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124195659021.png" alt></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124195659021.png"></p>
 <p><strong>Note</strong>: oveall brief algorithm</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124195715270.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191124195921355.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191124195715270.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191124195921355.png"></p></li>
 </ul>
-<h1 id="regression-hypothesis-test">3. regression hypothesis test</h1><h2 id="linear-test">3.1. linear test</h2><ul>
-<li><p><strong>Def</strong>: basic linear test <img src="/2019/11/19/regression-analysis/image-20191125120453858.png" alt></p>
+<h1 id="regression-hypothesis-test">3. regression hypothesis test</h1>
+<h2 id="linear-test">3.1. linear test</h2>
+<ul>
+<li><p><strong>Def</strong>: basic linear test <img src="/2019/11/19/regression-analysis/image-20191125120453858.png"></p>
 <p><strong>Note</strong>: basic idea to this test</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125120528733.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125120535508.png" alt></p>
-</li>
-<li><p><strong>Algorithm</strong>: the test </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125120841940.png" alt></p>
-<p><strong>Note</strong>: we can simplify the test since $RSS_h$ are hard to compute : by using a 约减 model (putting AX=b into the model and make it unconstraint)</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125121125937.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125121137246.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191125120528733.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125120535508.png"></p></li>
+<li><p><strong>Algorithm</strong>: the test</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125120841940.png"></p>
+<p><strong>Note</strong>: we can simplify the test since <span class="math inline">\(RSS_h\)</span> are hard to compute : by using a 约减 model (putting AX=b into the model and make it unconstraint)</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125121125937.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125121137246.png"></p></li>
 </ul>
-<h2 id="model-test">3.2. model test</h2><ul>
-<li><p><strong>Def</strong>: model test </p>
-<p><strong>Usage</strong>: which is a special test of section 3.1, but we’ll make it simpler </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125121505008.png" alt></p>
+<h2 id="model-test">3.2. model test</h2>
+<ul>
+<li><p><strong>Def</strong>: model test</p>
+<p><strong>Usage</strong>: which is a special test of section 3.1, but we'll make it simpler</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125121505008.png"></p>
 <p><strong>Note</strong>:</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125121530289.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191125121530289.png"></p></li>
 <li><p><strong>Algorithm</strong>: the same thing as 3.1</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125121748133.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125122129059.png" alt></p>
-<p><strong>Note</strong>: the famout TSS = RSS +ESS equation </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125122156643.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125122224583.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191125121748133.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125122129059.png"></p>
+<p><strong>Note</strong>: the famout TSS = RSS +ESS equation</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125122156643.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125122224583.png"></p></li>
 </ul>
-<h2 id="saliency-test">3.3. saliency test</h2><ul>
-<li><p><strong>Def</strong>: saliency test ( a special form of 3.1 but we’ll give a simpler way)</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125122411825.png" alt></p>
-</li>
+<h2 id="saliency-test">3.3. saliency test</h2>
+<ul>
+<li><p><strong>Def</strong>: saliency test ( a special form of 3.1 but we'll give a simpler way)</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125122411825.png"></p></li>
 <li><p><strong>Algorithm</strong>: saliency test</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125122446744.png" alt></p>
-<p><strong>Note</strong>: </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125122515204.png" alt></p>
-</li>
-</ul>
-<h2 id="outlier-test">3.4. outlier test</h2><ul>
-<li><p><strong>Def</strong>: outlier test</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125122554439.png" alt></p>
-</li>
-<li><p><strong>Theorem</strong>: </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125122606472.png" alt></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125122446744.png"></p>
 <p><strong>Note</strong>:</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125122620228.png" alt></p>
-</li>
-<li><p><strong>Algorithm</strong>: </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125122720728.png" alt></p>
-<p><strong>Proof</strong>:</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125122645232.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125122652826.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125122701996.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191125122515204.png"></p></li>
 </ul>
-<h2 id="the-prediction-problem">3.5. the prediction problem</h2><h3 id="point-estimation">3.5.1. point estimation</h3><ul>
+<h2 id="outlier-test">3.4. outlier test</h2>
+<ul>
+<li><p><strong>Def</strong>: outlier test</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125122554439.png"></p></li>
+<li><p><strong>Theorem</strong>:</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125122606472.png"></p>
+<p><strong>Note</strong>:</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125122620228.png"></p></li>
+<li><p><strong>Algorithm</strong>:</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125122720728.png"></p>
+<p><strong>Proof</strong>:</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125122645232.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125122652826.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125122701996.png"></p></li>
+</ul>
+<h2 id="the-prediction-problem">3.5. the prediction problem</h2>
+<h3 id="point-estimation">3.5.1. point estimation</h3>
+<ul>
 <li><p><strong>Def</strong>:</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125122811515.png" alt></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125122811515.png"></p>
 <ul>
 <li><p><strong>Qua</strong>: =&gt; unbiased</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125122826069.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191125122826069.png"></p></li>
 <li><p><strong>Qua</strong>: =&gt; markov</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125122840063.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191125122840063.png"></p></li>
 <li><p><strong>Qua</strong>: difference between</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125122858851.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125122908518.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191125122858851.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125122908518.png"></p></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="interval-estimation">3.5.2. interval estimation</h3><ul>
-<li><p><strong>Def</strong>: </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125122951070.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125122959351.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125123011708.png" alt></p>
-</li>
-</ul>
-<h1 id="regression-feature-selection">4. regression feature selection</h1><h2 id="metrics-for-selection">4.1. metrics for selection</h2><ul>
-<li><p><strong>Def</strong>: Rssq ( the $q_{th}$ time of selection) </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125125425055.png" alt></p>
+<h3 id="interval-estimation">3.5.2. interval estimation</h3>
 <ul>
-<li><p><strong>Theorem</strong>: =&gt; Rss q &gt;  Rss q+1</p>
-<p><strong>Usage</strong>: which means the more feature we choose the more accuracy we’ll get.</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125125504738.png" alt></p>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125122951070.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125122959351.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125123011708.png"></p></li>
+</ul>
+<h1 id="regression-feature-selection">4. regression feature selection</h1>
+<p>## metrics for selection</p>
+<ul>
+<li><p><strong>Def</strong>: Rssq ( the <span class="math inline">\(q_{th}\)</span> time of selection)</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125125425055.png"></p>
+<ul>
+<li><p><strong>Theorem</strong>: =&gt; Rss q &gt; Rss q+1</p>
+<p><strong>Usage</strong>: which means the more feature we choose the more accuracy we'll get.</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125125504738.png"></p>
 <p><strong>Proof</strong>:</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125125525714.png" alt></p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p><strong>Def</strong>: $Rms_q$</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125125613670.png" alt></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125125525714.png"></p></li>
+</ul></li>
+<li><p><strong>Def</strong>: <span class="math inline">\(Rms_q\)</span></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125125613670.png"></p>
 <p><strong>Note</strong>: the smaller RMSq, the better is the model</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125125627171.png" alt></p>
-</li>
-</ul>
-<ul>
+<p><img src="/2019/11/19/regression-analysis/image-20191125125627171.png"></p></li>
 <li><p><strong>Def</strong>: MSEP</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125125745234.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125125755646.png" alt></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125125745234.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125125755646.png"></p>
 <ul>
 <li><p><strong>Def</strong>: CP</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125125825442.png" alt></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125125825442.png"></p>
 <ul>
 <li><p><strong>Qua</strong>: =&gt; no proof</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125130346440.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125130404238.png" alt></p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125130411904.png" alt></p>
-<p><strong>Note</strong>: we can plot to see if selection is optimal </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125130432473.png" alt></p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
+<p><img src="/2019/11/19/regression-analysis/image-20191125130346440.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125130404238.png"></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125130411904.png"></p>
+<p><strong>Note</strong>: we can plot to see if selection is optimal</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125130432473.png"></p></li>
+</ul></li>
+</ul></li>
 <li><p><strong>Def</strong>: AIC( an application of MLE)</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125125904220.png" alt></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125125904220.png"></p>
 <p><strong>Note</strong>: specifically in linear model</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125125937020.png" alt></p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125125937020.png"></p>
 <p><strong>Proof</strong>:</p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125125948545.png" alt></p>
-<p><strong>Note</strong>: the smaller the better </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125130009012.png" alt></p>
-</li>
+<p><img src="/2019/11/19/regression-analysis/image-20191125125948545.png"></p>
+<p><strong>Note</strong>: the smaller the better</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125130009012.png"></p></li>
 </ul>
-<h2 id="optimal-selection">4.2. optimal selection</h2><ul>
-<li><p><strong>Def</strong>:  the best features </p>
-<p><img src="/2019/11/19/regression-analysis/image-20191125130242984.png" alt></p>
-</li>
-<li><p><strong>Algorithm</strong>: Cp plot </p>
-</li>
+<p>## optimal selection</p>
+<ul>
+<li><p><strong>Def</strong>: the best features</p>
+<p><img src="/2019/11/19/regression-analysis/image-20191125130242984.png"></p></li>
+<li><p><strong>Algorithm</strong>: Cp plot</p></li>
 </ul>
-<h2 id="step-wise-selection">4.3. step-wise selection</h2><ul>
+<h2 id="step-wise-selection">4.1. step-wise selection</h2>
+<ul>
 <li><strong>Algorithm</strong>: P149, basically do F test every step.</li>
 </ul>
-<h3 id="forward-selection">4.3.1. forward selection</h3><h3 id="backward-selection">4.3.2. backward selection</h3><h1 id="other-features">5. other features</h1>
+<h3 id="forward-selection">4.1.1. forward selection</h3>
+<h3 id="backward-selection">4.1.2. backward selection</h3>
+<h1 id="other-features">5. other features</h1>
+
       
     </div>
     
@@ -1084,7 +1033,7 @@
   <p><span>Title:</span><a href="/2019/11/19/regression-analysis/">Regression Analysis</a></p>
   <p><span>Author:</span><a href="/" title=" Benson 的personal blog">Benson</a></p>
   <p><span>PTime:</span>2019/11/19 - 12:11</p>
-  <p><span>LUpdate:</span>2019/12/08 - 21:12</p>
+  <p><span>LUpdate:</span>2019/12/15 - 19:12</p>
   <p><span>Link:</span><a href="/2019/11/19/regression-analysis/" title="Regression Analysis">https://steinsgate9.github.io/2019/11/19/regression-analysis/</a>
     <span class="copy-path"  title="click to copy link"><i class="fa fa-clipboard" data-clipboard-text="https://steinsgate9.github.io/2019/11/19/regression-analysis/"  aria-label="copy done！"></i></span>
   </p>
@@ -1159,8 +1108,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/19/stats_theory/" rel="next" title="Statistical Learning Theory">
-                <i class="fa fa-chevron-left"></i> Statistical Learning Theory
+              <a href="/2019/11/19/stochastic-process/" rel="next" title="Stochastic Process">
+                <i class="fa fa-chevron-left"></i> Stochastic Process
               </a>
             
           </div>
@@ -1374,7 +1323,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#regression-methods"><span class="nav-text">1. regression methods</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#basic-hypothesis"><span class="nav-text">1.1. basic hypothesis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#basic-least-square"><span class="nav-text">1.2. basic least square</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#expectation-amp-var"><span class="nav-text">1.2.1. expectation &amp; var</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#residual-sum-of-squares-RSS"><span class="nav-text">1.2.2. residual sum of squares ( RSS )</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#centralized-least-square"><span class="nav-text">1.3. centralized least square</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#expectation-amp-var-1"><span class="nav-text">1.3.1. expectation &amp; var</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MSE"><span class="nav-text">1.3.2. MSE</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#standardized-least-square"><span class="nav-text">1.4. standardized least square</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#constraint-least-square"><span class="nav-text">1.5. constraint least square</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#generalized-least-square"><span class="nav-text">1.6. generalized least square</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#incomplete-data-least-square"><span class="nav-text">1.7. incomplete-data least square</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ridge-least-square"><span class="nav-text">1.8. ridge least square</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MSE-1"><span class="nav-text">1.8.1. MSE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#optimal-K"><span class="nav-text">1.8.2. optimal K</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PCA-regression"><span class="nav-text">1.9. PCA regression</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MSE-2"><span class="nav-text">1.9.1. MSE</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#imcomplete-feature-least-square"><span class="nav-text">1.10. imcomplete-feature least square</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#expectation-amp-var-2"><span class="nav-text">1.10.1. expectation &amp; var</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MSE-3"><span class="nav-text">1.10.2. MSE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prediction-problem"><span class="nav-text">1.10.3. prediction problem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conclusion"><span class="nav-text">1.10.4. conclusion</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#regression-analysis"><span class="nav-text">2. regression analysis</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#cook-distance"><span class="nav-text">2.1. cook distance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VIF-CI"><span class="nav-text">2.2. VIF/ CI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#student-resitual-map"><span class="nav-text">2.3. student resitual map</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Box-cox-transformation"><span class="nav-text">2.4. Box-cox transformation</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#regression-hypothesis-test"><span class="nav-text">3. regression hypothesis test</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#linear-test"><span class="nav-text">3.1. linear test</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#model-test"><span class="nav-text">3.2. model test</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#saliency-test"><span class="nav-text">3.3. saliency test</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#outlier-test"><span class="nav-text">3.4. outlier test</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-prediction-problem"><span class="nav-text">3.5. the prediction problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#point-estimation"><span class="nav-text">3.5.1. point estimation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#interval-estimation"><span class="nav-text">3.5.2. interval estimation</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#regression-feature-selection"><span class="nav-text">4. regression feature selection</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#metrics-for-selection"><span class="nav-text">4.1. metrics for selection</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#optimal-selection"><span class="nav-text">4.2. optimal selection</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#step-wise-selection"><span class="nav-text">4.3. step-wise selection</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#forward-selection"><span class="nav-text">4.3.1. forward selection</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#backward-selection"><span class="nav-text">4.3.2. backward selection</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#other-features"><span class="nav-text">5. other features</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#regression-methods"><span class="nav-text">1. regression methods</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#basic-hypothesis"><span class="nav-text">1.1. basic hypothesis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#basic-least-square"><span class="nav-text">1.2. basic least square</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#expectation-var"><span class="nav-text">1.2.1. expectation &amp; var</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#residual-sum-of-squares-rss"><span class="nav-text">1.2.2. residual sum of squares ( RSS )</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#centralized-least-square"><span class="nav-text">1.3. centralized least square</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#expectation-var-1"><span class="nav-text">1.3.1. expectation &amp; var</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mse"><span class="nav-text">1.3.2. MSE</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#constraint-least-square"><span class="nav-text">1.4. constraint least square</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#generalized-least-square"><span class="nav-text">1.5. generalized least square</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#incomplete-data-least-square"><span class="nav-text">1.6. incomplete-data least square</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ridge-least-square"><span class="nav-text">1.7. ridge least square</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mse-1"><span class="nav-text">1.7.1. MSE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#optimal-k"><span class="nav-text">1.7.2. optimal K</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pca-regression"><span class="nav-text">1.8. PCA regression</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mse-2"><span class="nav-text">1.8.1. MSE</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#imcomplete-feature-least-square"><span class="nav-text">1.9. imcomplete-feature least square</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#expectation-var-2"><span class="nav-text">1.9.1. expectation &amp; var</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mse-3"><span class="nav-text">1.9.2. MSE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prediction-problem"><span class="nav-text">1.9.3. prediction problem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conclusion"><span class="nav-text">1.9.4. conclusion</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#regression-analysis"><span class="nav-text">2. regression analysis</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#cook-distance"><span class="nav-text">2.1. cook distance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vif-ci"><span class="nav-text">2.2. VIF/ CI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#student-resitual-map"><span class="nav-text">2.3. student resitual map</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#box-cox-transformation"><span class="nav-text">2.4. Box-cox transformation</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#regression-hypothesis-test"><span class="nav-text">3. regression hypothesis test</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#linear-test"><span class="nav-text">3.1. linear test</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#model-test"><span class="nav-text">3.2. model test</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#saliency-test"><span class="nav-text">3.3. saliency test</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#outlier-test"><span class="nav-text">3.4. outlier test</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-prediction-problem"><span class="nav-text">3.5. the prediction problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#point-estimation"><span class="nav-text">3.5.1. point estimation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#interval-estimation"><span class="nav-text">3.5.2. interval estimation</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#regression-feature-selection"><span class="nav-text">4. regression feature selection</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#step-wise-selection"><span class="nav-text">4.1. step-wise selection</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#forward-selection"><span class="nav-text">4.1.1. forward selection</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#backward-selection"><span class="nav-text">4.1.2. backward selection</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#other-features"><span class="nav-text">5. other features</span></a></li></ol></div>
             
 
           </div>
