@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.jpg?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.ico?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="database," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Data structure and algorithms">
+<meta name="keywords" content="database">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Database System">
+<meta property="og:url" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;database&#x2F;index.html">
+<meta property="og:site_name" content="BeNsoN">
+<meta property="og:description" content="Data structure and algorithms">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;database&#x2F;image-20191203164455493.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;database&#x2F;image-20191210210016705.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;database&#x2F;image-20191216000231804.png">
+<meta property="og:updated_time" content="2019-12-16T13:31:50.727Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;database&#x2F;image-20191203164455493.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: 'FV65T83Q2V',
+      apiKey: '5008cf0478de4ac53102baceee722a4d',
+      indexName: 'steinsgate9',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://SteinsGate9.github.io/2019/11/19/database/"/>
+
+
+
+
+
+  <title>Database System | BeNsoN</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+<!--     <a href="https://github.com/SteinsGate9" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style> -->
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">BeNsoN</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Live Long, Play Hard.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" target="_blank" rel="noopener" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://SteinsGate9.github.io/2019/11/19/database/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Benson">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://tva1.sinaimg.cn/large/006y8mN6gy1g96p07mbexj30uf0u0npd.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BeNsoN">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Database System</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-19T12:50:43+08:00">
+                2019-11-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/computer-science/" itemprop="url" rel="index">
+                    <span itemprop="name">computer science</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">total read
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>times
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  5k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  30
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Data structure and algorithms</p>
+<a id="more"></a>
+<h1 id="data-structure">1. data structure</h1>
+<p>overall picture of data structure</p>
+<p><img src="/2019/11/19/database/image-20191203164455493.png"></p>
+<h2 id="linear-adt">1.1. linear ADT</h2>
+<h3 id="string">1.1.1. string</h3>
+<h3 id="vector">1.1.2. vector</h3>
+<h3 id="list-linked">1.1.3. list (linked)</h3>
+<h3 id="stack">1.1.4. stack</h3>
+<h3 id="queue">1.1.5. queue</h3>
+<h2 id="tree-adt">1.2. tree ADT</h2>
+<h3 id="binary-tree">1.2.1. binary tree</h3>
+<h4 id="binary-search-tree">1.2.1.1. binary search tree</h4>
+<h1 id="leetcode">2. Leetcode</h1>
+<h2 id="int">2.1. int</h2>
+<h3 id="no.7-iterate-reverse-int">2.1.1. no.7 iterate &amp; reverse int</h3>
+<ul>
+<li>careful:
+<ul>
+<li>remember the INT_MAX &amp; INT_MIN, and that INT_MAX + 1 = INT_MIN</li>
+<li>and that any int will trancate to [INT_MIN, INT_MAX] if overflow.</li>
+<li>that string numbers n are bad for comparation.</li>
+</ul></li>
+</ul>
+<h3 id="no.9-iterate-reverse-int-2">2.1.2. no.9 iterate &amp; reverse int 2</h3>
+<ul>
+<li>key:
+<ul>
+<li>observation: some can compare when all is flipped over.</li>
+</ul></li>
+<li>careful:
+<ul>
+<li>remember it is difficult to yield the first character of a int,</li>
+</ul></li>
+</ul>
+<h3 id="no.13-iterate-assign">2.1.3. no.13 iterate &amp; assign</h3>
+<ul>
+<li><p>key:</p>
+<ul>
+<li>observation: examine the problem carefully</li>
+</ul></li>
+</ul>
+<h2 id="string-1">2.2. string</h2>
+<h3 id="no.28-iterate">2.2.1. no.28 iterate</h3>
+<ul>
+<li><p>key:</p>
+<ul>
+<li><p>observation: can use substr</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">haystack.substr(i,len);</span><br></pre></td></tr></table></figure></li>
+</ul></li>
+</ul>
+<h3 id="no.859-iterate-swap">2.2.2. no.859 iterate &amp; swap</h3>
+<ul>
+<li>key:
+<ul>
+<li>observation: consider all circumtances</li>
+</ul></li>
+</ul>
+<h2 id="vector-1">2.3. vector</h2>
+<h3 id="no.26-iterate-eraseassign">2.3.1. no.26 iterate &amp; erase/assign</h3>
+<ul>
+<li><p>careful:</p>
+<ul>
+<li><p>vector after erase, iterator position change!!!, so reassgnment is neccesary(all iterators need to be reassigned), so erase is not preferable during iteration!.</p></li>
+<li><p>try to use move &amp; assign tech instead of erase.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = gg.erase(a);</span><br><span class="line">b = a;</span><br></pre></td></tr></table></figure></li>
+</ul></li>
+</ul>
+<h3 id="no.665-iterate-change-value-math-problem">2.3.2. no.665 iterate &amp; change value (math problem)</h3>
+<ul>
+<li>key:
+<ul>
+<li><p>observation:</p>
+<ol start="0" type="1">
+<li><p>注意这个算法只是（只改变一次的最优策略）这种情况，并非改变（改变最少次数）的全局最优。所以是局部最优解，但是考虑到只改变一次这种情况，就是i j出问题，那么解决i, j 必然要1次的变动。如果能用一次解决，所以改变i或者j其中一个一定能解决这个问题。所以考虑改变i和j能解决问题的区别，在默认改变一次能解决所有问题的假设下，只有一种情况改变j才能解决：就是以下情况。所以才这么做。</p></li>
+<li><p>以上解释太蠢了，我们直接把所有四种情况能用一次改变解决的画出来即可，然后设计一个算法解决它，如果这个算法能解决，那么必然符合情况，不能解决就不符合。</p></li>
+<li><p>that for every xi &gt; xj (i &lt; j), either i or j have to be changed, and of course we want i to change since i decrease can at most amend (n-i) relationships, and j increase may at most amend j relationships. since we go from i=0 to n-1, the left side of i we assume is already fixed. the only condition we prefer j over i is that j can change both i-k, i-m. so we push j into a set to prevent that from happening.</p></li>
+</ol></li>
+</ul></li>
+</ul>
+<h2 id="linked-list">2.4. linked list</h2>
+<h3 id="no.21-iterate-merge-2-list">2.4.1. no.21 iterate &amp; merge 2 list</h3>
+<ul>
+<li>careful:
+<ul>
+<li>difference between while &amp; for , while: more flexible, for: be very carefull when operating linked list since for have this delayed feature.</li>
+</ul></li>
+</ul>
+<h2 id="stack-1">2.5. stack</h2>
+<h3 id="no.20-push-pop">2.5.1. no.20 push &amp; pop</h3>
+<h2 id="heap">2.6. heap</h2>
+<h3 id="the-skyline-problem-i-wouldnt-say-its-divideconcurd">2.6.1. the skyline problem (i wouldn't say it's divide&amp;concurd)</h3>
+<ul>
+<li><p>key:</p>
+<ul>
+<li><p>observation: first we need to observe that skyrim point is on every point when maximum height changes.</p>
+<p><img src="/2019/11/19/database/image-20191210210016705.png"></p>
+<p>thus, our priority is to efficiently update every maximum height.</p></li>
+<li><p>algorithm1: we can do linear check =&gt; O(n + m*p)</p></li>
+<li><p>algorithm2: we can do linear check with a heap so that we don't have to recheck the overlapping space, =&gt;O(n+ m *log(m/2))</p></li>
+</ul></li>
+<li><p>carefull</p>
+<ul>
+<li><p>== (?:)</p></li>
+<li><p>int+1 =&gt; overflow</p></li>
+<li><p>try to make things easier =&gt; observation is the most important .</p></li>
+</ul></li>
+</ul>
+<h2 id="bst">2.7. bst</h2>
+<h3 id="count-of-smaller-numbers-after-self-from-dc">2.7.1. 315. Count of Smaller Numbers After Self (from D&amp;C)</h3>
+<ul>
+<li><p>key</p>
+<ul>
+<li><p>observation: this is actually from D&amp;C algorithm2:</p>
+<p>=&gt; cur[i] = smaller[i+1:end] =&gt; insert cur[i] into [i+1:end] and see how many is smaller.(this is usage of BST)</p></li>
+</ul></li>
+</ul>
+<h2 id="divide-concur-basic-bottom-up">2.8. divide &amp; concur (basic bottom-up)</h2>
+<ul>
+<li><p>key</p>
+<ul>
+<li>find subproblem!!</li>
+<li>improvise</li>
+</ul></li>
+</ul>
+<h3 id="findi-j-findi-1-j-findi-j1">2.8.1. 240. find(i, j) = find(i-1, j) || find(i, j+1)</h3>
+<ul>
+<li>key
+<ul>
+<li>observation: find propagation function between problem &amp; subproblems</li>
+</ul></li>
+</ul>
+<h3 id="kth-largest-element-in-an-array">2.8.2. 215. Kth Largest Element in an Array</h3>
+<ul>
+<li>key
+<ul>
+<li><p>observation: we can sub this problem by =&gt; if we need to find the kth largest the problem becomes sort(k) , we know that we have all k-1 smaller element on its left ( e,g. 5 6 4(*) 3 1 2 if we want the 3rd largest) so we don't acctually care about the order of left of 4. so the subproblem can be sort(k-1), k-2 ... 1 largest. The hard point is that we don't know the kth partition pivix, so we can only guess the pixiv, for example if we choose the last element of array, we can use std::partition to solve the subproblem. so we random solve $sort(m) =&gt; sort((m-1)/2) or sort(random(n&lt;n)) $</p></li>
+<li><p>alternative: insert heap</p></li>
+</ul></li>
+</ul>
+<h3 id="beautiful-array">2.8.3. 932 beautiful array</h3>
+<ul>
+<li><p>key</p>
+<ul>
+<li>observation: from odd &amp; . =&gt; <span class="math inline">\(array(n) = (array((n+1)/2)*2-1) +(array(n/2)*2)\)</span></li>
+</ul></li>
+</ul>
+<h3 id="counting">2.8.4. counting</h3>
+<ul>
+<li><p>key</p>
+<ul>
+<li>observation: range sum =&gt; prefix[i] - prefix[j]. Think about merge and sort, we can split the prefix into 2 =&gt; [13,21,3,123,] [1,312,3,123,12,] and if we computed count(left) + count(right) + count(in between), it is O(n2), however if we sort the array along =&gt; O(nlogn + n(merge)) . done. same if we split into [n-i] [i], we use insert sort instead of merge sort. =&gt; O(nlogn + n2)</li>
+</ul></li>
+<li><p>careful</p>
+<ul>
+<li><p>== (?0:1) add parathesis</p></li>
+<li><p>notice when empty</p></li>
+</ul></li>
+</ul>
+<h3 id="reverse-pairs">2.8.5. 493. Reverse Pairs</h3>
+<ul>
+<li><p>key</p>
+<ul>
+<li><p>observation1: <span class="math inline">\(rev(i) = res(i-1) + c\)</span>, tried red-black tree =&gt; O(n * n)(worst case) but TLE. or we can try BIT whose worst case is O(n logn) , by using BIT we insert the index of element and sum of BIT become the num of element satisfying the condition.</p></li>
+<li><p>observation2: <span class="math inline">\(rev(i) = rev(i/2)+rev(i/2+1)+c\)</span>, by this propagation equation we can sort the array along the subproblem, by sorting the array we can use 2 pointer trick to make it linear =&gt; O(n)</p></li>
+</ul></li>
+</ul>
+<h3 id="permutation-sequence">2.8.6. 60. Permutation Sequence</h3>
+<ul>
+<li>key
+<ul>
+<li>observation: add k/(n-1)! th element to the front then it becomes a subpermutation without that element, use an array to store all usable elements.</li>
+</ul></li>
+</ul>
+<h2 id="dynamic-programming">2.9. dynamic programming</h2>
+<ul>
+<li><p>key</p>
+<ul>
+<li><p>find overlapped subproblem</p></li>
+<li><p>set a propagation equation</p>
+<ul>
+<li>for i-1 and i, it is important to make sure i-1 can be successfully propagated to i</li>
+<li>for :i-1 i i+1:end, it is important to make sure that i-1 and i+1 are independent</li>
+</ul></li>
+<li><p>set recursive or iteration (perfer iteration) ( since the purpose of recursive is to make things intuitive, and we already know the propagation equation so we are clear enough about the best way to search and we don't need intuitive way to help us clear our minds)</p></li>
+<li><p>set init values and margin conditions.</p></li>
+</ul></li>
+<li><p>advanced</p>
+<ul>
+<li>time (bu vs td, time complexity = relationships * c.(why? because in bu all relationships are used to calculate every elements, in td every elements is used once(prove by contradiction, if twice then you are not saved)). Then, in bu c = operations, in td c = call&amp;return, so bu is more preferable! )</li>
+</ul></li>
+</ul>
+<h3 id="sumi-j">2.9.1. 303 sum(i, j)</h3>
+<ul>
+<li>key
+<ul>
+<li>observation: use down-top &amp; subproblem: sum(i, j) = sums[j] - sums[i], which means n subproblems. note that: dynamic programming may seem not necessary in this senecio, but dp not only save time on 1 time calling, but saving time on multiply calling as well;</li>
+<li>alternative: top-down is not neccsary in this.</li>
+</ul></li>
+</ul>
+<h3 id="maxsolutioni">2.9.2. 198 maxsolution(i)</h3>
+<ul>
+<li><p>key</p>
+<ul>
+<li><p>observation: use down-top: robs[i] = max(robs[i-1], robs[i-2] + nums[i-1]);</p></li>
+<li><p>alternative: can use more variables (2 pointer ) to record delay : [i-2] and [i-1] (not preferred)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ninc = ex + it;</span><br><span class="line">ex = max(inc, ex);</span><br><span class="line">inc = ninc;</span><br></pre></td></tr></table></figure>
+<p>is same as</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">robs[i] = max(robs[i-1], robs[i-2] + nums[i-1]);</span><br></pre></td></tr></table></figure></li>
+<li><p>alternitive: tried top-down, so fucking memory-consuming and hard to write, make sure that use smallest data as possible, such as &lt;vector, i&gt; can replace <vector cut to i></vector></p></li>
+</ul></li>
+<li><p>carefull</p>
+<ul>
+<li><p>int[] are init as 0; char are init as unknown. memset(robs,-1,sizeof(robs));</p></li>
+<li><p>remember that the index difference (offset = 1) of array[] and memory maxsolution(i)</p></li>
+</ul></li>
+</ul>
+<h3 id="maxsumi-j">2.9.3. 53. maxsum(i, j)</h3>
+<ul>
+<li><p>key:</p>
+<ul>
+<li><p>observation: use subproblem: maxsum(i, j) = max(local(0~i)) local(i) = max(local[i-1], local[i-1]+xx), n subproblems, o(n).</p></li>
+<li><p>equivalent implement: math trick: think about the features about problem before solving it: in this problem, you can see if optimal = sum(i, j) that we must have every sum(i-k, i) &lt; 0. therefore our priority is to set the starting point at i and it will turn to a O(n). so we only have to set sum = 0 if we sum &lt;0 (which means start over from a new point) then it suffices to prove that the algorithm will let us start at i which yields the optimal.</p>
+<ul>
+<li>more advaned algorithm: use <span class="math inline">\(ms=max(sum(j)-sum(i))\)</span> so we save the $min(k) k&lt;i $ during the loop and it's done.... so easy. this solution have nothing to do with dp.</li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 id="maxi-j">2.9.4. 392. max(i, j)</h3>
+<ul>
+<li>key:
+<ul>
+<li>obervation: can't use subproblem, so it have to be a 2-dim array</li>
+<li>improve: use space saving tech!! 2-dim -&gt; 2*1-dim</li>
+</ul></li>
+<li>careful:
+<ul>
+<li>i = 0/ j=0</li>
+<li>copy 2 array &amp; conditions</li>
+<li>the change of prop equation</li>
+<li>no assignment in if.</li>
+</ul></li>
+</ul>
+<h3 id="maxi">2.9.5. 91 max(i)</h3>
+<ul>
+<li><p>key:</p></li>
+<li><p>obervation: consider all possible outcomes</p></li>
+<li><p>carefull:</p>
+<ul>
+<li>"0" and 0</li>
+</ul></li>
+</ul>
+<h3 id="continuous-subarray-sum">2.9.6. 523. Continuous Subarray Sum</h3>
+<ul>
+<li>key:
+<ul>
+<li>obervation: boring &amp; tedious</li>
+</ul></li>
+</ul>
+<h3 id="k-concatenation-maximum-sum">2.9.7. 1191 K-Concatenation Maximum Sum</h3>
+<ul>
+<li><p>key:</p>
+<ul>
+<li>obervation: observe this string first. 从大到小思考，划清界限：比如在这里设用到i个方块里面的数字。那么i=0到k，k到2的情况都是等价的，可以证明他们必然终止于同一点。所以只需要考虑max1, max2, max2+(k-2)<em>sum,然后max2 &gt;= max1, 所以解为max(m2, m2+(k-2) </em> sum)。这道题的动态规划比较隐蔽，而且没有复杂的规约式子,maxj = max(j-1) + max(0, sum). 所以需要好好思考。</li>
+</ul></li>
+</ul>
+<h3 id="freedom-trail">2.9.8. 514. Freedom Trail</h3>
+<ul>
+<li><p>key</p>
+<ul>
+<li><p>observation: separate the problem to sub[i-1]+problem[from i-1 to i] = sub[i]</p>
+<p>matrix[keysize][ring size], and matrix[i][j] means that key &lt;=i 's smallest route on ring[j]. $$ <span class="math display">\[\begin{equation}
+matrix[i][j]=
+\left\{  
+             \begin{array}{**lr**}  
+              min_k(matrix[i-1][k] + distance[k\to j]) &amp; \text{if k is not empty}  \\  
+
+             INT\_MAX &amp;  \text{if ring[j] != key[i]}  
+             \end{array}  
+\right.  
+\end{equation}\]</span> $$</p></li>
+</ul></li>
+<li><p>carefull</p>
+<ul>
+<li><p>init size of vector</p></li>
+<li><p>iteration i &amp; j don't mess them up</p></li>
+<li><p>don't mess up the parameters</p></li>
+</ul></li>
+</ul>
+<h3 id="valid-permutations-for-di-sequence">2.9.9. 903. Valid Permutations for DI Sequence</h3>
+<ul>
+<li><p>key</p>
+<ul>
+<li><p>observation: separate the problem to sub[i-1] + xxx = sub[i]</p>
+<ol type="1">
+<li><p>we think about this problem from i-1 to i: that if we set DL, how about DLD?</p></li>
+<li><p>we think of matrix[i][j] means the i th element is the jth largest among all string, then we can use DL to indicate the [i+1][j] from ith, that if D=&gt; we add matrixi[j] to all matrix i+1[&lt;j], but here's the problem we don't have the ability to solve the duplicate issue.</p></li>
+<li><p>so we improve 1) by setting j = sizeofstring+1-i and contains the jth largest of the rest of string. the reason we do this is we don't have to worry about duplicate, since the i and j suffices m[i][j] = jth ... = <strong>sum of all m[i-1]</strong> ; and the final matrix[size][1] = size*(size-1)*(size-2) ... = all possible, so we can choose who to pick from level i-1 only by "DL" string. And we can see that setting in 1) do not satisty this sum of propagation which means we have to choose who to sum up not only from the string but also considering whether there is duplicated element, which is a big problem.</p></li>
+</ol>
+<p><span class="math display">\[
+\begin{equation}  
+matrix[i][j]=\left\{  
+             \begin{array}{**lr**}  
+             \sum_{k=j+1}^{size+2-i} matrix[i-1][k] &amp; \text{if string[i-2]=&#39;D&#39;}  \\  
+             \sum_{k=1}^{j} matrix[i-1][k] &amp;  \text{else}    
+             \end{array}  
+\right.  
+\end{equation}
+\]</span></p></li>
+<li><p>algorithm2:</p>
+<ol start="0" type="1">
+<li>we get 0~i-1 permutation(i-1 substring), we do sth to get i permutation(i substring)</li>
+</ol>
+<p>let's say <code>dp[i][j]</code> represents the number of permutation of number <code>0, 1, ... , i</code> which ends with <code>j</code>. Also, it represents the answer of <code>s.substring(0, i)</code> which ends with <code>j</code> . this actually stems from the brilliant idea that we first use 0 to i-1 permutation and add 1 to those &gt;= j where j is the the end of i permutation. This works because the only cases where +1 will destroy the order is when j = k+1 and permu(i) - permu(k) = +-1 (e.g. 23) and by adding &gt;= j, the order of 23 will not change, therefore it's safe to add the 1 to i-1 permutation and get i permutation. therefore we have the equation below <span class="math display">\[
+dp[i][j]=\left\{  
+               \begin{array}{**lr**}  
+              sum(dp[i - 1][0], dp[i - 1][1], ... , dp[i - 1][j - 1]). &amp; \text{s.charAt(i - 1) == &#39;I&#39;: I}\\
+                        sum(dp[i - 1][j], dp[i - 1][j + 1], ... , dp[i - 1][i - 1]). &amp; \text{s.charAt(i - 1) == &#39;D&#39;:} 
+               \end{array}  
+  \right.
+\]</span></p>
+<ol type="1">
+<li>the above 2 algorithms stems from the same D&amp;C intuition, but they construct by different ways algorithm1 construct a string by directly saying that what should be the end of the first elements of the final string. algorithm2 construct a string with a subset of permutation however following the same rule and construct a larger string by that. algorithm1 is more intuitive, algorithm2 takes more time to think about and prove it's correctness.</li>
+</ol></li>
+</ul></li>
+</ul>
+<h3 id="burst-balloons">2.9.10. 312. Burst Balloons</h3>
+<ul>
+<li><p>key:</p>
+<ul>
+<li><p>observation : i-1 and i doesn't work. start:i-i i i+1:end work in this case</p>
+<ol type="1">
+<li><p>set matrix[i][j] = from [i to j] optimal sequence when i-1 and j+1 are not bursted yet.</p></li>
+<li><p>we can get the following equation <span class="math display">\[
+d[i][j] = \max \limits_{k \in[1,n-2]} d[i][k-1] + d[k+1][j] +s[i]s[k]s[j]
+\]</span> <strong>Note</strong>: this seems quite easy but it's not intuitive, in order to get this equation we have to assume k is the last to burst. the naive thought would be s[i-1] =&gt; s[i] but this is too complicated, so [i][j-1] and [j][i] will it work? if j-1 and j is connected, this is fucked up since [i:j-1] is affected by [j:end], to make separate the problem , we have to make them independent, which means [i:j-1] have to be secured by a fixed j that have nothing to do with the right part which leaves us no choice and have to choose j as a fixed ballon. In the mean time, j has to be fixed since the right of j requires the same as well. So j is fixed all the time which means it is the last one to burst, only by this assumption, we can separate the problem into 2 independent subproblems. And we have to keep in mind that we have many choices as fixed j, we choose the maximum.</p></li>
+</ol></li>
+</ul></li>
+</ul>
+<h3 id="wildcard-matching">2.9.11. 44 wildcard matching</h3>
+<ul>
+<li><p>key</p>
+<ul>
+<li><p>observation: that we can sub this problem using a 2 pointer, mind that below is a simplified version of dp, the original dp of condition2 is dp[i][j] = OR_all_i-k,j , since i-1,j itself equals OR_all_i-1-k,j, we only need to OR dp_i-1,j =&gt; simplifies the problem</p>
+<p><img src="/2019/11/19/database/image-20191216000231804.png"></p></li>
+</ul></li>
+</ul>
+<h2 id="depth-first-search">2.10. depth first search</h2>
+<ul>
+<li><p>key</p></li>
+<li><p>find subproblems</p></li>
+<li><p>set the meaning for the same level</p></li>
+<li><p>update next level status (how to search, or the propagation function)</p>
+<ul>
+<li><p>make sure no affecting over searches(to prevent duplicate you can [+] =&gt; do search =&gt; [-] or change the searching setting (with no refence) the common technique))</p></li>
+<li><p>set recursive / iterative(stack) (prefer recursive) =&gt; stop for{par_(lever+1)} / stack or array（necessary when special obervation simplifies problem)</p></li>
+<li><p>set terminal condition</p></li>
+<li><p>see if trimming or other advanced tricks can be used</p></li>
+</ul></li>
+<li><p>advanced</p>
+<ul>
+<li><p>if we want to return when we find a solution but not all solutions, we can terminate internally(by the next line after subproblem) or externally(by the entrance of subproblem).</p></li>
+<li><p>if we want greedy in some circumstances(trim), then we have to return more than usual=&gt;return the status of result to trigger trimming.</p></li>
+</ul></li>
+</ul>
+<h3 id="addopeartion">2.10.1. 282 addopeartion</h3>
+<ul>
+<li>key:
+<ul>
+<li><p>observation: is easy =&gt; 4^n algorithm, no other way?</p>
+<p>=&gt; cur[i+?] = cur[i] +-* cur[i:r]; and be careful that when cur[i:r] start with 0 such as 01 =&gt; it can't be treated as a number, so we skip it .</p></li>
+</ul></li>
+</ul>
+<h3 id="count-of-smaller-numbers-after-self-from-dc-1">2.10.2. 315. Count of Smaller Numbers After Self (from D&amp;C)</h3>
+<ul>
+<li><p>key:</p>
+<ul>
+<li><p>observation: the observation is not intuitive!!!:((((</p>
+<p>=&gt; cur[i, j] = cur[i, mid] + cur[mid+1, j] + between(left and right）and if we could somehow sort this left &amp; right, the between procedure is O(n)， so, merge sort.</p></li>
+<li><p>algorithm2:</p>
+<p>=&gt; cur[i] = smaller[i+1:end] =&gt; insert cur[i] into [i+1:end] and see how many is smaller.(this is usage of BST)</p></li>
+</ul></li>
+<li><p>careful</p>
+<ul>
+<li><p>empty!!</p></li>
+<li><p>INT_MIN not -1</p></li>
+</ul></li>
+</ul>
+<h3 id="freedom-trail-1">2.10.3. 514. Freedom Trail</h3>
+<ul>
+<li>key:
+<ul>
+<li>observation: separate the problem to [0: i-1] + from[i-1 to i] + [i: size-1]</li>
+</ul></li>
+</ul>
+<h3 id="binary-watch">2.10.4. 401 Binary Watch</h3>
+<ul>
+<li><p>key</p>
+<ul>
+<li>observation: we can depth first search =&gt; by setting the same level as same number of bits. and add 1 to it until gg.</li>
+</ul></li>
+</ul>
+<h3 id="different-ways-to-add-parentheses">2.10.5. Different Ways to Add Parentheses</h3>
+<ul>
+<li><p>key</p>
+<ul>
+<li>observation: suppose we have a final signal <em>/-/+ (e.g. (3-1) </em> (2-3) *is the final) and we can separate the equation to 2 part =&gt; <span class="math inline">\(sum(1, sizeof(n)) =(sum(1, i) */-/+ sum(i+1, sizeof(n))) \text{ for i in [1, sizeof(n) -1]}\)</span>. so this becomes easy.</li>
+</ul></li>
+</ul>
+<h3 id="upper-lower-letters">2.10.6. upper lower letters</h3>
+<ul>
+<li><p>key</p>
+<ul>
+<li>observation: i th level is the string with ith first elements dealt with.</li>
+</ul></li>
+</ul>
+<h3 id="restore-ip-addresses">2.10.7. 93. Restore IP Addresses</h3>
+<ul>
+<li><p>key</p>
+<ul>
+<li>observation: ith level is the left dots to put , i = 1,2,3,4, so conditions on i =1 .</li>
+</ul></li>
+</ul>
+<h3 id="n-queens">2.10.8. 51. N-Queens</h3>
+<ul>
+<li>key: track this shit</li>
+<li>careful:
+<ul>
+<li>with the bit manipulation</li>
+</ul></li>
+</ul>
+<h3 id="permutations-ii">2.10.9. 47. Permutations II</h3>
+<ul>
+<li>key: ...ez</li>
+</ul>
+<h3 id="gray-code">2.10.10. 89. Gray Code</h3>
+<ul>
+<li><p>key: ...ez</p></li>
+<li><p>careful:</p>
+<ul>
+<li>conditions when we find and cut all other loops.</li>
+</ul></li>
+</ul>
+<h3 id="palindrome-partitioning">2.10.11. 131. Palindrome Partitioning</h3>
+<ul>
+<li>key: the same level means the number of dots in between</li>
+</ul>
+<h3 id="letter-combinations-of-a-phone-number">2.10.12. 17. Letter Combinations of a Phone Number</h3>
+<ul>
+<li>key; the same level means the number dealt with</li>
+<li>careful
+<ul>
+<li>empty input</li>
+</ul></li>
+</ul>
+<h3 id="word-ladder-ii">2.10.13. 126. Word Ladder II</h3>
+<ul>
+<li>key; same level means the number of findings</li>
+<li>careful
+<ul>
+<li><p>auto a = vector<int> do not necessaily copy ???</int></p></li>
+<li><p>reserve carefully or always puck back</p></li>
+</ul></li>
+</ul>
+<h3 id="wildcard-matching-1">2.10.14. 44. Wildcard Matching</h3>
+<ul>
+<li><p>key:</p>
+<ul>
+<li><p>observation: if the previous <em>(say i-1 th ) is set, and we meet the ith </em>, then if * doesn't meet demands, then we don't need to go back to i-1. this can be proved by constract. so we use a greedy DFS(add trimming) to solve this.</p></li>
+<li><p>algorithm2: the above algorithm can be implemented in iteration, we have the following 5 conditions:</p>
+<ol type="1">
+<li><p>if s==p or p =='?', we move +1</p></li>
+<li><p>if p=='*', we record/update the position now for future usage</p></li>
+<li><p>if s!=p</p></li>
+</ol>
+<p>(3.1) if we met * before, go back</p>
+<p>(3.2) if we haven't, return false.</p>
+<ol start="4" type="1">
+<li><p>if p is empty, return true.</p></li>
+<li><p>if s is empty (out of while),</p></li>
+</ol>
+<p>(5.1) if p consist only of "*", return true.</p>
+<p>(5.2) if not, return false.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isMatch</span><span class="params">(<span class="built_in">string</span> s, <span class="built_in">string</span> p)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">auto</span> sp = s.<span class="built_in">begin</span>(), pp = p.<span class="built_in">begin</span>(), spp = s.<span class="built_in">end</span>()+<span class="number">1</span>, ppp = p.<span class="built_in">end</span>();</span><br><span class="line">  <span class="keyword">while</span> (sp != s.<span class="built_in">end</span>())&#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;s.substr(sp-s.<span class="built_in">begin</span>()) &lt;&lt;<span class="string">" "</span>&lt;&lt;p.substr(pp-p.<span class="built_in">begin</span>())&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">if</span> (*sp==*pp || *pp==<span class="string">'?'</span>) &#123;sp++; pp++;&#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (*pp == <span class="string">'*'</span>) &#123;spp = sp+<span class="number">1</span>; ppp = ++pp;&#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (spp != s.<span class="built_in">end</span>()+<span class="number">1</span>) &#123;sp = spp++; pp = ppp;&#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">while</span> (*pp == <span class="string">'*'</span>) pp++;</span><br><span class="line">  <span class="keyword">if</span> (pp == p.<span class="built_in">end</span>()) <span class="keyword">return</span> <span class="literal">true</span>; <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul></li>
+</ul>
+<h2 id="breadth-first-search">2.11. breadth first search</h2>
+<ul>
+<li><p>key</p>
+<ul>
+<li><p>find subproblem</p></li>
+<li><p>set the meaning for the same level,</p>
+<ul>
+<li>set update status for next level (how to search, or the propagation function)</li>
+<li>make sure not affecting other searches</li>
+</ul></li>
+<li><p>set iteration/ recursive (prefer recursive) =&gt; stop for{same level} onlyone(lever+1) / while(stop) { for{same level} update} (actually no need to recur)</p></li>
+<li><p>set terminal return or continue;</p></li>
+<li><p>see if advanced technique can be used</p></li>
+</ul></li>
+<li><p>advanced</p>
+<ul>
+<li>two way bfs?</li>
+</ul></li>
+</ul>
+<h3 id="binary-watch-1">2.11.1. 401 Binary Watch</h3>
+<ul>
+<li>key
+<ul>
+<li>observation: we can breadth first search =&gt; by setting the same level as same number of bits.</li>
+</ul></li>
+</ul>
+<h3 id="word-ladder-ii-1">2.11.2. 126. Word Ladder II</h3>
+<ul>
+<li><p>key:</p>
+<ul>
+<li>observation is very important in this problem. as you can see why we prefer BFS over DFS.That first we only want the shortest=&gt; that's natural advantage, since it means that depth is fixed and all possible answers appears on the same level that we don't necessarily need to exhaust the tree(DFS on the other hand do not have this advantage). Secondly, on the same level, we can see that we can separate the problem into this: the next steps on next level do not appear on the above levels(why? because you can prove that if it exists on the above level, it is not the shortest anymore), so this feature means we can expedite the BFS search by narrowing down possible next steps.</li>
+</ul></li>
+</ul>
+<h3 id="additive-number">2.11.3. 306 additive number</h3>
+<ul>
+<li><p>key</p>
+<ul>
+<li>observation: 2 pointer exhaustion, DFS, the hard part is the margin condition</li>
+</ul></li>
+<li><p>careful</p></li>
+<li><p>always careful with the margin especially when dealing with arrays!!!</p></li>
+</ul>
+<h2 id="binary-search">2.12. binary search</h2>
+<ul>
+<li><p>key</p>
+<ul>
+<li><p>find subproblem(split in 2)</p></li>
+<li><p>set find a monotone array and ditch one of of problems (unique propagation equation)</p></li>
+<li><p>set recursive or iterative (perfer iterative since it make things easier)</p></li>
+<li><p>set the margin conditions</p>
+<ul>
+<li><p>l&lt;r, l+r/2, if(array==1) r = mid, l = mid + 1, when array is 0000011111 and we want the first 1.</p></li>
+<li><p>l&lt;r, ceil(l+r/2.0), l = mid, if(array!=1) r = mid - 1; when array is 000001111 and we want the last 0, the point is to make sure [l, r] always have the thing you want.</p></li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 id="divide-2-numbers">2.12.1. 29 divide 2 numbers</h3>
+<ul>
+<li>key
+<ul>
+<li>observation: the array that numbers m, n can be expressed in binary. and divide can be expressed in binary as well. and we can tell that it is unique. so we try to get the unique result, we can do this by shifting the divider. <span class="math inline">\(2^m*d+2^{m-1}*d+2 ^{m-3}*d\)</span>, and m-3 &lt; m-1 &lt; m， so every coefficient is only 1 and smaller each so we can do shifting trick. The original thought is to get every m individually, and this is the original thought to get m involves binary. so this it actually a 31 binary problem =&gt; 31 O(n) $  {=&gt;}$ O(n)</li>
+</ul></li>
+</ul>
+<h3 id="ugly-number">2.12.2. 1201 Ugly Number</h3>
+<ul>
+<li><p>key</p>
+<ul>
+<li>observation: that we can easily compute $f(n)=_{i=1}^{n}I(i ) $, this is how we get the solution: that from max to 1, we find f(k) = n.</li>
+</ul></li>
+<li><p>careful:</p>
+<ul>
+<li><p>gcd(a, c, d) = gcd(a, gcd(c, d)) for gcd(a, c, d) <span class="math inline">\(\in\)</span> gcd(c,d)</p></li>
+<li><p>lcm(a, c, d) = lcm(a, lcm(c, d))</p></li>
+</ul></li>
+</ul>
+<h3 id="powerx-n">2.12.3. 50 power(x, n)</h3>
+<ul>
+<li><p>key:</p>
+<ul>
+<li>observation is easy</li>
+</ul></li>
+<li><p>careful</p>
+<ul>
+<li><p>abs(int) could be dangerous, the following code is more appropriate.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">abs</span>((<span class="keyword">int64_t</span>)n);</span><br></pre></td></tr></table></figure></li>
+</ul></li>
+</ul>
+<h3 id="search-in-rotated-sorted-array-ii">2.12.4. 81. Search in Rotated Sorted Array II</h3>
+<ul>
+<li><p>key</p>
+<ul>
+<li><p>observation is easy</p></li>
+<li><p>detail: margin, especially when l &gt; r</p></li>
+</ul></li>
+</ul>
+<h3 id="shortest-subarray-with-sum-at-least-k">2.12.5. 862 shortest subarray with sum at least k</h3>
+<ul>
+<li>key
+<ul>
+<li>observation: dp that it is similar to max sub problem, this problem is more complicated since we need to search more from max(i-1)'s starting point to i ( in the previous problem, we do not need this step), during the search we can use bs. I thought about how to decrease the searching points during this linear o(n) search, obviously we don't need to search those i with sum(i to j) &lt;0. but here we need N2 storage for the sum(i, j), we could have turn this to linear storage by finding the basis of these sum(i, j) -&gt; sum(i). we only need o(n) to store these element and the algorithm turn to the alternative .</li>
+<li>alternative algorithm: the second algorithm, we can keep more of the array ( in previous problem it is only 1 element min(sum(j)) j &lt;i ), this time we want more elements, the key of the elements is that we want them increasing, to make this happen we do the following: if we find out that in i's time we have sum(i) &lt; array(j) we pop the array until sum(i) is in the array and array is increasing. improvement here: we can discard sum(i) after it's usage since we know that no matter what, substring starts with i will only grow larger.</li>
+</ul></li>
+</ul>
+<h3 id="longest-duplicate-substring">2.12.6. 1044. Longest Duplicate Substring</h3>
+<ul>
+<li>key
+<ul>
+<li>observe; we separate this to n subproblems ( find dup substring length = i) and we always know that if longest length = g, then i&lt;=g =&gt; I(find sub) = 1 and i &gt; g I (find sub) = -1 . so we use binary search to connect n subproblems. for each subproblem we use rolling hash table to get themO(n) * O(logN) = O(N^2)</li>
+</ul></li>
+</ul>
+<h3 id="median-of-two-sorted-arrays">2.12.7. 4. Median of Two Sorted Arrays</h3>
+<ul>
+<li><p>key:</p>
+<ul>
+<li><p>observation: median = find i and j to separate the 2 arrays. so we don't have subproblems in this problem, instead it is a rather easy searching =&gt; we can even find a mono array to accelerate the searching. it is actually a 2 way BS, something like(0001, 1110) you can do 2 way to shorten the paragraph since there are less constraint on the mid variable, but doing my way as a 1 way BS is more explicit but more complicated.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">findMedianSortedArrays</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums1, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums2)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n = nums1.<span class="built_in">size</span>(), m = nums2.<span class="built_in">size</span>();</span><br><span class="line">    <span class="keyword">int</span> i = (m+n)%<span class="number">2</span>==<span class="number">0</span> ? <span class="built_in">max</span>((n-m)/<span class="number">2</span><span class="number">-1</span>, <span class="number">-1</span>) : <span class="built_in">max</span>((n-m<span class="number">-1</span>)/<span class="number">2</span>, <span class="number">-1</span>), r = !(m+n)%<span class="number">2</span> ? <span class="built_in">min</span>((m+n)/<span class="number">2</span><span class="number">-1</span>,n<span class="number">-1</span>): <span class="built_in">min</span>((m+n<span class="number">-1</span>)/<span class="number">2</span>, n<span class="number">-1</span>);</span><br><span class="line">    <span class="keyword">int</span> mid = (i+r)/<span class="number">2</span>, mid_2 = (n+m)%<span class="number">2</span>==<span class="number">0</span> ? (m+n)/<span class="number">2</span>-mid : (m+n+<span class="number">1</span>)/<span class="number">2</span>-mid, j;</span><br><span class="line">    <span class="keyword">if</span> ( n == <span class="number">0</span> ) <span class="keyword">return</span> m%<span class="number">2</span>==<span class="number">0</span> ? (nums2[m/<span class="number">2</span><span class="number">-1</span>] +nums2[m/<span class="number">2</span>])/<span class="number">2.0</span> : nums2[m/<span class="number">2</span>];</span><br><span class="line">    <span class="keyword">if</span> ( m == <span class="number">0</span> ) <span class="keyword">return</span> n%<span class="number">2</span>==<span class="number">0</span> ? (nums1[n/<span class="number">2</span><span class="number">-1</span>] +nums1[n/<span class="number">2</span>])/<span class="number">2.0</span> : nums1[n/<span class="number">2</span>];</span><br><span class="line">    <span class="keyword">while</span>( i &lt; r )&#123;</span><br><span class="line">        mid = <span class="built_in">ceil</span>((i+r)/<span class="number">2.0</span>);</span><br><span class="line">        mid_2 = (n+m)%<span class="number">2</span>==<span class="number">0</span> ? (m+n)/<span class="number">2</span>-mid<span class="number">-2</span> : (m+n+<span class="number">1</span>)/<span class="number">2</span>-mid<span class="number">-2</span>;</span><br><span class="line">        <span class="keyword">int</span> midr = mid == n<span class="number">-1</span> ? INT_MAX : nums1[mid+<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">int</span> mid2r = mid_2 == m<span class="number">-1</span> ? INT_MAX : nums2[mid_2+<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">if</span> (midl &gt;= mid2r) r = mid<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">else</span> i = mid ;</span><br><span class="line">    &#125;</span><br><span class="line">    j = (n+m)%<span class="number">2</span>==<span class="number">0</span> ? (m+n)/<span class="number">2</span>-i<span class="number">-2</span> : (m+n+<span class="number">1</span>)/<span class="number">2</span>-i<span class="number">-2</span>;</span><br><span class="line">    <span class="keyword">int</span> midl = i == <span class="number">-1</span> ? INT_MIN : nums1[i];</span><br><span class="line">    <span class="keyword">int</span> midr = i == n<span class="number">-1</span> ? INT_MAX : nums1[i+<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span> mid2l = j == <span class="number">-1</span> ? INT_MIN : nums2[j];</span><br><span class="line">    <span class="keyword">int</span> mid2r = j == m<span class="number">-1</span> ? INT_MAX : nums2[j+<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">return</span> (n+m)%<span class="number">2</span>==<span class="number">0</span> ? (<span class="built_in">max</span>(midl, mid2l) + <span class="built_in">min</span>(midr, mid2r))/<span class="number">2.0</span></span><br><span class="line">                      : <span class="built_in">max</span>(midl, mid2l);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul></li>
+<li><p>carefull:</p>
+<ul>
+<li>i+r/2 or ceil(i+r/2.0)</li>
+<li>no max function with size_t</li>
+</ul></li>
+</ul>
+<h2 id="brutal">2.13. brutal</h2>
+<h3 id="binary-watch-2">2.13.1. 401. Binary Watch</h3>
+<ul>
+<li>key: ez</li>
+</ul>
+<h3 id="maximum-length-of-a-concatenated-string-with-unique-characters">2.13.2. 1239. Maximum Length of a Concatenated String with Unique Characters</h3>
+<ul>
+<li><p>trick: a great way to do exhaustion for all 0/1 pairs (01010101).</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(n bits)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (i = all stored sized)&#123;</span><br><span class="line"></span><br><span class="line">  	stored.push_back(a | b)  <span class="comment">// every time push back same size of stored(size x 2) and stored are the all permutations of example.</span></span><br><span class="line"></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>Title:</span><a href="/2019/11/19/database/">Database System</a></p>
+  <p><span>Author:</span><a href="/" title=" Benson 的personal blog">Benson</a></p>
+  <p><span>PTime:</span>2019/11/19 - 12:11</p>
+  <p><span>LUpdate:</span>2019/12/16 - 21:12</p>
+  <p><span>Link:</span><a href="/2019/11/19/database/" title="Database System">https://steinsgate9.github.io/2019/11/19/database/</a>
+    <span class="copy-path"  title="click to copy link"><i class="fa fa-clipboard" data-clipboard-text="https://steinsgate9.github.io/2019/11/19/database/"  aria-label="copy done！"></i></span>
+  </p>
+  <p><span>Protocal:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)</a> Please keep the original link and author.</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: 'copy done',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script>
+
+      
+    </div>
+    
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Benson WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Benson Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/database/" rel="tag"># database</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/19/datastructure-algorithm/" rel="next" title="Data Structure and Algorithms">
+                <i class="fa fa-chevron-left"></i> Data Structure and Algorithms
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/11/19/measure-theory/" rel="prev" title="Measure Theory">
+                Measure Theory <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5dd409321289b452" async = "async" ></script>
+</div>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NzYxNi8yNDExNA"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="https://tva1.sinaimg.cn/large/006y8mN6gy1g96p07mbexj30uf0u0npd.jpg"
+                alt="Benson" />
+            
+              <p class="site-author-name" itemprop="name">Benson</p>
+              <p class="site-description motion-element" itemprop="description">Benson's personal blog, including stats, cs, math, among others.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="bensonuouououow@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-globe"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/bensonuouououo" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.instagram.com/bensonuouououo/" target="_blank" title="Instagram">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Instagram</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.alloyteam.com/nav/" title="Web前端导航" target="_blank">Web前端导航</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.chuangzaoshi.com/code" title="创造狮导航" target="_blank">创造狮导航</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.36zhen.com/t?id=3448" title="前端书籍资料" target="_blank">前端书籍资料</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://e.xitu.io/" title="掘金酱" target="_blank">掘金酱</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.v2ex.com/" title="V2EX" target="_blank">V2EX</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.v2ex.com/" title="印记中文" target="_blank">印记中文</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#data-structure"><span class="nav-text">1. data structure</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#linear-adt"><span class="nav-text">1.1. linear ADT</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#string"><span class="nav-text">1.1.1. string</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vector"><span class="nav-text">1.1.2. vector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#list-linked"><span class="nav-text">1.1.3. list (linked)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stack"><span class="nav-text">1.1.4. stack</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#queue"><span class="nav-text">1.1.5. queue</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tree-adt"><span class="nav-text">1.2. tree ADT</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#binary-tree"><span class="nav-text">1.2.1. binary tree</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#binary-search-tree"><span class="nav-text">1.2.1.1. binary search tree</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#leetcode"><span class="nav-text">2. Leetcode</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#int"><span class="nav-text">2.1. int</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#no.7-iterate-reverse-int"><span class="nav-text">2.1.1. no.7 iterate &amp; reverse int</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#no.9-iterate-reverse-int-2"><span class="nav-text">2.1.2. no.9 iterate &amp; reverse int 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#no.13-iterate-assign"><span class="nav-text">2.1.3. no.13 iterate &amp; assign</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#string-1"><span class="nav-text">2.2. string</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#no.28-iterate"><span class="nav-text">2.2.1. no.28 iterate</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#no.859-iterate-swap"><span class="nav-text">2.2.2. no.859 iterate &amp; swap</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vector-1"><span class="nav-text">2.3. vector</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#no.26-iterate-eraseassign"><span class="nav-text">2.3.1. no.26 iterate &amp; erase/assign</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#no.665-iterate-change-value-math-problem"><span class="nav-text">2.3.2. no.665 iterate &amp; change value (math problem)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#linked-list"><span class="nav-text">2.4. linked list</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#no.21-iterate-merge-2-list"><span class="nav-text">2.4.1. no.21 iterate &amp; merge 2 list</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stack-1"><span class="nav-text">2.5. stack</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#no.20-push-pop"><span class="nav-text">2.5.1. no.20 push &amp; pop</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#heap"><span class="nav-text">2.6. heap</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#the-skyline-problem-i-wouldnt-say-its-divideconcurd"><span class="nav-text">2.6.1. the skyline problem (i wouldn&#39;t say it&#39;s divide&amp;concurd)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bst"><span class="nav-text">2.7. bst</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#count-of-smaller-numbers-after-self-from-dc"><span class="nav-text">2.7.1. 315. Count of Smaller Numbers After Self (from D&amp;C)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#divide-concur-basic-bottom-up"><span class="nav-text">2.8. divide &amp; concur (basic bottom-up)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#findi-j-findi-1-j-findi-j1"><span class="nav-text">2.8.1. 240. find(i, j) = find(i-1, j) || find(i, j+1)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kth-largest-element-in-an-array"><span class="nav-text">2.8.2. 215. Kth Largest Element in an Array</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#beautiful-array"><span class="nav-text">2.8.3. 932 beautiful array</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#counting"><span class="nav-text">2.8.4. counting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reverse-pairs"><span class="nav-text">2.8.5. 493. Reverse Pairs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#permutation-sequence"><span class="nav-text">2.8.6. 60. Permutation Sequence</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dynamic-programming"><span class="nav-text">2.9. dynamic programming</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sumi-j"><span class="nav-text">2.9.1. 303 sum(i, j)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maxsolutioni"><span class="nav-text">2.9.2. 198 maxsolution(i)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maxsumi-j"><span class="nav-text">2.9.3. 53. maxsum(i, j)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maxi-j"><span class="nav-text">2.9.4. 392. max(i, j)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maxi"><span class="nav-text">2.9.5. 91 max(i)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#continuous-subarray-sum"><span class="nav-text">2.9.6. 523. Continuous Subarray Sum</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#k-concatenation-maximum-sum"><span class="nav-text">2.9.7. 1191 K-Concatenation Maximum Sum</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#freedom-trail"><span class="nav-text">2.9.8. 514. Freedom Trail</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#valid-permutations-for-di-sequence"><span class="nav-text">2.9.9. 903. Valid Permutations for DI Sequence</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#burst-balloons"><span class="nav-text">2.9.10. 312. Burst Balloons</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#wildcard-matching"><span class="nav-text">2.9.11. 44 wildcard matching</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#depth-first-search"><span class="nav-text">2.10. depth first search</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#addopeartion"><span class="nav-text">2.10.1. 282 addopeartion</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#count-of-smaller-numbers-after-self-from-dc-1"><span class="nav-text">2.10.2. 315. Count of Smaller Numbers After Self (from D&amp;C)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#freedom-trail-1"><span class="nav-text">2.10.3. 514. Freedom Trail</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#binary-watch"><span class="nav-text">2.10.4. 401 Binary Watch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#different-ways-to-add-parentheses"><span class="nav-text">2.10.5. Different Ways to Add Parentheses</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#upper-lower-letters"><span class="nav-text">2.10.6. upper lower letters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#restore-ip-addresses"><span class="nav-text">2.10.7. 93. Restore IP Addresses</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#n-queens"><span class="nav-text">2.10.8. 51. N-Queens</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#permutations-ii"><span class="nav-text">2.10.9. 47. Permutations II</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gray-code"><span class="nav-text">2.10.10. 89. Gray Code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#palindrome-partitioning"><span class="nav-text">2.10.11. 131. Palindrome Partitioning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#letter-combinations-of-a-phone-number"><span class="nav-text">2.10.12. 17. Letter Combinations of a Phone Number</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#word-ladder-ii"><span class="nav-text">2.10.13. 126. Word Ladder II</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#wildcard-matching-1"><span class="nav-text">2.10.14. 44. Wildcard Matching</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#breadth-first-search"><span class="nav-text">2.11. breadth first search</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#binary-watch-1"><span class="nav-text">2.11.1. 401 Binary Watch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#word-ladder-ii-1"><span class="nav-text">2.11.2. 126. Word Ladder II</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#additive-number"><span class="nav-text">2.11.3. 306 additive number</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#binary-search"><span class="nav-text">2.12. binary search</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#divide-2-numbers"><span class="nav-text">2.12.1. 29 divide 2 numbers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ugly-number"><span class="nav-text">2.12.2. 1201 Ugly Number</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#powerx-n"><span class="nav-text">2.12.3. 50 power(x, n)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#search-in-rotated-sorted-array-ii"><span class="nav-text">2.12.4. 81. Search in Rotated Sorted Array II</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shortest-subarray-with-sum-at-least-k"><span class="nav-text">2.12.5. 862 shortest subarray with sum at least k</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#longest-duplicate-substring"><span class="nav-text">2.12.6. 1044. Longest Duplicate Substring</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#median-of-two-sorted-arrays"><span class="nav-text">2.12.7. 4. Median of Two Sorted Arrays</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#brutal"><span class="nav-text">2.13. brutal</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#binary-watch-2"><span class="nav-text">2.13.1. 401. Binary Watch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maximum-length-of-a-concatenated-string-with-unique-characters"><span class="nav-text">2.13.2. 1239. Maximum Length of a Concatenated String with Unique Characters</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Benson</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      total visitors
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      people
+    </span>
+  
+
+  
+    <span class="site-pv">
+      total read
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      times
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.staticfile.org/MathJax/MathJax-2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

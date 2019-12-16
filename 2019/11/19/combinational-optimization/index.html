@@ -278,7 +278,7 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;combinational-optimization&#x2F;image-20191125135133029.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;combinational-optimization&#x2F;image-20191125135139195.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;combinational-optimization&#x2F;image-20191125135145213.png">
-<meta property="og:updated_time" content="2019-12-16T13:02:42.935Z">
+<meta property="og:updated_time" content="2019-12-16T13:31:50.703Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;combinational-optimization&#x2F;image-20191125141531700.png">
 
@@ -580,7 +580,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1.3k
+                  3.4k
                 </span>
               
 
@@ -596,7 +596,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  7
+                  20
                 </span>
               
             </div>
@@ -619,976 +619,872 @@
       
         <p>Combinational Optimization Course Slides Notes</p>
 <a id="more"></a>
-<h1 id="linear-programming">1. linear programming</h1><h2 id="type">1.1. type</h2><ul>
-<li><p><strong>Def</strong>: linear programming </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191125141531700.png" alt></p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191125141542370.png" alt></p>
-</li>
-</ul>
-<h3 id="integer-programming">1.1.1. integer programming</h3><ul>
-<li><p><strong>Def</strong>: Integer programming </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191201231531983.png" alt></p>
-</li>
-</ul>
+<h1 id="linear-programming">1. linear programming</h1>
+<h2 id="type">1.1. type</h2>
 <ul>
-<li><p><strong>Qua</strong>: NP-hard </p>
+<li><p><strong>Def</strong>: linear programming</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191125141531700.png"></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191125141542370.png"></p></li>
+</ul>
+<h3 id="integer-programming">1.1.1. integer programming</h3>
+<ul>
+<li><p><strong>Def</strong>: Integer programming</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191201231531983.png"></p>
+<ul>
+<li><p><strong>Qua</strong>: NP-hard</p>
 <p><strong>Proof</strong>:</p>
 <ul>
-<li><p>idea: </p>
-<p>partition &lt;=p integer </p>
+<li><p>idea:</p>
+<p>partition &lt;=p integer</p>
 <ul>
-<li><p>partition: given $ \left\{ a1,a2…an \right\}$, let some of the instances = half of sum</p>
-<p>integer programming: $ \sum_{n = 1}^{\infty}aixi=1/2 \sum_{n = 1}^{\infty}ai$  </p>
-</li>
+<li><p>partition: given $ { a1,a2...an }$, let some of the instances = half of sum</p>
+<p>integer programming: $ <em>{n = 1}^{}aixi=1/2 </em>{n = 1}^{}ai$</p></li>
 <li><p>prove that integer is np</p>
-<p>if the programming have a solution, then O(solution) = poly(input)</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>Def</strong>: mixed integer programming </p>
-<p>some of … is integer </p>
-</li>
-<li><p><strong>Def</strong>: o/1 programming </p>
-<p>all x is 0/1</p>
-</li>
-</ul>
+<p>if the programming have a solution, then O(solution) = poly(input)</p></li>
+</ul></li>
+</ul></li>
+<li><p><strong>Def</strong>: mixed integer programming</p>
+<p>some of ... is integer</p></li>
+<li><p><strong>Def</strong>: o/1 programming</p>
+<p>all x is 0/1</p></li>
+</ul></li>
+<li><p><strong>Def</strong>: standard form of linear programming</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191125141640176.png"></p>
 <ul>
-<li><p><strong>Def</strong>: standard form of linear programming </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191125141640176.png" alt></p>
-<ul>
-<li><p><strong>Def</strong>: totally unimodular </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129122015584.png" alt></p>
-</li>
+<li><p><strong>Def</strong>: totally unimodular</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129122015584.png"></p></li>
 <li><p><strong>Qua</strong>: =&gt; relaxation=integer</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129122059018.png" alt></p>
-</li>
-</ul>
-</li>
-</ul>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129122059018.png"></p></li>
+</ul></li>
+<li><p><strong>Def</strong>: relaxation</p>
 <ul>
-<li><p><strong>Def</strong>: relaxation </p>
+<li><p><strong>Qua</strong>: domainI(IP) &lt;= domain(LP)</p></li>
+<li><p><strong>Qua</strong>: solu(IP) &lt; solu(LP)</p></li>
+<li><p><strong>Qua</strong>: best(IP) &lt;= best(LP)</p></li>
+<li><p><strong>Qua</strong>: if the A = totally unimodular, then best(IP) = best(LP) (totally unimodular quality)</p></li>
+</ul></li>
+</ul>
+<h2 id="solution-to-linear-programming">1.2. solution to linear programming</h2>
+<h3 id="general-procedure-for-solving">1.2.1. general procedure for solving</h3>
 <ul>
-<li><p><strong>Qua</strong>: domainI(IP) &lt;= domain(LP)</p>
-</li>
-<li><p><strong>Qua</strong>: solu(IP) &lt; solu(LP)</p>
-</li>
-<li><p><strong>Qua</strong>: best(IP) &lt;= best(LP)</p>
-</li>
-<li><p><strong>Qua</strong>: if the A = totally unimodular, then best(IP) = best(LP) (totally unimodular quality)</p>
-</li>
+<li><p><strong>Def</strong>: general procedure for solving linear programming</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191125142224738.png"></p></li>
 </ul>
-</li>
-</ul>
-<h2 id="solution-to-linear-programming">1.2. solution to linear programming</h2><h3 id="general-procedure-for-solving">1.2.1. general procedure for solving</h3><ul>
-<li><p><strong>Def</strong>: general procedure for solving linear programming </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191125142224738.png" alt></p>
-</li>
-</ul>
-<h3 id="linear-programming-method">1.2.2. linear programming method</h3><h4 id="simplex-method">1.2.2.1. simplex method</h4><ul>
-<li><p><strong>Def</strong>: </p>
+<h3 id="linear-programming-method">1.2.2. linear programming method</h3>
+<h4 id="simplex-method">1.2.2.1. simplex method</h4>
 <ul>
-<li>problem: </li>
-</ul>
-</li>
-<li><p><strong>Qua</strong>: exponential some times but faster in general </p>
-</li>
-</ul>
-<h4 id="graphics-method">1.2.2.2. graphics method</h4><ul>
 <li><p><strong>Def</strong>:</p>
 <ul>
-<li>problem: </li>
+<li>problem:</li>
+</ul></li>
+<li><p><strong>Qua</strong>: exponential some times but faster in general</p></li>
 </ul>
-</li>
-<li><p><strong>Qua</strong>: multi-linear, but almost always slower</p>
-</li>
+<h4 id="graphics-method">1.2.2.2. graphics method</h4>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<ul>
+<li>problem:</li>
+</ul></li>
+<li><p><strong>Qua</strong>: multi-linear, but almost always slower</p></li>
 </ul>
-<h4 id="cutting-plane-method">1.2.2.3. cutting plane method</h4><h3 id="search-based-method">1.2.3. search-based method</h3><h4 id="computer-theory">1.2.3.1. computer theory</h4><ul>
+<h4 id="cutting-plane-method">1.2.2.3. cutting plane method</h4>
+<h3 id="search-based-method">1.2.3. search-based method</h3>
+<h4 id="computer-theory">1.2.3.1. computer theory</h4>
+<ul>
 <li>divide and conquer (make a tree and search it)</li>
 <li>pruning(backtracking )</li>
 </ul>
-<h4 id="implementing-techs">1.2.3.2. implementing techs</h4><ul>
-<li>recursive </li>
+<h4 id="implementing-techs">1.2.3.2. implementing techs</h4>
+<ul>
+<li>recursive</li>
 <li>incursive</li>
 </ul>
-<h4 id="method">1.2.3.3. method</h4><h5 id="bfs">1.2.3.3.1. bfs</h5><ul>
-<li><p><strong>Def</strong>: </p>
+<h4 id="method">1.2.3.3. method</h4>
+<h5 id="bfs">1.2.3.3.1. bfs</h5>
 <ul>
-<li><p>intro: one of basic search algorithms( way to be more specific)</p>
-</li>
-<li><p>problem: search(opt) / tranverse(decision)</p>
-</li>
-</ul>
-</li>
-</ul>
-<h5 id="dfs">1.2.3.3.2. dfs</h5><ul>
-<li><strong>Def</strong>: <ul>
-<li>intro: one of basic search algorithms( way to be more specific)</li>
-<li>problem: search(opt) / tranverse(decision)</li>
-</ul>
-</li>
-</ul>
-<h5 id="backtracking">1.2.3.3.3. backtracking</h5><ul>
-<li><p><strong>Def</strong>:  </p>
-<ul>
-<li><p>intro: dfs + pruning</p>
-</li>
-<li><p>problem: search(opt) / tranverse(decision)</p>
-</li>
-</ul>
-</li>
-</ul>
-<h5 id="dynamic-programming">1.2.3.3.4. dynamic programming</h5><ul>
-<li><p><strong>Def</strong>: </p>
-<ul>
-<li><p>intro: dfs + saving ( turn into bottom-up algorithm instead of top-down search or a smaller structure of the dfs tree)</p>
-</li>
-<li><p>problem: opt </p>
-</li>
-</ul>
-</li>
-<li><p><strong>Theorm</strong>: principle of optimality </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202001049346.png" alt></p>
-<p><strong>Note</strong>: This therom gives the function below and give the propagation function,</p>
-<p>the propagation function iff exists the principle of optimality holds + subproblem overlap </p>
-<p>And it derives the (top-down / bottom-up optimization of DP)</p>
-<script type="math/tex; mode=display">
-best(s1,n) = best(best(s1;s2,n))</script><p><strong>Note</strong>: how to choose subproblem</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202001417794.png" alt></p>
-</li>
-</ul>
-<ul>
-<li><p><strong>Def</strong>: subproblem map</p>
-<p><strong>Usage</strong>: can be used to visualize the overall propogation equation </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202000059133.png" alt></p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202000529778.png" alt></p>
-<p><strong>Note</strong>: we can use this map, compute the edges of this map, and get the complexity.</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202001757368.png" alt></p>
-</li>
-</ul>
-<ul>
-<li><p><strong>Def</strong>: 2 ways of implementation </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202000632852.png" alt></p>
-</li>
-</ul>
-<h5 id="branch-amp-bound">1.2.3.3.5. branch &amp; bound</h5><ul>
-<li><p><strong>Def</strong>: for maximum problem</p>
-<ul>
-<li><p>intro: bfs/dfs + trimming</p>
-</li>
-<li><p>problem: opt</p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><strong>Qua</strong>: exp algorithm </li>
-</ul>
-<ul>
-<li><p><strong>Algo</strong>: for max problem</p>
-<p><strong>Usage</strong>: for each branch we have upper bound (possible largest result), if upper bound &lt; lower bound (alread results), we trim。</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129134050800.png" alt></p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129135648436.png" alt></p>
-<p>for min problem</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202192447383.png" alt></p>
-<p><strong>Note</strong>:</p>
-<p>1) lower bound=existing solutions, upper bound is for every branch</p>
-<p>2) if upper bound &lt; lower bound, then prune the branch</p>
-<p>for 0-1 variable, 分支 is trivial since you always 分 0/1</p>
-</li>
-</ul>
-<h5 id="greedy-search">1.2.3.3.6. greedy search</h5><ul>
-<li><strong>Def</strong>: <ul>
-<li>intro: bfs/dfs + greedy choose </li>
-<li>problem: opt</li>
-</ul>
-</li>
-</ul>
-<h5 id="A">1.2.3.3.7. A*</h5><ul>
-<li><strong>Def</strong>: <ul>
-<li>intro: bfs + inspire</li>
-<li>problem: opt</li>
-</ul>
-</li>
-</ul>
-<h5 id="B">1.2.3.3.8. B*</h5><ul>
 <li><p><strong>Def</strong>:</p>
 <ul>
-<li><p>intro: bfs</p>
-</li>
-<li><p>problem: opt</p>
-</li>
+<li><p>intro: one of basic search algorithms( way to be more specific)</p></li>
+<li><p>problem: search(opt) / tranverse(decision)</p></li>
+</ul></li>
 </ul>
-</li>
+<h5 id="dfs">1.2.3.3.2. dfs</h5>
+<ul>
+<li><strong>Def</strong>:
+<ul>
+<li>intro: one of basic search algorithms( way to be more specific)</li>
+<li>problem: search(opt) / tranverse(decision)</li>
+</ul></li>
 </ul>
-<h5 id="D">1.2.3.3.9. D*</h5><h5 id="IDA">1.2.3.3.10. IDA*</h5><ul>
-<li><strong>Def</strong>: <ul>
+<h5 id="backtracking">1.2.3.3.3. backtracking</h5>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<ul>
+<li><p>intro: dfs + pruning</p></li>
+<li><p>problem: search(opt) / tranverse(decision)</p></li>
+</ul></li>
+</ul>
+<h5 id="dynamic-programming">1.2.3.3.4. dynamic programming</h5>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<ul>
+<li><p>intro: dfs + saving ( turn into bottom-up algorithm instead of top-down search or a smaller structure of the dfs tree)</p></li>
+<li><p>problem: opt</p></li>
+</ul></li>
+<li><p><strong>Theorm</strong>: principle of optimality</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202001049346.png"></p>
+<p><strong>Note</strong>: This therom gives the function below and give the propagation function,</p>
+<p>the propagation function iff exists the principle of optimality holds + subproblem overlap</p>
+<p>And it derives the (top-down / bottom-up optimization of DP) <span class="math display">\[
+best(s1,n) = best(best(s1;s2,n))
+\]</span></p>
+<p><strong>Note</strong>: how to choose subproblem</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202001417794.png"></p></li>
+<li><p><strong>Def</strong>: subproblem map</p>
+<p><strong>Usage</strong>: can be used to visualize the overall propogation equation</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202000059133.png"></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202000529778.png"></p>
+<p><strong>Note</strong>: we can use this map, compute the edges of this map, and get the complexity.</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202001757368.png"></p></li>
+<li><p><strong>Def</strong>: 2 ways of implementation</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202000632852.png"></p></li>
+</ul>
+<h5 id="branch-bound">1.2.3.3.5. branch &amp; bound</h5>
+<ul>
+<li><p><strong>Def</strong>: for maximum problem</p>
+<ul>
+<li><p>intro: bfs/dfs + trimming</p></li>
+<li><p>problem: opt</p></li>
+<li><p><strong>Qua</strong>: exp algorithm</p></li>
+<li><p><strong>Algo</strong>: for max problem</p>
+<p><strong>Usage</strong>: for each branch we have upper bound (possible largest result), if upper bound &lt; lower bound (alread results), we trim。</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129134050800.png"></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129135648436.png"></p>
+<p>for min problem</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202192447383.png"></p>
+<p><strong>Note</strong>:</p>
+<ol type="1">
+<li><p>lower bound=existing solutions, upper bound is for every branch</p></li>
+<li><p>if upper bound &lt; lower bound, then prune the branch</p></li>
+</ol>
+<p>for 0-1 variable, 分支 is trivial since you always 分 0/1</p></li>
+</ul></li>
+</ul>
+<h5 id="greedy-search">1.2.3.3.6. greedy search</h5>
+<ul>
+<li><strong>Def</strong>:
+<ul>
+<li>intro: bfs/dfs + greedy choose</li>
+<li>problem: opt</li>
+</ul></li>
+</ul>
+<h5 id="a">1.2.3.3.7. A*</h5>
+<ul>
+<li><strong>Def</strong>:
+<ul>
+<li>intro: bfs + inspire</li>
+<li>problem: opt</li>
+</ul></li>
+</ul>
+<h5 id="b">1.2.3.3.8. B*</h5>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<ul>
+<li><p>intro: bfs</p></li>
+<li><p>problem: opt</p></li>
+</ul></li>
+</ul>
+<h5 id="d">1.2.3.3.9. D*</h5>
+<h5 id="ida">1.2.3.3.10. IDA*</h5>
+<ul>
+<li><strong>Def</strong>:
+<ul>
 <li>intro: dfs + inspire</li>
 <li>problem: opt</li>
+</ul></li>
 </ul>
-</li>
+<h3 id="approximation-method">1.2.4. approximation method</h3>
+<h4 id="computer-theory-1">1.2.4.1. computer theory</h4>
+<ul>
+<li>local search</li>
+<li>greedy</li>
+<li>relaxation</li>
 </ul>
-<h3 id="approximation-method">1.2.4. approximation method</h3><h4 id="computer-theory-1">1.2.4.1. computer theory</h4><ul>
-<li>local search </li>
-<li>greedy </li>
-<li>relaxation </li>
-</ul>
-<h2 id="specific-question">1.3. specific question</h2><h3 id="subset-sum">1.3.1. subset sum</h3><ul>
+<h2 id="specific-question">1.3. specific question</h2>
+<h3 id="subset-sum">1.3.1. subset sum</h3>
+<ul>
 <li><p><strong>Def</strong>: decistion form</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191201231832080.png" alt></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191201231832080.png"></p>
 <p><strong>Note</strong>: opt form, is a subproblem of backpack</p>
 <p>maximum</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191201231851426.png" alt></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191201231851426.png"></p>
 <p>minimum</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191201232009449.png" alt></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191201232009449.png"></p>
 <p>k-subsum</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191201232607508.png" alt></p>
-</li>
+<p><img src="/2019/11/19/combinational-optimization/image-20191201232607508.png"></p></li>
 </ul>
-<h3 id="backpack-problem">1.3.2. backpack problem</h3><ul>
+<h3 id="backpack-problem">1.3.2. backpack problem</h3>
+<ul>
 <li><p><strong>Def</strong>: 0-1 backpack problem</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129115455870.png" alt></p>
-</li>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129115455870.png"></p></li>
 </ul>
-<h4 id="dp1">1.3.2.1. dp1</h4><ul>
-<li><p><strong>Algo</strong>: dynamic programming </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129132350165.png" alt></p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129132441795.png" alt></p>
+<h4 id="dp1">1.3.2.1. dp1</h4>
+<ul>
+<li><p><strong>Algo</strong>: dynamic programming</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129132350165.png"></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129132441795.png"></p>
 <ul>
 <li><p><strong>Qua</strong>: O(nC), pseudo-poly algorithm( if max number C is bounded by O(2^n), then the DP is polynomial, this is the definition of pseudo-poly)</p>
-<p>the input is n+logL, L = max(max pj, max wj, C)</p>
-</li>
+<p>the input is n+logL, L = max(max pj, max wj, C)</p></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h4 id="dp2">1.3.2.2. dp2</h4><ul>
-<li><p><strong>Algo</strong>: dynamic programming 2 </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129132551298.png" alt></p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129132600789.png" alt></p>
+<h4 id="dp2">1.3.2.2. dp2</h4>
+<ul>
+<li><p><strong>Algo</strong>: dynamic programming 2</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129132551298.png"></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129132600789.png"></p>
 <ul>
 <li><strong>Qua</strong>: O(nP), same as above</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h4 id="branch-amp-bound-1">1.3.2.3. branch &amp; bound</h4><ul>
-<li><p><strong>Algorithm</strong>: relaxation linear programming ( branch &amp; bound method ) </p>
+<h4 id="branch-bound-1">1.3.2.3. branch &amp; bound</h4>
+<ul>
+<li><p><strong>Algorithm</strong>: relaxation linear programming ( branch &amp; bound method )</p>
 <p>properties for relaxation problem</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202011950643.png" alt></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202011950643.png"></p>
 <p>UB1: we use relation problem tp compute upper bound for non-relaxation, a fixed one, not optimal since we want it to be small.</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129134849942.png" alt></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129134849942.png"></p>
 <p>UB2: we optimize the UB1</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202012413162.png" alt></p>
-<p>LB1: </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129135505799.png" alt></p>
-</li>
-</ul>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202012413162.png"></p>
+<p>LB1:</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129135505799.png"></p>
 <ul>
 <li><p><strong>Qua</strong>: =&gt; some constraint relaxation programming have to obey</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129134242929.png" alt></p>
-</li>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129134242929.png"></p></li>
+</ul></li>
 </ul>
-<h4 id="greedy">1.3.2.4. greedy</h4><ul>
-<li><p><strong>Algorithm</strong>: greedy </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129140208140.png" alt></p>
-<p><strong>Note</strong>: the approximate ratio is $\infty$, so we have to improve it </p>
-</li>
+<h4 id="greedy">1.3.2.4. greedy</h4>
+<ul>
+<li><p><strong>Algorithm</strong>: greedy</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129140208140.png"></p>
+<p><strong>Note</strong>: the approximate ratio is <span class="math inline">\(\infty\)</span>, so we have to improve it</p></li>
 </ul>
-<h4 id="improving-greedy">1.3.2.5. improving greedy</h4><ul>
+<h4 id="improving-greedy">1.3.2.5. improving greedy</h4>
+<ul>
 <li><p><strong>Algorithm</strong>: improving greedy method</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129140357000.png" alt></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129140357000.png"></p>
 <ul>
 <li><p><strong>Qua</strong>: the approximate ratio is 2</p>
-<p><strong>Proof</strong>: using a upper bound </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129140423440.png" alt></p>
-</li>
+<p><strong>Proof</strong>: using a upper bound</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129140423440.png"></p></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h4 id="PTAS">1.3.2.6. PTAS</h4><ul>
-<li><p><strong>Algorithm</strong> : PTAS </p>
-<p><strong>Usage</strong>: ensembling $2^k$ possible solution together and output the best of them.</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129142026479.png" alt></p>
-<p><strong>Proof</strong>: separate the JK into 2 part by i0. the first part consist only intersection &amp; jk itself, because no samples exists only in J* before i0. the second part consist of 3 part. This construction is done by introducing i0, have nothing to do with Jk algorithm(only Jk indicate that Ja+beta is not empty since i0 can’t be the largest )</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129142046144.png" alt></p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129142129096.png" alt></p>
-<p><strong>Note</strong>:从一般思路出发，设计一个贪婪算法。首先通过密度差异i0得到重量之间的关系，然后同样从密度差异出发，得到密度的关系，把重量转化为价值之间的关系，证明完毕。</p>
-</li>
-</ul>
-<h4 id="FPTAS">1.3.2.7. FPTAS</h4><ul>
-<li><p><strong>Algorithm</strong>: FPTAS </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129142204067.png" alt></p>
-<p><strong>Proof</strong>:</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129142228601.png" alt></p>
-<p><strong>Note</strong>: 从一个伪多项式算法出发，设计一个P缩微的实例。（之所以不放C，是因为可行性有可能改变）从这个实例出发，然后在两个问题空间里放缩得到结果。</p>
-</li>
-</ul>
-<h3 id="assignment-problem-amp-TSP">1.3.3. assignment problem &amp; TSP</h3><h4 id="assignment-problem">1.3.3.1. assignment problem</h4><ul>
-<li><p><strong>Def</strong>:assignment problem</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129121710110.png" alt></p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129121651628.png" alt></p>
-<p><strong>Note</strong>: standard form</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129122411264.png" alt></p>
-</li>
-</ul>
+<h4 id="ptas">1.3.2.6. PTAS</h4>
 <ul>
-<li><p><strong>Qua</strong>: P( special kind of integer programming is poly solvable,  NP-hard is defined when n-&gt;inf)</p>
-</li>
-<li><p><strong>Qua</strong>: equivalent to Bipartite Matching </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191216190900577.png" alt></p>
-</li>
-<li><p><strong>Qua</strong>: standardization, A is shown above, A is totally unimodular matrix</p>
-</li>
+<li><p><strong>Algorithm</strong> : PTAS</p>
+<p><strong>Usage</strong>: ensembling <span class="math inline">\(2^k\)</span> possible solution together and output the best of them.</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129142026479.png"></p>
+<p><strong>Proof</strong>: separate the JK into 2 part by i0. the first part consist only intersection &amp; jk itself, because no samples exists only in J* before i0. the second part consist of 3 part. This construction is done by introducing i0, have nothing to do with Jk algorithm(only Jk indicate that Ja+beta is not empty since i0 can't be the largest )</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129142046144.png"></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129142129096.png"></p>
+<p><strong>Note</strong>:从一般思路出发，设计一个贪婪算法。首先通过密度差异i0得到重量之间的关系，然后同样从密度差异出发，得到密度的关系，把重量转化为价值之间的关系，证明完毕。</p></li>
 </ul>
-<h4 id="tsp-problem">1.3.3.2. tsp problem</h4><ul>
+<h4 id="fptas">1.3.2.7. FPTAS</h4>
+<ul>
+<li><p><strong>Algorithm</strong>: FPTAS</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129142204067.png"></p>
+<p><strong>Proof</strong>:</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129142228601.png"></p>
+<p><strong>Note</strong>: 从一个伪多项式算法出发，设计一个P缩微的实例。（之所以不放C，是因为可行性有可能改变）从这个实例出发，然后在两个问题空间里放缩得到结果。</p></li>
+</ul>
+<h3 id="assignment-problem-tsp">1.3.3. assignment problem &amp; TSP</h3>
+<h4 id="assignment-problem">1.3.3.1. assignment problem</h4>
+<ul>
+<li><p><strong>Def</strong>:assignment problem</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129121710110.png"></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129121651628.png"></p>
+<p><strong>Note</strong>: standard form</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129122411264.png"></p>
+<ul>
+<li><p><strong>Qua</strong>: P( special kind of integer programming is poly solvable, NP-hard is defined when n-&gt;inf)</p></li>
+<li><p><strong>Qua</strong>: equivalent to Bipartite Matching</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191216190900577.png"></p></li>
+<li><p><strong>Qua</strong>: standardization, A is shown above, A is totally unimodular matrix</p></li>
+</ul></li>
+</ul>
+<h4 id="tsp-problem">1.3.3.2. tsp problem</h4>
+<ul>
 <li><p><strong>Def</strong>: tsp problem (same as assignment ) (this is not the final version)</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129120253355.png" alt></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129120253355.png"></p>
 <p><strong>Note</strong>: sub-tsp have to be mentioned. sub-tsp have to be mentioned, the problem can be separated into several small problems if the constraint is not mentioned.</p>
 <ul>
 <li><p><strong>Qua</strong>: first solution</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129125645660.png" alt></p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129125645660.png"></p></li>
 <li><p><strong>Qua</strong>: second solution</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129130213835.png" alt></p>
-<p><strong>Proof</strong>: </p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129130213835.png"></p>
+<p><strong>Proof</strong>:</p>
 <p>=》</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129130647311.png" alt></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129130647311.png"></p>
 <p>《=</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129130736813.png" alt></p>
-</li>
-</ul>
-<ul>
-<li><p><strong>Qua</strong>: NP-C</p>
-</li>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129130736813.png"></p></li>
+<li><p><strong>Qua</strong>: NP-C</p></li>
 <li><p><strong>Qua</strong>: no constant - ratio</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129140821921.png" alt></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129140821921.png"></p>
 <p><strong>Proof</strong>: using reduction to HC, which is a NPC problem, (gap technique)</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129140852337.png" alt></p>
-</li>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129140852337.png"></p></li>
+<li><p><strong>Qua</strong>: no FPTAS</p></li>
+</ul></li>
 </ul>
+<h4 id="metric-tsp">1.3.3.3. metric TSP</h4>
 <ul>
-<li><strong>Qua</strong>: no FPTAS</li>
-</ul>
-<h4 id="metric-TSP">1.3.3.3. metric TSP</h4><ul>
 <li><p><strong>Def</strong>: metric tsp</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129141034226.png" alt></p>
-</li>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129141034226.png"></p></li>
 </ul>
-<h5 id="spanning-tree">1.3.3.3.1. spanning tree</h5><ul>
+<h5 id="spanning-tree">1.3.3.3.1. spanning tree</h5>
+<ul>
 <li><p><strong>Algorithm</strong>: weighed smallest spanning tree method</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202112446362.png" alt></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202112446362.png"></p>
 <ul>
-<li><p><strong>Qua</strong>: =&gt; appximate ratio = 2 </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129141230833.png" alt></p>
-<p><strong>Proof</strong>: because every node has at most weight 2 in TSP solution, so we either eliminate the same edge in doubt spanning tree or we use triangle inequality to eliminate. double spanning tree’s edges will always suffice since you only have weight 2 in TSP solution (at most 2 opportunies for you to eliminate edges in spanning tree).</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202113207607.png" alt></p>
-</li>
-<li><p><strong>Qua</strong>: =&gt; the best approximate ratio = 2 </p>
+<li><p><strong>Qua</strong>: =&gt; appximate ratio = 2</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129141230833.png"></p>
+<p><strong>Proof</strong>: because every node has at most weight 2 in TSP solution, so we either eliminate the same edge in doubt spanning tree or we use triangle inequality to eliminate. double spanning tree's edges will always suffice since you only have weight 2 in TSP solution (at most 2 opportunies for you to eliminate edges in spanning tree).</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202113207607.png"></p></li>
+<li><p><strong>Qua</strong>: =&gt; the best approximate ratio = 2</p>
 <p><strong>Proof</strong>: given an example of worst ratio</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129141356475.png" alt></p>
-</li>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129141356475.png"></p></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h5 id="christofides">1.3.3.3.2. christofides</h5><ul>
-<li><p><strong>Algorithm</strong>: christofides </p>
+<h5 id="christofides">1.3.3.3.2. christofides</h5>
+<ul>
+<li><p><strong>Algorithm</strong>: christofides</p>
 <p><strong>Usage</strong>: note that euler tour can be redundunt on edges as long as you past every edge in the M+T</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202130457082.png" alt></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202130457082.png"></p>
 <ul>
-<li><p><strong>Qua</strong>: =&gt; ratio $\leq$ 3/2</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129141612669.png" alt></p>
-<p><strong>Proof</strong>: first we prove that T&lt; C, this is easy since we can erase edge from c and T<c-edge<c. then we can see that opt> 2 matching only on odd point &gt; 2 * best matching odd point. so M &lt; C/2 . M+T&lt; 3/2 opt. The hard part is 2 mathching only on odd point involves using triangle inequality. At last we have 3/2 opt&gt; M+T&gt; generateed.</c-edge<c.></p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202121133691.png" alt></p>
-<p><strong>Note</strong>: 2 matching only on odd point </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202131235916.png" alt></p>
-</li>
+<li><p><strong>Qua</strong>: =&gt; ratio <span class="math inline">\(\leq\)</span> 3/2</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129141612669.png"></p>
+<p><strong>Proof</strong>: first we prove that T&lt; C, this is easy since we can erase edge from c and T&lt;C-edge&lt;C. Then we can see that opt &gt; 2 matching only on odd point &gt; 2 * best matching odd point. so M &lt; C/2 . M+T&lt; 3/2 opt. The hard part is 2 mathching only on odd point involves using triangle inequality. At last we have 3/2 opt&gt; M+T&gt; generateed.</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202121133691.png"></p>
+<p><strong>Note</strong>: 2 matching only on odd point</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202131235916.png"></p></li>
+<li><p><strong>Qua</strong>：worst ratio <span class="math inline">\(\geq 3/2\)</span></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202120136169.png"></p></li>
+</ul></li>
 </ul>
-</li>
-</ul>
+<h3 id="shortest-path">1.3.4. shortest path</h3>
+<h4 id="naive-shortest-path">1.3.4.1. naive shortest path</h4>
 <ul>
-<li><p><strong>Qua</strong>：worst ratio $\geq 3/2$</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202120136169.png" alt></p>
-</li>
-</ul>
-<h3 id="shortest-path">1.3.4. shortest path</h3><h4 id="naive-shortest-path">1.3.4.1. naive shortest path</h4><ul>
-<li><p><strong>Def</strong>: given </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129133426588.png" alt></p>
+<li><p><strong>Def</strong>: given</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129133426588.png"></p>
 <ul>
 <li><p><strong>Algorithm</strong>: 3 classic basic algorithms</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129133444477.png" alt></p>
-</li>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129133444477.png"></p></li>
+<li><p><strong>Algo</strong>: Dij, no negative weight, from 1 point to other point</p>
+<p>​ 1) choose a point with the smallest dis</p>
+<p>​ 2) choose the nearest neighbor ( smallest cj)</p>
+<p>​ 3) update all point cj</p>
+<p>​ 4) set the point as updated()</p>
+<p><strong>Note</strong>: actually a top-down implementation of bfs, using the feature of principle of optimality, 感觉像是DP算法的进一步优化版本，DP算法尽管有重叠子问题可以消除，但是dij算法还去掉了一些重叠子问题减少计算量（比如在第二个点固定的过程中就只考虑了第一个点的update，其他点都去掉了）</p></li>
+</ul></li>
 </ul>
-</li>
-</ul>
+<h4 id="take-out-problem-specific-shortest-path">1.3.4.2. take-out problem (specific shortest path)</h4>
 <ul>
-<li><p><strong>Algo</strong>: Dij, no negative weight, from 1 point to other point </p>
-<p>​    1) choose a point with the smallest dis</p>
-<p>​    2) choose the nearest neighbor ( smallest cj)</p>
-<p>​    3) update all point cj</p>
-<p>​    4) set the point as updated()</p>
-<p><strong>Note</strong>: actually a top-down implementation of bfs, using the feature of principle of optimality, 感觉像是DP算法的进一步优化版本，DP算法尽管有重叠子问题可以消除，但是dij算法还去掉了一些重叠子问题减少计算量（比如在第二个点固定的过程中就只考虑了第一个点的update，其他点都去掉了）</p>
-</li>
-</ul>
-<h4 id="take-out-problem-specific-shortest-path">1.3.4.2. take-out problem (specific shortest path)</h4><ul>
-<li><p><strong>Def</strong>: a special form of shortest path, </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129133212851.png" alt></p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129133222251.png" alt></p>
+<li><p><strong>Def</strong>: a special form of shortest path,</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129133212851.png"></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129133222251.png"></p>
 <ul>
-<li><p><strong>Algo</strong>: dynamic programming </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129133231163.png" alt></p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129133315946.png" alt></p>
+<li><p><strong>Algo</strong>: dynamic programming</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129133231163.png"></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129133315946.png"></p>
 <p>implementation( here min should be max and wjt = max里面的内容 )</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202011517462.png" alt></p>
-<p><strong>Note</strong>: use special form of Dij algorithm to solve it （之所以可以用，因为这不仅仅是最长路问题，而是和邻边的max问题；最短路：邻边的min+min关系；最长路，邻边的max+max关系。或者直接加两个负号，-ri = min(-ri+l1)变成最短路问题。</p>
-</li>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202011517462.png"></p>
+<p><strong>Note</strong>: use special form of Dij algorithm to solve it （之所以可以用，因为这不仅仅是最长路问题，而是和邻边的max问题；最短路：邻边的min+min关系；最长路，邻边的max+max关系。或者直接加两个负号，-ri = min(-ri+l1)变成最短路问题。</p></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="minimum-matching">1.3.5. minimum matching</h3><ul>
-<li><p><strong>Def</strong>: minimum matching </p>
+<h3 id="minimum-matching">1.3.5. minimum matching</h3>
+<ul>
+<li><p><strong>Def</strong>: minimum matching</p>
 <p><strong>Usage</strong>: matching 问题简而言之就是找一个边集，使得任意顶点只有一条边。</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129141529563.png" alt></p>
-</li>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129141529563.png"></p></li>
 </ul>
-<h3 id="vertex-cover">1.3.6. vertex cover</h3><ul>
-<li><p><strong>Def</strong>: vertex cover</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191216191406089.png" alt></p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129141745506.png" alt></p>
+<h3 id="vertex-cover">1.3.6. vertex cover</h3>
+<ul>
+<li><strong>Def</strong>: vertex cover</li>
+</ul>
+<p><img src="/2019/11/19/combinational-optimization/image-20191216191406089.png"></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129141745506.png"></p>
 <ul>
 <li><p><strong>Qua</strong>: NPC</p>
-<p><strong>Proof</strong>: 3SAT &lt;= VC </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129141712195.png" alt></p>
+<p><strong>Proof</strong>: 3SAT &lt;= VC</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129141712195.png"></p>
 <p>=&gt; 通过给=1的顶点染色，然后给剩下三角形的两个染色，证明是VC</p>
-<p>&lt;= 先证明如果是VC上面必须有n个，下面也必须有2m个，又因为条件里有《n+2m，所以=n+2m个，然后就证完了。</p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
+<p>&lt;= 先证明如果是VC上面必须有n个，下面也必须有2m个，又因为条件里有《n+2m，所以=n+2m个，然后就证完了。</p></li>
 <li><p><strong>Algo</strong>: relaxation algorithms</p>
 <ul>
-<li><p><strong>Qua</strong>: =&gt; ratio $\leq$ 2 </p>
+<li><p><strong>Qua</strong>: =&gt; ratio <span class="math inline">\(\leq\)</span> 2</p>
 <p><strong>Proof</strong>:</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129141914176.png" alt></p>
-</li>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129141914176.png"></p></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="partition-problem">1.3.7. partition problem</h3><h4 id="subset-partition">1.3.7.1. subset partition</h4><ul>
-<li><p><strong>Def</strong>: partition problem </p>
+<h3 id="partition-problem">1.3.7. partition problem</h3>
+<h4 id="subset-partition">1.3.7.1. subset partition</h4>
+<ul>
+<li><p><strong>Def</strong>: partition problem</p>
 <p>desicion version</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202140547649.png" alt></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202140547649.png"></p>
 <p>opt version</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202140704112.png" alt></p>
-</li>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202140704112.png"></p></li>
 </ul>
-<h4 id="product-partition">1.3.7.2. product partition</h4><ul>
+<h4 id="product-partition">1.3.7.2. product partition</h4>
+<ul>
 <li><p><strong>Def</strong>: product partition problem</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129142408349.png" alt></p>
-</li>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129142408349.png"></p></li>
 <li><p><strong>Qua</strong>: NPC, have FPTAS</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129142427876.png" alt></p>
-</li>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129142427876.png"></p></li>
 </ul>
-<h3 id="scheduling">1.3.8. scheduling</h3><ul>
+<h3 id="scheduling">1.3.8. scheduling</h3>
+<ul>
 <li><p><strong>Def</strong>: scheduling problem</p>
 <p><strong>Usage</strong>: representing scheduling problem in 3 elements</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191125132151583.png" alt></p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191125133133372.png" alt></p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191125140650699.png" alt></p>
-</li>
-</ul>
+<p><img src="/2019/11/19/combinational-optimization/image-20191125132151583.png"></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191125133133372.png"></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191125140650699.png"></p>
 <ul>
-<li><p><strong>Def</strong>: machine env ( $\alpha$ )</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191125133323602.png" alt></p>
-<p><strong>Example</strong>: possible example of machine environment </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191125133813023.png" alt></p>
-<p><strong>Note</strong>: mixed &amp; hybrid </p>
-</li>
-</ul>
-<ul>
-<li><p><strong>Def</strong>: job characteristic ( $\beta$ )</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191125132125137.png" alt></p>
-<p><strong>Note</strong>: more constraint </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191125132223931.png" alt></p>
-</li>
-</ul>
-<ul>
-<li><p><strong>Def</strong>: loss function ( $\gamma$ )</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191125135801006.png" alt></p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191125135504726.png" alt></p>
-</li>
-</ul>
-<ul>
+<li><p><strong>Def</strong>: machine env ( <span class="math inline">\(\alpha\)</span> )</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191125133323602.png"></p>
+<p><strong>Example</strong>: possible example of machine environment</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191125133813023.png"></p>
+<p><strong>Note</strong>: mixed &amp; hybrid</p></li>
+<li><p><strong>Def</strong>: job characteristic ( <span class="math inline">\(\beta\)</span> )</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191125132125137.png"></p>
+<p><strong>Note</strong>: more constraint</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191125132223931.png"></p></li>
+<li><p><strong>Def</strong>: loss function ( <span class="math inline">\(\gamma\)</span> )</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191125135801006.png"></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191125135504726.png"></p></li>
+</ul></li>
 <li><p><strong>Def</strong>: gatt diagram</p>
-<p><strong>Usage</strong>: representing a possible solution </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191125132302053.png" alt></p>
-</li>
+<p><strong>Usage</strong>: representing a possible solution</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191125132302053.png"></p></li>
 <li><p><strong>Example</strong>: Santa problem</p>
 <p><strong>Usage</strong>: the simpliest scheduling problem ( without precedence )</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191125140155649.png" alt></p>
-</li>
+<p><img src="/2019/11/19/combinational-optimization/image-20191125140155649.png"></p></li>
 <li><p><strong>Example</strong>: parodox of scheduling problem</p>
 <p><strong>Usage</strong>: the cons for greedy algorithms: decrease job time &amp; increase machine number will not necessarily yield better result.</p>
-<p>P175</p>
-</li>
+<p>P175</p></li>
 </ul>
-<h4 id="P1-Cj-Cmax-L1max-Tj-Uj">1.3.8.1. P1 Cj, Cmax, L1max, Tj, Uj</h4><h5 id="C-max-or-sum-n-1-infty-C-j">1.3.8.1.1. $C_{max}$ or $\sum_{n=1}^{\infty} C_j$</h5><ul>
-<li><p><strong>Def</strong>:  $C_{max}$ or $\sum_{n=1}^{\infty} C_j$</p>
+<h4 id="p1-cj-cmax-l1max-tj-uj">1.3.8.1. P1 Cj, Cmax, L1max, Tj, Uj</h4>
+<h5 id="c_max-or-sum_n1infty-c_j">1.3.8.1.1. \(C_{max}\) or \(\sum_{n=1}^{\infty} C_j\)</h5>
 <ul>
-<li><p><strong>Algorithm</strong>: for $\sum_{n=1}^{\infty}  C_j$: EDD </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202132251638.png" alt></p>
-</li>
-<li><p><strong>Algorithm</strong>: weighed sum cj $\sum_{j=1}^{n} w_jc_j$</p>
-<p><strong>Note</strong>: </p>
-<p>0.0) $\sum_{n=1}^{\infty} wjcj = (w_1+…w_n)p1 + …$ </p>
-<p>1.0) when n = 2, get solution $w_2p_1$ vs $w_1p_2$</p>
-<p>2.0) when n &gt; 2, insights from n =2, sort $\frac{pj}{wj}$</p>
+<li><p><strong>Def</strong>: <span class="math inline">\(C_{max}\)</span> or <span class="math inline">\(\sum_{n=1}^{\infty} C_j\)</span></p>
+<ul>
+<li><p><strong>Algorithm</strong>: for <span class="math inline">\(\sum_{n=1}^{\infty} C_j\)</span>: EDD</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202132251638.png"></p></li>
+<li><p><strong>Algorithm</strong>: weighed sum cj <span class="math inline">\(\sum_{j=1}^{n} w_jc_j\)</span></p>
+<p><strong>Note</strong>:</p>
+<p>0.0) <span class="math inline">\(\sum_{n=1}^{\infty} wjcj = (w_1+...w_n)p1 + ...\)</span></p>
+<p>1.0) when n = 2, get solution <span class="math inline">\(w_2p_1\)</span> vs <span class="math inline">\(w_1p_2\)</span></p>
+<p>2.0) when n &gt; 2, insights from n =2, sort <span class="math inline">\(\frac{pj}{wj}\)</span></p>
 <p><strong>Proof</strong>:</p>
-<p>1.0) swapping 2 element i,j =&gt; contradiction, </p>
-<p>1.1) <strong>set i - j =-1 to make it easier.</strong>( this step is important since we only get information from i and j)</p>
-</li>
-</ul>
-</li>
-</ul>
+<p>1.0) swapping 2 element i,j =&gt; contradiction,</p>
+<p>1.1) <strong>set i - j =-1 to make it easier.</strong>( this step is important since we only get information from i and j)</p></li>
+<li><p><strong>Algorithm</strong>: weighed functional sum of cj : <span class="math inline">\(\sum_{n=1}^{\infty} w_jg(c_j)\)</span></p>
 <ul>
-<li><p><strong>Algorithm</strong>: weighed functional sum of cj : $\sum_{n=1}^{\infty} w_jg(c_j)$</p>
-<ul>
-<li><p><strong>Qua</strong>; when g is convex: worst ratio = sup …</p>
-</li>
-<li><p><strong>Qua</strong>: when g is 分段linear: NPC</p>
-</li>
-<li><p><strong>Qua</strong>: when g is $x ^{\beta}$ =&gt; i &lt;g j &amp; i &lt;l j</p>
-</li>
+<li><p><strong>Qua</strong>; when g is convex: worst ratio = sup ...</p></li>
+<li><p><strong>Qua</strong>: when g is 分段linear: NPC</p></li>
+<li><p><strong>Qua</strong>: when g is <span class="math inline">\(x ^{\beta}\)</span> =&gt; i &lt;g j &amp; i &lt;l j</p></li>
+</ul></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h5 id="L1max-Tj-Uj">1.3.8.1.2. L1max, Tj, Uj</h5><ul>
-<li><p><strong>Def</strong>: one machine problem: Lmax is the maximum of delay time. $\sum_{n=1}^{\infty}  U_j$ is the total delayed objects. $ \sum_{n=1}^{\infty} T_j$ is the added delayed time. </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202133234540.png" alt></p>
+<h5 id="l1max-tj-uj">1.3.8.1.2. L1max, Tj, Uj</h5>
 <ul>
-<li><p><strong>Algorithm</strong>: for $Max(L)$</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202133258642.png" alt></p>
-<p><strong>Proof</strong>: note that only k, j, i changes in the $\sigma’$ solution and everyone of them are bounded by the max($\sigma $) of the original.</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202133309750.png" alt></p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202133322281.png" alt></p>
-</li>
-<li><p><strong>Algorithm</strong>: for $\sum_{n=1}^{\infty}  U_j$</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202133752123.png" alt></p>
+<li><p><strong>Def</strong>: one machine problem: Lmax is the maximum of delay time. <span class="math inline">\(\sum_{n=1}^{\infty} U_j\)</span> is the total delayed objects. $ _{n=1}^{} T_j$ is the added delayed time.</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202133234540.png"></p>
+<ul>
+<li><p><strong>Algorithm</strong>: for <span class="math inline">\(Max(L)\)</span></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202133258642.png"></p>
+<p><strong>Proof</strong>: note that only k, j, i changes in the <span class="math inline">\(\sigma&#39;\)</span> solution and everyone of them are bounded by the max($$) of the original.</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202133309750.png"></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202133322281.png"></p></li>
+<li><p><strong>Algorithm</strong>: for <span class="math inline">\(\sum_{n=1}^{\infty} U_j\)</span></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202133752123.png"></p>
 <p><strong>Note</strong>: example of Moore-Hodgeson</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202134222547.png" alt></p>
-</li>
-<li><p><strong>Algorithm</strong>: for $\sum_{n=1}^{\infty}  T_j$</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202135251243.png" alt></p>
-<p><strong>Note</strong>: no resting time </p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202134222547.png"></p></li>
+<li><p><strong>Algorithm</strong>: for <span class="math inline">\(\sum_{n=1}^{\infty} T_j\)</span></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202135251243.png"></p>
+<p><strong>Note</strong>: no resting time</p>
 <ul>
 <li><strong>Qua</strong>: =&gt; exist pseudo - p algo</li>
 <li><strong>Qua</strong>: =&gt; exist FPTAS</li>
 <li><strong>Qua</strong>: =&gt; NP-C</li>
+</ul></li>
+<li><p><strong>Algorithm</strong>: another loss function where we want "JUST IN TIME" : <span class="math inline">\(\sum_{n=1}^{\infty} T_j +E_j\)</span> where <span class="math inline">\(Ej= max(d_j-c_j, 0)\)</span></p></li>
+</ul></li>
 </ul>
-</li>
-<li><p><strong>Algorithm</strong>: another loss function where we want “JUST IN TIME” : $\sum_{n=1}^{\infty} T_j +E_j$ where $Ej= max(d_j-c_j, 0)$</p>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="Pm-Cmax-Cmin">1.3.8.2. Pm Cmax, Cmin</h4><ul>
+<h4 id="pm-cmax-cmin">1.3.8.2. Pm Cmax, Cmin</h4>
+<ul>
 <li><p><strong>Def</strong>: multi-machine problem Pm</p>
 <p><strong>Note</strong>: Pm and P difference: whether m is a given input(P) or constant(Pm), the consequence of this is that when Pseudo-P algorithm in Pm is O(P^m), it is exponential in P since m is input.</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202135823826.png" alt></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202135823826.png"></p>
 <ul>
-<li><p><strong>Qua</strong>: =&gt; NP-hard </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202135847679.png" alt></p>
+<li><p><strong>Qua</strong>: =&gt; NP-hard</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202135847679.png"></p>
 <p><strong>Proof</strong>: obvious</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202135901436.png" alt></p>
-<p>from 2 to Pm|| ..: adding p-2 dummy node with cj = C</p>
-</li>
-<li><p><strong>Algorithm</strong>: LS </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202143622270.png" alt></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202135901436.png"></p>
+<p>from 2 to Pm|| ..: adding p-2 dummy node with cj = C</p></li>
+<li><p><strong>Algorithm</strong>: LS</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202143622270.png"></p>
 <ul>
-<li><p><strong>Qua</strong>: worst ratio $=$ 2- 1/m </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202143639476.png" alt></p>
+<li><p><strong>Qua</strong>: worst ratio <span class="math inline">\(=\)</span> 2- 1/m</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202143639476.png"></p>
 <p><strong>Proof</strong>: extra information by introducing minimal counterexample instead of counterexample.</p>
 <p>1.0) first prove that Jn determine max span: exactly why we introduce minimal conterexample.</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202143716799.png" alt></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202143716799.png"></p>
 <p>2.0) tightness prove: find an example that have 2 - 1/m</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202143728100.png" alt></p>
-</li>
-</ul>
-</li>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202143728100.png"></p></li>
+</ul></li>
 <li><p><strong>Algorithm</strong>: LPT</p>
 <p><strong>Usage</strong>: insight from the worst case of above that we can sort the small one but not the large ones so we do from large to small this time.</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202150902493.png" alt></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202150902493.png"></p>
 <ul>
-<li><p><strong>Qua</strong>: worst ratio </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202150920451.png" alt></p>
-<p><strong>Proof</strong>: </p>
-<p>1.0) if we can prove that $C^*(I) \geq 3 p_n$ =&gt; (ratio = 4/3 - 1/3m) or that the opposite where only 2 objects are operated on each machine =&gt; (ratio=1, LPT can generate another optimal), we can prove the worst ratio &lt;= 4/3 - 1/3m.</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202151039282.png" alt></p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202151051936.png" alt></p>
+<li><p><strong>Qua</strong>: worst ratio</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202150920451.png"></p>
+<p><strong>Proof</strong>:</p>
+<p>1.0) if we can prove that <span class="math inline">\(C^*(I) \geq 3 p_n\)</span> =&gt; (ratio = 4/3 - 1/3m) or that the opposite where only 2 objects are operated on each machine =&gt; (ratio=1, LPT can generate another optimal), we can prove the worst ratio &lt;= 4/3 - 1/3m.</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202151039282.png"></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202151051936.png"></p>
 <p>2.0) the first condition is obvious since we separate the problem instances into 2 part, the first part is trivial and we only need to prove the second part.</p>
 <p>3.0) for the second condition, we prove by constructing LTP for every instances, and prove that LTP is optimal. Given an optimal sorting, we can construvt LTP by swapping the order of the objects.</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202152927610.png" alt></p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202152927610.png"></p></li>
+</ul></li>
+</ul></li>
 <li><p><strong>Def</strong>: Pm||Cmin (maximization problem)</p>
 <ul>
-<li><p><strong>Algorithm</strong>: LS </p>
+<li><p><strong>Algorithm</strong>: LS</p>
 <ul>
-<li><p><strong>Qua</strong>: worst ratio = m </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202153409765.png" alt></p>
-<p><strong>Proof</strong>: </p>
-<p>1.0) prove ratio $ \leq$ m</p>
+<li><p><strong>Qua</strong>: worst ratio = m</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202153409765.png"></p>
+<p><strong>Proof</strong>:</p>
+<p>1.0) prove ratio $ $ m</p>
 <p>1.1) first prove lower bound for Cls</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202153921675.png" alt></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202153921675.png"></p>
 <p>2.1) second prove upper bound for C*</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191202153939314.png" alt></p>
-<p>2.2) ratio $\geq$ m </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191209132233277.png" alt></p>
-<p><strong>Note</strong>: how to construct: since it’s maximization problem, only 1 sample of Cmin will perform as the worst case.</p>
-</li>
-</ul>
-</li>
-<li><p><strong>Algorithm</strong>: LST</p>
-</li>
-<li><p><strong>Qua</strong>: worst ratio = $\frac{4m-2}{3m-1}$</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191202153939314.png"></p>
+<p>2.2) ratio <span class="math inline">\(\geq\)</span> m</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191209132233277.png"></p>
+<p><strong>Note</strong>: how to construct: since it's maximization problem, only 1 sample of Cmin will perform as the worst case.</p></li>
+</ul></li>
+<li><p><strong>Algorithm</strong>: LST</p></li>
+<li><p><strong>Qua</strong>: worst ratio = <span class="math inline">\(\frac{4m-2}{3m-1}\)</span></p>
 <ul>
-<li><strong>Note</strong>: for every instance, there’s not always a scheduling that satisty both optimal for Cmax &amp; Cmin. But is there an algorithm such that ratio_min &lt; $\alpha$  and ratio_max &lt; $\beta$ ?</li>
+<li><strong>Note</strong>: for every instance, there's not always a scheduling that satisty both optimal for Cmax &amp; Cmin. But is there an algorithm such that ratio_min &lt; <span class="math inline">\(\alpha\)</span> and ratio_max &lt; <span class="math inline">\(\beta\)</span> ?</li>
+</ul></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="P-Cmax">1.3.8.3. P Cmax</h4><ul>
+<h4 id="p-cmax">1.3.8.3. P Cmax</h4>
+<ul>
 <li><p><strong>Def</strong>: P||Cmax</p>
 <ul>
 <li><p><strong>Qua</strong>: strong NP-hard</p>
-<p><strong>Proof</strong>: 3-partition $ \leq_p $ P||Cmax </p>
-<p><strong>Note</strong>: Pm||Cmax can not use this reduction since m in Pm is a constant .</p>
-</li>
+<p><strong>Proof</strong>: 3-partition $ _p $ P||Cmax</p>
+<p><strong>Note</strong>: Pm||Cmax can not use this reduction since m in Pm is a constant .</p></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h4 id="F2-Cmax">1.3.8.4. F2 Cmax</h4><ul>
+<h4 id="f2-cmax">1.3.8.4. F2 Cmax</h4>
+<ul>
 <li><p><strong>Def</strong>: F2 Cmax</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191209134123752.png" alt></p>
-</li>
-</ul>
+<p><img src="/2019/11/19/combinational-optimization/image-20191209134123752.png"></p>
 <ul>
-<li><p><strong>Algorithm</strong>:  Johnson </p>
+<li><p><strong>Algorithm</strong>: Johnson</p>
 <p><strong>Note</strong>: why sort the second array?</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191209133808902.png" alt></p>
-</li>
+<p><img src="/2019/11/19/combinational-optimization/image-20191209133808902.png"></p></li>
+</ul></li>
 </ul>
-<h4 id="F3-Cmax">1.3.8.5. F3 Cmax</h4><ul>
-<li><p><strong>Def</strong>: </p>
+<h4 id="f3-cmax">1.3.8.5. F3 Cmax</h4>
 <ul>
-<li><strong>Qua</strong>: worst ratio &lt;= 5/3 or 3/2 </li>
-</ul>
-</li>
-</ul>
-<h4 id="Fm-Cmax">1.3.8.6. Fm Cmax</h4><ul>
-<li><p><strong>Def</strong>: </p>
+<li><p><strong>Def</strong>:</p>
 <ul>
-<li><p><strong>Qua</strong>: possible lower / upper bound </p>
-<p>LB = max{dilation, congestion}. dilation = $max \sum_{j=1}^{n}pji  $ , congestion = $max \sum_{i=1}^{m} pji $</p>
-</li>
+<li><strong>Qua</strong>: worst ratio &lt;= 5/3 or 3/2</li>
+</ul></li>
 </ul>
-</li>
-</ul>
+<h4 id="fm-cmax">1.3.8.6. Fm Cmax</h4>
 <ul>
-<li><p><strong>Qua</strong>: exists PTAS</p>
-</li>
-<li><p><strong>Qua</strong>: worst ratio &gt; 5/4</p>
-</li>
-<li><p><strong>Qua</strong>: worst ratio &lt;=2 / log….</p>
-</li>
+<li><p><strong>Def</strong>:</p>
+<ul>
+<li><p><strong>Qua</strong>: possible lower / upper bound</p>
+<p>LB = max{dilation, congestion}. dilation = $max <em>{j=1}^{n}pji $ , congestion = $max </em>{i=1}^{m} pji $</p></li>
+<li><p><strong>Qua</strong>: exists PTAS</p></li>
+<li><p><strong>Qua</strong>: worst ratio &gt; 5/4</p></li>
+<li><p><strong>Qua</strong>: worst ratio &lt;=2 / log....</p></li>
+</ul></li>
 </ul>
-<h4 id="O2-Cmax">1.3.8.7. O2 Cmax</h4><ul>
+<h4 id="o2-cmax">1.3.8.7. O2 Cmax</h4>
+<ul>
 <li><p><strong>Def</strong>: O2 Cmax</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191209140109624.png" alt></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191209140109624.png"></p>
 <ul>
 <li><p><strong>Algorithm</strong>: johnson</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191209140907161.png" alt></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191209140907161.png"></p>
 <ul>
-<li><p><strong>Qua</strong>: this is a feasible &amp; optimal solution </p>
+<li><p><strong>Qua</strong>: this is a feasible &amp; optimal solution</p>
 <p><strong>Proof</strong>:</p>
 <p>1.0) first prove that separatly they are feasible</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191209141513648.png" alt></p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191209141542578.png" alt></p>
-<p>2.0) then we combine those 2 and prove that they are still feasible </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191209141752683.png" alt></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191209141513648.png"></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191209141542578.png"></p>
+<p>2.0) then we combine those 2 and prove that they are still feasible</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191209141752683.png"></p>
 <p>3.0) prove optimal</p>
-<p>traverse through all possible solutions and get solution = lowerbound.</p>
-</li>
+<p>traverse through all possible solutions and get solution = lowerbound.</p></li>
+</ul></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="Jm-Cmax">1.3.8.8. Jm Cmax</h4><ul>
-<li><strong>Def</strong>:<ul>
-<li><strong>Qua</strong>: worst ratio &gt;= ….</li>
-</ul>
-</li>
-</ul>
-<h3 id="bin-packing">1.3.9. bin-packing</h3><ul>
-<li><p><strong>Def</strong>:  bin-packing problem</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191209150350412.png" alt></p>
+<h4 id="jm-cmax">1.3.8.8. Jm Cmax</h4>
 <ul>
-<li><p><strong>Qua</strong>: worst ratio $\geq$  1.5 </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191209150713548.png" alt></p>
-<p><strong>Proof</strong>:</p>
-</li>
-</ul>
-</li>
-</ul>
+<li><strong>Def</strong>:
 <ul>
+<li><strong>Qua</strong>: worst ratio &gt;= ....</li>
+</ul></li>
+</ul>
+<h3 id="bin-packing">1.3.9. bin-packing</h3>
+<ul>
+<li><p><strong>Def</strong>: bin-packing problem</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191209150350412.png"></p>
+<ul>
+<li><p><strong>Qua</strong>: worst ratio <span class="math inline">\(\geq\)</span> 1.5</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191209150713548.png"></p>
+<p><strong>Proof</strong>:</p></li>
 <li><p><strong>Algorithm</strong>: next fit ( influenced by sequence )</p>
-<p><strong>Note</strong>: fit =&gt; fill; not fit =&gt; new box </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191209150841499.png" alt></p>
+<p><strong>Note</strong>: fit =&gt; fill; not fit =&gt; new box</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191209150841499.png"></p>
 <ul>
-<li><p><strong>Qua</strong>: worst ratio = 2 </p>
+<li><p><strong>Qua</strong>: worst ratio = 2</p>
 <p><strong>Proof</strong>:</p>
-<p>1.0) ratio $\leq$ 2 ( from local =&gt; global )</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191209150932812.png" alt></p>
-<p>2.0) ratio $\geq$ 2 </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191209151006615.png" alt></p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p><strong>Algorithm</strong>: first fit </p>
+<p>1.0) ratio <span class="math inline">\(\leq\)</span> 2 ( from local =&gt; global )</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191209150932812.png"></p>
+<p>2.0) ratio <span class="math inline">\(\geq\)</span> 2</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191209151006615.png"></p></li>
+</ul></li>
+<li><p><strong>Algorithm</strong>: first fit</p>
 <p><strong>Note</strong>: 1 =&gt; j, fill the first fit or new bin</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191209152447015.png" alt></p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191209152522867.png" alt></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191209152447015.png"></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191209152522867.png"></p>
 <ul>
 <li><strong>Qua</strong>: worst ratio = 1.7</li>
-</ul>
-</li>
-</ul>
-<ul>
+</ul></li>
 <li><p><strong>Algorithm</strong>: first fit decreasing (FFD)</p>
-<p><strong>Note</strong>: sort non-increasing + first fit </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191209153330865.png" alt></p>
+<p><strong>Note</strong>: sort non-increasing + first fit</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191209153330865.png"></p>
 <ul>
-<li><p><strong>Qua</strong>: worst ratio = 1.5 </p>
-<p><strong>Proof</strong>: want to get upperbound for l =&gt; upperbound for pj and j </p>
-<p>1.0) prove ratio $\leq$ 1.5 </p>
-<p>1.1) prove upperbound for pj </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191209153735115.png" alt></p>
+<li><p><strong>Qua</strong>: worst ratio = 1.5</p>
+<p><strong>Proof</strong>: want to get upperbound for l =&gt; upperbound for pj and j</p>
+<p>1.0) prove ratio <span class="math inline">\(\leq\)</span> 1.5</p>
+<p>1.1) prove upperbound for pj</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191209153735115.png"></p>
 <p>1.2) prove upperbound for j</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191209153909364.png" alt></p>
-<p>1.3) =&gt; get result </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191209154014611.png" alt></p>
-<p>2.0) prove ratio $\geq$ 1.5</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191216150831349.png" alt></p>
-<p><strong>Note</strong>: relaxation can be made =&gt; $p_j \leq C/2$ will suffice ( see slides )</p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p><strong>Theorem</strong>:  $ratio_{forbinpacking} \geq 3/2$</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191216150918253.png" alt></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191209153909364.png"></p>
+<p>1.3) =&gt; get result</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191209154014611.png"></p>
+<p>2.0) prove ratio <span class="math inline">\(\geq\)</span> 1.5</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191216150831349.png"></p>
+<p><strong>Note</strong>: relaxation can be made =&gt; <span class="math inline">\(p_j \leq C/2\)</span> will suffice ( see slides )</p></li>
+</ul></li>
+</ul></li>
+<li><p><strong>Theorem</strong>: <span class="math inline">\(ratio_{forbinpacking} \geq 3/2\)</span></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191216150918253.png"></p>
 <p><strong>Proof</strong>: GAP-technique: use p reduction from partition problem, cc</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191216151147887.png" alt></p>
-</li>
+<p><img src="/2019/11/19/combinational-optimization/image-20191216151147887.png"></p></li>
 </ul>
-<h1 id="course-homework">2. course homework</h1><h2 id="specific-TSP-problem">2.1. specific TSP problem</h2><ul>
+<h1 id="course-homework">2. course homework</h1>
+<h2 id="specific-tsp-problem">2.1. specific TSP problem</h2>
+<ul>
 <li><p><strong>Def</strong>: tsp issue</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191125135058860.png" alt></p>
-</li>
+<p><img src="/2019/11/19/combinational-optimization/image-20191125135058860.png"></p></li>
 </ul>
-<h3 id="1-prove">2.1.1. 1) prove</h3><ul>
+<h3 id="prove">2.1.1. 1) prove</h3>
+<ul>
 <li><p><strong>Def</strong>: prove the following statment</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191125135106023.png" alt></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191125135106023.png"></p>
 <ul>
-<li><p><strong>solution</strong>: </p>
+<li><strong>solution</strong>:
 <ul>
-<li><p>y-x =1 </p>
+<li>y-x =1
 <ul>
-<li>say born in {1,…X}, have to go at least one time back&amp;forth to {X+1 …n}</li>
-</ul>
-</li>
-<li><p>y-x =2</p>
+<li>say born in {1,...X}, have to go at least one time back&amp;forth to {X+1 ...n}</li>
+</ul></li>
+<li>y-x =2
 <ul>
-<li>say born in {1…X}, can go to X+1-&gt; {X+2…n} -&gt; X, avoid 1 cost .</li>
+<li>say born in {1...X}, can go to X+1-&gt; {X+2...n} -&gt; X, avoid 1 cost .</li>
+</ul></li>
+</ul></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="2-prove-TSP">2.1.2. 2) prove TSP</h3><ul>
-<li><p><strong>Def</strong>:  prove TSP</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191125135113812.png" alt></p>
+<h3 id="prove-tsp">2.1.2. 2) prove TSP</h3>
 <ul>
-<li><strong>solution</strong>: <ul>
-<li>draw the symmetric matrix </li>
-<li>画图题：<ul>
+<li><p><strong>Def</strong>: prove TSP</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191125135113812.png"></p>
+<ul>
+<li><strong>solution</strong>:
+<ul>
+<li>draw the symmetric matrix</li>
+<li>画图题：
+<ul>
 <li>从对角线出发，y-x是距离对角线的距离，然后环游是两条y-x=1的对角线，画个图就ok。</li>
 <li>而且该环游刚好是下届，证完。</li>
+</ul></li>
+</ul></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="3-prove">2.1.3. 3) prove</h3><ul>
-<li><p><strong>Def</strong>: prove </p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191125135120265.png" alt></p>
+<h3 id="prove-1">2.1.3. 3) prove</h3>
 <ul>
-<li><strong>solution</strong>:<ul>
-<li><em>= min&lt;= sum min = </em> </li>
+<li><p><strong>Def</strong>: prove</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191125135120265.png"></p>
+<ul>
+<li><strong>solution</strong>:
+<ul>
+<li><em>= min&lt;= sum min = </em></li>
 <li>T(S) = constant</li>
+</ul></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="specific-sequencing-problem">2.2. specific sequencing problem</h2><ul>
+<h2 id="specific-sequencing-problem">2.2. specific sequencing problem</h2>
+<ul>
 <li><p><strong>Def</strong> :</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191125135126561.png" alt></p>
-</li>
+<p><img src="/2019/11/19/combinational-optimization/image-20191125135126561.png"></p></li>
 </ul>
-<h3 id="1-prove-in-NP">2.2.1. 1) prove $\in$ NP</h3><ul>
-<li><p><strong>Def</strong>: prove</p>
-<p><img src="/Users/huangbenson/Library/Application Support/typora-user-images/image-20191118144712934.png" alt></p>
+<h3 id="prove-in-np">2.2.1. 1) prove \(\in\) NP</h3>
 <ul>
-<li><strong>solution</strong>:<ul>
+<li><p><strong>Def</strong>: prove</p>
+<p><img src="/Users/huangbenson/Library/Application%20Support/typora-user-images/image-20191118144712934.png"></p>
+<ul>
+<li><strong>solution</strong>:
+<ul>
 <li>从np定义出发，计算input size</li>
+</ul></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="2-prove">2.2.2. 2) prove</h3><ul>
-<li><p><strong>Def</strong>: prove</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191125135133029.png" alt></p>
+<h3 id="prove-2">2.2.2. 2) prove</h3>
 <ul>
-<li><strong>solution</strong>:<ul>
-<li>从hamilton实例出发，构建作业：把顶点转为车子型号，无边则冲突，有边则不冲突<ul>
+<li><p><strong>Def</strong>: prove</p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191125135133029.png"></p>
+<ul>
+<li><strong>solution</strong>:
+<ul>
+<li>从hamilton实例出发，构建作业：把顶点转为车子型号，无边则冲突，有边则不冲突
+<ul>
 <li>当hamilton有解，则车子顺序有解</li>
 <li>当车子顺序有解，hamilton有解</li>
+</ul></li>
+</ul></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="3-write-in-linear-programming">2.2.3. 3) write in linear programming</h3><ul>
+<h3 id="write-in-linear-programming">2.2.3. 3) write in linear programming</h3>
+<ul>
 <li><p><strong>Def</strong>: 改写为数学规划</p>
 <ul>
-<li><p><strong>solution</strong>:</p>
+<li><strong>solution</strong>:
 <ul>
-<li><p>xjt = 1 当第t辆车形为j</p>
-</li>
-<li><p>$\sum_n xjt = nj j =1..k$ </p>
-</li>
-<li>sum j 1 to k sum t 1+sigma tp si + sigma xjt aij &lt;= ri for </li>
+<li><p>xjt = 1 当第t辆车形为j</p></li>
+<li><p><span class="math inline">\(\sum_n xjt = nj j =1..k\)</span></p></li>
+<li><p>sum j 1 to k sum t 1+sigma tp si + sigma xjt aij &lt;= ri for</p></li>
+</ul></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="MAX-SAT">2.3. MAX-SAT</h2><ul>
+<p>## MAX-SAT</p>
+<ul>
 <li><p><strong>Def</strong>:</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191125135139195.png" alt></p>
-</li>
+<p><img src="/2019/11/19/combinational-optimization/image-20191125135139195.png"></p></li>
 </ul>
-<h3 id="1-write-in-linear-programming">2.3.1. 1) write in linear programming</h3><ul>
+<h3 id="write-in-linear-programming-1">2.2.4. 1) write in linear programming</h3>
+<ul>
 <li><p><strong>Def</strong>: write in linear programming</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191125135145213.png" alt></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191125135145213.png"></p>
 <ul>
-<li><strong>Solution</strong>: </li>
+<li><strong>Solution</strong>:</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h2 id="specific-assign-problem">2.4. specific assign problem</h2><ul>
-<li><strong>Def</strong>: </li>
-</ul>
-<h3 id="1-write-in-integeral-programming">2.4.1. 1) write in integeral programming</h3><ul>
-<li><p><strong>Def</strong>: write in integeral programming </p>
+<h2 id="specific-assign-problem">2.3. specific assign problem</h2>
 <ul>
-<li><strong>Solution</strong>: <script type="math/tex; mode=display">
+<li><strong>Def</strong>:</li>
+</ul>
+<h3 id="write-in-integeral-programming">2.3.1. 1) write in integeral programming</h3>
+<ul>
+<li><p><strong>Def</strong>: write in integeral programming</p>
+<ul>
+<li><strong>Solution</strong>: <span class="math display">\[
 max P*X \\
 s.t. x_{ij} =0/1 \\
-\sum_{i,j=1}^{n} X _{ij}*j  \leq T</script></li>
+\sum_{i,j=1}^{n} X _{ij}*j  \leq T 
+\]</span></li>
+</ul></li>
+<li><p><strong>Note</strong>: loss function have to be linear</p></li>
 </ul>
-</li>
-<li><p><strong>Note</strong>: loss function have to be linear</p>
-</li>
-</ul>
-<h3 id="2-write-in-DP">2.4.2. 2) write in DP</h3><ul>
+<h3 id="write-in-dp">2.3.2. 2) write in DP</h3>
+<ul>
 <li><p><strong>Def</strong>: write in DP</p>
 <ul>
-<li><strong>Solution</strong>: say DP[i][t] = maximum outcome for [i: end] with a budge of t . <script type="math/tex; mode=display">
+<li><strong>Solution</strong>: say DP[i][t] = maximum outcome for [i: end] with a budge of t . <span class="math display">\[
 \begin{equation}  
 DP[i][t] = \left\{  
              \begin{array}{**lr**}  
-                max_j(DP[i-1][t-j]+p_{ij}) &j=1...t  \\  
-             p _{it}, & \text{if (i == n)} \\      
+                max_j(DP[i-1][t-j]+p_{ij}) &amp;j=1...t  \\  
+             p _{it}, &amp; \text{if (i == n)} \\      
              \end{array}  
 \right.  
-\end{equation}</script></li>
+\end{equation} 
+\]</span></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h2 id="specific-clique-problem">2.5. specific clique problem</h2><ul>
-<li><strong>Def</strong>: </li>
-</ul>
-<h3 id="1-prove-trivial">2.5.1. 1) prove trivial</h3><h3 id="2-prove-NP-hard">2.5.2. 2) prove NP-hard</h3><h3 id="3-give-a-algorithm-of-ratio-2">2.5.3. 3) give a algorithm of ratio = 2</h3><ul>
-<li><p><strong>Def</strong>: given a matching algorithm derive an algorithm for min vertex cover ratio = 2 </p>
+<h2 id="specific-clique-problem">2.4. specific clique problem</h2>
 <ul>
-<li><p><strong>Solution</strong>: add all max matching vertex $M_v$ to result.</p>
-<p><strong>Proof</strong>: valid algorithm &amp;&amp; ratio = 2 </p>
-<p>1) prove by contradiction that if matching vectexs do not necessarily cover all edges, it’s not a max matching.</p>
-<p>2) $\frac{C ^{A} }{C ^{<em>}}=\frac{M_V}{V ^{</em>} } \leq \frac{2*M_E}{M_E} = 2  $</p>
-</li>
+<li><strong>Def</strong>:</li>
 </ul>
-</li>
+<h3 id="prove-trivial">2.4.1. 1) prove trivial</h3>
+<h3 id="prove-np-hard">2.4.2. 2) prove NP-hard</h3>
+<h3 id="give-a-algorithm-of-ratio-2">2.4.3. 3) give a algorithm of ratio = 2</h3>
+<ul>
+<li><p><strong>Def</strong>: given a matching algorithm derive an algorithm for min vertex cover ratio = 2</p>
+<ul>
+<li><p><strong>Solution</strong>: add all max matching vertex <span class="math inline">\(M_v\)</span> to result.</p>
+<p><strong>Proof</strong>: valid algorithm &amp;&amp; ratio = 2</p>
+<ol type="1">
+<li><p>prove by contradiction that if matching vectexs do not necessarily cover all edges, it's not a max matching.</p></li>
+<li><p>$=  = 2 $</p></li>
+</ol></li>
+</ul></li>
 </ul>
-<h3 id="4-prove-trivial">2.5.4. 4) prove trivial</h3><ul>
+<h3 id="prove-trivial-1">2.4.4. 4) prove trivial</h3>
+<ul>
 <li><strong>Def</strong>: prove ratio bounds, proof is trivial</li>
 </ul>
-<h2 id="specific-subset-sum">2.6. specific subset sum</h2><ul>
-<li><strong>Def</strong>: …</li>
-</ul>
-<h3 id="1-give-an-algorithm">2.6.1. 1) give an algorithm</h3><ul>
-<li><strong>Def</strong>: trivial </li>
-</ul>
-<h3 id="2-prove-statement">2.6.2. 2) prove statement</h3><ul>
-<li><p><strong>Def</strong>: prove…</p>
+<h2 id="specific-subset-sum">2.5. specific subset sum</h2>
 <ul>
-<li><strong>Solution</strong>: prove by contradiction <script type="math/tex; mode=display">
-l(T_1)/l(T_2) > a + l(T_3)/l(T_1) > a => \\
-l(T_3)/l(T_2) > a^2 =>  \\ 
-S_k > (a^2 -1 )S_{k+1} \geq (a^3-a)S_k =>contradiction</script></li>
+<li><strong>Def</strong>: ...</li>
 </ul>
-</li>
-</ul>
-<h3 id="3-give-an-alpha-algorithm">2.6.3. 3) give an $\alpha$- algorithm</h3><ul>
-<li><p><strong>Def</strong>: …</p>
+<h3 id="give-an-algorithm">2.5.1. 1) give an algorithm</h3>
 <ul>
-<li><p><strong>Solution</strong>: </p>
-<p>1) if a =&gt; select Sk and Sk+1 </p>
-<p>2) if b =&gt; use 2.6.1 </p>
-<p>3) if !(a || b) =&gt; use 2.6.2, since $C^* \geq 1$ and we can always find $C_A \leq a$ , so worst ratio $\leq a$</p>
-</li>
+<li><strong>Def</strong>: trivial</li>
 </ul>
-</li>
+<h3 id="prove-statement">2.5.2. 2) prove statement</h3>
+<ul>
+<li><p><strong>Def</strong>: prove...</p>
+<ul>
+<li><strong>Solution</strong>: prove by contradiction <span class="math display">\[
+l(T_1)/l(T_2) &gt; a + l(T_3)/l(T_1) &gt; a =&gt; \\
+l(T_3)/l(T_2) &gt; a^2 =&gt;  \\ 
+S_k &gt; (a^2 -1 )S_{k+1} \geq (a^3-a)S_k =&gt;contradiction
+\]</span></li>
+</ul></li>
+</ul>
+<h3 id="give-an-alpha--algorithm">2.5.3. 3) give an \(\alpha\)- algorithm</h3>
+<ul>
+<li><p><strong>Def</strong>: ...</p>
+<ul>
+<li><p><strong>Solution</strong>:</p>
+<ol type="1">
+<li><p>if a =&gt; select Sk and Sk+1</p></li>
+<li><p>if b =&gt; use 2.6.1</p></li>
+<li><p>if !(a || b) =&gt; use 2.6.2, since <span class="math inline">\(C^* \geq 1\)</span> and we can always find <span class="math inline">\(C_A \leq a\)</span> , so worst ratio <span class="math inline">\(\leq a\)</span></p></li>
+</ol></li>
+</ul></li>
 </ul>
 
       
@@ -1684,8 +1580,8 @@ S_k > (a^2 -1 )S_{k+1} \geq (a^3-a)S_k =>contradiction</script></li>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/19/Complexity_Theory/" rel="next" title="Complexity Theory">
-                <i class="fa fa-chevron-left"></i> Complexity Theory
+              <a href="/2019/11/19/compiler/" rel="next" title="Compiler Principle">
+                <i class="fa fa-chevron-left"></i> Compiler Principle
               </a>
             
           </div>
@@ -1694,8 +1590,8 @@ S_k > (a^2 -1 )S_{k+1} \geq (a^3-a)S_k =>contradiction</script></li>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/19/Probability/" rel="prev" title="Probability Theory">
-                Probability Theory <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/19/c++/" rel="prev" title="C++">
+                C++ <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -1788,7 +1684,7 @@ S_k > (a^2 -1 )S_{k+1} \geq (a^3-a)S_k =>contradiction</script></li>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1810,7 +1706,7 @@ S_k > (a^2 -1 )S_{k+1} \geq (a^3-a)S_k =>contradiction</script></li>
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -1899,7 +1795,7 @@ S_k > (a^2 -1 )S_{k+1} \geq (a^3-a)S_k =>contradiction</script></li>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#linear-programming"><span class="nav-text">1. linear programming</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#type"><span class="nav-text">1.1. type</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#integer-programming"><span class="nav-text">1.1.1. integer programming</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#solution-to-linear-programming"><span class="nav-text">1.2. solution to linear programming</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#general-procedure-for-solving"><span class="nav-text">1.2.1. general procedure for solving</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linear-programming-method"><span class="nav-text">1.2.2. linear programming method</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#simplex-method"><span class="nav-text">1.2.2.1. simplex method</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#graphics-method"><span class="nav-text">1.2.2.2. graphics method</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cutting-plane-method"><span class="nav-text">1.2.2.3. cutting plane method</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#search-based-method"><span class="nav-text">1.2.3. search-based method</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#computer-theory"><span class="nav-text">1.2.3.1. computer theory</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#implementing-techs"><span class="nav-text">1.2.3.2. implementing techs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#method"><span class="nav-text">1.2.3.3. method</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#bfs"><span class="nav-text">1.2.3.3.1. bfs</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#dfs"><span class="nav-text">1.2.3.3.2. dfs</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#backtracking"><span class="nav-text">1.2.3.3.3. backtracking</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#dynamic-programming"><span class="nav-text">1.2.3.3.4. dynamic programming</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#branch-amp-bound"><span class="nav-text">1.2.3.3.5. branch &amp; bound</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#greedy-search"><span class="nav-text">1.2.3.3.6. greedy search</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#A"><span class="nav-text">1.2.3.3.7. A*</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#B"><span class="nav-text">1.2.3.3.8. B*</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#D"><span class="nav-text">1.2.3.3.9. D*</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#IDA"><span class="nav-text">1.2.3.3.10. IDA*</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#approximation-method"><span class="nav-text">1.2.4. approximation method</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#computer-theory-1"><span class="nav-text">1.2.4.1. computer theory</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#specific-question"><span class="nav-text">1.3. specific question</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#subset-sum"><span class="nav-text">1.3.1. subset sum</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#backpack-problem"><span class="nav-text">1.3.2. backpack problem</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#dp1"><span class="nav-text">1.3.2.1. dp1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#dp2"><span class="nav-text">1.3.2.2. dp2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#branch-amp-bound-1"><span class="nav-text">1.3.2.3. branch &amp; bound</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#greedy"><span class="nav-text">1.3.2.4. greedy</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#improving-greedy"><span class="nav-text">1.3.2.5. improving greedy</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PTAS"><span class="nav-text">1.3.2.6. PTAS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#FPTAS"><span class="nav-text">1.3.2.7. FPTAS</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#assignment-problem-amp-TSP"><span class="nav-text">1.3.3. assignment problem &amp; TSP</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#assignment-problem"><span class="nav-text">1.3.3.1. assignment problem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tsp-problem"><span class="nav-text">1.3.3.2. tsp problem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#metric-TSP"><span class="nav-text">1.3.3.3. metric TSP</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#spanning-tree"><span class="nav-text">1.3.3.3.1. spanning tree</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#christofides"><span class="nav-text">1.3.3.3.2. christofides</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shortest-path"><span class="nav-text">1.3.4. shortest path</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#naive-shortest-path"><span class="nav-text">1.3.4.1. naive shortest path</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#take-out-problem-specific-shortest-path"><span class="nav-text">1.3.4.2. take-out problem (specific shortest path)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#minimum-matching"><span class="nav-text">1.3.5. minimum matching</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vertex-cover"><span class="nav-text">1.3.6. vertex cover</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#partition-problem"><span class="nav-text">1.3.7. partition problem</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#subset-partition"><span class="nav-text">1.3.7.1. subset partition</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#product-partition"><span class="nav-text">1.3.7.2. product partition</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scheduling"><span class="nav-text">1.3.8. scheduling</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#P1-Cj-Cmax-L1max-Tj-Uj"><span class="nav-text">1.3.8.1. P1 Cj, Cmax, L1max, Tj, Uj</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#C-max-or-sum-n-1-infty-C-j"><span class="nav-text">1.3.8.1.1. $C_{max}$ or $\sum_{n=1}^{\infty} C_j$</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#L1max-Tj-Uj"><span class="nav-text">1.3.8.1.2. L1max, Tj, Uj</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Pm-Cmax-Cmin"><span class="nav-text">1.3.8.2. Pm Cmax, Cmin</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#P-Cmax"><span class="nav-text">1.3.8.3. P Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#F2-Cmax"><span class="nav-text">1.3.8.4. F2 Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#F3-Cmax"><span class="nav-text">1.3.8.5. F3 Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Fm-Cmax"><span class="nav-text">1.3.8.6. Fm Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#O2-Cmax"><span class="nav-text">1.3.8.7. O2 Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Jm-Cmax"><span class="nav-text">1.3.8.8. Jm Cmax</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bin-packing"><span class="nav-text">1.3.9. bin-packing</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#course-homework"><span class="nav-text">2. course homework</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#specific-TSP-problem"><span class="nav-text">2.1. specific TSP problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-prove"><span class="nav-text">2.1.1. 1) prove</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-prove-TSP"><span class="nav-text">2.1.2. 2) prove TSP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-prove"><span class="nav-text">2.1.3. 3) prove</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#specific-sequencing-problem"><span class="nav-text">2.2. specific sequencing problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-prove-in-NP"><span class="nav-text">2.2.1. 1) prove $\in$ NP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-prove"><span class="nav-text">2.2.2. 2) prove</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-write-in-linear-programming"><span class="nav-text">2.2.3. 3) write in linear programming</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MAX-SAT"><span class="nav-text">2.3. MAX-SAT</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-write-in-linear-programming"><span class="nav-text">2.3.1. 1) write in linear programming</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#specific-assign-problem"><span class="nav-text">2.4. specific assign problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-write-in-integeral-programming"><span class="nav-text">2.4.1. 1) write in integeral programming</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-write-in-DP"><span class="nav-text">2.4.2. 2) write in DP</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#specific-clique-problem"><span class="nav-text">2.5. specific clique problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-prove-trivial"><span class="nav-text">2.5.1. 1) prove trivial</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-prove-NP-hard"><span class="nav-text">2.5.2. 2) prove NP-hard</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-give-a-algorithm-of-ratio-2"><span class="nav-text">2.5.3. 3) give a algorithm of ratio = 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-prove-trivial"><span class="nav-text">2.5.4. 4) prove trivial</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#specific-subset-sum"><span class="nav-text">2.6. specific subset sum</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-give-an-algorithm"><span class="nav-text">2.6.1. 1) give an algorithm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-prove-statement"><span class="nav-text">2.6.2. 2) prove statement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-give-an-alpha-algorithm"><span class="nav-text">2.6.3. 3) give an $\alpha$- algorithm</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#linear-programming"><span class="nav-text">1. linear programming</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#type"><span class="nav-text">1.1. type</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#integer-programming"><span class="nav-text">1.1.1. integer programming</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#solution-to-linear-programming"><span class="nav-text">1.2. solution to linear programming</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#general-procedure-for-solving"><span class="nav-text">1.2.1. general procedure for solving</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linear-programming-method"><span class="nav-text">1.2.2. linear programming method</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#simplex-method"><span class="nav-text">1.2.2.1. simplex method</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#graphics-method"><span class="nav-text">1.2.2.2. graphics method</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cutting-plane-method"><span class="nav-text">1.2.2.3. cutting plane method</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#search-based-method"><span class="nav-text">1.2.3. search-based method</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#computer-theory"><span class="nav-text">1.2.3.1. computer theory</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#implementing-techs"><span class="nav-text">1.2.3.2. implementing techs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#method"><span class="nav-text">1.2.3.3. method</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#bfs"><span class="nav-text">1.2.3.3.1. bfs</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#dfs"><span class="nav-text">1.2.3.3.2. dfs</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#backtracking"><span class="nav-text">1.2.3.3.3. backtracking</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#dynamic-programming"><span class="nav-text">1.2.3.3.4. dynamic programming</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#branch-bound"><span class="nav-text">1.2.3.3.5. branch &amp; bound</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#greedy-search"><span class="nav-text">1.2.3.3.6. greedy search</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#a"><span class="nav-text">1.2.3.3.7. A*</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#b"><span class="nav-text">1.2.3.3.8. B*</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#d"><span class="nav-text">1.2.3.3.9. D*</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ida"><span class="nav-text">1.2.3.3.10. IDA*</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#approximation-method"><span class="nav-text">1.2.4. approximation method</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#computer-theory-1"><span class="nav-text">1.2.4.1. computer theory</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#specific-question"><span class="nav-text">1.3. specific question</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#subset-sum"><span class="nav-text">1.3.1. subset sum</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#backpack-problem"><span class="nav-text">1.3.2. backpack problem</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#dp1"><span class="nav-text">1.3.2.1. dp1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#dp2"><span class="nav-text">1.3.2.2. dp2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#branch-bound-1"><span class="nav-text">1.3.2.3. branch &amp; bound</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#greedy"><span class="nav-text">1.3.2.4. greedy</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#improving-greedy"><span class="nav-text">1.3.2.5. improving greedy</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ptas"><span class="nav-text">1.3.2.6. PTAS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fptas"><span class="nav-text">1.3.2.7. FPTAS</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#assignment-problem-tsp"><span class="nav-text">1.3.3. assignment problem &amp; TSP</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#assignment-problem"><span class="nav-text">1.3.3.1. assignment problem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tsp-problem"><span class="nav-text">1.3.3.2. tsp problem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#metric-tsp"><span class="nav-text">1.3.3.3. metric TSP</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#spanning-tree"><span class="nav-text">1.3.3.3.1. spanning tree</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#christofides"><span class="nav-text">1.3.3.3.2. christofides</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shortest-path"><span class="nav-text">1.3.4. shortest path</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#naive-shortest-path"><span class="nav-text">1.3.4.1. naive shortest path</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#take-out-problem-specific-shortest-path"><span class="nav-text">1.3.4.2. take-out problem (specific shortest path)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#minimum-matching"><span class="nav-text">1.3.5. minimum matching</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vertex-cover"><span class="nav-text">1.3.6. vertex cover</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#partition-problem"><span class="nav-text">1.3.7. partition problem</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#subset-partition"><span class="nav-text">1.3.7.1. subset partition</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#product-partition"><span class="nav-text">1.3.7.2. product partition</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scheduling"><span class="nav-text">1.3.8. scheduling</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#p1-cj-cmax-l1max-tj-uj"><span class="nav-text">1.3.8.1. P1 Cj, Cmax, L1max, Tj, Uj</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#c_max-or-sum_n1infty-c_j"><span class="nav-text">1.3.8.1.1. \(C_{max}\) or \(\sum_{n=1}^{\infty} C_j\)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#l1max-tj-uj"><span class="nav-text">1.3.8.1.2. L1max, Tj, Uj</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pm-cmax-cmin"><span class="nav-text">1.3.8.2. Pm Cmax, Cmin</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#p-cmax"><span class="nav-text">1.3.8.3. P Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#f2-cmax"><span class="nav-text">1.3.8.4. F2 Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#f3-cmax"><span class="nav-text">1.3.8.5. F3 Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fm-cmax"><span class="nav-text">1.3.8.6. Fm Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#o2-cmax"><span class="nav-text">1.3.8.7. O2 Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jm-cmax"><span class="nav-text">1.3.8.8. Jm Cmax</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bin-packing"><span class="nav-text">1.3.9. bin-packing</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#course-homework"><span class="nav-text">2. course homework</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#specific-tsp-problem"><span class="nav-text">2.1. specific TSP problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#prove"><span class="nav-text">2.1.1. 1) prove</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prove-tsp"><span class="nav-text">2.1.2. 2) prove TSP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prove-1"><span class="nav-text">2.1.3. 3) prove</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#specific-sequencing-problem"><span class="nav-text">2.2. specific sequencing problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#prove-in-np"><span class="nav-text">2.2.1. 1) prove \(\in\) NP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prove-2"><span class="nav-text">2.2.2. 2) prove</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#write-in-linear-programming"><span class="nav-text">2.2.3. 3) write in linear programming</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#write-in-linear-programming-1"><span class="nav-text">2.2.4. 1) write in linear programming</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#specific-assign-problem"><span class="nav-text">2.3. specific assign problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#write-in-integeral-programming"><span class="nav-text">2.3.1. 1) write in integeral programming</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#write-in-dp"><span class="nav-text">2.3.2. 2) write in DP</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#specific-clique-problem"><span class="nav-text">2.4. specific clique problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#prove-trivial"><span class="nav-text">2.4.1. 1) prove trivial</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prove-np-hard"><span class="nav-text">2.4.2. 2) prove NP-hard</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#give-a-algorithm-of-ratio-2"><span class="nav-text">2.4.3. 3) give a algorithm of ratio = 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prove-trivial-1"><span class="nav-text">2.4.4. 4) prove trivial</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#specific-subset-sum"><span class="nav-text">2.5. specific subset sum</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#give-an-algorithm"><span class="nav-text">2.5.1. 1) give an algorithm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prove-statement"><span class="nav-text">2.5.2. 2) prove statement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#give-an-alpha--algorithm"><span class="nav-text">2.5.3. 3) give an \(\alpha\)- algorithm</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
