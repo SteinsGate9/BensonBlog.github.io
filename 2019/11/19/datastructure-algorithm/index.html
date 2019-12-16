@@ -141,7 +141,7 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;datastructure-algorithm&#x2F;image-20191203164455493.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;datastructure-algorithm&#x2F;image-20191210210016705.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;datastructure-algorithm&#x2F;image-20191216000231804.png">
-<meta property="og:updated_time" content="2019-12-16T11:01:39.817Z">
+<meta property="og:updated_time" content="2019-12-16T12:27:40.825Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;datastructure-algorithm&#x2F;image-20191203164455493.png">
 
@@ -443,7 +443,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  4.8k
+                  5k
                 </span>
               
 
@@ -459,7 +459,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  29
+                  30
                 </span>
               
             </div>
@@ -553,24 +553,20 @@
 <ul>
 <li>key:
 <ul>
-<li>observation:
-<ul>
-<li>注意这个算法只是（只改变一次的最优策略）这种情况，并非改变（改变最少次数）的全局最优。所以是局部最优解，但是考虑到只改变一次这种情况，就是i j出问题，那么解决i, j 必然要1次的变动。如果能用一次解决，所以改变i或者j其中一个一定能解决这个问题。所以考虑改变i和j能解决问题的区别，在默认改变一次能解决所有问题的假设下，只有一种情况改变j才能解决：就是以下情况。所以才这么做。</li>
-<li>以上解释太蠢了，我们直接把所有四种情况能用一次改变解决的画出来即可，然后设计一个算法解决它，如果这个算法能解决，那么必然符合情况，不能解决就不符合。</li>
-<li>that for every xi &gt; xj (i &lt; j), either i or j have to be changed, and of course we want i to change since i decrease can at most amend (n-i) relationships, and j increase may at most amend j relationships. since we go from i=0 to n-1, the left side of i we assume is already fixed. the only condition we prefer j over i is that j can change both i-k, i-m. so we push j into a set to prevent that from happening.</li>
-</ul></li>
+<li><p>observation:</p>
+<ol start="0" type="1">
+<li><p>注意这个算法只是（只改变一次的最优策略）这种情况，并非改变（改变最少次数）的全局最优。所以是局部最优解，但是考虑到只改变一次这种情况，就是i j出问题，那么解决i, j 必然要1次的变动。如果能用一次解决，所以改变i或者j其中一个一定能解决这个问题。所以考虑改变i和j能解决问题的区别，在默认改变一次能解决所有问题的假设下，只有一种情况改变j才能解决：就是以下情况。所以才这么做。</p></li>
+<li><p>以上解释太蠢了，我们直接把所有四种情况能用一次改变解决的画出来即可，然后设计一个算法解决它，如果这个算法能解决，那么必然符合情况，不能解决就不符合。</p></li>
+<li><p>that for every xi &gt; xj (i &lt; j), either i or j have to be changed, and of course we want i to change since i decrease can at most amend (n-i) relationships, and j increase may at most amend j relationships. since we go from i=0 to n-1, the left side of i we assume is already fixed. the only condition we prefer j over i is that j can change both i-k, i-m. so we push j into a set to prevent that from happening.</p></li>
+</ol></li>
 </ul></li>
 </ul>
 <h2 id="linked-list">2.4. linked list</h2>
 <h3 id="no.21-iterate-merge-2-list">2.4.1. no.21 iterate &amp; merge 2 list</h3>
 <ul>
-<li>key:
+<li>careful:
 <ul>
-<li>improvement: difference between while &amp; for
-<ul>
-<li>while: more flexible</li>
-<li>for: be very carefull when operating linked list since for have this delayed feature.</li>
-</ul></li>
+<li>difference between while &amp; for , while: more flexible, for: be very carefull when operating linked list since for have this delayed feature.</li>
 </ul></li>
 </ul>
 <h2 id="stack-1">2.5. stack</h2>
@@ -582,9 +578,9 @@
 <ul>
 <li><p>observation: first we need to observe that skyrim point is on every point when maximum height changes.</p>
 <p><img src="/2019/11/19/datastructure-algorithm/image-20191210210016705.png"></p>
-<p>thus, our priority is to efficiently update every maximum height.</p>
-<p>algorithm1: we can do linear check =&gt; O(n + m*p)</p>
-<p>algorithm2: we can do linear check with a heap so that we don't have to recheck the overlapping space, =&gt;O(n+ m *log(m/2))</p></li>
+<p>thus, our priority is to efficiently update every maximum height.</p></li>
+<li><p>algorithm1: we can do linear check =&gt; O(n + m*p)</p></li>
+<li><p>algorithm2: we can do linear check with a heap so that we don't have to recheck the overlapping space, =&gt;O(n+ m *log(m/2))</p></li>
 </ul></li>
 <li><p>carefull</p>
 <ul>
@@ -707,8 +703,10 @@
 <li><p>key:</p>
 <ul>
 <li><p>observation: use subproblem: maxsum(i, j) = max(local(0~i)) local(i) = max(local[i-1], local[i-1]+xx), n subproblems, o(n).</p></li>
-<li><p>equivalent implement: math trick: think about the features about problem before solving it: in this problem, you can see if optimal = sum(i, j) that we must have every sum(i-k, i) &lt; 0. therefore our priority is to set the starting point at i and it will turn to a O(n). so we only have to set sum = 0 if we sum &lt;0 (which means start over from a new point) then it suffices to prove that the algorithm will let us start at i which yields the optimal.</p></li>
-<li><p>more advaned algorithm: use <span class="math inline">\(ms=max(sum(j)-sum(i))\)</span> so we save the $min(k) k&lt;i $ during the loop and it's done.... so easy. this solution have nothing to do with dp.</p></li>
+<li><p>equivalent implement: math trick: think about the features about problem before solving it: in this problem, you can see if optimal = sum(i, j) that we must have every sum(i-k, i) &lt; 0. therefore our priority is to set the starting point at i and it will turn to a O(n). so we only have to set sum = 0 if we sum &lt;0 (which means start over from a new point) then it suffices to prove that the algorithm will let us start at i which yields the optimal.</p>
+<ul>
+<li>more advaned algorithm: use <span class="math inline">\(ms=max(sum(j)-sum(i))\)</span> so we save the $min(k) k&lt;i $ during the loop and it's done.... so easy. this solution have nothing to do with dp.</li>
+</ul></li>
 </ul></li>
 </ul>
 <h3 id="maxi-j">2.9.4. 392. max(i, j)</h3>
@@ -777,7 +775,7 @@ matrix[i][j]=
 <li><p>key</p>
 <ul>
 <li><p>observation: separate the problem to sub[i-1] + xxx = sub[i]</p>
-<ol start="0" type="1">
+<ol type="1">
 <li><p>we think about this problem from i-1 to i: that if we set DL, how about DLD?</p></li>
 <li><p>we think of matrix[i][j] means the i th element is the jth largest among all string, then we can use DL to indicate the [i+1][j] from ith, that if D=&gt; we add matrixi[j] to all matrix i+1[&lt;j], but here's the problem we don't have the ability to solve the duplicate issue.</p></li>
 <li><p>so we improve 1) by setting j = sizeofstring+1-i and contains the jth largest of the rest of string. the reason we do this is we don't have to worry about duplicate, since the i and j suffices m[i][j] = jth ... = <strong>sum of all m[i-1]</strong> ; and the final matrix[size][1] = size*(size-1)*(size-2) ... = all possible, so we can choose who to pick from level i-1 only by "DL" string. And we can see that setting in 1) do not satisty this sum of propagation which means we have to choose who to sum up not only from the string but also considering whether there is duplicated element, which is a big problem.</p></li>
@@ -792,20 +790,22 @@ matrix[i][j]=\left\{
 \right.  
 \end{equation}
 \]</span></p></li>
-</ul></li>
-<li><p>algorithm2: we get 0~i-1 permutation(i-1 substring), we do sth to get i permutation(i substring)</p>
+<li><p>algorithm2:</p>
 <ol start="0" type="1">
-<li>let's say <code>dp[i][j]</code> represents the number of permutation of number <code>0, 1, ... , i</code> which ends with <code>j</code>. Also, it represents the answer of <code>s.substring(0, i)</code> which ends with <code>j</code> . this actually stems from the brilliant idea that we first use 0 to i-1 permutation and add 1 to those &gt;= j where j is the the end of i permutation. This works because the only cases where +1 will destroy the order is when j = k+1 and permu(i) - permu(k) = +-1 (e.g. 23) and by adding &gt;= j, the order of 23 will not change, therefore it's safe to add the 1 to i-1 permutation and get i permutation. therefore we have the equation below $$ \begin{equation}</li>
+<li>we get 0~i-1 permutation(i-1 substring), we do sth to get i permutation(i substring)</li>
 </ol>
-<p>dp[i][j]={<br>
-</p>
-<span class="math display">\[\begin{array}{**lr**}  
+<p>let's say <code>dp[i][j]</code> represents the number of permutation of number <code>0, 1, ... , i</code> which ends with <code>j</code>. Also, it represents the answer of <code>s.substring(0, i)</code> which ends with <code>j</code> . this actually stems from the brilliant idea that we first use 0 to i-1 permutation and add 1 to those &gt;= j where j is the the end of i permutation. This works because the only cases where +1 will destroy the order is when j = k+1 and permu(i) - permu(k) = +-1 (e.g. 23) and by adding &gt;= j, the order of 23 will not change, therefore it's safe to add the 1 to i-1 permutation and get i permutation. therefore we have the equation below <span class="math display">\[
+dp[i][j]=\left\{  
+               \begin{array}{**lr**}  
               sum(dp[i - 1][0], dp[i - 1][1], ... , dp[i - 1][j - 1]). &amp; \text{s.charAt(i - 1) == &#39;I&#39;: I}\\
-                          sum(dp[i - 1][j], dp[i - 1][j + 1], ... , dp[i - 1][i - 1]). &amp; \text{s.charAt(i - 1) == &#39;D&#39;:} 
-               \end{array}\]</span>
-<p>.<br>
-\end{equation} $$</p></li>
-<li><p>the above 2 algorithms stems from the same D&amp;C intuition, but they construct by different ways algorithm1 construct a string by directly saying that what should be the end of the first elements of the final string. algorithm2 construct a string with a subset of permutation however following the same rule and construct a larger string by that. algorithm1 is more intuitive, algorithm2 takes more time to think about and prove it's correctness.</p></li>
+                        sum(dp[i - 1][j], dp[i - 1][j + 1], ... , dp[i - 1][i - 1]). &amp; \text{s.charAt(i - 1) == &#39;D&#39;:} 
+               \end{array}  
+  \right.
+\]</span></p>
+<ol type="1">
+<li>the above 2 algorithms stems from the same D&amp;C intuition, but they construct by different ways algorithm1 construct a string by directly saying that what should be the end of the first elements of the final string. algorithm2 construct a string with a subset of permutation however following the same rule and construct a larger string by that. algorithm1 is more intuitive, algorithm2 takes more time to think about and prove it's correctness.</li>
+</ol></li>
+</ul></li>
 </ul>
 <h3 id="burst-balloons">2.9.10. 312. Burst Balloons</h3>
 <ul>
@@ -850,8 +850,8 @@ d[i][j] = \max \limits_{k \in[1,n-2]} d[i][k-1] + d[k+1][j] +s[i]s[k]s[j]
 <ul>
 <li>key:
 <ul>
-<li>observation: is easy =&gt; 4^n algorithm, no other way?</li>
-<li>=&gt; cur[i+?] = cur[i] +-* cur[i:r]; and be careful that when cur[i:r] start with 0 such as 01 =&gt; it can't be treated as a number, so we skip it .</li>
+<li><p>observation: is easy =&gt; 4^n algorithm, no other way?</p>
+<p>=&gt; cur[i+?] = cur[i] +-* cur[i:r]; and be careful that when cur[i:r] start with 0 such as 01 =&gt; it can't be treated as a number, so we skip it .</p></li>
 </ul></li>
 </ul>
 <h3 id="count-of-smaller-numbers-after-self-from-dc-1">2.10.2. 315. Count of Smaller Numbers After Self (from D&amp;C)</h3>
@@ -949,7 +949,22 @@ d[i][j] = \max \limits_{k \in[1,n-2]} d[i][k-1] + d[k+1][j] +s[i]s[k]s[j]
 <ul>
 <li><p>key:</p>
 <ul>
-<li>observation: if the previous <em>(say i-1 th ) is set, and we meet the ith </em>, then if * doesn't meet demands, then we don't need to go back to i-1. this can be proved by constract. so we use a greedy DFS(add trimming) to solve this.</li>
+<li><p>observation: if the previous <em>(say i-1 th ) is set, and we meet the ith </em>, then if * doesn't meet demands, then we don't need to go back to i-1. this can be proved by constract. so we use a greedy DFS(add trimming) to solve this.</p></li>
+<li><p>algorithm2: the above algorithm can be implemented in iteration, we have the following 5 conditions:</p>
+<ol type="1">
+<li><p>if s==p or p =='?', we move +1</p></li>
+<li><p>if p=='*', we record/update the position now for future usage</p></li>
+<li><p>if s!=p</p></li>
+</ol>
+<p>(3.1) if we met * before, go back</p>
+<p>(3.2) if we haven't, return false.</p>
+<ol start="4" type="1">
+<li><p>if p is empty, return true.</p></li>
+<li><p>if s is empty (out of while),</p></li>
+</ol>
+<p>(5.1) if p consist only of "*", return true.</p>
+<p>(5.2) if not, return false.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isMatch</span><span class="params">(<span class="built_in">string</span> s, <span class="built_in">string</span> p)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">auto</span> sp = s.<span class="built_in">begin</span>(), pp = p.<span class="built_in">begin</span>(), spp = s.<span class="built_in">end</span>()+<span class="number">1</span>, ppp = p.<span class="built_in">end</span>();</span><br><span class="line">  <span class="keyword">while</span> (sp != s.<span class="built_in">end</span>())&#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;s.substr(sp-s.<span class="built_in">begin</span>()) &lt;&lt;<span class="string">" "</span>&lt;&lt;p.substr(pp-p.<span class="built_in">begin</span>())&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">if</span> (*sp==*pp || *pp==<span class="string">'?'</span>) &#123;sp++; pp++;&#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (*pp == <span class="string">'*'</span>) &#123;spp = sp+<span class="number">1</span>; ppp = ++pp;&#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (spp != s.<span class="built_in">end</span>()+<span class="number">1</span>) &#123;sp = spp++; pp = ppp;&#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">while</span> (*pp == <span class="string">'*'</span>) pp++;</span><br><span class="line">  <span class="keyword">if</span> (pp == p.<span class="built_in">end</span>()) <span class="keyword">return</span> <span class="literal">true</span>; <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul></li>
 </ul>
 <h2 id="breadth-first-search">2.11. breadth first search</h2>
@@ -1077,9 +1092,11 @@ d[i][j] = \max \limits_{k \in[1,n-2]} d[i][k-1] + d[k+1][j] +s[i]s[k]s[j]
 </ul>
 <h2 id="brutal">2.13. brutal</h2>
 <h3 id="binary-watch-2">2.13.1. 401. Binary Watch</h3>
+<ul>
+<li>key: ez</li>
+</ul>
 <h3 id="maximum-length-of-a-concatenated-string-with-unique-characters">2.13.2. 1239. Maximum Length of a Concatenated String with Unique Characters</h3>
 <ul>
-<li><p>key</p></li>
 <li><p>trick: a great way to do exhaustion for all 0/1 pairs (01010101).</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(n bits)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (i = all stored sized)&#123;</span><br><span class="line"></span><br><span class="line">  	stored.push_back(a | b)  <span class="comment">// every time push back same size of stored(size x 2) and stored are the all permutations of example.</span></span><br><span class="line"></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
@@ -1102,7 +1119,7 @@ d[i][j] = \max \limits_{k \in[1,n-2]} d[i][k-1] + d[k+1][j] +s[i]s[k]s[j]
   <p><span>Title:</span><a href="/2019/11/19/datastructure-algorithm/">Data Structure and Algorithms</a></p>
   <p><span>Author:</span><a href="/" title=" Benson 的personal blog">Benson</a></p>
   <p><span>PTime:</span>2019/11/19 - 12:11</p>
-  <p><span>LUpdate:</span>2019/12/16 - 19:12</p>
+  <p><span>LUpdate:</span>2019/12/16 - 20:12</p>
   <p><span>Link:</span><a href="/2019/11/19/datastructure-algorithm/" title="Data Structure and Algorithms">https://steinsgate9.github.io/2019/11/19/datastructure-algorithm/</a>
     <span class="copy-path"  title="click to copy link"><i class="fa fa-clipboard" data-clipboard-text="https://steinsgate9.github.io/2019/11/19/datastructure-algorithm/"  aria-label="copy done！"></i></span>
   </p>
@@ -1187,8 +1204,8 @@ d[i][j] = \max \limits_{k \in[1,n-2]} d[i][k-1] + d[k+1][j] +s[i]s[k]s[j]
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/19/Complexity_Theory/" rel="prev" title="Complexity Theory">
-                Complexity Theory <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/19/Convex_Optimization/" rel="prev" title="Convex Optimization">
+                Convex Optimization <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
