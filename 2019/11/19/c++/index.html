@@ -143,7 +143,7 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;c++&#x2F;image-20191203173614014.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;c++&#x2F;image-20191203174116325.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;20&#x2F;NJyCiQ3eKVFrE2S.png">
-<meta property="og:updated_time" content="2019-12-29T15:35:47.946Z">
+<meta property="og:updated_time" content="2020-01-03T14:02:31.862Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;c++&#x2F;image-20191206233350611.png">
 
@@ -484,42 +484,39 @@
       
         <p>Basic c++ grammer &amp; knowledge</p>
 <a id="more"></a>
-<h1 id="Overview">1. Overview</h1><p>C++ 程序可以定义为对象的集合，这些对象通过调用彼此的方法进行交互。现在让我们简要地看一下什么是类、对象，方法、即时变量。对象和变量其实一回事，只不过从不同角度来看。</p>
+<h1 id="overview">1. Overview</h1>
+<p>C++ 程序可以定义为对象的集合，这些对象通过调用彼此的方法进行交互。现在让我们简要地看一下什么是类、对象，方法、即时变量。对象和变量其实一回事，只不过从不同角度来看。</p>
 <ul>
-<li><p><strong>数据类型</strong> - 其实不是类，无法继承，没有成员函数，但可以看作最基础的类</p>
-</li>
-<li><p><strong>类 -</strong> 类可以定义为描述对象行为/状态的模板/蓝图。</p>
-</li>
-<li><p><strong>对象/变量 -</strong> 对象当作类的实体化；变量是一样的，只不过变量强调的是内存的分配。</p>
-</li>
-<li><p><strong>方法 -</strong> 从基本上说，一个方法表示一种行为。一个类可以包含多个方法。可以在方法中写入逻辑、操作数据以及执行所有的动作。</p>
-</li>
+<li><p><strong>数据类型</strong> - 其实不是类，无法继承，没有成员函数，但可以看作最基础的类</p></li>
+<li><p><strong>类 -</strong> 类可以定义为描述对象行为/状态的模板/蓝图。</p></li>
+<li><p><strong>对象/变量 -</strong> 对象当作类的实体化；变量是一样的，只不过变量强调的是内存的分配。</p></li>
+<li><p><strong>方法 -</strong> 从基本上说，一个方法表示一种行为。一个类可以包含多个方法。可以在方法中写入逻辑、操作数据以及执行所有的动作。</p></li>
 </ul>
-<h1 id="Variable">2. Variable</h1><h2 id="data-type">2.1. data type</h2><h3 id="basic-type">2.1.1. basic type</h3><ul>
-<li><p><strong>Def</strong>: basic data type </p>
+<h1 id="variable">2. Variable</h1>
+<h2 id="data-type">2.1. data type</h2>
+<h3 id="basic-type">2.1.1. basic type</h3>
 <ul>
-<li><p>basic type可以看作最弱的类</p>
-</li>
+<li><p><strong>Def</strong>: basic data type</p>
+<ul>
+<li><p>basic type可以看作最弱的类</p></li>
 <li><p>basic type 和 class 的区别</p>
 <ul>
-<li>The basic types can’t have members. Classes can (and usually will).</li>
-<li>The basic types can’t be specified as a base-class.</li>
-</ul>
-</li>
-<li><p>c++ basic data type </p>
+<li>The basic types can't have members. Classes can (and usually will).</li>
+<li>The basic types can't be specified as a base-class.</li>
+</ul></li>
+<li><p>c++ basic data type</p>
 <p>从上面我们知道，在32位计算机系统中，ssize_t 是int型，占4个字节，在64位计算机系统中，ssize_t是long int 型，占8个字节。size_t is used for .size() loop， size_t 不要和0做比较，它是一个非负数，+-超过边界就gg。size_t 可以做backward loop 用size_t = -1 做比较</p>
-<p><img src="/2019/11/19/c++/image-20191206233350611.png" alt>1.短整型short：所占内存大小：2byte=16bit；</p>
-</li>
+<p><img src="/2019/11/19/c++/image-20191206233350611.png">1.短整型short：所占内存大小：2byte=16bit；</p></li>
 </ul>
-<p>所能表示范围：-32768~32767；(即-2^15~2^15-1)</p>
-<p>​    2.整型int：所占内存大小：4byte=32bit；</p>
-<p>所能表示范围：-2147483648~2147483647；(即-2^31~2^31-1)</p>
+<p>所能表示范围：-32768~32767；(即-2<sup>15~2</sup>15-1)</p>
+<p>​ 2.整型int：所占内存大小：4byte=32bit；</p>
+<p>所能表示范围：-2147483648~2147483647；(即-2<sup>31~2</sup>31-1)</p>
 <p>unsigned: 所占内存大小：4byte=32bit；</p>
-<p>所能表示范围：0~4294967295；(即0~2^32-1)</p>
+<p>所能表示范围：0<sub>4294967295；(即0</sub>2^32-1)</p>
 <p>3.长整型long：所占内存大小：4byte=32bit；</p>
-<p>所能表示范围：-2147483648~2147483647；(即-2^31~2^31-1)</p>
+<p>所能表示范围：-2147483648~2147483647；(即-2<sup>31~2</sup>31-1)</p>
 <p>unsigned long: 所占内存大小：4byte=32bit；</p>
-<p>所能表示范围：0~4294967295；(即0~2^32-1)</p>
+<p>所能表示范围：0<sub>4294967295；(即0</sub>2^32-1)</p>
 <p>注：上面所说的全部是有符号型的，short，int，long都默认为有符号型，其中long和int都占4个字节的空间大小，他们有什么区别呢？</p>
 <p>16位操作系统：long：4字节，int：2字节</p>
 <p>32位操作系统：long：4字节，int：4字节</p>
@@ -530,9 +527,9 @@
 <p>4.字符型char：所占内存大小：1byte=8bit；</p>
 <p>所能表示范围：不确定！！！！；</p>
 <p>unsigned char：所占内存大小：1byte=8bit；</p>
-<p>所能表示范围：0~255；(0~2^8-1)</p>
+<p>所能表示范围：0<sub>255；(0</sub>2^8-1)</p>
 <p>singned char: 所占内存大小：1byte=8bit；</p>
-<p>所能表示范围：-128~127；(-2^7~2^7-1)</p>
+<p>所能表示范围：-128~127；(-2<sup>7~2</sup>7-1)</p>
 <p>char的默认类型不确定有可能是unsigned，也有可能是signed，主要更具编译器而定，可以自己测试一下编译器的默认char的符号类型。</p>
 <p>5.布尔类型bool：所占内存大小：1byte=8bit；</p>
 <p>所能表示的范围：只能取两个值false或者true；所以最小值就是：0， 最大值：1.</p>
@@ -541,216 +538,190 @@
 <p>7.双精度double：所占内存大小：8byte=32bit；</p>
 <p>所能表示的范围：(2.22507e-308)~(1.79769e+308);</p>
 <p>注：如何区分和使用这两个浮点类型呢，首先float和double的精度不同，float保留到小数点后面7位，而double保留到小数点后面16位，float能保证6位有效数字，而double能保证15位有效数字，如果在不追求精度的的情况下当然用 float比较好，节省内存，如果需要很高的精度的情况下，最好还是用double，平时我们定义浮点型变量一般都用double，毕竟精度高，一般精度的损失是不能忽略的。</p>
-<p>8.字符串string：由于string在c++中属于类类型，不是基本数据类型，类不能计算其在内存中所占大小，非要用sizeof(string)来算的话，一般算出来的结果是 sizeof(string)=4byte， 如果string字符串内容很多，很明显就不是其真实大小，string类里面有计算其字节大小的函数如：size(),length()。</p>
-</li>
-<li><p><strong>Init</strong>: </p>
+<p>8.字符串string：由于string在c++中属于类类型，不是基本数据类型，类不能计算其在内存中所占大小，非要用sizeof(string)来算的话，一般算出来的结果是 sizeof(string)=4byte， 如果string字符串内容很多，很明显就不是其真实大小，string类里面有计算其字节大小的函数如：size(),length()。</p></li>
+<li><p><strong>Init</strong>:</p>
 <p>normal init</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">extern</span> <span class="keyword">int</span> b; <span class="comment">//变量声明，编译时有用</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> b=<span class="number">10</span>;<span class="comment">//变量定义</span></span><br><span class="line">  <span class="built_in">cout</span>&lt;&lt;b&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">  system(<span class="string">"pause"</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>new ways supported in c++ </p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//	2、直接初始化</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">i</span><span class="params">(<span class="number">32</span>)</span></span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; i &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="function"><span class="keyword">const</span> <span class="title">j</span><span class="params">(<span class="number">10</span>)</span></span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; j &lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
-</li>
+<p>new ways supported in c++</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//	2、直接初始化</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">i</span><span class="params">(<span class="number">32</span>)</span></span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; i &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="function"><span class="keyword">const</span> <span class="title">j</span><span class="params">(<span class="number">10</span>)</span></span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; j &lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h3 id="const-decoration">2.1.2. const decoration</h3><ul>
-<li><p><strong>Def</strong> : const </p>
-<p>宏定义常量跟const常量的区别: 宏定义编译器不会检查语法错误，而const则会检查语法问题</p>
-</li>
+<h3 id="const-decoration">2.1.2. const decoration</h3>
+<ul>
+<li><p><strong>Def</strong> : const</p>
+<p>宏定义常量跟const常量的区别: 宏定义编译器不会检查语法错误，而const则会检查语法问题</p></li>
 </ul>
-<h4 id="const-variable">2.1.2.1. const variable</h4><ul>
+<h4 id="const-variable">2.1.2.1. const variable</h4>
+<ul>
 <li><p><strong>Def</strong>: const int a</p>
-<p>const修饰基本变量 </p>
+<p>const修饰基本变量</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> x = <span class="number">3</span>; <span class="comment">// x的值不能再被改变</span></span><br></pre></td></tr></table></figure>
 <p>用可变的*y去操作不可变的x，权限大-权限小 编译器出错</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> x = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">int</span> *y = &amp;x;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> x = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">int</span> *y = &amp;x;</span><br></pre></td></tr></table></figure></li>
 <li><p><strong>Def</strong>: const int *p = x</p>
 <p>const修饰<em>p, </em>p的值不能赋值，p可以赋值。</p>
 <p>或者等价写法：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> <span class="keyword">const</span> *p = <span class="literal">NULL</span>;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> <span class="keyword">const</span> *p = <span class="literal">NULL</span>;</span><br></pre></td></tr></table></figure></li>
 <li><p><strong>Def</strong>: const int &amp;p = x</p>
 <p>此时修饰的是引用y，y不能再赋值，x可以赋值</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> &amp;y = x;</span><br></pre></td></tr></table></figure>
 <p>被const修饰过的形参a和b不能改变其值</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> &amp;a,<span class="keyword">const</span> <span class="keyword">int</span> &amp;b)</span></span>&#123;</span><br><span class="line">	<span class="comment">// 被const修饰过的形参a和b不能改变其值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> &amp;a,<span class="keyword">const</span> <span class="keyword">int</span> &amp;b)</span></span>&#123;</span><br><span class="line">	<span class="comment">// 被const修饰过的形参a和b不能改变其值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h4 id="const-class">2.1.2.2. const class</h4><ul>
-<li><p><strong>Def</strong>: const object </p>
+<h4 id="const-class">2.1.2.2. const class</h4>
+<ul>
+<li><p><strong>Def</strong>: const object</p>
 <ul>
 <li><p><strong>Qua</strong>: init related</p>
-<p>在定义对象时必须进行初始化; </p>
+<p>在定义对象时必须进行初始化;</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> a = <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
 <p>const 对象 or 成员变量是const，要求成员变量必须有初始值，因为事后无法赋值</p>
-<p>只能调用它的常成员函数，而不能调用普通的成员函数。常成员函数是常对象的唯一的对外接口。</p>
-</li>
-</ul>
-</li>
-</ul>
+<p>只能调用它的常成员函数，而不能调用普通的成员函数。常成员函数是常对象的唯一的对外接口。</p></li>
+</ul></li>
+<li><p><strong>Def</strong>: const member</p>
 <ul>
-<li><p><strong>Def</strong>: const member </p>
-<ul>
-<li><strong>Qua</strong>: init related<br>构造函数就只能通过初始化列表对该数据成员进行初始化，而任何其他的函数都不能对该成员函数赋值。</li>
-</ul>
-</li>
+<li><strong>Qua</strong>: init related 构造函数就只能通过初始化列表对该数据成员进行初始化，而任何其他的函数都不能对该成员函数赋值。</li>
+</ul></li>
 <li><p><strong>Def</strong>: const member function</p>
 <ul>
 <li><p><strong>Qua</strong>: const definition</p>
 <p>const是函数类型的组成部分，所以在函数的实现部分也要带关键字const。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">showDate</span><span class="params">()</span> <span class="keyword">const</span></span>;       <span class="comment">// 声明</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">showDate</span><span class="params">()</span> <span class="keyword">const</span>       <span class="comment">// 实现</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(“year”);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>常成员函数不能更新对象的数据成员，也不能调用该类中的普通成员函数，这就保证了在常成员函数中绝对不会更新数据成员的值。</p>
-</li>
+<p>常成员函数不能更新对象的数据成员，也不能调用该类中的普通成员函数，这就保证了在常成员函数中绝对不会更新数据成员的值。</p></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="auto-decoration">2.1.3. auto decoration</h3><ul>
-<li><p><strong>Init</strong>:  </p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> f1=<span class="number">3.14</span>; <span class="comment">//自动推导类型，在C++11中已删除这一用法</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="register-decoration">2.1.4. register decoration</h3><ul>
-<li><p><strong>Def</strong> : register</p>
-<p>register 存储类用于定义存储在寄存器中而不是 RAM 中的局部变量。这意味着变量的最大尺寸等于寄存器的大小（通常是一个词），且不能对它应用一元的 ‘&amp;’ 运算符（因为它没有内存位置）。    </p>
-</li>
-</ul>
-<h3 id="static-decoration">2.1.5. static decoration</h3><ul>
-<li><p><strong>Def</strong> : static</p>
-<p>static 存储类指示编译器在程序的生命周期内保持局部变量的存在，而不需要在每次它进入和离开作用域时进行创建和销毁。因此，使用 static 修饰局部变量可以在函数调用之间保持局部变量的值。</p>
-</li>
-</ul>
+<h3 id="auto-decoration">2.1.3. auto decoration</h3>
 <ul>
-<li><p><strong>Example</strong>:  </p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">extern</span> <span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span></span>;</span><br><span class="line"><span class="keyword">int</span> num=<span class="number">10</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span> (num&gt;<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        fun();</span><br><span class="line">        num--;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    system(<span class="string">"pause"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> index=<span class="number">5</span>; <span class="comment">//程序的生命周期内保持局部变量的存在</span></span><br><span class="line">    index++;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"index="</span>&lt;&lt;index&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"count="</span>&lt;&lt;num&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">输出：</span><br><span class="line">index=6</span><br><span class="line">count=10</span><br><span class="line">index=7</span><br><span class="line">count=9</span><br><span class="line">index=8</span><br><span class="line">count=8</span><br><span class="line">index=9</span><br><span class="line">count=7</span><br><span class="line">index=10</span><br><span class="line">count=6</span><br><span class="line">index=11</span><br><span class="line">count=5</span><br><span class="line">index=12</span><br><span class="line">count=4</span><br><span class="line">index=13</span><br><span class="line">count=3</span><br><span class="line">index=14</span><br><span class="line">count=2</span><br><span class="line">index=15</span><br><span class="line">count=1</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="extern-decoration">2.1.6. extern decoration</h3><ul>
-<li><p><strong>Def</strong>: extern</p>
-<p>extern 是程序使用未定义的变量或者方法来通过编译，链接程序的时候再将变量的定义和方法的定义链接过来。</p>
-</li>
-</ul>
-<h3 id="mutable-decoration">2.1.7. mutable decoration</h3><ul>
-<li><p><strong>Def</strong>: mutable </p>
-<p>仅适用于类对象</p>
-</li>
-</ul>
-<h3 id="thread-local-decoration">2.1.8. thread_local decoration</h3><ul>
-<li><p><strong>Def</strong> : thread_local</p>
-<p>使用 thread_local 说明符声明的变量仅可在它在其上创建的线程上访问。 变量在创建线程时创建，并在销毁线程时销毁。 每个线程都有其自己的变量副本。</p>
-</li>
-</ul>
-<h3 id="reference-decoration">2.1.9. reference decoration</h3><h4 id="reference-of-variable-int-amp-xxx">2.1.9.1. reference of variable   (int &amp;xxx)</h4><ul>
-<li><p><strong>Init</strong>: </p>
-<p>int &amp;b = a; //必须要初始化引用</p>
-</li>
-<li><p><strong>Example</strong>:   </p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 用C++引用交换两个数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">int</span> &amp;a, <span class="keyword">int</span> &amp;b)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> c = <span class="number">0</span>;</span><br><span class="line">	c = a;</span><br><span class="line">	a = b;</span><br><span class="line">	b = c;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="reference-of-pointer-int-amp-xxx">2.1.9.2. reference of pointer (int* &amp; xxx)</h4><ul>
-<li><p><strong>Def</strong>: reference of pointer</p>
-<p>see int* as whole, meaning the reference of pointer variable</p>
-</li>
-<li><p><strong>Example</strong>: </p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//3、指针类型的引用</span></span><br><span class="line"><span class="comment">//类型  *&amp;指针引用名  = 指针变量</span></span><br><span class="line"><span class="keyword">int</span> x = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> *p = &amp;x; <span class="comment">//必须要初始化引用</span></span><br><span class="line"><span class="keyword">int</span> *&amp;q = p; <span class="comment">// 这边赋值的仍然是一个地址，即是q是一个地址</span></span><br><span class="line">*q = <span class="number">20</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"q = "</span> &lt;&lt; q &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"x = "</span> &lt;&lt; x &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">*p = <span class="number">30</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"p = "</span> &lt;&lt; p &lt;&lt; <span class="built_in">endl</span>; <span class="comment">// p代表的是地址</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"*p = "</span> &lt;&lt; *p &lt;&lt; <span class="built_in">endl</span>; <span class="comment">// *p代表的是指向这个内存地址的值</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> v = <span class="number">15</span>, f = <span class="number">10</span>;</span><br><span class="line">fun(&amp;v, &amp;f);</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"v = "</span> &lt;&lt; v &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"f = "</span> &lt;&lt; f &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">fun(v, f);</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"v = "</span> &lt;&lt; v &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"f = "</span> &lt;&lt; f &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">fun1(v, f);</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"v = "</span> &lt;&lt; v &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"f = "</span> &lt;&lt; f &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="pointer-decoration">2.1.10. pointer decoration</h3><h4 id="pointer-of-varibale">2.1.10.1. pointer of varibale</h4><ul>
 <li><p><strong>Init</strong>:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 用指针交换两个数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">int</span> *a, <span class="keyword">int</span> *b)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> c = <span class="number">0</span>;</span><br><span class="line">	c = *a;</span><br><span class="line">	*a = *b;</span><br><span class="line">	*b = c;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> f1=<span class="number">3.14</span>; <span class="comment">//自动推导类型，在C++11中已删除这一用法</span></span><br></pre></td></tr></table></figure></li>
 </ul>
-<h4 id="array-of-pointer-指针数组）">2.1.10.2. array of pointer (指针数组）</h4><ul>
+<h3 id="register-decoration">2.1.4. register decoration</h3>
+<ul>
+<li><p><strong>Def</strong> : register</p>
+<p>register 存储类用于定义存储在寄存器中而不是 RAM 中的局部变量。这意味着变量的最大尺寸等于寄存器的大小（通常是一个词），且不能对它应用一元的 '&amp;' 运算符（因为它没有内存位置）。</p></li>
+</ul>
+<h3 id="static-decoration">2.1.5. static decoration</h3>
+<ul>
+<li><p><strong>Def</strong> : static</p>
+<p>static 存储类指示编译器在程序的生命周期内保持局部变量的存在，而不需要在每次它进入和离开作用域时进行创建和销毁。因此，使用 static 修饰局部变量可以在函数调用之间保持局部变量的值。</p></li>
+<li><p><strong>Example</strong>:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">extern</span> <span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span></span>;</span><br><span class="line"><span class="keyword">int</span> num=<span class="number">10</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span> (num&gt;<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        fun();</span><br><span class="line">        num--;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    system(<span class="string">"pause"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> index=<span class="number">5</span>; <span class="comment">//程序的生命周期内保持局部变量的存在</span></span><br><span class="line">    index++;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"index="</span>&lt;&lt;index&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"count="</span>&lt;&lt;num&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">输出：</span><br><span class="line">index=6</span><br><span class="line">count=10</span><br><span class="line">index=7</span><br><span class="line">count=9</span><br><span class="line">index=8</span><br><span class="line">count=8</span><br><span class="line">index=9</span><br><span class="line">count=7</span><br><span class="line">index=10</span><br><span class="line">count=6</span><br><span class="line">index=11</span><br><span class="line">count=5</span><br><span class="line">index=12</span><br><span class="line">count=4</span><br><span class="line">index=13</span><br><span class="line">count=3</span><br><span class="line">index=14</span><br><span class="line">count=2</span><br><span class="line">index=15</span><br><span class="line">count=1</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="extern-decoration">2.1.6. extern decoration</h3>
+<ul>
+<li><p><strong>Def</strong>: extern</p>
+<p>extern 是程序使用未定义的变量或者方法来通过编译，链接程序的时候再将变量的定义和方法的定义链接过来。</p></li>
+</ul>
+<h3 id="mutable-decoration">2.1.7. mutable decoration</h3>
+<ul>
+<li><p><strong>Def</strong>: mutable</p>
+<p>仅适用于类对象</p></li>
+</ul>
+<h3 id="thread_local-decoration">2.1.8. thread_local decoration</h3>
+<ul>
+<li><p><strong>Def</strong> : thread_local</p>
+<p>使用 thread_local 说明符声明的变量仅可在它在其上创建的线程上访问。 变量在创建线程时创建，并在销毁线程时销毁。 每个线程都有其自己的变量副本。</p></li>
+</ul>
+<h3 id="reference-decoration">2.1.9. reference decoration</h3>
+<h4 id="reference-of-variable-int-xxx">2.1.9.1. reference of variable (int &amp;xxx)</h4>
+<ul>
+<li><p><strong>Init</strong>:</p>
+<p>int &amp;b = a; //必须要初始化引用</p></li>
+<li><p><strong>Example</strong>:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 用C++引用交换两个数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">int</span> &amp;a, <span class="keyword">int</span> &amp;b)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> c = <span class="number">0</span>;</span><br><span class="line">	c = a;</span><br><span class="line">	a = b;</span><br><span class="line">	b = c;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="reference-of-pointer-int-xxx">2.1.9.2. reference of pointer (int* &amp; xxx)</h4>
+<ul>
+<li><p><strong>Def</strong>: reference of pointer</p>
+<p>see int* as whole, meaning the reference of pointer variable</p></li>
+<li><p><strong>Example</strong>:</p></li>
+</ul>
+<p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//3、指针类型的引用</span></span><br><span class="line"><span class="comment">//类型  *&amp;指针引用名  = 指针变量</span></span><br><span class="line"><span class="keyword">int</span> x = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> *p = &amp;x; <span class="comment">//必须要初始化引用</span></span><br><span class="line"><span class="keyword">int</span> *&amp;q = p; <span class="comment">// 这边赋值的仍然是一个地址，即是q是一个地址</span></span><br><span class="line">*q = <span class="number">20</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"q = "</span> &lt;&lt; q &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"x = "</span> &lt;&lt; x &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">*p = <span class="number">30</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"p = "</span> &lt;&lt; p &lt;&lt; <span class="built_in">endl</span>; <span class="comment">// p代表的是地址</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"*p = "</span> &lt;&lt; *p &lt;&lt; <span class="built_in">endl</span>; <span class="comment">// *p代表的是指向这个内存地址的值</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> v = <span class="number">15</span>, f = <span class="number">10</span>;</span><br><span class="line">fun(&amp;v, &amp;f);</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"v = "</span> &lt;&lt; v &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"f = "</span> &lt;&lt; f &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">fun(v, f);</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"v = "</span> &lt;&lt; v &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"f = "</span> &lt;&lt; f &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">fun1(v, f);</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"v = "</span> &lt;&lt; v &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"f = "</span> &lt;&lt; f &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure></p>
+<h3 id="pointer-decoration">2.1.10. pointer decoration</h3>
+<h4 id="pointer-of-varibale">2.1.10.1. pointer of varibale</h4>
+<ul>
+<li><p><strong>Init</strong>:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 用指针交换两个数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">int</span> *a, <span class="keyword">int</span> *b)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> c = <span class="number">0</span>;</span><br><span class="line">	c = *a;</span><br><span class="line">	*a = *b;</span><br><span class="line">	*b = c;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="array-of-pointer-指针数组">2.1.10.2. array of pointer (指针数组）</h4>
+<ul>
 <li><p><strong>Def</strong>: array of pointer</p>
-<p>a array of pointer, every element is a pointer. basically is an array.</p>
-</li>
+<p>a array of pointer, every element is a pointer. basically is an array.</p></li>
 <li><p><strong>Init</strong>:</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> * n [<span class="number">3</span>]=&#123;<span class="string">"gain"</span>,<span class="string">"much"</span>,<span class="string">"strong"</span>&#125;; <span class="comment">// 不加括号就是指针数组</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2019/11/20/VWtgBOuMF7oSv3Q.png" alt="image.png" style="zoom:50%;"></p>
-</li>
+<p><img src="https://i.loli.net/2019/11/20/VWtgBOuMF7oSv3Q.png" alt="image.png" style="zoom:50%;"></p></li>
 </ul>
-<h4 id="pointer-of-array（数组指针）">2.1.10.3. pointer of array（数组指针）</h4><ul>
+<h4 id="pointer-of-array数组指针">2.1.10.3. pointer of array（数组指针）</h4>
+<ul>
 <li><p><strong>Def</strong> : pointer of array</p>
-<p>pointer points to array. basically is a pointer </p>
-</li>
+<p>pointer points to array. basically is a pointer</p></li>
 <li><p><strong>Init</strong>:</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> (*p) [<span class="number">4</span>];</span><br></pre></td></tr></table></figure>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> c[] [<span class="number">4</span>] = &#123;<span class="string">"哥"</span>, <span class="string">"哥"</span>, <span class="string">"我"</span>, <span class="string">"岸"</span>, <span class="string">"上"</span>, <span class="string">"走"</span>&#125;;    <span class="comment">//UTF－8：一个汉字=3个字节</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 申请10个int的空间，返回指向第一个int的指针。所以它其实不是数组指针，数组指针指向一个数组，他指向数组的第一个数。</span></span><br><span class="line"><span class="keyword">int</span> *a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 申请10个int的空间，返回指向第一个int的指针。所以它其实不是数组指针，数组指针指向一个数组，他指向数组的第一个数。</span></span><br><span class="line"><span class="keyword">int</span> *a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br></pre></td></tr></table></figure></li>
 <li><p>opertation</p>
 <ul>
-<li>指针+1，是+指针类型对应字节数；指针的地址+1，是+8*<em>*</em></li>
+<li>指针+1，是+指针类型对应字节数；指针的地址+1，是+8****</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="array-decoration">2.1.11. array decoration</h3><ul>
-<li><p><strong>Def</strong> : array </p>
-<p>define an array of elements</p>
-</li>
+<p>### array decoration</p>
+<ul>
+<li><p><strong>Def</strong> : array</p>
+<p>define an array of elements</p></li>
 <li><p><strong>Qua</strong>: difference with pointer</p>
 <ul>
 <li><strong>当声明一个数组时，它同时也分配了一段内存空间，用于存储数组元素，但当声明一个指针时，它只分配了用于容纳指针的空间（32位中4个字节的大小）。</strong></li>
-<li>数组和指针都指向内存首地址，但数组是常量，指针是变量。（而char <em> p = “Hello World”的意义是在栈上创建指针，指向存储在静态数据区的字符串，指针p是一个指针变量，<em>*p++操作是正确的</em></em>。）</li>
-</ul>
-</li>
+<li>数组和指针都指向内存首地址，但数组是常量，指针是变量。（而char * p = "Hello World"的意义是在栈上创建指针，指向存储在静态数据区的字符串，指针p是一个指针变量，<strong>p++操作是正确的</strong>。）</li>
+</ul></li>
 <li><p>operation</p>
 <ul>
-<li><strong><em>\</em>数组名+1，是+数组元素大小的字节数；\</strong>*<em>数组名的地址+1，是+整个数组大小的字节数***</em></li>
+<li><strong><em>*数组名+1，是+数组元素大小的字节数；*</em>*<em>数组名的地址+1，是+整个数组大小的字节数*</em></strong></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="enum-type">2.1.12. enum type</h3><ul>
-<li><p><strong>Init</strong>:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">enum</span> color</span><br><span class="line">&#123;</span><br><span class="line">    blue,</span><br><span class="line">    red,</span><br><span class="line">    white</span><br><span class="line">&#125;; <span class="comment">//默认值从0开始</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    color c=red;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;c&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    system(<span class="string">"pause"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="string-type">2.1.13. string type</h3><ul>
-<li><p><strong>Init</strong>:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> name = <span class="string">"liugx"</span>;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">age</span><span class="params">(<span class="string">"27"</span>)</span></span>;<span class="comment">//直接初始化</span></span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s1</span><span class="params">(name)</span></span>;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s2</span><span class="params">(<span class="number">5</span>,<span class="string">'c'</span>)</span></span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Function</strong>: </p>
-</li>
-</ul>
-<h3 id="vector-type">2.1.14. vector type</h3><ul>
-<li><p><strong>Init</strong>:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">1</span>) <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a(<span class="number">10</span>); <span class="comment">//定义了10个整型元素的向量（尖括号中为元素类型名，它可以是任何合法的数据类型），但没有给出初值，其值是不确定的。</span></span><br><span class="line">(<span class="number">2</span>）<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a(<span class="number">10</span>,<span class="number">1</span>); <span class="comment">//定义了10个整型元素的向量,且给出每个元素的初值为1</span></span><br><span class="line">(<span class="number">3</span>）<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a(b); <span class="comment">//用b向量来创建a向量，整体复制性赋值</span></span><br><span class="line">(<span class="number">4</span>）<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a(b.<span class="built_in">begin</span>(),b.<span class="built_in">begin</span>+<span class="number">3</span>); <span class="comment">//定义了a值为b中第0个到第2个（共3个）元素</span></span><br><span class="line">(<span class="number">5</span>）<span class="keyword">int</span> b[<span class="number">7</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">9</span>,<span class="number">8</span>&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a(b,b+<span class="number">7</span>); <span class="comment">//从数组中获得初值</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
+<h3 id="enum-type">2.1.11. enum type</h3>
 <ul>
+<li><p><strong>Init</strong>:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">enum</span> color</span><br><span class="line">&#123;</span><br><span class="line">    blue,</span><br><span class="line">    red,</span><br><span class="line">    white</span><br><span class="line">&#125;; <span class="comment">//默认值从0开始</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    color c=red;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;c&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    system(<span class="string">"pause"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="string-type">2.1.12. string type</h3>
+<ul>
+<li><p><strong>Init</strong>:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> name = <span class="string">"liugx"</span>;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">age</span><span class="params">(<span class="string">"27"</span>)</span></span>;<span class="comment">//直接初始化</span></span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s1</span><span class="params">(name)</span></span>;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s2</span><span class="params">(<span class="number">5</span>,<span class="string">'c'</span>)</span></span>;</span><br></pre></td></tr></table></figure></li>
+<li><p><strong>Function</strong>:</p></li>
+</ul>
+<h3 id="vector-type">2.1.13. vector type</h3>
+<ul>
+<li><p><strong>Init</strong>:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">1</span>) <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a(<span class="number">10</span>); <span class="comment">//定义了10个整型元素的向量（尖括号中为元素类型名，它可以是任何合法的数据类型），但没有给出初值，其值是不确定的。</span></span><br><span class="line">(<span class="number">2</span>）<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a(<span class="number">10</span>,<span class="number">1</span>); <span class="comment">//定义了10个整型元素的向量,且给出每个元素的初值为1</span></span><br><span class="line">(<span class="number">3</span>）<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a(b); <span class="comment">//用b向量来创建a向量，整体复制性赋值</span></span><br><span class="line">(<span class="number">4</span>）<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a(b.<span class="built_in">begin</span>(),b.<span class="built_in">begin</span>+<span class="number">3</span>); <span class="comment">//定义了a值为b中第0个到第2个（共3个）元素</span></span><br><span class="line">(<span class="number">5</span>）<span class="keyword">int</span> b[<span class="number">7</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">9</span>,<span class="number">8</span>&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a(b,b+<span class="number">7</span>); <span class="comment">//从数组中获得初值</span></span><br></pre></td></tr></table></figure></li>
 <li><p><strong>Function</strong> :</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">（<span class="number">1</span>）a.assign(b.<span class="built_in">begin</span>(), b.<span class="built_in">begin</span>()+<span class="number">3</span>); <span class="comment">//b为向量，将b的0~2个元素构成的向量赋给a</span></span><br><span class="line">（<span class="number">2</span>）a.assign(<span class="number">4</span>,<span class="number">2</span>); <span class="comment">//是a只含4个元素，且每个元素为2</span></span><br><span class="line">（<span class="number">3</span>）a.back(); <span class="comment">//返回a的最后一个元素</span></span><br><span class="line">（<span class="number">4</span>）a.front(); <span class="comment">//返回a的第一个元素</span></span><br><span class="line">（<span class="number">5</span>）a[i]; <span class="comment">//返回a的第i个元素，当且仅当a[i]存在2013-12-07</span></span><br><span class="line">（<span class="number">6</span>）a.<span class="built_in">clear</span>(); <span class="comment">//清空a中的元素</span></span><br><span class="line">（<span class="number">7</span>）a.empty(); <span class="comment">//判断a是否为空，空则返回ture,不空则返回false</span></span><br><span class="line">（<span class="number">8</span>）a.pop_back(); <span class="comment">//删除a向量的最后一个元素</span></span><br><span class="line">（<span class="number">9</span>）a.erase(a.<span class="built_in">begin</span>()+<span class="number">1</span>,a.<span class="built_in">begin</span>()+<span class="number">3</span>); <span class="comment">//删除a中第1个（从第0个算起）到第2个元素，也就是说删除的元素从a.begin()+1算起（包括它）一直到a.begin()+         3（不包括它）</span></span><br><span class="line">（<span class="number">10</span>）a.push_back(<span class="number">5</span>); <span class="comment">//在a的最后一个向量后插入一个元素，其值为5</span></span><br><span class="line">（<span class="number">11</span>）a.insert(a.<span class="built_in">begin</span>()+<span class="number">1</span>,<span class="number">5</span>); <span class="comment">//在a的第1个元素（从第0个算起）的位置插入数值5，如a为1,2,3,4，插入元素后为1,5,2,3,4</span></span><br><span class="line">（<span class="number">12</span>）a.insert(a.<span class="built_in">begin</span>()+<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>); <span class="comment">//在a的第1个元素（从第0个算起）的位置插入3个数，其值都为5</span></span><br><span class="line">（<span class="number">13</span>）a.insert(a.<span class="built_in">begin</span>()+<span class="number">1</span>,b+<span class="number">3</span>,b+<span class="number">6</span>); <span class="comment">//b为数组，在a的第1个元素（从第0个算起）的位置插入b的第3个元素到第5个元素（不包括b+6），如b为1,2,3,4,5,9,8         ，插入元素后为1,4,5,9,2,3,4,5,9,8</span></span><br><span class="line">（<span class="number">14</span>）a.<span class="built_in">size</span>(); <span class="comment">//返回a中元素的个数；</span></span><br><span class="line">（<span class="number">15</span>）a.capacity(); <span class="comment">//返回a在内存中总共可以容纳的元素个数</span></span><br><span class="line">（<span class="number">16</span>）a.resize(<span class="number">10</span>); <span class="comment">//将a的现有元素个数调至10个，多则删，少则补，其值随机</span></span><br><span class="line">（<span class="number">17</span>）a.resize(<span class="number">10</span>,<span class="number">2</span>); <span class="comment">//将a的现有元素个数调至10个，多则删，少则补，其值为2</span></span><br><span class="line">（<span class="number">18</span>）a.reserve(<span class="number">100</span>); <span class="comment">//将a的容量（capacity）扩充至100，也就是说现在测试a.capacity();的时候返回值是100.这种操作只有在需要给a添加大量数据的时候才         显得有意义，因为这将避免内存多次容量扩充操作（当a的容量不足时电脑会自动扩容，当然这必然降低性能） </span></span><br><span class="line">（<span class="number">19</span>）a.swap(b); <span class="comment">//b为向量，将a中的元素和b中的元素进行整体性交换</span></span><br><span class="line">（<span class="number">20</span>）a==b; <span class="comment">//b为向量，向量的比较操作还有!=,&gt;=,&lt;=,&gt;,&lt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>operation </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">（<span class="number">1</span>）a.assign(b.<span class="built_in">begin</span>(), b.<span class="built_in">begin</span>()+<span class="number">3</span>); <span class="comment">//b为向量，将b的0~2个元素构成的向量赋给a</span></span><br><span class="line">（<span class="number">2</span>）a.assign(<span class="number">4</span>,<span class="number">2</span>); <span class="comment">//是a只含4个元素，且每个元素为2</span></span><br><span class="line">（<span class="number">3</span>）a.back(); <span class="comment">//返回a的最后一个元素</span></span><br><span class="line">（<span class="number">4</span>）a.front(); <span class="comment">//返回a的第一个元素</span></span><br><span class="line">（<span class="number">5</span>）a[i]; <span class="comment">//返回a的第i个元素，当且仅当a[i]存在2013-12-07</span></span><br><span class="line">（<span class="number">6</span>）a.<span class="built_in">clear</span>(); <span class="comment">//清空a中的元素</span></span><br><span class="line">（<span class="number">7</span>）a.empty(); <span class="comment">//判断a是否为空，空则返回ture,不空则返回false</span></span><br><span class="line">（<span class="number">8</span>）a.pop_back(); <span class="comment">//删除a向量的最后一个元素</span></span><br><span class="line">（<span class="number">9</span>）a.erase(a.<span class="built_in">begin</span>()+<span class="number">1</span>,a.<span class="built_in">begin</span>()+<span class="number">3</span>); <span class="comment">//删除a中第1个（从第0个算起）到第2个元素，也就是说删除的元素从a.begin()+1算起（包括它）一直到a.begin()+         3（不包括它）</span></span><br><span class="line">（<span class="number">10</span>）a.push_back(<span class="number">5</span>); <span class="comment">//在a的最后一个向量后插入一个元素，其值为5</span></span><br><span class="line">（<span class="number">11</span>）a.insert(a.<span class="built_in">begin</span>()+<span class="number">1</span>,<span class="number">5</span>); <span class="comment">//在a的第1个元素（从第0个算起）的位置插入数值5，如a为1,2,3,4，插入元素后为1,5,2,3,4</span></span><br><span class="line">（<span class="number">12</span>）a.insert(a.<span class="built_in">begin</span>()+<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>); <span class="comment">//在a的第1个元素（从第0个算起）的位置插入3个数，其值都为5</span></span><br><span class="line">（<span class="number">13</span>）a.insert(a.<span class="built_in">begin</span>()+<span class="number">1</span>,b+<span class="number">3</span>,b+<span class="number">6</span>); <span class="comment">//b为数组，在a的第1个元素（从第0个算起）的位置插入b的第3个元素到第5个元素（不包括b+6），如b为1,2,3,4,5,9,8         ，插入元素后为1,4,5,9,2,3,4,5,9,8</span></span><br><span class="line">（<span class="number">14</span>）a.<span class="built_in">size</span>(); <span class="comment">//返回a中元素的个数；</span></span><br><span class="line">（<span class="number">15</span>）a.capacity(); <span class="comment">//返回a在内存中总共可以容纳的元素个数</span></span><br><span class="line">（<span class="number">16</span>）a.resize(<span class="number">10</span>); <span class="comment">//将a的现有元素个数调至10个，多则删，少则补，其值随机</span></span><br><span class="line">（<span class="number">17</span>）a.resize(<span class="number">10</span>,<span class="number">2</span>); <span class="comment">//将a的现有元素个数调至10个，多则删，少则补，其值为2</span></span><br><span class="line">（<span class="number">18</span>）a.reserve(<span class="number">100</span>); <span class="comment">//将a的容量（capacity）扩充至100，也就是说现在测试a.capacity();的时候返回值是100.这种操作只有在需要给a添加大量数据的时候才         显得有意义，因为这将避免内存多次容量扩充操作（当a的容量不足时电脑会自动扩容，当然这必然降低性能） </span></span><br><span class="line">（<span class="number">19</span>）a.swap(b); <span class="comment">//b为向量，将a中的元素和b中的元素进行整体性交换</span></span><br><span class="line">（<span class="number">20</span>）a==b; <span class="comment">//b为向量，向量的比较操作还有!=,&gt;=,&lt;=,&gt;,&lt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>operation</p>
 <ul>
 <li><p>append</p>
-<p>from int </p>
+<p>from int</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)</span><br><span class="line">	a.push_back(i);</span><br></pre></td></tr></table></figure>
 <p>from array</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">6</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; b；</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">4</span>;i++)</span><br><span class="line">	b.push_back(a[i]);</span><br></pre></td></tr></table></figure>
-<p>from vector </p>
+<p>from vector</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">6</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; b;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; c(a,a+<span class="number">4</span>);</span><br><span class="line"><span class="keyword">for</span>(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator it=c.<span class="built_in">begin</span>();it&lt;c.<span class="built_in">end</span>();it++)</span><br><span class="line">	b.push_back(*it);</span><br></pre></td></tr></table></figure>
-<p>from txt </p>
+<p>from txt</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ifstream <span class="title">in</span><span class="params">(<span class="string">"data.txt"</span>)</span></span>;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i; in&gt;&gt;i)</span><br><span class="line">    a.push_back(i);</span><br></pre></td></tr></table></figure>
-<p>mistake: do not assign vector without init </p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)</span><br><span class="line">    a[i]=i;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
+<p>mistake: do not assign vector without init</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)</span><br><span class="line">    a[i]=i;</span><br></pre></td></tr></table></figure></li>
 <li><p>sorting</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//对a中的从a.begin()（包括它）到a.end()（不包括它）的元素进行从小到大排列</span></span><br><span class="line">sort(a.<span class="built_in">begin</span>(),a.<span class="built_in">end</span>()); </span><br><span class="line"></span><br><span class="line"><span class="comment">//对a中的从a.begin()（包括它）到a.end()（不包括它）的元素倒置，但不排列，如a中元素为1,3,2,4,倒置后为4,2,3,1</span></span><br><span class="line">reverse(a.<span class="built_in">begin</span>(),a.<span class="built_in">end</span>()); </span><br><span class="line"></span><br><span class="line"><span class="comment">//把a中的从a.begin()（包括它）到a.end()（不包括它）的元素复制到b中，从b.begin()+1的位置（包括它）开        始复制，覆盖掉原有元素</span></span><br><span class="line">copy(a.<span class="built_in">begin</span>(),a.<span class="built_in">end</span>(),b.<span class="built_in">begin</span>()+<span class="number">1</span>); </span><br><span class="line"></span><br><span class="line"><span class="comment">//在a中的从a.begin()（包括它）到a.end()（不包括它）的元素中查找10，若存在返回其在向量中的位置</span></span><br><span class="line"><span class="built_in">find</span>(a.<span class="built_in">begin</span>(),a.<span class="built_in">end</span>(),<span class="number">10</span>);</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//对a中的从a.begin()（包括它）到a.end()（不包括它）的元素进行从小到大排列</span></span><br><span class="line">sort(a.<span class="built_in">begin</span>(),a.<span class="built_in">end</span>()); </span><br><span class="line"></span><br><span class="line"><span class="comment">//对a中的从a.begin()（包括它）到a.end()（不包括它）的元素倒置，但不排列，如a中元素为1,3,2,4,倒置后为4,2,3,1</span></span><br><span class="line">reverse(a.<span class="built_in">begin</span>(),a.<span class="built_in">end</span>()); </span><br><span class="line"></span><br><span class="line"><span class="comment">//把a中的从a.begin()（包括它）到a.end()（不包括它）的元素复制到b中，从b.begin()+1的位置（包括它）开        始复制，覆盖掉原有元素</span></span><br><span class="line">copy(a.<span class="built_in">begin</span>(),a.<span class="built_in">end</span>(),b.<span class="built_in">begin</span>()+<span class="number">1</span>); </span><br><span class="line"></span><br><span class="line"><span class="comment">//在a中的从a.begin()（包括它）到a.end()（不包括它）的元素中查找10，若存在返回其在向量中的位置</span></span><br><span class="line"><span class="built_in">find</span>(a.<span class="built_in">begin</span>(),a.<span class="built_in">end</span>(),<span class="number">10</span>);</span><br></pre></td></tr></table></figure></li>
+</ul></li>
 </ul>
-<h2 id="copy">2.2. copy</h2><ul>
+<h2 id="copy">2.2. copy</h2>
+<ul>
 <li><strong>Note</strong>:深拷贝与浅拷贝的区别就在于深拷贝会在堆内存中另外申请空间来储存数据，从而也就解决了指针悬挂的问题。简而言之，当数据成员中有指针时，必须要用深拷贝。</li>
 </ul>
-<h3 id="shallow-copy">2.2.1. shallow copy</h3><h3 id="deep-copy">2.2.2. deep copy</h3><h1 id="Class">3. Class</h1><h2 id="compiling-sequence">3.1. compiling sequence</h2><ul>
-<li><p><strong>Def</strong>: compiling sequence: </p>
+<h3 id="shallow-copy">2.2.1. shallow copy</h3>
+<h3 id="deep-copy">2.2.2. deep copy</h3>
+<h1 id="class">3. Class</h1>
+<h2 id="compiling-sequence">3.1. compiling sequence</h2>
+<ul>
+<li><p><strong>Def</strong>: compiling sequence:</p>
 <p>按代码从上到下</p>
 <ul>
 <li>编译变量(variable)</li>
@@ -762,201 +733,190 @@
 <li>再编译成员函数的函数体。</li>
 </ul>
 <p><strong>Note</strong>: 这也就解释了为什么成员函数可以访问成员变量，即使这个变量是放在类的最末尾(后于这个成员函数定义)。原因就是编译器先编译整个类(除成员函数的函数体)，然后再编译成员函数体。</p>
-<p>这还解释了为什么在类中重命名一些类型尽量放到类的最开始处。因为类中的除成员函数体之外都是顺序编译的，如果不把类型重命名放到使用该重命名的类型之前，那么编译器就不会认识这个重命名的类型。</p>
-</li>
+<p>这还解释了为什么在类中重命名一些类型尽量放到类的最开始处。因为类中的除成员函数体之外都是顺序编译的，如果不把类型重命名放到使用该重命名的类型之前，那么编译器就不会认识这个重命名的类型。</p></li>
 </ul>
-<h2 id="construction-function">3.2. construction function</h2><ul>
+<h2 id="construction-function">3.2. construction function</h2>
+<ul>
 <li><p><strong>Def</strong> : construction funciton</p>
-<p>就是在声明对象的时候可以直接赋值给该对象私有成员，不用去调用接口赋值，方便一点，这个直接赋值呢，又分为在构造函数内部（函数实现部分，大括号内）对每个私有数据成员赋值，还可以用列表初始化的方式赋值（这点比较重要，在继承的时候还会再拓展的），书上例子都有，我在这说的意思就是你自己好好去看看书上的例题代码。</p>
-</li>
+<p>就是在声明对象的时候可以直接赋值给该对象私有成员，不用去调用接口赋值，方便一点，这个直接赋值呢，又分为在构造函数内部（函数实现部分，大括号内）对每个私有数据成员赋值，还可以用列表初始化的方式赋值（这点比较重要，在继承的时候还会再拓展的），书上例子都有，我在这说的意思就是你自己好好去看看书上的例题代码。</p></li>
 </ul>
-<h2 id="destruction-function">3.3. destruction function</h2><ul>
+<h2 id="destruction-function">3.3. destruction function</h2>
+<ul>
 <li><p><strong>Def</strong> : destruction function</p>
-<p>在该类的对象的生命周期结束时调用，只要是用于若构造函数声明了内存空间的话，释放掉，析构函数的调用次序是对象的声明顺序的逆序，因为这些对象存入的地方是栈，栈具有先进后出的特点</p>
-</li>
+<p>在该类的对象的生命周期结束时调用，只要是用于若构造函数声明了内存空间的话，释放掉，析构函数的调用次序是对象的声明顺序的逆序，因为这些对象存入的地方是栈，栈具有先进后出的特点</p></li>
 </ul>
-<h2 id="static-function">3.4. static function</h2><ul>
+<h2 id="static-function">3.4. static function</h2>
+<ul>
 <li><p><strong>Qua</strong>: init related</p>
 <ul>
-<li><p>只有一种初始化方式，在类外初始化；</p>
-</li>
-<li><p>静态成员函数只允许访问静态成员函数或是静态数据成员，而普通函数可以随便访问；</p>
-</li>
+<li><p>只有一种初始化方式，在类外初始化；</p></li>
+<li><p>静态成员函数只允许访问静态成员函数或是静态数据成员，而普通函数可以随便访问；</p></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h2 id="suspend-pointer">3.5. suspend pointer</h2><ul>
+<h2 id="suspend-pointer">3.5. suspend pointer</h2>
+<ul>
 <li><p><strong>Def</strong> : suspend pointer</p>
-<p>第一个对象的私有成员指针指向了这块内存区域，然后将该对象赋值给第二个对象，执行第二个函数的析构函数时，第一个对象的指针本来指向该内存区域，但是被释放了，就会变成一个野指针，擅自修改或调用就会出现未知bug，这就是指针悬挂问题，所以需要重载拷贝构造函数以及重载赋值运算符，在赋值的时候给第二个对象也开辟一块新的内存空间将字符串复制过去（关于如何重载，书上有例子）</p>
-</li>
+<p>第一个对象的私有成员指针指向了这块内存区域，然后将该对象赋值给第二个对象，执行第二个函数的析构函数时，第一个对象的指针本来指向该内存区域，但是被释放了，就会变成一个野指针，擅自修改或调用就会出现未知bug，这就是指针悬挂问题，所以需要重载拷贝构造函数以及重载赋值运算符，在赋值的时候给第二个对象也开辟一块新的内存空间将字符串复制过去（关于如何重载，书上有例子）</p></li>
 </ul>
-<h1 id="Function">4. Function</h1><h2 id="function-type">4.1. function type</h2><h3 id="basic-type-1">4.1.1. basic type</h3><ul>
-<li><p><strong>Init</strong>: </p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">function</span> <span class="params">(x, y)</span></span>;</span><br></pre></td></tr></table></figure>
-</li>
+<h1 id="function">4. Function</h1>
+<h2 id="function-type">4.1. function type</h2>
+<h3 id="basic-type-1">4.1.1. basic type</h3>
+<ul>
+<li><p><strong>Init</strong>:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">function</span> <span class="params">(x, y)</span></span>;</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h3 id="inline-decoration">4.1.2. inline decoration</h3><ul>
+<h3 id="inline-decoration">4.1.2. inline decoration</h3>
+<ul>
 <li><p><strong>Def</strong>: inline decoration</p>
-<p>replace function with codes</p>
-</li>
+<p>replace function with codes</p></li>
 <li><p><strong>Qua</strong>: pros &amp; cons</p>
 <ul>
 <li>pro： 内联函数编译器处理时相当于只调用方法体里面的逻辑，好处省时，适用于循环调用该函数时用</li>
-<li>con：为什么不把所有函数都写成内联函数？<ul>
+<li>con：为什么不把所有函数都写成内联函数？
+<ul>
 <li>1、内联编译时建议性的，由编译器决定</li>
 <li>2、逻辑简单，调用频繁的函数建议使用内联</li>
 <li>3、递归函数无法使用内联方式，编译器会把递归函数当成普通函数处理</li>
+</ul></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="declaration">4.2. declaration</h2><ul>
+<h2 id="declaration">4.2. declaration</h2>
+<ul>
 <li><p><strong>Def</strong>: declaration</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//void fun(int i,int k = 5, int j);// 编译出错</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> k = <span class="number">5</span>, <span class="keyword">int</span> j = <span class="number">10</span>)</span></span>;</span><br></pre></td></tr></table></figure>
 <p>lambda</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[last] (<span class="keyword">int</span> e) &#123; <span class="keyword">return</span> e &gt; *(last - <span class="number">1</span>); &#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">anonymous</span><span class="params">(<span class="keyword">int</span> e)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> e &gt; *(last - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">anonymous</span><span class="params">(<span class="keyword">int</span> e)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> e &gt; *(last - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h2 id="definition">4.3. definition</h2><ul>
+<h2 id="definition">4.3. definition</h2>
+<ul>
 <li><p><strong>Def</strong> : definition</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> k, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; i &lt;&lt; k &lt;&lt; j &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> k, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; i &lt;&lt; k &lt;&lt; j &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h2 id="overload-重载">4.4. overload(重载)</h2><ul>
+<h2 id="overload重载">4.4. overload(重载)</h2>
+<ul>
 <li><p><strong>Def</strong> : overload</p>
-<p>在相同作用域内，函数名称相同，参数个数，参数类型或者返回值不同的称之为函数重载</p>
-</li>
-<li><p><strong>Example</strong>: </p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getMax</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// to do</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">getMax</span><span class="params">(<span class="keyword">float</span> i, <span class="keyword">float</span> j)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// to do</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">getMax</span><span class="params">(<span class="keyword">double</span> i, <span class="keyword">double</span> j)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// to do</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
+<p>在相同作用域内，函数名称相同，参数个数，参数类型或者返回值不同的称之为函数重载</p></li>
+<li><p><strong>Example</strong>:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getMax</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// to do</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">getMax</span><span class="params">(<span class="keyword">float</span> i, <span class="keyword">float</span> j)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// to do</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">getMax</span><span class="params">(<span class="keyword">double</span> i, <span class="keyword">double</span> j)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// to do</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h2 id="override-重写">4.5. override (重写)</h2><ul>
+<h2 id="override-重写">4.5. override (重写)</h2>
+<ul>
 <li><p><strong>Def</strong> :</p>
-<p>father &amp; son</p>
-</li>
+<p>father &amp; son</p></li>
 </ul>
-<h2 id="passing-parameter">4.6. passing parameter</h2><p><img src="/2019/11/19/c++/image-20191203173614014.png" alt></p>
-<h2 id="return-parameter">4.7. return parameter</h2><p><img src="/2019/11/19/c++/image-20191203174116325.png" alt></p>
-<h1 id="Affect-Field">5. Affect Field</h1><h2 id="affect-field">5.1. affect field</h2><ul>
+<h2 id="passing-parameter">4.6. passing parameter</h2>
+<p><img src="/2019/11/19/c++/image-20191203173614014.png"></p>
+<h2 id="return-parameter">4.7. return parameter</h2>
+<p><img src="/2019/11/19/c++/image-20191203174116325.png"></p>
+<h1 id="affect-field">5. Affect Field</h1>
+<h2 id="affect-field-1">5.1. affect field</h2>
+<ul>
 <li><p><strong>Def</strong> : affect field</p>
-<p>命名空间是ANSIC++引入的可以由用户命名的作用域，用来处理程序中 常见的同名冲突。<br>在 C语言中定义了3个层次的作用域，即</p>
+<p>命名空间是ANSIC++引入的可以由用户命名的作用域，用来处理程序中 常见的同名冲突。 在 C语言中定义了3个层次的作用域，即</p>
 <ul>
 <li><p>文件，编译单元</p>
 <ul>
-<li><p>单个文件（static）</p>
-</li>
+<li><p>单个文件（static）</p></li>
 <li><p>所有文件，整个程序（global）</p>
-<p>但是，如果一个程序包括文件A和文件B，那么在进行连接时，会报告出错，因为在同一个程序中有两个同名的变量，认为是对变量的重复定义。可 以通过extern声明同一程序中的两个文件中的同名变量是同一个变量。如果在文件B中有以下声明：<br>extem int a；</p>
-</li>
+<p>但是，如果一个程序包括文件A和文件B，那么在进行连接时，会报告出错，因为在同一个程序中有两个同名的变量，认为是对变量的重复定义。可 以通过extern声明同一程序中的两个文件中的同名变量是同一个变量。如果在文件B中有以下声明： extem int a；</p></li>
+</ul></li>
+<li><p>命名空间</p></li>
+<li><p>C++又引入了类作用域，类是出现在文件内的。</p></li>
+<li><p>函数（函数内）</p></li>
+<li><p>复合语句（语句内）</p></li>
 </ul>
-</li>
-<li><p>命名空间</p>
-</li>
-<li><p>C++又引入了类作用域，类是出现在文件内的。</p>
-</li>
-<li><p>函数（函数内）</p>
-</li>
-<li><p>复合语句（语句内）</p>
-</li>
+<p>在不同的作用域中可以定义相同名字的变量，互不于扰，系统能够区别它们。</p></li>
 </ul>
-<p>在不同的作用域中可以定义相同名字的变量，互不于扰，系统能够区别它们。</p>
-</li>
-</ul>
-<h2 id="namespace">5.2. namespace</h2><ul>
-<li><p><strong>Def</strong>: namespace</p>
-<p>实际上就是一个由程序设计者命名的内存区域，程序设计者可以根据需要指定一些有名字的空间域，把一些全局实分别放在各个命名空间中，从而与其他全局实体分隔开来。</p>
-</li>
-<li><p><strong>Qua</strong>: usage</p>
-<p>建立一些互相分隔的作用域，把一些全局实体分隔开来。</p>
-</li>
-<li><p><strong>Example</strong>: </p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> myNameSpace &#123;</span><br><span class="line"><span class="keyword">int</span> A;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Liu</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">setA</span><span class="params">()</span></span>&#123;</span><br><span class="line">		A = <span class="number">20</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"A ："</span> &lt;&lt; A &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getMax</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> num;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> myNameSpace;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	myNameSpace::A = <span class="number">10</span>;</span><br><span class="line">	myNameSpace::<span class="built_in">print</span>();</span><br><span class="line">	myNameSpace::Liu liu;</span><br><span class="line">	liu.setA();</span><br><span class="line">	<span class="built_in">print</span>();</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"命名空间的使用："</span> &lt;&lt; myNameSpace::getMax(<span class="number">9</span>) &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="decoration">5.2.1. decoration.</h3><ul>
-<li><p><strong>Def</strong> : different namespaces</p>
+<h2 id="namespace">5.2. namespace</h2>
 <ul>
-<li><p>1.显式，在某某命名空间中</p>
-</li>
-<li><p>2.全局命名空间，等同于全局空间。</p>
-</li>
-<li>3.匿名命名空间   例：namespace{   class A；  }</li>
+<li><p><strong>Def</strong>: namespace</p>
+<p>实际上就是一个由程序设计者命名的内存区域，程序设计者可以根据需要指定一些有名字的空间域，把一些全局实分别放在各个命名空间中，从而与其他全局实体分隔开来。</p></li>
+<li><p><strong>Qua</strong>: usage</p>
+<p>建立一些互相分隔的作用域，把一些全局实体分隔开来。</p></li>
+<li><p><strong>Example</strong>:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> myNameSpace &#123;</span><br><span class="line"><span class="keyword">int</span> A;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Liu</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">setA</span><span class="params">()</span></span>&#123;</span><br><span class="line">		A = <span class="number">20</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"A ："</span> &lt;&lt; A &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getMax</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> num;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> myNameSpace;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	myNameSpace::A = <span class="number">10</span>;</span><br><span class="line">	myNameSpace::<span class="built_in">print</span>();</span><br><span class="line">	myNameSpace::Liu liu;</span><br><span class="line">	liu.setA();</span><br><span class="line">	<span class="built_in">print</span>();</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"命名空间的使用："</span> &lt;&lt; myNameSpace::getMax(<span class="number">9</span>) &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
-</li>
+<h3 id="decoration.">5.2.1. decoration.</h3>
+<ul>
+<li><strong>Def</strong> : different namespaces
+<ul>
+<li><p>1.显式，在某某命名空间中</p></li>
+<li><p>2.全局命名空间，等同于全局空间。</p></li>
+<li><p>3.匿名命名空间 例：namespace{ class A； }</p></li>
+</ul></li>
 </ul>
-<p>​                         </p>
-<h2 id="class">5.3. class</h2><ul>
+<p>​</p>
+<h2 id="class-1">5.3. class</h2>
+<ul>
 <li><p>类中的数据和函数分为公有类（public），保护类（protected），私有类（private），</p>
 <p>类公有派生类，保护派生类，私有派生类</p>
-<p>类中的成员 在public中 ，可以在其他地方直接使用  使用方法：对象.公用类成员（对象：：公用类成员）</p>
+<p>类中的成员 在public中 ，可以在其他地方直接使用 使用方法：对象.公用类成员（对象：：公用类成员）</p>
 <p>而其他的需要借助公有类函数调用 ，但是在类中可以直接调用 。</p>
 <p>例： class x的对象X的成员m具有类作用域，对m的访问有三种</p>
 <p>（1）如果 在X的成员函数中没有声明 同名 的局部作用域标识符，那么可以在该函数内可以直接访问成员m。</p>
 <p>（2）通过表达式x.m或者x::m。这正是程序中访问对象的最基本的方法</p>
-<p>（3）通过ptr-&gt;m这样的表达式，其中ptr为指向x类的一个对象的指针。</p>
-</li>
+<p>（3）通过ptr-&gt;m这样的表达式，其中ptr为指向x类的一个对象的指针。</p></li>
 </ul>
-<h1 id="Memory">6. Memory</h1><h2 id="allocation">6.1. allocation</h2><h3 id="allocation-ways">6.1.1. allocation ways</h3><ul>
+<h1 id="memory">6. Memory</h1>
+<h2 id="allocation">6.1. allocation</h2>
+<h3 id="allocation-ways">6.1.1. allocation ways</h3>
+<ul>
 <li><p><strong>Def</strong> : allocation</p>
 <ul>
 <li>从静态存储区分配：此时的内存在程序编译的时候已经分配好，并且在程序的整个运行期间都存在。全局变量，static变量等在此存储。</li>
 <li>在stack区分配：相关代码执行时创建，执行结束时被自动释放。局部变量在此存储。栈<a href="https://www.baidu.com/s?wd=内存分配&amp;tn=SE_PcZhidaonwhc_ngpagmjz&amp;rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">内存分配</a>运算内置于处理器的指令集中，效率高，但容量有限。</li>
 <li>在heap区分配：<a href="https://www.baidu.com/s?wd=动态分配内存&amp;tn=SE_PcZhidaonwhc_ngpagmjz&amp;rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">动态分配内存</a>。用new/malloc时开辟，delete/free时释放。生存期由用户指定，灵活。但有内存泄露等问题。</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="array-like">6.1.2. array like</h3><ul>
-<li><p><strong>Def</strong>: c based </p>
+<h3 id="array-like">6.1.2. array like</h3>
+<ul>
+<li><p><strong>Def</strong>: c based</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> a []= &#123;sa,a,a&#125;;</span><br></pre></td></tr></table></figure>
-<p>in stack </p>
-</li>
+<p>in stack</p></li>
 <li><p><strong>Def</strong>: string</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> a ;</span><br></pre></td></tr></table></figure>
-<p>in stack and heap</p>
-</li>
+<p>in stack and heap</p></li>
 <li><p><strong>Def</strong>: vector</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;Type&gt; vect;</span><br></pre></td></tr></table></figure>
 <p>will allocate the <code>vector</code>, i.e. the header info, on the stack, but the elements on heap</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;Type&gt; *vect = <span class="keyword">new</span> <span class="built_in">vector</span>&lt;Type&gt;;</span><br></pre></td></tr></table></figure>
 <p>allocates everything on the heap</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;Type*&gt; vect;</span><br></pre></td></tr></table></figure>
-<p>will allocate the <code>vector</code> on the stack and a bunch of pointers on the free store, but where these point is determined by how you use them (you could point element 0 to the free store and element 1 to the stack, say).</p>
-</li>
+<p>will allocate the <code>vector</code> on the stack and a bunch of pointers on the free store, but where these point is determined by how you use them (you could point element 0 to the free store and element 1 to the stack, say).</p></li>
 </ul>
-<h3 id="class-1">6.1.3. class</h3><h2 id="memory-storage">6.2. memory storage</h2><ul>
-<li><p><strong>Def</strong> </p>
+<h3 id="class-2">6.1.3. class</h3>
+<h2 id="memory-storage">6.2. memory storage</h2>
+<ul>
+<li><p><strong>Def</strong></p>
 <ul>
 <li>栈区 int i = 1;定义一个变量</li>
-<li>堆区    int *p = new int[10];</li>
-<li>全局区    存储的全局变量和静态变量</li>
-<li>常量区    string str = “c++”</li>
-<li>代码区    存储逻辑代码的二进制</li>
+<li>堆区 int *p = new int[10];</li>
+<li>全局区 存储的全局变量和静态变量</li>
+<li>常量区 string str = "c++"</li>
+<li>代码区 存储逻辑代码的二进制</li>
 </ul>
-<p><img src="https://i.loli.net/2019/11/20/NJyCiQ3eKVFrE2S.png" alt="image.png" style="zoom:33%;"></p>
-</li>
+<p><img src="https://i.loli.net/2019/11/20/NJyCiQ3eKVFrE2S.png" alt="image.png" style="zoom:33%;"></p></li>
 </ul>
-<h2 id="heap-storage">6.3. heap storage</h2><ul>
-<li><p><strong>Example</strong>:  in c </p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 	C语言内存申请和释放</span></span><br><span class="line"><span class="comment">	 * 	void *malloc(size_t size)</span></span><br><span class="line"><span class="comment">	 * 	void free(void *memblock)</span></span><br><span class="line"><span class="comment">	 */</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Example</strong>:  in c++</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//C++中内存申请和释放使用关键字new和delete，需要配套使用</span></span><br><span class="line"><span class="comment">//申请初始化指针，分配一块4的内存，初始化值为10</span></span><br><span class="line"><span class="keyword">int</span> *p = <span class="keyword">new</span> <span class="keyword">int</span>(<span class="number">10</span>); </span><br><span class="line"><span class="keyword">if</span> (<span class="literal">NULL</span> == p) &#123;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//释放</span></span><br><span class="line"><span class="keyword">delete</span> p;</span><br><span class="line">p = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//如何申请和释放内存块？</span></span><br><span class="line"><span class="keyword">int</span> *arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">1000</span>]; 创建一个<span class="number">10</span>个大小的<span class="keyword">int</span>指针数组。</span><br><span class="line"><span class="comment">//假设内存申请失败</span></span><br><span class="line"><span class="keyword">if</span> (<span class="literal">NULL</span> == arr) &#123;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">delete</span>[] arr;<span class="comment">//如果不加[]，则只会释放arr[0]的内存</span></span><br><span class="line">arr = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"C++内存管理"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Example</strong>:  in c++ </p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Tv</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="keyword">int</span> x = <span class="number">10</span>;</span><br><span class="line">	<span class="keyword">int</span> y = <span class="number">20</span>;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">px</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; x &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">py</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; y &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	Tv tv;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; tv.x &lt;&lt; <span class="built_in">endl</span>; <span class="comment">//在内存开辟一块栈空间，不需要主动释放</span></span><br><span class="line">tv.px();</span><br><span class="line">tv.py();</span><br><span class="line"><span class="comment">//	Tv *tvNew;</span></span><br><span class="line">Tv *tvNew = <span class="keyword">new</span> Tv(); <span class="comment">// 向内存申请一块堆空间</span></span><br><span class="line"><span class="keyword">if</span> (<span class="literal">NULL</span> == tvNew) &#123;</span><br><span class="line">system(<span class="string">"pause"</span>);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 类似于C语言的写法</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; (*tvNew).x &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">(*tvNew).px();</span><br><span class="line">(*tvNew).py();</span><br><span class="line"><span class="comment">// 类似于NDK编程的写法</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; tvNew-&gt;x &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">tvNew-&gt;px();</span><br><span class="line">tvNew-&gt;py();</span><br><span class="line"><span class="keyword">delete</span> tvNew; <span class="comment">// 在内存中申请的堆空间，需要主动释放</span></span><br><span class="line">tvNew = <span class="literal">NULL</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
-</li>
+<h2 id="heap-storage">6.3. heap storage</h2>
+<ul>
+<li><p><strong>Example</strong>: in c</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 	C语言内存申请和释放</span></span><br><span class="line"><span class="comment">	 * 	void *malloc(size_t size)</span></span><br><span class="line"><span class="comment">	 * 	void free(void *memblock)</span></span><br><span class="line"><span class="comment">	 */</span></span><br></pre></td></tr></table></figure></li>
+<li><p><strong>Example</strong>: in c++</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//C++中内存申请和释放使用关键字new和delete，需要配套使用</span></span><br><span class="line"><span class="comment">//申请初始化指针，分配一块4的内存，初始化值为10</span></span><br><span class="line"><span class="keyword">int</span> *p = <span class="keyword">new</span> <span class="keyword">int</span>(<span class="number">10</span>); </span><br><span class="line"><span class="keyword">if</span> (<span class="literal">NULL</span> == p) &#123;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//释放</span></span><br><span class="line"><span class="keyword">delete</span> p;</span><br><span class="line">p = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//如何申请和释放内存块？</span></span><br><span class="line"><span class="keyword">int</span> *arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">1000</span>]; 创建一个<span class="number">10</span>个大小的<span class="keyword">int</span>指针数组。</span><br><span class="line"><span class="comment">//假设内存申请失败</span></span><br><span class="line"><span class="keyword">if</span> (<span class="literal">NULL</span> == arr) &#123;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">delete</span>[] arr;<span class="comment">//如果不加[]，则只会释放arr[0]的内存</span></span><br><span class="line">arr = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"C++内存管理"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p><strong>Example</strong>: in c++</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Tv</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="keyword">int</span> x = <span class="number">10</span>;</span><br><span class="line">	<span class="keyword">int</span> y = <span class="number">20</span>;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">px</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; x &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">py</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; y &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	Tv tv;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; tv.x &lt;&lt; <span class="built_in">endl</span>; <span class="comment">//在内存开辟一块栈空间，不需要主动释放</span></span><br><span class="line">tv.px();</span><br><span class="line">tv.py();</span><br><span class="line"><span class="comment">//	Tv *tvNew;</span></span><br><span class="line">Tv *tvNew = <span class="keyword">new</span> Tv(); <span class="comment">// 向内存申请一块堆空间</span></span><br><span class="line"><span class="keyword">if</span> (<span class="literal">NULL</span> == tvNew) &#123;</span><br><span class="line">system(<span class="string">"pause"</span>);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 类似于C语言的写法</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; (*tvNew).x &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">(*tvNew).px();</span><br><span class="line">(*tvNew).py();</span><br><span class="line"><span class="comment">// 类似于NDK编程的写法</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; tvNew-&gt;x &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">tvNew-&gt;px();</span><br><span class="line">tvNew-&gt;py();</span><br><span class="line"><span class="keyword">delete</span> tvNew; <span class="comment">// 在内存中申请的堆空间，需要主动释放</span></span><br><span class="line">tvNew = <span class="literal">NULL</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h2 id="segment-fault">6.4. segment fault</h2><ul>
-<li><strong>Def</strong>: segment fault<ul>
-<li><a href="https://www.baidu.com/s?wd=内存分配&amp;tn=SE_PcZhidaonwhc_ngpagmjz&amp;rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">内存分配</a>未成功，却被使用。<br>对策：使用内存之前检查是否分配成功。用p!=NULL判断。</li>
-<li><a href="https://www.baidu.com/s?wd=内存分配&amp;tn=SE_PcZhidaonwhc_ngpagmjz&amp;rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">内存分配</a>成功，未初始化就被使用。<br>内存的缺省值没有统一的标准。大部分编译器以0作为初始值，但不完全是。<br>对策：内存初始化时赋初值。</li>
-<li>内存操作越界。<br>对策：只能是小心了。</li>
-<li>释放了内存，仍然使用。<br>（1） 使用显示delete和free的野指针。<br>对策：释放完内存，将指针置为NULL。<br>（2） 使用隐式delete和free的野指针。主要是指函数返回指向栈内存的指针或引用。<br>对策：当然是不要返回就可以了。</li>
-<li>未释放内存，导致内存泄露。<br>用new/malloc开辟了内存，没用delete/free释放.<br>对策：new和delete的个数一定相同；malloc和free的个数一定相同；new[]和[]delete一定对应。 </li>
-</ul>
-</li>
+<h2 id="segment-fault">6.4. segment fault</h2>
+<ul>
+<li><strong>Def</strong>: segment fault
+<ul>
+<li><a href="https://www.baidu.com/s?wd=内存分配&amp;tn=SE_PcZhidaonwhc_ngpagmjz&amp;rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">内存分配</a>未成功，却被使用。 对策：使用内存之前检查是否分配成功。用p!=NULL判断。</li>
+<li><a href="https://www.baidu.com/s?wd=内存分配&amp;tn=SE_PcZhidaonwhc_ngpagmjz&amp;rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">内存分配</a>成功，未初始化就被使用。 内存的缺省值没有统一的标准。大部分编译器以0作为初始值，但不完全是。 对策：内存初始化时赋初值。</li>
+<li>内存操作越界。 对策：只能是小心了。</li>
+<li>释放了内存，仍然使用。 （1） 使用显示delete和free的野指针。 对策：释放完内存，将指针置为NULL。 （2） 使用隐式delete和free的野指针。主要是指函数返回指向栈内存的指针或引用。 对策：当然是不要返回就可以了。</li>
+<li>未释放内存，导致内存泄露。 用new/malloc开辟了内存，没用delete/free释放. 对策：new和delete的个数一定相同；malloc和free的个数一定相同；new[]和[]delete一定对应。</li>
+</ul></li>
 </ul>
 
       
@@ -977,7 +937,7 @@
   <p><span>Title:</span><a href="/2019/11/19/c++/">C++</a></p>
   <p><span>Author:</span><a href="/" title=" Benson 的personal blog">Benson</a></p>
   <p><span>PTime:</span>2019/11/19 - 12:11</p>
-  <p><span>LUpdate:</span>2019/12/29 - 23:12</p>
+  <p><span>LUpdate:</span>2020/01/03 - 22:01</p>
   <p><span>Link:</span><a href="/2019/11/19/c++/" title="C++">https://steinsgate9.github.io/2019/11/19/c++/</a>
     <span class="copy-path"  title="click to copy link"><i class="fa fa-clipboard" data-clipboard-text="https://steinsgate9.github.io/2019/11/19/c++/"  aria-label="copy done！"></i></span>
   </p>
@@ -1062,8 +1022,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/19/datastructure-algorithm/" rel="prev" title="datastructure-algorithm">
-                datastructure-algorithm <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/19/Probability/" rel="prev" title="Probability Theory">
+                Probability Theory <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -1267,7 +1227,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Overview"><span class="nav-text">1. Overview</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Variable"><span class="nav-text">2. Variable</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#data-type"><span class="nav-text">2.1. data type</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#basic-type"><span class="nav-text">2.1.1. basic type</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#const-decoration"><span class="nav-text">2.1.2. const decoration</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#const-variable"><span class="nav-text">2.1.2.1. const variable</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#const-class"><span class="nav-text">2.1.2.2. const class</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#auto-decoration"><span class="nav-text">2.1.3. auto decoration</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#register-decoration"><span class="nav-text">2.1.4. register decoration</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#static-decoration"><span class="nav-text">2.1.5. static decoration</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#extern-decoration"><span class="nav-text">2.1.6. extern decoration</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mutable-decoration"><span class="nav-text">2.1.7. mutable decoration</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#thread-local-decoration"><span class="nav-text">2.1.8. thread_local decoration</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reference-decoration"><span class="nav-text">2.1.9. reference decoration</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#reference-of-variable-int-amp-xxx"><span class="nav-text">2.1.9.1. reference of variable   (int &amp;xxx)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#reference-of-pointer-int-amp-xxx"><span class="nav-text">2.1.9.2. reference of pointer (int* &amp; xxx)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pointer-decoration"><span class="nav-text">2.1.10. pointer decoration</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#pointer-of-varibale"><span class="nav-text">2.1.10.1. pointer of varibale</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#array-of-pointer-指针数组）"><span class="nav-text">2.1.10.2. array of pointer (指针数组）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pointer-of-array（数组指针）"><span class="nav-text">2.1.10.3. pointer of array（数组指针）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#array-decoration"><span class="nav-text">2.1.11. array decoration</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#enum-type"><span class="nav-text">2.1.12. enum type</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#string-type"><span class="nav-text">2.1.13. string type</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vector-type"><span class="nav-text">2.1.14. vector type</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#copy"><span class="nav-text">2.2. copy</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#shallow-copy"><span class="nav-text">2.2.1. shallow copy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#deep-copy"><span class="nav-text">2.2.2. deep copy</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Class"><span class="nav-text">3. Class</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#compiling-sequence"><span class="nav-text">3.1. compiling sequence</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#construction-function"><span class="nav-text">3.2. construction function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#destruction-function"><span class="nav-text">3.3. destruction function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#static-function"><span class="nav-text">3.4. static function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#suspend-pointer"><span class="nav-text">3.5. suspend pointer</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Function"><span class="nav-text">4. Function</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#function-type"><span class="nav-text">4.1. function type</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#basic-type-1"><span class="nav-text">4.1.1. basic type</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#inline-decoration"><span class="nav-text">4.1.2. inline decoration</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#declaration"><span class="nav-text">4.2. declaration</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#definition"><span class="nav-text">4.3. definition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#overload-重载"><span class="nav-text">4.4. overload(重载)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#override-重写"><span class="nav-text">4.5. override (重写)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#passing-parameter"><span class="nav-text">4.6. passing parameter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#return-parameter"><span class="nav-text">4.7. return parameter</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Affect-Field"><span class="nav-text">5. Affect Field</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#affect-field"><span class="nav-text">5.1. affect field</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#namespace"><span class="nav-text">5.2. namespace</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#decoration"><span class="nav-text">5.2.1. decoration.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#class"><span class="nav-text">5.3. class</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Memory"><span class="nav-text">6. Memory</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#allocation"><span class="nav-text">6.1. allocation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#allocation-ways"><span class="nav-text">6.1.1. allocation ways</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#array-like"><span class="nav-text">6.1.2. array like</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#class-1"><span class="nav-text">6.1.3. class</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#memory-storage"><span class="nav-text">6.2. memory storage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#heap-storage"><span class="nav-text">6.3. heap storage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#segment-fault"><span class="nav-text">6.4. segment fault</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#overview"><span class="nav-text">1. Overview</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#variable"><span class="nav-text">2. Variable</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#data-type"><span class="nav-text">2.1. data type</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#basic-type"><span class="nav-text">2.1.1. basic type</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#const-decoration"><span class="nav-text">2.1.2. const decoration</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#const-variable"><span class="nav-text">2.1.2.1. const variable</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#const-class"><span class="nav-text">2.1.2.2. const class</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#auto-decoration"><span class="nav-text">2.1.3. auto decoration</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#register-decoration"><span class="nav-text">2.1.4. register decoration</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#static-decoration"><span class="nav-text">2.1.5. static decoration</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#extern-decoration"><span class="nav-text">2.1.6. extern decoration</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mutable-decoration"><span class="nav-text">2.1.7. mutable decoration</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#thread_local-decoration"><span class="nav-text">2.1.8. thread_local decoration</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reference-decoration"><span class="nav-text">2.1.9. reference decoration</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#reference-of-variable-int-xxx"><span class="nav-text">2.1.9.1. reference of variable (int &amp;xxx)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#reference-of-pointer-int-xxx"><span class="nav-text">2.1.9.2. reference of pointer (int* &amp; xxx)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pointer-decoration"><span class="nav-text">2.1.10. pointer decoration</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#pointer-of-varibale"><span class="nav-text">2.1.10.1. pointer of varibale</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#array-of-pointer-指针数组"><span class="nav-text">2.1.10.2. array of pointer (指针数组）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pointer-of-array数组指针"><span class="nav-text">2.1.10.3. pointer of array（数组指针）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#enum-type"><span class="nav-text">2.1.11. enum type</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#string-type"><span class="nav-text">2.1.12. string type</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vector-type"><span class="nav-text">2.1.13. vector type</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#copy"><span class="nav-text">2.2. copy</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#shallow-copy"><span class="nav-text">2.2.1. shallow copy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#deep-copy"><span class="nav-text">2.2.2. deep copy</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#class"><span class="nav-text">3. Class</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#compiling-sequence"><span class="nav-text">3.1. compiling sequence</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#construction-function"><span class="nav-text">3.2. construction function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#destruction-function"><span class="nav-text">3.3. destruction function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#static-function"><span class="nav-text">3.4. static function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#suspend-pointer"><span class="nav-text">3.5. suspend pointer</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#function"><span class="nav-text">4. Function</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#function-type"><span class="nav-text">4.1. function type</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#basic-type-1"><span class="nav-text">4.1.1. basic type</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#inline-decoration"><span class="nav-text">4.1.2. inline decoration</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#declaration"><span class="nav-text">4.2. declaration</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#definition"><span class="nav-text">4.3. definition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#overload重载"><span class="nav-text">4.4. overload(重载)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#override-重写"><span class="nav-text">4.5. override (重写)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#passing-parameter"><span class="nav-text">4.6. passing parameter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#return-parameter"><span class="nav-text">4.7. return parameter</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#affect-field"><span class="nav-text">5. Affect Field</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#affect-field-1"><span class="nav-text">5.1. affect field</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#namespace"><span class="nav-text">5.2. namespace</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#decoration."><span class="nav-text">5.2.1. decoration.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#class-1"><span class="nav-text">5.3. class</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#memory"><span class="nav-text">6. Memory</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#allocation"><span class="nav-text">6.1. allocation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#allocation-ways"><span class="nav-text">6.1.1. allocation ways</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#array-like"><span class="nav-text">6.1.2. array like</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#class-2"><span class="nav-text">6.1.3. class</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#memory-storage"><span class="nav-text">6.2. memory storage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#heap-storage"><span class="nav-text">6.3. heap storage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#segment-fault"><span class="nav-text">6.4. segment fault</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1287,7 +1247,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
