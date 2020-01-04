@@ -151,7 +151,7 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;datastructure-algorithm&#x2F;IMG_5430.JPG">
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;datastructure-algorithm&#x2F;IMG_3650.JPG">
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;datastructure-algorithm&#x2F;IMG_9352.JPG">
-<meta property="og:updated_time" content="2020-01-03T14:02:31.895Z">
+<meta property="og:updated_time" content="2020-01-04T11:59:18.048Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;datastructure-algorithm&#x2F;image-20191203164455493.png">
 
@@ -453,7 +453,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  13.3k
+                  13.4k
                 </span>
               
 
@@ -469,7 +469,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  79
+                  80
                 </span>
               
             </div>
@@ -670,19 +670,19 @@
 </ul>
 <h3 id="remove-duplicate-letters">2.5.10. Remove Duplicate Letters</h3>
 <ul>
-<li>key
+<li><p>key</p>
 <ul>
 <li>stack is used to simply keep a non-increasing array.</li>
 </ul></li>
 </ul>
-<p>### 975. Odd Even Jump</p>
+<h3 id="odd-even-jump">2.5.11. 975 Odd Even Jump</h3>
 <ul>
 <li><p>key</p>
 <ul>
 <li>dp provide us with a way of solving this: only we have to solve the next smallerst higher / next lartest smaller, use index stack!</li>
 </ul></li>
 </ul>
-<h3 id="trapping-rain-water">2.5.11. 42. Trapping Rain Water</h3>
+<h3 id="trapping-rain-water">2.5.12. 42. Trapping Rain Water</h3>
 <ul>
 <li>key
 <ul>
@@ -785,7 +785,7 @@
 <li></li>
 </ul></li>
 </ul>
-<h3 id="odd-even-jump">2.8.1. 975. Odd Even Jump</h3>
+<h3 id="odd-even-jump-1">2.8.1. 975. Odd Even Jump</h3>
 <ul>
 <li>key
 <ul>
@@ -848,6 +848,15 @@
 <p>=&gt; cur[i] = smaller[i+1:end] =&gt; insert cur[i] into [i+1:end] and see how many is smaller.(this is usage of BST)</p></li>
 </ul></li>
 </ul>
+<h3 id="sum-of-distances-in-tree">2.11.2. 834. Sum of Distances in Tree</h3>
+<ul>
+<li><p>key</p>
+<ul>
+<li><p>observation: RES[i] = sum of all before[i]</p></li>
+<li><p>optimization: compute RES[root] &amp; RES[i] = RES[i-&gt;parent] + countbeforei - countafteri.</p>
+<p><strong>Note</strong>: you can see that we don't need to keep vector of all sum, since it's all 1s, we only need the counting of before and sum of vector.</p></li>
+</ul></li>
+</ul>
 <h2 id="trie">2.12. Trie</h2>
 <ul>
 <li>usage:
@@ -900,7 +909,7 @@ DP[right]if(v==v-&gt;right) )
 <ul>
 <li>observation: this is a typical dfs problem where we can use trie to expedite the process. tree problem</li>
 </ul>
-<p>For Trie, 26 pointers to point the sub-strings and a bool leaf to indicate whether the current node is a leaf (i.e. a string in words) and also idx is used to save the index of words for the current node. For DFS, just check if the current position is visited before (board[i][j]=='X'), if so, return, check if there is a string with such prefix (nullptr == root-&gt;children[words[idx][pos]-'a']), if not, return; otherwise, check if the current searched string is a leaf of the trie (a string in words), if so, save it to res and set leaf of the trie node to false to indicate such string is already found. At last, move to its neighbors to continue the search. Remember to recover the char [i][j] at the end.</p></li>
+<p><strong>Note</strong>: For Trie, 26 pointers to point the sub-strings and a bool leaf to indicate whether the current node is a leaf (i.e. a string in words) and also idx is used to save the index of words for the current node. For DFS, just check if the current position is visited before (board[i][j]=='X'), if so, return, check if there is a string with such prefix (nullptr == root-&gt;children[words[idx][pos]-'a']), if not, return; otherwise, check if the current searched string is a leaf of the trie (a string in words), if so, save it to res and set leaf of the trie node to false to indicate such string is already found. At last, move to its neighbors to continue the search. Remember to recover the char [i][j] at the end.</p></li>
 <li><p>careful</p>
 <ul>
 <li>be sure to use &amp; when necessary! since not using &amp; will copy this fucker and slow the code down!!</li>
@@ -1030,10 +1039,8 @@ DP[right]if(v==v-&gt;right) )
 <li><p>key:</p>
 <ul>
 <li><p>observation: use subproblem: maxsum(i, j) = max(local(0~i)) local(i) = max(local[i-1], local[i-1]+xx), n subproblems, o(n).</p></li>
-<li><p>equivalent implement: math trick: think about the features about problem before solving it: in this problem, you can see if optimal = sum(i, j) that we must have every sum(i-k, i) &lt; 0. therefore our priority is to set the starting point at i and it will turn to a O(n). so we only have to set sum = 0 if we sum &lt;0 (which means start over from a new point) then it suffices to prove that the algorithm will let us start at i which yields the optimal.</p>
-<ul>
-<li>more advaned algorithm: use <span class="math inline">\(ms=max(sum(j)-sum(i))\)</span> so we save the $min(k) k&lt;i $ during the loop and it's done.... so easy. this solution have nothing to do with dp.</li>
-</ul></li>
+<li><p>equivalent implement: math trick: think about the features about problem before solving it: in this problem, you can see if optimal = sum(i, j) that we must have every sum(i-k, i) &lt; 0. therefore our priority is to set the starting point at i and it will turn to a O(n). so we only have to set sum = 0 if we sum &lt;0 (which means start over from a new point) then it suffices to prove that the algorithm will let us start at i which yields the optimal.</p></li>
+<li><p>more advaned algorithm: use <span class="math inline">\(ms=max(sum(j)-sum(i))\)</span> so we save the $min(k) k&lt;i $ during the loop and it's done.... so easy. this solution have nothing to do with dp.</p></li>
 </ul></li>
 </ul>
 <h3 id="maxi-j">2.15.4. 392. max(i, j)</h3>
@@ -1102,11 +1109,9 @@ matrix[i][j]=
 <li><p>key</p>
 <ul>
 <li><p>observation: separate the problem to sub[i-1] + xxx = sub[i]</p>
-<ol type="1">
-<li><p>we think about this problem from i-1 to i: that if we set DL, how about DLD?</p></li>
-<li><p>we think of matrix[i][j] means the i th element is the jth largest among all string, then we can use DL to indicate the [i+1][j] from ith, that if D=&gt; we add matrixi[j] to all matrix i+1[&lt;j], but here's the problem we don't have the ability to solve the duplicate issue.</p></li>
-<li><p>so we improve 1) by setting j = sizeofstring+1-i and contains the jth largest of the rest of string. the reason we do this is we don't have to worry about duplicate, since the i and j suffices m[i][j] = jth ... = <strong>sum of all m[i-1]</strong> ; and the final matrix[size][1] = size*(size-1)*(size-2) ... = all possible, so we can choose who to pick from level i-1 only by "DL" string. And we can see that setting in 1) do not satisty this sum of propagation which means we have to choose who to sum up not only from the string but also considering whether there is duplicated element, which is a big problem.</p></li>
-</ol>
+<p>（1） we think about this problem from i-1 to i: that if we set DL, how about DLD?</p>
+<p>（2） we think of matrix[i][j] means the i th element is the jth largest among all string, then we can use DL to indicate the [i+1][j] from ith, that if D=&gt; we add matrixi[j] to all matrix i+1[&lt;j], but here's the problem we don't have the ability to solve the duplicate issue.</p>
+<p>（3） so we improve 1) by setting j = sizeofstring+1-i and contains the jth largest of the rest of string. the reason we do this is we don't have to worry about duplicate, since the i and j suffices m[i][j] = jth ... = <strong>sum of all m[i-1]</strong> ; and the final matrix[size][1] = size*(size-1)*(size-2) ... = all possible, so we can choose who to pick from level i-1 only by "DL" string. And we can see that setting in 1) do not satisty this sum of propagation which means we have to choose who to sum up not only from the string but also considering whether there is duplicated element, which is a big problem.</p>
 <p><span class="math display">\[
 \begin{equation}  
 matrix[i][j]=\left\{  
@@ -1118,9 +1123,7 @@ matrix[i][j]=\left\{
 \end{equation}
 \]</span></p></li>
 <li><p>algorithm2:</p>
-<ol start="0" type="1">
-<li>we get 0~i-1 permutation(i-1 substring), we do sth to get i permutation(i substring)</li>
-</ol>
+<p>（0） we get 0~i-1 permutation(i-1 substring), we do sth to get i permutation(i substring)</p>
 <p>let's say <code>dp[i][j]</code> represents the number of permutation of number <code>0, 1, ... , i</code> which ends with <code>j</code>. Also, it represents the answer of <code>s.substring(0, i)</code> which ends with <code>j</code> . this actually stems from the brilliant idea that we first use 0 to i-1 permutation and add 1 to those &gt;= j where j is the the end of i permutation. This works because the only cases where +1 will destroy the order is when j = k+1 and permu(i) - permu(k) = +-1 (e.g. 23) and by adding &gt;= j, the order of 23 will not change, therefore it's safe to add the 1 to i-1 permutation and get i permutation. therefore we have the equation below <span class="math display">\[
 dp[i][j]=\left\{  
                \begin{array}{**lr**}  
@@ -1128,10 +1131,7 @@ dp[i][j]=\left\{
                         sum(dp[i - 1][j], dp[i - 1][j + 1], ... , dp[i - 1][i - 1]). &amp; \text{s.charAt(i - 1) == &#39;D&#39;:} 
                \end{array}  
   \right.
-\]</span></p>
-<ol type="1">
-<li>the above 2 algorithms stems from the same D&amp;C intuition, but they construct by different ways algorithm1 construct a string by directly saying that what should be the end of the first elements of the final string. algorithm2 construct a string with a subset of permutation however following the same rule and construct a larger string by that. algorithm1 is more intuitive, algorithm2 takes more time to think about and prove it's correctness.</li>
-</ol></li>
+\]</span> （1） the above 2 algorithms stems from the same D&amp;C intuition, but they construct by different ways algorithm1 construct a string by directly saying that what should be the end of the first elements of the final string. algorithm2 construct a string with a subset of permutation however following the same rule and construct a larger string by that. algorithm1 is more intuitive, algorithm2 takes more time to think about and prove it's correctness.</p></li>
 </ul></li>
 </ul>
 <h3 id="burst-balloons">2.15.10. 312. Burst Balloons</h3>
@@ -1162,7 +1162,7 @@ dp[i][j]=\left\{
     \right.  
     \end{equation}
 \]</span></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isMatch</span><span class="params">(self, s, p)</span>:</span></span><br><span class="line">        dp = [[<span class="literal">False</span> <span class="keyword">for</span> _ <span class="keyword">in</span> range(len(p)+<span class="number">1</span>)] <span class="keyword">for</span> i <span class="keyword">in</span> range(len(s)+<span class="number">1</span>)]</span><br><span class="line">        dp[<span class="number">0</span>][<span class="number">0</span>] = <span class="literal">True</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>, len(p)+<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> p[j<span class="number">-1</span>] != <span class="string">'*'</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            dp[<span class="number">0</span>][j] = <span class="literal">True</span></span><br><span class="line">                </span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, len(s)+<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>, len(p)+<span class="number">1</span>):</span><br><span class="line">                <span class="keyword">if</span> p[j<span class="number">-1</span>] <span class="keyword">in</span> &#123;s[i<span class="number">-1</span>], <span class="string">'?'</span>&#125;:</span><br><span class="line">                    dp[i][j] = dp[i<span class="number">-1</span>][j<span class="number">-1</span>]</span><br><span class="line">                <span class="keyword">elif</span> p[j<span class="number">-1</span>] == <span class="string">'*'</span>:</span><br><span class="line">                    dp[i][j] = dp[i<span class="number">-1</span>][j] <span class="keyword">or</span> dp[i][j<span class="number">-1</span>]</span><br><span class="line">        <span class="keyword">return</span> dp[<span class="number">-1</span>][<span class="number">-1</span>]</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isMatch</span><span class="params">(self, s, p)</span>:</span></span><br><span class="line">        dp = [[<span class="literal">False</span> <span class="keyword">for</span> _ <span class="keyword">in</span> range(len(p)+<span class="number">1</span>)] <span class="keyword">for</span> i <span class="keyword">in</span> range(len(s)+<span class="number">1</span>)]</span><br><span class="line">        dp[<span class="number">0</span>][<span class="number">0</span>] = <span class="literal">True</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>, len(p)+<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> p[j<span class="number">-1</span>] != <span class="string">'*'</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            dp[<span class="number">0</span>][j] = <span class="literal">True</span></span><br><span class="line">                </span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, len(s)+<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>, len(p)+<span class="number">1</span>):</span><br><span class="line">                <span class="keyword">if</span> p[j<span class="number">-1</span>] <span class="keyword">in</span> &#123;s[i<span class="number">-1</span>], <span class="string">'?'</span>&#125;:</span><br><span class="line">                    dp[i][j] = dp[i<span class="number">-1</span>][j<span class="number">-1</span>]</span><br><span class="line">                <span class="keyword">elif</span> p[j<span class="number">-1</span>] == <span class="string">'*'</span>:</span><br><span class="line">                    dp[i][j] = dp[i<span class="number">-1</span>][j] <span class="keyword">or</span> dp[i][j<span class="number">-1</span>]</span><br><span class="line">      <span class="keyword">return</span> dp[<span class="number">-1</span>][<span class="number">-1</span>]</span><br></pre></td></tr></table></figure></li>
 </ul></li>
 </ul>
 <p>​</p>
@@ -1216,7 +1216,7 @@ INTMAX&amp;  \text{if set_size=0}
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">minStickers</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&amp; stickers, <span class="built_in">string</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> m = stickers.<span class="built_in">size</span>();</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; mp(m, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;(<span class="number">26</span>, <span class="number">0</span>));</span><br><span class="line">        <span class="built_in">unordered_map</span>&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt; dp;</span><br><span class="line">        <span class="comment">// count characters a-z for each sticker </span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; i++) </span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">char</span> c:stickers[i]) mp[i][c-<span class="string">'a'</span>]++;</span><br><span class="line">        dp[<span class="string">""</span>] = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> helper(dp, mp, target);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">helper</span><span class="params">(<span class="built_in">unordered_map</span>&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt;&amp; dp, <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; mp, <span class="built_in">string</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (dp.count(target)) <span class="keyword">return</span> dp[target];</span><br><span class="line">        <span class="keyword">int</span> ans = INT_MAX, n = mp.<span class="built_in">size</span>();</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; tar(<span class="number">26</span>, <span class="number">0</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">char</span> c:target) tar[c-<span class="string">'a'</span>]++;</span><br><span class="line">        <span class="comment">// try every sticker</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="comment">// optimization</span></span><br><span class="line">            <span class="keyword">if</span> (mp[i][target[<span class="number">0</span>]-<span class="string">'a'</span>] == <span class="number">0</span>) <span class="keyword">continue</span>; </span><br><span class="line">            <span class="built_in">string</span> s;</span><br><span class="line">            <span class="comment">// apply a sticker on every character a-z</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">26</span>; j++) </span><br><span class="line">                <span class="keyword">if</span> (tar[j]-mp[i][j] &gt; <span class="number">0</span>) s += <span class="built_in">string</span>(tar[j]-mp[i][j], <span class="string">'a'</span>+j);</span><br><span class="line">            <span class="keyword">int</span> tmp = helper(dp, mp, s);</span><br><span class="line">            <span class="keyword">if</span> (tmp!= <span class="number">-1</span>) ans = <span class="built_in">min</span>(ans, <span class="number">1</span>+tmp);</span><br><span class="line">        &#125;</span><br><span class="line">        dp[target] = ans == INT_MAX? <span class="number">-1</span>:ans;</span><br><span class="line">        <span class="keyword">return</span> dp[target];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
 </ul></li>
 </ul>
-<h3 id="odd-even-jump-1">2.15.15. 975. Odd Even Jump</h3>
+<h3 id="odd-even-jump-2">2.15.15. 975. Odd Even Jump</h3>
 <ul>
 <li><p>key</p>
 <ul>
@@ -1252,7 +1252,7 @@ dp[i][j]= max(dp[i][j-1],dp[i-1][j-1]+fuel[j]) \text{   if dis[j]&lt;=dp[i]}
 <li><p>observation: <code>dp[i] means the least number of target i</code> <span class="math display">\[
 dp[i] = min(dp[2^n-1-i] + steps, dp[i-2 ^{n-1}+2 ^{m}]+steps.  \text{   n=floor(log2(i))}
 \]</span> ok, so we go like [AAAAR][AAAR] and number of A could be zero so we include the double turning situation. the nA could be anything from <span class="math inline">\(2 ^{m}-1\)</span>, we have to do trimming. So the <strong>Lemma</strong> here is for i, it has to include either $2 ^{n}-1 $ or <span class="math inline">\(2 ^{n-1}-1\)</span>, the former is easy to prove, however to prove the latter is hard.</p>
-<p>The observation is that for i that $ 2 ^{m-1}-1 +2^{m}-1 +1i 2 ^{m}-1+2 ^{m+1}-1$ , <span class="math inline">\(2 ^{m}-1\)</span> will always appear on the optimal answer. So you can see it's either the 2 options given above (e.g. for i &gt; 2**4 and i &lt; 2^5, it's either 15 or 31)</p>
+<p><strong>Note</strong>: The observation is that for i that $ 2 ^{m-1}-1 +2^{m}-1 +1i 2 ^{m}-1+2 ^{m+1}-1$ , <span class="math inline">\(2 ^{m}-1\)</span> will always appear on the optimal answer. So you can see it's either the 2 options given above (e.g. for i &gt; 2**4 and i &lt; 2^5, it's either 15 or 31)</p>
 <figure>
 <img src="/2019/11/19/datastructure-algorithm/IMG_6261.JPG" alt><figcaption>IMG_6261</figcaption>
 </figure>
@@ -1276,27 +1276,29 @@ dp[i] = min(dp[2^n-1-i] + steps, dp[i-2 ^{n-1}+2 ^{m}]+steps.  \text{   n=floor(
 <li>((1==?):0:1)</li>
 </ul></li>
 </ul>
-<p>### Jump Game II</p>
+<h3 id="jump-game-ii">2.15.19. Jump Game II</h3>
 <ul>
 <li>key
 <ul>
 <li>observation: same as 871</li>
 </ul></li>
 </ul>
-<h3 id="maximum-profit-in-job-scheduling">2.15.19. 1235. Maximum Profit in Job Scheduling</h3>
+<h3 id="maximum-profit-in-job-scheduling">2.15.20. 1235. Maximum Profit in Job Scheduling</h3>
 <ul>
 <li><p>key</p>
 <ul>
-<li><p>observation O(n3): <span class="math display">\[
+<li>observation O(n3): <span class="math display">\[
 DP[i][j] = DP[q&lt;i][j-1]...
-\]</span></p></li>
+\]</span></li>
+</ul></li>
 <li><p>algorithm2 O(n2): <code>DP[i] means DP max taking i</code> <span class="math display">\[
-DP[i] = max(DP[all_qfits&lt;i]+...)
-\]</span></p></li>
+  DP[i] = max(DP[all_qfits&lt;i]+...)
+  \]</span></p>
+<ul>
 <li><p>algorithm1 O(n2 or n): <code>DP[i] means DP max until i</code> <span class="math display">\[
 DP[i] = max(DP[first_q fits &lt;i]+...)
 \]</span> <strong>Note</strong>: the opt come up like this: we only need max from all_qfits&lt;i so basically we only need to keep max to DP[first_qfits], so meet the demands and cut the unless crap.</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">jobScheduling</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; startTime, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; endTime, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; profit)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sz = startTime.<span class="built_in">size</span>();</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; index(sz, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;(<span class="number">3</span>,<span class="number">0</span>));</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=sz<span class="number">-1</span>; i++) &#123;index[i][<span class="number">0</span>]=endTime[i], index[i][<span class="number">1</span>]=startTime[i], index[i][<span class="number">2</span>]=profit[i];&#125; sort(index.<span class="built_in">begin</span>(), index.<span class="built_in">end</span>(), [](<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp;a, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp;b)&#123;<span class="keyword">return</span> a[<span class="number">0</span>]&lt;b[<span class="number">0</span>];&#125;);</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; dp(sz+<span class="number">1</span>, <span class="number">0</span>); <span class="keyword">int</span> ma = INT_MIN;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>, j=<span class="number">0</span>; i&lt;=sz; i++, j=i<span class="number">-1</span>)&#123;</span><br><span class="line">            dp[i] = dp[i<span class="number">-1</span>];</span><br><span class="line">            <span class="keyword">while</span>(j&gt;=<span class="number">1</span> &amp;&amp; index[j<span class="number">-1</span>][<span class="number">0</span>]&gt;index[i<span class="number">-1</span>][<span class="number">1</span>]) j--;</span><br><span class="line">            dp[i] = <span class="built_in">max</span>(dp[i], dp[j]+index[i<span class="number">-1</span>][<span class="number">2</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[sz];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">      <span class="function"><span class="keyword">int</span> <span class="title">jobScheduling</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; startTime, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; endTime, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; profit)</span> </span>&#123;</span><br><span class="line">          <span class="keyword">int</span> sz = startTime.<span class="built_in">size</span>();</span><br><span class="line">          <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; index(sz, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;(<span class="number">3</span>,<span class="number">0</span>));</span><br><span class="line">          <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=sz<span class="number">-1</span>; i++) &#123;index[i][<span class="number">0</span>]=endTime[i], index[i][<span class="number">1</span>]=startTime[i], index[i][<span class="number">2</span>]=profit[i];&#125; sort(index.<span class="built_in">begin</span>(), index.<span class="built_in">end</span>(), [](<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp;a, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp;b)&#123;<span class="keyword">return</span> a[<span class="number">0</span>]&lt;b[<span class="number">0</span>];&#125;);</span><br><span class="line">          <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; dp(sz+<span class="number">1</span>, <span class="number">0</span>); <span class="keyword">int</span> ma = INT_MIN;</span><br><span class="line">          <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>, j=<span class="number">0</span>; i&lt;=sz; i++, j=i<span class="number">-1</span>)&#123;</span><br><span class="line">              dp[i] = dp[i<span class="number">-1</span>];</span><br><span class="line">              <span class="keyword">while</span>(j&gt;=<span class="number">1</span> &amp;&amp; index[j<span class="number">-1</span>][<span class="number">0</span>]&gt;index[i<span class="number">-1</span>][<span class="number">1</span>]) j--;</span><br><span class="line">              dp[i] = <span class="built_in">max</span>(dp[i], dp[j]+index[i<span class="number">-1</span>][<span class="number">2</span>]);</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="keyword">return</span> dp[sz];</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;;</span><br></pre></td></tr></table></figure></li>
 </ul></li>
 </ul>
 <h2 id="depth-first-search">2.16. depth first search</h2>
@@ -1322,12 +1324,8 @@ DP[i] = max(DP[first_q fits &lt;i]+...)
 <ul>
 <li><p>different-node optimization: if searching encounters <code>exact same searching settings</code>, memorize it, consider</p>
 <ul>
-<li><ol type="1">
-<li>is there possibility of encountering same searching settings on different levels?</li>
-</ol></li>
-<li><ol start="2" type="1">
-<li>is there any possibility that we cut those branches that doesn't affect optimal(usually on max/min problem)</li>
-</ol>
+<li><p>is there possibility of encountering same searching settings on different levels?</p></li>
+<li><p>is there any possibility that we cut those branches that doesn't affect optimal(usually on max/min problem)</p>
 <ul>
 <li>use a global store =&gt; other branches affect trimming, usually when no duplicated path in all searching paths.
 <ul>
@@ -1337,12 +1335,8 @@ DP[i] = max(DP[first_q fits &lt;i]+...)
 </ul></li>
 <li><p>same-node optimization: if we want to trim dfs, it's actually a step of narrowing down the domain =&gt; for a specific problem, we see what is the actual domain(the set contains the optimal): consider</p>
 <ul>
-<li><ol type="1">
-<li>is it full search(does it contain optimal?)</li>
-</ol></li>
-<li><ol start="2" type="1">
-<li>is there duplicates on the same level?(duplicate do not mean same problem, but it means unnecessary same outcome考虑是否重合可以从A分支是否包含B分支没有的内容或者相反来考虑 )) : e.g. sticker problem, going from the covering sequence is full and reduced duplicates, why? it is full since you can prove it by contrast, it is reduced because it cut off branches.</li>
-</ol>
+<li><p>is it full search(does it contain optimal?)</p></li>
+<li><p>is there duplicates on the same level?(duplicate do not mean same problem, but it means unnecessary same outcome考虑是否重合可以从A分支是否包含B分支没有的内容或者相反来考虑 )) : e.g. sticker problem, going from the covering sequence is full and reduced duplicates, why? it is full since you can prove it by contrast, it is reduced because it cut off branches.</p>
 <ul>
 <li><p>use parameter update =&gt; previous same branch affect trimming.</p>
 <ul>
@@ -1574,32 +1568,145 @@ DP[i] = max(DP[first_q fits &lt;i]+...)
 <ul>
 <li><p><strong>Note</strong>: that some times conditions are hard to implement in tree because the level structure, use parameters to add additional information.</p>
 <p>return value =&gt; node child info: node update</p>
-<p>para value =&gt; node parent info: leaf update/ trimming</p></li>
-<li><p>```c++ class Solution { public:</p>
-<pre><code>int dfs(TreeNode* root, bool have_node, bool monitored){
-    if(!root) return 0;
-    if(have_node){
-        auto temp_left = dfs(root-&gt;left, 0, 1), temp_right = dfs(root-&gt;left, 0, 1);
-        return temp_left+temp_right+1;
-    }
-    if(monitored){
-        auto take_none = dfs(root-&gt;left, 0, 0) + dfs(root-&gt;right, 0, 0);
-        auto take_top = 1 + dfs(root-&gt;left, 0, 1) + dfs(root-&gt;right, 0, 1);
-        return min(take_none, take_top);
-    }
-    if(root-&gt;val) return root-&gt;val;
-    auto take_left = dfs(root-&gt;left, 1, 0) + dfs(root-&gt;right, 0, 0);
-    auto take_right = dfs(root-&gt;left, 0, 0) + dfs(root-&gt;right, 1, 0);
-    auto take_top = dfs(root-&gt;left, 0, 1) + dfs(root-&gt;right, 0, 1)+1;
-    return root-&gt;val = min(min(take_left, take_right), take_top);
-}
-int minCameraCover(TreeNode* root) {
-    return dfs(root, 0, 0);
-}</code></pre>
-<p>}; <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">## breadth first search</span><br><span class="line"></span><br><span class="line">- usage: have to satisfy all otherwise we could use (DFS + meme + trim&gt;shortest)</span><br><span class="line"></span><br><span class="line">  - when asked to find shortest and depth_tree &gt; shortest </span><br><span class="line"></span><br><span class="line">  - when the same level information can help us with trimming.</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- key </span><br><span class="line"></span><br><span class="line">  - find subproblem</span><br><span class="line"></span><br><span class="line">  - set the meaning for the same level, </span><br><span class="line">  </span><br><span class="line">    - set update status for next level (how to search, or the propagation function)</span><br><span class="line">    - make sure not affecting other searches </span><br><span class="line">  </span><br><span class="line">  - set iteration/ recursive (prefer recursive) =&gt; </span><br><span class="line">  </span><br><span class="line">    - iterative: stop for&#123;same level&#125; onlyone(lever+1) </span><br><span class="line">    - recursive: while(stop) &#123; for&#123;same level&#125;  update&#125;  (actually no need to recur)</span><br><span class="line">  </span><br><span class="line">  - set terminal return or continue;</span><br><span class="line">  </span><br><span class="line">  - see if advanced technique can be used</span><br><span class="line">  </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">  </span><br><span class="line">- advanced</span><br><span class="line"></span><br><span class="line">  - dp: avoid necessary branches</span><br><span class="line">  - trimming: return before iteration;</span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">### 401 Binary Watch</span><br><span class="line"></span><br><span class="line">- key </span><br><span class="line">  - observation: we can breadth first search =&gt; by setting the same level as same number of bits.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 126. Word Ladder II</span><br><span class="line"></span><br><span class="line">- key:</span><br><span class="line"></span><br><span class="line">  - observation is very important in this problem. as you can see why we prefer BFS over DFS.That first we only want the shortest=&gt; that&apos;s natural advantage, since it means that depth is fixed and all possible answers appears on the same level that we don&apos;t necessarily need to exhaust the tree(DFS on the other hand do not have this advantage). Secondly, on the same level, we can see that we can separate the problem into this: the next steps on next level do not appear on the above levels(why? because you can prove that if it exists on the above level, it is not the shortest anymore), so this feature means we can expedite the BFS search by narrowing down possible next steps.</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">### 691. Stickers to Spell Word</span><br><span class="line"></span><br><span class="line">- key</span><br><span class="line">  - BFS is obvious but not necessary, but keep in mind that string matching you can always use int.</span><br><span class="line"></span><br><span class="line">- careful</span><br><span class="line"></span><br><span class="line">  - vector&lt;vector&#123;size, vector()&#125;</span><br><span class="line"></span><br><span class="line">  - don&apos;t use auto when vector&lt;vector</span><br><span class="line"></span><br><span class="line">  - don&apos;t copy the whole string/ avoid using vector&lt;bool&gt;, use 2^n-1.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 864. Shortest Path to Get All Keys</span><br><span class="line"></span><br><span class="line">- key </span><br><span class="line">  - BFS through that trimming when no keys are acquired.</span><br><span class="line">- careful</span><br><span class="line">  - C++ map is lousy</span><br><span class="line">  -  bitset.tolong()</span><br><span class="line"></span><br><span class="line">### 1125. Smallest Sufficient Team</span><br><span class="line"></span><br><span class="line">- key </span><br><span class="line">  - observation: bfs </span><br><span class="line">  - trimming: since it&apos;s bfs, trim those with same level branches.</span><br><span class="line"></span><br><span class="line">- careful </span><br><span class="line">  - for loop check states!</span><br><span class="line">  - 1&lt;&lt;i (check for LL!)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## binary search</span><br><span class="line"></span><br><span class="line">- key</span><br><span class="line"></span><br><span class="line">  - find subproblem(split in 2 subproblems)</span><br><span class="line"></span><br><span class="line">  - set find a monotone array and ditch one of of problems (unique propagation equation), so monotone array is useful so we can easily trim one of the branches!</span><br><span class="line"></span><br><span class="line">  - set recursive or iterative (perfer iterative since it make things easier)</span><br><span class="line"></span><br><span class="line">  - set the margin conditions</span><br><span class="line"></span><br><span class="line">    - l&lt;r, l+r/2, if(array==1) r = mid, l = mid + 1,  when array is 0000011111 and we want the first 1.</span><br><span class="line"></span><br><span class="line">    - l&lt;r, ceil(l+r/2.0), l = mid, if(array!=1)  r = mid - 1; when array is 000001111 and we want the last 0, the point is to make sure [l, r] always have the thing you want.</span><br><span class="line"></span><br><span class="line">      </span><br><span class="line"></span><br><span class="line">### 29 divide 2 numbers</span><br><span class="line"></span><br><span class="line">- key</span><br><span class="line">  - observation: the array that numbers m, n can be expressed in binary. and divide can be expressed in binary as well. and we can tell that it is unique. so we try to get the unique result, we can do this by shifting the divider. $2^m*d+2^&#123;m-1&#125;*d+2 ^&#123;m-3&#125;*d$, and m-3 &lt; m-1 &lt; m， so every coefficient is only 1 and smaller each so we can do shifting trick. The original thought is to get every m individually, and this is the original thought to get m involves binary. so this it actually a  31 binary problem =&gt; 31 O(n) $ \overset&#123;\text&#123;that 31 can be done in a roll&#125;&#125; &#123;=&gt;&#125;$ O(n) </span><br><span class="line"></span><br><span class="line">### 1201 Ugly Number </span><br><span class="line"></span><br><span class="line">- key</span><br><span class="line"></span><br><span class="line">  - observation: that we can easily compute $f(n)=\sum_&#123;i=1&#125;^&#123;n&#125;I(i \text&#123; divides2/3/5&#125;) $, this is how we get the solution: that from max to 1, we find f(k) = n.</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- careful:</span><br><span class="line"></span><br><span class="line">  - gcd(a, c, d) = gcd(a, gcd(c, d)) for gcd(a, c, d) $\in$ gcd(c,d)  </span><br><span class="line"></span><br><span class="line">  - lcm(a, c, d) = lcm(a, lcm(c, d))</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">### 50 power(x, n)</span><br><span class="line"></span><br><span class="line">- key: </span><br><span class="line"></span><br><span class="line">  - observation is easy</span><br><span class="line"></span><br><span class="line">- careful</span><br><span class="line"></span><br><span class="line">  - abs(int) could be dangerous,  the following code is more appropriate.</span><br><span class="line"></span><br><span class="line">    ```c++</span><br><span class="line">    abs((int64_t)n);</span><br></pre></td></tr></table></figure></p></li>
+<p>para value =&gt; node parent info: leaf update/ trimming</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">dfs</span><span class="params">(TreeNode* root, <span class="keyword">bool</span> have_node, <span class="keyword">bool</span> monitored)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!root) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(have_node)&#123;</span><br><span class="line">            <span class="keyword">auto</span> temp_left = dfs(root-&gt;left, <span class="number">0</span>, <span class="number">1</span>), temp_right = dfs(root-&gt;left, <span class="number">0</span>, <span class="number">1</span>);</span><br><span class="line">            <span class="keyword">return</span> temp_left+temp_right+<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(monitored)&#123;</span><br><span class="line">            <span class="keyword">auto</span> take_none = dfs(root-&gt;left, <span class="number">0</span>, <span class="number">0</span>) + dfs(root-&gt;right, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">            <span class="keyword">auto</span> take_top = <span class="number">1</span> + dfs(root-&gt;left, <span class="number">0</span>, <span class="number">1</span>) + dfs(root-&gt;right, <span class="number">0</span>, <span class="number">1</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">min</span>(take_none, take_top);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(root-&gt;val) <span class="keyword">return</span> root-&gt;val;</span><br><span class="line">        <span class="keyword">auto</span> take_left = dfs(root-&gt;left, <span class="number">1</span>, <span class="number">0</span>) + dfs(root-&gt;right, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">        <span class="keyword">auto</span> take_right = dfs(root-&gt;left, <span class="number">0</span>, <span class="number">0</span>) + dfs(root-&gt;right, <span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">        <span class="keyword">auto</span> take_top = dfs(root-&gt;left, <span class="number">0</span>, <span class="number">1</span>) + dfs(root-&gt;right, <span class="number">0</span>, <span class="number">1</span>)+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span> root-&gt;val = <span class="built_in">min</span>(<span class="built_in">min</span>(take_left, take_right), take_top);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">minCameraCover</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> dfs(root, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
 </ul></li>
 </ul>
-<h3 id="search-in-rotated-sorted-array-ii">2.16.25. 81. Search in Rotated Sorted Array II</h3>
+<h2 id="breadth-first-search">2.17. breadth first search</h2>
+<ul>
+<li><p>usage: have to satisfy all otherwise we could use (DFS + meme + trim&gt;shortest)</p>
+<ul>
+<li><p>when asked to find shortest and depth_tree &gt; shortest</p></li>
+<li><p>when the same level information can help us with trimming.</p></li>
+</ul></li>
+<li><p>key</p>
+<ul>
+<li><p>find subproblem</p></li>
+<li><p>set the meaning for the same level,</p>
+<ul>
+<li>set update status for next level (how to search, or the propagation function)</li>
+<li>make sure not affecting other searches</li>
+</ul></li>
+<li><p>set iteration/ recursive (prefer recursive) =&gt;</p>
+<ul>
+<li>iterative: stop for{same level} onlyone(lever+1)</li>
+<li>recursive: while(stop) { for{same level} update} (actually no need to recur)</li>
+</ul></li>
+<li><p>set terminal return or continue;</p></li>
+<li><p>see if advanced technique can be used</p></li>
+</ul></li>
+<li><p>advanced</p>
+<ul>
+<li>dp: avoid necessary branches</li>
+<li>trimming: return before iteration;</li>
+</ul></li>
+</ul>
+<h3 id="binary-watch-1">2.17.1. 401 Binary Watch</h3>
+<ul>
+<li>key
+<ul>
+<li>observation: we can breadth first search =&gt; by setting the same level as same number of bits.</li>
+</ul></li>
+</ul>
+<h3 id="word-ladder-ii-1">2.17.2. 126. Word Ladder II</h3>
+<ul>
+<li><p>key:</p>
+<ul>
+<li>observation is very important in this problem. as you can see why we prefer BFS over DFS.That first we only want the shortest=&gt; that's natural advantage, since it means that depth is fixed and all possible answers appears on the same level that we don't necessarily need to exhaust the tree(DFS on the other hand do not have this advantage). Secondly, on the same level, we can see that we can separate the problem into this: the next steps on next level do not appear on the above levels(why? because you can prove that if it exists on the above level, it is not the shortest anymore), so this feature means we can expedite the BFS search by narrowing down possible next steps.</li>
+</ul></li>
+</ul>
+<h3 id="stickers-to-spell-word-2">2.17.3. 691. Stickers to Spell Word</h3>
+<ul>
+<li><p>key</p>
+<ul>
+<li>BFS is obvious but not necessary, but keep in mind that string matching you can always use int.</li>
+</ul></li>
+<li><p>careful</p>
+<ul>
+<li><p>vector&lt;vector{size, vector()}</p></li>
+<li><p>don't use auto when vector&lt;vector</p></li>
+<li><p>don't copy the whole string/ avoid using vector<bool>, use 2^n-1.</bool></p></li>
+</ul></li>
+</ul>
+<h3 id="shortest-path-to-get-all-keys">2.17.4. 864. Shortest Path to Get All Keys</h3>
+<ul>
+<li>key
+<ul>
+<li>BFS through that trimming when no keys are acquired.</li>
+</ul></li>
+<li>careful
+<ul>
+<li>C++ map is lousy</li>
+<li>bitset.tolong()</li>
+</ul></li>
+</ul>
+<h3 id="smallest-sufficient-team">2.17.5. 1125. Smallest Sufficient Team</h3>
+<ul>
+<li>key
+<ul>
+<li>observation: bfs</li>
+<li>trimming: since it's bfs, trim those with same level branches.</li>
+</ul></li>
+<li>careful
+<ul>
+<li>for loop check states!</li>
+<li>1&lt;&lt;i (check for LL!)</li>
+</ul></li>
+</ul>
+<h3 id="maximum-width-of-binary">2.17.6. 662. Maximum Width of Binary</h3>
+<ul>
+<li>careful
+<ul>
+<li>with the poping operations</li>
+<li>with int64 overflow</li>
+</ul></li>
+</ul>
+<h2 id="binary-search">2.18. binary search</h2>
+<ul>
+<li><p>key</p>
+<ul>
+<li><p>find subproblem(split in 2 subproblems)</p></li>
+<li><p>set find a monotone array and ditch one of of problems (unique propagation equation), so monotone array is useful so we can easily trim one of the branches!</p></li>
+<li><p>set recursive or iterative (perfer iterative since it make things easier)</p></li>
+<li><p>set the margin conditions</p>
+<ul>
+<li><p>l&lt;r, l+r/2, if(array==1) r = mid, l = mid + 1, when array is 0000011111 and we want the first 1.</p></li>
+<li><p>l&lt;r, ceil(l+r/2.0), l = mid, if(array!=1) r = mid - 1; when array is 000001111 and we want the last 0, the point is to make sure [l, r] always have the thing you want.</p></li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 id="divide-2-numbers">2.18.1. 29 divide 2 numbers</h3>
+<ul>
+<li>key
+<ul>
+<li>observation: the array that numbers m, n can be expressed in binary. and divide can be expressed in binary as well. and we can tell that it is unique. so we try to get the unique result, we can do this by shifting the divider. <span class="math inline">\(2^m*d+2^{m-1}*d+2 ^{m-3}*d\)</span>, and m-3 &lt; m-1 &lt; m， so every coefficient is only 1 and smaller each so we can do shifting trick. The original thought is to get every m individually, and this is the original thought to get m involves binary. so this it actually a 31 binary problem =&gt; 31 O(n) $  {=&gt;}$ O(n)</li>
+</ul></li>
+</ul>
+<h3 id="ugly-number">2.18.2. 1201 Ugly Number</h3>
+<ul>
+<li><p>key</p>
+<ul>
+<li>observation: that we can easily compute $f(n)=_{i=1}^{n}I(i ) $, this is how we get the solution: that from max to 1, we find f(k) = n.</li>
+</ul></li>
+<li><p>careful:</p>
+<ul>
+<li><p>gcd(a, c, d) = gcd(a, gcd(c, d)) for gcd(a, c, d) <span class="math inline">\(\in\)</span> gcd(c,d)</p></li>
+<li><p>lcm(a, c, d) = lcm(a, lcm(c, d))</p></li>
+</ul></li>
+</ul>
+<h3 id="powerx-n">2.18.3. 50 power(x, n)</h3>
+<ul>
+<li><p>key:</p>
+<ul>
+<li>observation is easy</li>
+</ul></li>
+<li><p>careful</p>
+<ul>
+<li><p>abs(int) could be dangerous, the following code is more appropriate.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">abs</span>((<span class="keyword">int64_t</span>)n);</span><br></pre></td></tr></table></figure></li>
+</ul></li>
+</ul>
+<h3 id="search-in-rotated-sorted-array-ii">2.18.4. 81. Search in Rotated Sorted Array II</h3>
 <ul>
 <li><p>key</p>
 <ul>
@@ -1607,7 +1714,7 @@ int minCameraCover(TreeNode* root) {
 <li><p>detail: margin, especially when l &gt; r</p></li>
 </ul></li>
 </ul>
-<h3 id="shortest-subarray-with-sum-at-least-k">2.16.26. 862 shortest subarray with sum at least k</h3>
+<h3 id="shortest-subarray-with-sum-at-least-k">2.18.5. 862 shortest subarray with sum at least k</h3>
 <ul>
 <li>key
 <ul>
@@ -1615,14 +1722,14 @@ int minCameraCover(TreeNode* root) {
 <li>alternative algorithm: the second algorithm, we can keep more of the array ( in previous problem it is only 1 element min(sum(j)) j &lt;i ), this time we want more elements, the key of the elements is that we want them increasing, to make this happen we do the following: if we find out that in i's time we have sum(i) &lt; array(j) we pop the array until sum(i) is in the array and array is increasing. improvement here: we can discard sum(i) after it's usage since we know that no matter what, substring starts with i will only grow larger.</li>
 </ul></li>
 </ul>
-<h3 id="longest-duplicate-substring">2.16.27. 1044. Longest Duplicate Substring</h3>
+<h3 id="longest-duplicate-substring">2.18.6. 1044. Longest Duplicate Substring</h3>
 <ul>
 <li>key
 <ul>
 <li>observe; we separate this to n subproblems ( find dup substring length = i) and we always know that if longest length = g, then i&lt;=g =&gt; I(find sub) = 1 and i &gt; g I (find sub) = -1 . so we use binary search to connect n subproblems. for each subproblem we use rolling hash table to get themO(n) * O(logN) = O(N^2)</li>
 </ul></li>
 </ul>
-<h3 id="median-of-two-sorted-arrays">2.16.28. 4. Median of Two Sorted Arrays</h3>
+<h3 id="median-of-two-sorted-arrays">2.18.7. 4. Median of Two Sorted Arrays</h3>
 <ul>
 <li><p>key:</p>
 <ul>
@@ -1635,7 +1742,7 @@ int minCameraCover(TreeNode* root) {
 <li>no max function with size_t</li>
 </ul></li>
 </ul>
-<h3 id="find-k-th-smallest-pair-distance-1">2.16.29. 719. Find K-th Smallest Pair Distance</h3>
+<h3 id="find-k-th-smallest-pair-distance-1">2.18.8. 719. Find K-th Smallest Pair Distance</h3>
 <ul>
 <li><p>key</p>
 <ul>
@@ -1658,7 +1765,7 @@ int minCameraCover(TreeNode* root) {
 <li>count after j and margin conditions</li>
 </ul></li>
 </ul>
-<h2 id="greedy-search">2.17. greedy search</h2>
+<h2 id="greedy-search">2.19. greedy search</h2>
 <ul>
 <li><p>usage: only special problems can use this. one way of trimming all other branches except for the greedy optimal one/ or a way of searching directly to the results instead of following a path of searching/ or directly solving subproblems</p></li>
 <li><p>key</p>
@@ -1668,7 +1775,7 @@ int minCameraCover(TreeNode* root) {
 <li><p>prove that from smallest to i+1 using greedy(like a easy dp equation) is optimal (compare to not smallest to i+1)</p></li>
 </ul></li>
 </ul>
-<h3 id="wildcard-matching-2">2.17.1. wildcard matching</h3>
+<h3 id="wildcard-matching-2">2.19.1. wildcard matching</h3>
 <ul>
 <li><p>key</p>
 <ul>
@@ -1676,7 +1783,7 @@ int minCameraCover(TreeNode* root) {
 <p>imagine that take * =&gt; 0 as local greedy then until meet next *, local greedy is global greedy.</p></li>
 </ul></li>
 </ul>
-<h3 id="remove-k-digits-1">2.17.2. 402. Remove K Digits</h3>
+<h3 id="remove-k-digits-1">2.19.2. 402. Remove K Digits</h3>
 <ul>
 <li><p>key</p>
 <ul>
@@ -1685,7 +1792,7 @@ int minCameraCover(TreeNode* root) {
 <p>​ (2) DP[2] is setting 2nd as smallest and can be derived from DP[1]</p></li>
 </ul></li>
 </ul>
-<h3 id="remove-duplicate-letters-1">2.17.3. Remove Duplicate Letters</h3>
+<h3 id="remove-duplicate-letters-1">2.19.3. Remove Duplicate Letters</h3>
 <ul>
 <li><p>key</p>
 <ul>
@@ -1693,7 +1800,7 @@ int minCameraCover(TreeNode* root) {
 <p><strong>Proof</strong>: actually a pretty trivial proof, that at ith level we set the smallest possible outcome for [1:i], since the poped element can replenished after ith step and we'll always get smaller outcome by poping those items. So it is a greedy local optimal solution which yields global optimal.</p></li>
 </ul></li>
 </ul>
-<h3 id="minimum-number-of-refueling-stops-1">2.17.4. 871. Minimum Number of Refueling Stops</h3>
+<h3 id="minimum-number-of-refueling-stops-1">2.19.4. 871. Minimum Number of Refueling Stops</h3>
 <ul>
 <li><p>key</p>
 <ul>
@@ -1703,14 +1810,14 @@ int minCameraCover(TreeNode* root) {
 </figure></li>
 </ul></li>
 </ul>
-<h3 id="ipo">2.17.5. 502. IPO</h3>
+<h3 id="ipo">2.19.5. 502. IPO</h3>
 <ul>
 <li>key
 <ul>
 <li>greedy, go for the largest possible =&gt; heap . same as 871</li>
 </ul></li>
 </ul>
-<h3 id="patching-array">2.17.6. 330. Patching Array</h3>
+<h3 id="patching-array">2.19.6. 330. Patching Array</h3>
 <ul>
 <li><p>key</p>
 <ul>
@@ -1720,7 +1827,7 @@ int minCameraCover(TreeNode* root) {
 <p>​ (2) the next DP[i+1] can be solved by adding the number DP[i] can't solve. proof is easy.</p></li>
 </ul></li>
 </ul>
-<h3 id="course-schedule-iii-1">2.17.7. 630. Course Schedule III</h3>
+<h3 id="course-schedule-iii-1">2.19.7. 630. Course Schedule III</h3>
 <ul>
 <li><p>key</p>
 <ul>
@@ -1733,7 +1840,7 @@ int minCameraCover(TreeNode* root) {
 <p><strong>Proof</strong>: if DP[i] is have i</p></li>
 </ul></li>
 </ul>
-<h3 id="create-maximum-number">2.17.8. 321. Create Maximum Number</h3>
+<h3 id="create-maximum-number">2.19.8. 321. Create Maximum Number</h3>
 <ul>
 <li>careful:
 <ul>
@@ -1741,8 +1848,8 @@ int minCameraCover(TreeNode* root) {
 <li>临时变量不是左值不能放在引用参数上。</li>
 </ul></li>
 </ul>
-<h2 id="sorting">2.18. sorting</h2>
-<h3 id="maximum-gap">2.18.1. 164. Maximum Gap</h3>
+<h2 id="sorting">2.20. sorting</h2>
+<h3 id="maximum-gap">2.20.1. 164. Maximum Gap</h3>
 <ul>
 <li><p>key</p>
 <ul>
@@ -1751,15 +1858,15 @@ int minCameraCover(TreeNode* root) {
 <p><strong>Note</strong>: bucket sort's first step is a partial sorting where you fill number into gaps, and we only need gaps in this problem.</p>
 <p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">   <span class="function"><span class="keyword">int</span> <span class="title">maximumGap</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">const</span> <span class="keyword">int</span> n = nums.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">if</span>(n&lt;=<span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> maxE = *max_element(nums.<span class="built_in">begin</span>(),nums.<span class="built_in">end</span>());</span><br><span class="line">        <span class="keyword">int</span> minE = *min_element(nums.<span class="built_in">begin</span>(),nums.<span class="built_in">end</span>());</span><br><span class="line">        <span class="keyword">double</span> len = <span class="keyword">double</span>(maxE-minE)/<span class="keyword">double</span>(n<span class="number">-1</span>);</span><br><span class="line">        <span class="keyword">if</span>(!len) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; maxA(n,INT_MIN);</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; minA(n,INT_MAX);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> index = (nums[i]-minE)/len;</span><br><span class="line">            maxA[index] = <span class="built_in">max</span>(maxA[index],nums[i]);</span><br><span class="line">            minA[index] = <span class="built_in">min</span>(minA[index],nums[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> gap = <span class="number">0</span>, prev = maxA[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;n; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(minA[i]==INT_MAX) <span class="keyword">continue</span>;</span><br><span class="line">            gap = <span class="built_in">max</span>(gap,minA[i]-prev);</span><br><span class="line">            prev = maxA[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> gap;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p></li>
 </ul>
-<h2 id="math">2.19. math</h2>
-<h3 id="sum-of-subarray-minimums-1">2.19.1. 907. Sum of Subarray Minimums</h3>
+<h2 id="math">2.21. math</h2>
+<h3 id="sum-of-subarray-minimums-1">2.21.1. 907. Sum of Subarray Minimums</h3>
 <ul>
 <li><p>key</p>
 <ul>
 <li>observation: 这个问题本来的局势是把所有幂集的最小值加起来，我们先对最小值做一个聚集，然后通过问题本身的性质进行解决。</li>
 </ul></li>
 </ul>
-<h3 id="pattern-1">2.19.2. 456. 132 Pattern</h3>
+<h3 id="pattern-1">2.21.2. 456. 132 Pattern</h3>
 <ul>
 <li><p>key</p>
 <ul>
@@ -1770,7 +1877,7 @@ int minCameraCover(TreeNode* root) {
 </figure></li>
 </ul></li>
 </ul>
-<h3 id="couples-holding-hands-1">2.19.3. 765. Couples Holding Hands</h3>
+<h3 id="couples-holding-hands-1">2.21.3. 765. Couples Holding Hands</h3>
 <ul>
 <li><p>key</p>
 <ul>
@@ -1779,7 +1886,7 @@ int minCameraCover(TreeNode* root) {
 <p><strong>Note</strong>: why circles ? because every swap fix 1 pixel, and doing in circle do not affect other elements beside the circle. 如果有一个圈的话，每一次修好一个元素，一个圈的元素数又是固定的，且对圈外无影响，所以必定会修好且最优。图像化来想的话，一个圈的就是m个cuples，每对cuples之间在i,i+1有从两对cuples中各出一个元素。</p></li>
 </ul></li>
 </ul>
-<h3 id="minimum-number-of-k-consecutive-bit-flips">2.19.4. 995. Minimum Number of K Consecutive Bit Flips</h3>
+<h3 id="minimum-number-of-k-consecutive-bit-flips">2.21.4. 995. Minimum Number of K Consecutive Bit Flips</h3>
 <ul>
 <li><p>key</p>
 <ul>
@@ -1788,7 +1895,7 @@ int minCameraCover(TreeNode* root) {
 <p><strong>Proof</strong>2: 首先确定每一个点最多flip一次，然后对每个点排序，找到最左的点，它的左边一定全是1，然后这个点到第二个点中间一定全是1。就证完了其实不是greedy，因为只有一个解。</p></li>
 </ul></li>
 </ul>
-<h3 id="three-equal-parts">2.19.5. 927. Three Equal Parts</h3>
+<h3 id="three-equal-parts">2.21.5. 927. Three Equal Parts</h3>
 <ul>
 <li><p>key</p>
 <ul>
@@ -1796,7 +1903,7 @@ int minCameraCover(TreeNode* root) {
 </ul>
 <p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; threeEqualParts(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; A) &#123;</span><br><span class="line">        <span class="keyword">int</span> sz = A.<span class="built_in">size</span>(); <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;index; <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=sz<span class="number">-1</span>; i++) <span class="keyword">if</span>(A[i]==<span class="number">1</span>) index.push_back(i);</span><br><span class="line">        <span class="keyword">if</span>(index.empty()) <span class="keyword">return</span> &#123;<span class="number">0</span>, sz<span class="number">-1</span>&#125;;</span><br><span class="line">        <span class="keyword">if</span>(index.<span class="built_in">size</span>()%<span class="number">3</span>) <span class="keyword">return</span> &#123;<span class="number">-1</span>, <span class="number">-1</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span> m = sz <span class="number">-1</span> - index.back(); <span class="keyword">int</span> start = index[index.<span class="built_in">size</span>()/<span class="number">3</span><span class="number">-1</span>], start_n = index[index.<span class="built_in">size</span>()/<span class="number">3</span>], <span class="built_in">end</span> = index[index.<span class="built_in">size</span>()/<span class="number">3</span>*<span class="number">2</span><span class="number">-1</span>], end_n = index[index.<span class="built_in">size</span>()/<span class="number">3</span>*<span class="number">2</span>];</span><br><span class="line">        <span class="keyword">if</span>(start_n-start<span class="number">-1</span> &gt;= m &amp;&amp; end_n-<span class="built_in">end</span><span class="number">-1</span> &gt;= m)&#123;</span><br><span class="line">            <span class="keyword">int</span> cur_s = start, cur_n = <span class="built_in">end</span>, cur_f = index.back();</span><br><span class="line">            <span class="keyword">while</span>(cur_s!=index[<span class="number">0</span>] &amp;&amp; cur_n!=start_n &amp;&amp; cur_f!=end_n)&#123;</span><br><span class="line">                <span class="keyword">if</span>(A[cur_s]!=A[cur_n] || A[cur_n]!=A[cur_f]) &#123;<span class="keyword">break</span>;&#125;</span><br><span class="line">                cur_s--, cur_n--, cur_f--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(cur_s==index[<span class="number">0</span>] &amp;&amp; cur_n==start_n &amp;&amp; cur_f==end_n) <span class="keyword">return</span> &#123;start+m, <span class="built_in">end</span>+m+<span class="number">1</span>&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">            </span><br><span class="line">        <span class="keyword">return</span> &#123;<span class="number">-1</span>, <span class="number">-1</span>&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p></li>
 </ul>
-<h3 id="candy">2.19.6. 135. Candy</h3>
+<h3 id="candy">2.21.6. 135. Candy</h3>
 <ul>
 <li><p>key</p>
 <ul>
@@ -1806,19 +1913,19 @@ int minCameraCover(TreeNode* root) {
 </figure></li>
 </ul></li>
 </ul>
-<h3 id="random-pick-with-blacklist">2.19.7. 710. Random Pick with Blacklist</h3>
+<h3 id="random-pick-with-blacklist">2.21.7. 710. Random Pick with Blacklist</h3>
 <ul>
 <li>key
 <ul>
 <li>observation: math sampling problem =&gt; how to sample from set(N - blacklist) ? since we want prob = 1/len(set(N-blacklist)) = 1/(N-B), so we choose from 0-&gt;N-B to make sure whitelist prob is correct then we remap the blacklist to whitelist that&gt;N-B, the reason we do so is because randint can only choose from continuous numbers.</li>
 </ul></li>
 </ul>
-<h2 id="brutal">2.20. brutal</h2>
-<h3 id="binary-watch-1">2.20.1. 401. Binary Watch</h3>
+<h2 id="brutal">2.22. brutal</h2>
+<h3 id="binary-watch-2">2.22.1. 401. Binary Watch</h3>
 <ul>
 <li>key: ez</li>
 </ul>
-<h3 id="maximum-length-of-a-concatenated-string-with-unique-characters">2.20.2. 1239. Maximum Length of a Concatenated String with Unique Characters</h3>
+<h3 id="maximum-length-of-a-concatenated-string-with-unique-characters">2.22.2. 1239. Maximum Length of a Concatenated String with Unique Characters</h3>
 <ul>
 <li><p>trick: a great way to do exhaustion for all 0/1 pairs (01010101).</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(n bits)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (i = all stored sized)&#123;</span><br><span class="line"></span><br><span class="line">  	stored.push_back(a | b)  <span class="comment">// every time push back same size of stored(size x 2) and stored are the all permutations of example.</span></span><br><span class="line"></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></li>
@@ -1842,7 +1949,7 @@ int minCameraCover(TreeNode* root) {
   <p><span>Title:</span><a href="/2019/11/19/datastructure-algorithm/">Data Structure and Algorithms</a></p>
   <p><span>Author:</span><a href="/" title=" Benson 的personal blog">Benson</a></p>
   <p><span>PTime:</span>2019/11/19 - 12:11</p>
-  <p><span>LUpdate:</span>2020/01/03 - 22:01</p>
+  <p><span>LUpdate:</span>2020/01/04 - 19:01</p>
   <p><span>Link:</span><a href="/2019/11/19/datastructure-algorithm/" title="Data Structure and Algorithms">https://steinsgate9.github.io/2019/11/19/datastructure-algorithm/</a>
     <span class="copy-path"  title="click to copy link"><i class="fa fa-clipboard" data-clipboard-text="https://steinsgate9.github.io/2019/11/19/datastructure-algorithm/"  aria-label="copy done！"></i></span>
   </p>
@@ -1917,14 +2024,18 @@ int minCameraCover(TreeNode* root) {
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/11/19/stats_theory/" rel="next" title="Statistical Learning Theory">
+                <i class="fa fa-chevron-left"></i> Statistical Learning Theory
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/19/stochastic-process/" rel="prev" title="Stochastic Process">
-                Stochastic Process <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/19/regression-analysis/" rel="prev" title="Regression Analysis">
+                Regression Analysis <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -2128,7 +2239,7 @@ int minCameraCover(TreeNode* root) {
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#data-structure"><span class="nav-text">1. data structure</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#linear-adt"><span class="nav-text">1.1. linear ADT</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#string"><span class="nav-text">1.1.1. string</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vector"><span class="nav-text">1.1.2. vector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#list-linked"><span class="nav-text">1.1.3. list (linked)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stack"><span class="nav-text">1.1.4. stack</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#queue"><span class="nav-text">1.1.5. queue</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tree-adt"><span class="nav-text">1.2. tree ADT</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#binary-tree"><span class="nav-text">1.2.1. binary tree</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#binary-search-tree"><span class="nav-text">1.2.1.1. binary search tree</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#leetcode"><span class="nav-text">2. Leetcode</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#int"><span class="nav-text">2.1. int</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#no.7-iterate-reverse-int"><span class="nav-text">2.1.1. no.7 iterate &amp; reverse int</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#no.9-iterate-reverse-int-2"><span class="nav-text">2.1.2. no.9 iterate &amp; reverse int 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#no.13-iterate-assign"><span class="nav-text">2.1.3. no.13 iterate &amp; assign</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#string-1"><span class="nav-text">2.2. string</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#no.28-iterate"><span class="nav-text">2.2.1. no.28 iterate</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#no.859-iterate-swap"><span class="nav-text">2.2.2. no.859 iterate &amp; swap</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vector-1"><span class="nav-text">2.3. vector</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#no.26-iterate-eraseassign"><span class="nav-text">2.3.1. no.26 iterate &amp; erase/assign</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#no.665-iterate-change-value-math-problem"><span class="nav-text">2.3.2. no.665 iterate &amp; change value (math problem)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#insert-interval"><span class="nav-text">2.3.3. 57. Insert Interval</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#linked-list"><span class="nav-text">2.4. linked list</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#no.21-iterate-merge-2-list"><span class="nav-text">2.4.1. no.21 iterate &amp; merge 2 list</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stack-1"><span class="nav-text">2.5. stack</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#push-pop"><span class="nav-text">2.5.1. 20. push &amp; pop</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xxx.-simplify-path"><span class="nav-text">2.5.2. xxx. Simplify Path</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xxx.-basic-calculator"><span class="nav-text">2.5.3. xxx. Basic Calculator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#section"><span class="nav-text">2.5.4. </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#remove-k-digits"><span class="nav-text">2.5.5. 402. Remove K Digits</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sum-of-subarray-minimums"><span class="nav-text">2.5.6. 907 Sum of Subarray Minimums</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pattern"><span class="nav-text">2.5.7. 456 132 Pattern</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#largest-rectangle-in-histogram"><span class="nav-text">2.5.8. Largest Rectangle in Histogram</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maximal-rectangle"><span class="nav-text">2.5.9. 85. Maximal Rectangle</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#remove-duplicate-letters"><span class="nav-text">2.5.10. Remove Duplicate Letters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#trapping-rain-water"><span class="nav-text">2.5.11. 42. Trapping Rain Water</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#heap"><span class="nav-text">2.6. heap</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#the-skyline-problem-i-wouldnt-say-its-divideconcurd"><span class="nav-text">2.6.1. the skyline problem (i wouldn&#39;t say it&#39;s divide&amp;concurd)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find-k-th-smallest-pair-distance"><span class="nav-text">2.6.2. 719. Find K-th Smallest Pair Distance</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find-median-from-data-stream"><span class="nav-text">2.6.3. 295. Find Median from Data Stream</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#trapping-rain-water-ii"><span class="nav-text">2.6.4. 407. Trapping Rain Water II</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#k-th-smallest-prime-fraction"><span class="nav-text">2.6.5. 786. K-th Smallest Prime Fraction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#minimum-cost-to-hire-k-workers"><span class="nav-text">2.6.6. 857. Minimum Cost to Hire K Workers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#swim-in-rising-water"><span class="nav-text">2.6.7. 778. Swim in Rising Water</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#deque"><span class="nav-text">2.7. deque</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sliding-window-maximum"><span class="nav-text">2.7.1. 239. Sliding Window Maximum</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#maphash-table"><span class="nav-text">2.8. map(hash table)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#odd-even-jump"><span class="nav-text">2.8.1. 975. Odd Even Jump</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maximum-frequency-stack"><span class="nav-text">2.8.2. Maximum Frequency Stack</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#union-find"><span class="nav-text">2.9. union find</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#couples-holding-hands"><span class="nav-text">2.9.1. 751 Couples Holding Hands</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#redundant-connection-ii"><span class="nav-text">2.9.2. 685. Redundant Connection II</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bt"><span class="nav-text">2.10. bt</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#binary-tree-postorder-traversal"><span class="nav-text">2.10.1. Binary Tree Postorder Traversal</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bst"><span class="nav-text">2.11. bst</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#count-of-smaller-numbers-after-self-from-dc"><span class="nav-text">2.11.1. 315. Count of Smaller Numbers After Self (from D&amp;C)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#trie"><span class="nav-text">2.12. Trie</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#number-of-valid-words-for-each-puzzle"><span class="nav-text">2.12.1. 1178. Number of Valid Words for Each Puzzle</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#longest-univalue-path"><span class="nav-text">2.12.2. 687. Longest Univalue Path</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vertical-order-traversal-of-a-binary-tree"><span class="nav-text">2.12.3. 987. Vertical Order Traversal of a Binary Tree</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#graph"><span class="nav-text">2.13. graph</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#reachable-nodes-in-subdivided-graph"><span class="nav-text">2.13.1. 882. Reachable Nodes In Subdivided Graph</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#word-search-ii"><span class="nav-text">2.13.2. 212. Word Search II</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#divide-concur-basic-bottom-up"><span class="nav-text">2.14. divide &amp; concur (basic bottom-up)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#findi-j-findi-1-j-findi-j1"><span class="nav-text">2.14.1. 240. find(i, j) = find(i-1, j) || find(i, j+1)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kth-largest-element-in-an-array"><span class="nav-text">2.14.2. 215. Kth Largest Element in an Array</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#beautiful-array"><span class="nav-text">2.14.3. 932 beautiful array</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#count-of-range-sum"><span class="nav-text">2.14.4. Count of Range Sum</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reverse-pairs"><span class="nav-text">2.14.5. 493. Reverse Pairs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#permutation-sequence"><span class="nav-text">2.14.6. 60. Permutation Sequence</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#section-1"><span class="nav-text">2.14.7. </span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dynamic-programming"><span class="nav-text">2.15. dynamic programming</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sumi-j"><span class="nav-text">2.15.1. 303 sum(i, j)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maxsolutioni"><span class="nav-text">2.15.2. 198 maxsolution(i)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maxsumi-j"><span class="nav-text">2.15.3. 53. maxsum(i, j)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maxi-j"><span class="nav-text">2.15.4. 392. max(i, j)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maxi"><span class="nav-text">2.15.5. 91 max(i)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#continuous-subarray-sum"><span class="nav-text">2.15.6. 523. Continuous Subarray Sum</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#k-concatenation-maximum-sum"><span class="nav-text">2.15.7. 1191 K-Concatenation Maximum Sum</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#freedom-trail"><span class="nav-text">2.15.8. 514. Freedom Trail</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#valid-permutations-for-di-sequence"><span class="nav-text">2.15.9. 903. Valid Permutations for DI Sequence</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#burst-balloons"><span class="nav-text">2.15.10. 312. Burst Balloons</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#wildcard-matching"><span class="nav-text">2.15.11. 44 wildcard matching</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#regular-expression-matching"><span class="nav-text">2.15.12. 10 Regular Expression Matching</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#word-break-ii"><span class="nav-text">2.15.13. 140. Word Break II</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stickers-to-spell-word"><span class="nav-text">2.15.14. 691. Stickers to Spell Word</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#odd-even-jump-1"><span class="nav-text">2.15.15. 975. Odd Even Jump</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#minimum-number-of-refueling-stops"><span class="nav-text">2.15.16. 871. Minimum Number of Refueling Stops</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#race-car"><span class="nav-text">2.15.17. 818. Race Car</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#course-schedule-iii"><span class="nav-text">2.15.18. 630. Course Schedule III</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maximum-profit-in-job-scheduling"><span class="nav-text">2.15.19. 1235. Maximum Profit in Job Scheduling</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#depth-first-search"><span class="nav-text">2.16. depth first search</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#addopeartion"><span class="nav-text">2.16.1. 282 addopeartion</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#count-of-smaller-numbers-after-self-from-dc-1"><span class="nav-text">2.16.2. 315. Count of Smaller Numbers After Self (from D&amp;C)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#freedom-trail-1"><span class="nav-text">2.16.3. 514. Freedom Trail</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#binary-watch"><span class="nav-text">2.16.4. 401 Binary Watch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#different-ways-to-add-parentheses"><span class="nav-text">2.16.5. Different Ways to Add Parentheses</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#upper-lower-letters"><span class="nav-text">2.16.6. upper lower letters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#restore-ip-addresses"><span class="nav-text">2.16.7. 93. Restore IP Addresses</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#additive-number"><span class="nav-text">2.16.8. 306 additive number</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#n-queens"><span class="nav-text">2.16.9. 51. N-Queens</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#permutations-ii"><span class="nav-text">2.16.10. 47. Permutations II</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gray-code"><span class="nav-text">2.16.11. 89. Gray Code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#palindrome-partitioning"><span class="nav-text">2.16.12. 131. Palindrome Partitioning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#letter-combinations-of-a-phone-number"><span class="nav-text">2.16.13. 17. Letter Combinations of a Phone Number</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#word-ladder-ii"><span class="nav-text">2.16.14. 126. Word Ladder II</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#wildcard-matching-1"><span class="nav-text">2.16.15. 44. Wildcard Matching</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sudoku-solver"><span class="nav-text">2.16.16. 37. Sudoku Solver</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stickers-to-spell-word-1"><span class="nav-text">2.16.17. Stickers to Spell Word</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#number-of-squareful-arrays"><span class="nav-text">2.16.18. 996. Number of Squareful Arrays</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tiling-a-rectangle-with-the-fewest-squares"><span class="nav-text">2.16.19. 1240. Tiling a Rectangle with the Fewest Squares</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unique-paths-iii"><span class="nav-text">2.16.20. 980. Unique Paths III</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#decoded-string-at-index"><span class="nav-text">2.16.21. 888. Decoded String at Index</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#swim-in-rising-water-1"><span class="nav-text">2.16.22. 778. Swim in Rising Water</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maximum-score-words-formed-by-letters"><span class="nav-text">2.16.23. 1255. Maximum Score Words Formed by Letters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#section-2"><span class="nav-text">2.16.24. </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#search-in-rotated-sorted-array-ii"><span class="nav-text">2.16.25. 81. Search in Rotated Sorted Array II</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shortest-subarray-with-sum-at-least-k"><span class="nav-text">2.16.26. 862 shortest subarray with sum at least k</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#longest-duplicate-substring"><span class="nav-text">2.16.27. 1044. Longest Duplicate Substring</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#median-of-two-sorted-arrays"><span class="nav-text">2.16.28. 4. Median of Two Sorted Arrays</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find-k-th-smallest-pair-distance-1"><span class="nav-text">2.16.29. 719. Find K-th Smallest Pair Distance</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#greedy-search"><span class="nav-text">2.17. greedy search</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#wildcard-matching-2"><span class="nav-text">2.17.1. wildcard matching</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#remove-k-digits-1"><span class="nav-text">2.17.2. 402. Remove K Digits</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#remove-duplicate-letters-1"><span class="nav-text">2.17.3. Remove Duplicate Letters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#minimum-number-of-refueling-stops-1"><span class="nav-text">2.17.4. 871. Minimum Number of Refueling Stops</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ipo"><span class="nav-text">2.17.5. 502. IPO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#patching-array"><span class="nav-text">2.17.6. 330. Patching Array</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#course-schedule-iii-1"><span class="nav-text">2.17.7. 630. Course Schedule III</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#create-maximum-number"><span class="nav-text">2.17.8. 321. Create Maximum Number</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sorting"><span class="nav-text">2.18. sorting</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#maximum-gap"><span class="nav-text">2.18.1. 164. Maximum Gap</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#math"><span class="nav-text">2.19. math</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sum-of-subarray-minimums-1"><span class="nav-text">2.19.1. 907. Sum of Subarray Minimums</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pattern-1"><span class="nav-text">2.19.2. 456. 132 Pattern</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#couples-holding-hands-1"><span class="nav-text">2.19.3. 765. Couples Holding Hands</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#minimum-number-of-k-consecutive-bit-flips"><span class="nav-text">2.19.4. 995. Minimum Number of K Consecutive Bit Flips</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#three-equal-parts"><span class="nav-text">2.19.5. 927. Three Equal Parts</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#candy"><span class="nav-text">2.19.6. 135. Candy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#random-pick-with-blacklist"><span class="nav-text">2.19.7. 710. Random Pick with Blacklist</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#brutal"><span class="nav-text">2.20. brutal</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#binary-watch-1"><span class="nav-text">2.20.1. 401. Binary Watch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maximum-length-of-a-concatenated-string-with-unique-characters"><span class="nav-text">2.20.2. 1239. Maximum Length of a Concatenated String with Unique Characters</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#data-structure"><span class="nav-text">1. data structure</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#linear-adt"><span class="nav-text">1.1. linear ADT</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#string"><span class="nav-text">1.1.1. string</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vector"><span class="nav-text">1.1.2. vector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#list-linked"><span class="nav-text">1.1.3. list (linked)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stack"><span class="nav-text">1.1.4. stack</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#queue"><span class="nav-text">1.1.5. queue</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tree-adt"><span class="nav-text">1.2. tree ADT</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#binary-tree"><span class="nav-text">1.2.1. binary tree</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#binary-search-tree"><span class="nav-text">1.2.1.1. binary search tree</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#leetcode"><span class="nav-text">2. Leetcode</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#int"><span class="nav-text">2.1. int</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#no.7-iterate-reverse-int"><span class="nav-text">2.1.1. no.7 iterate &amp; reverse int</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#no.9-iterate-reverse-int-2"><span class="nav-text">2.1.2. no.9 iterate &amp; reverse int 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#no.13-iterate-assign"><span class="nav-text">2.1.3. no.13 iterate &amp; assign</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#string-1"><span class="nav-text">2.2. string</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#no.28-iterate"><span class="nav-text">2.2.1. no.28 iterate</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#no.859-iterate-swap"><span class="nav-text">2.2.2. no.859 iterate &amp; swap</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vector-1"><span class="nav-text">2.3. vector</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#no.26-iterate-eraseassign"><span class="nav-text">2.3.1. no.26 iterate &amp; erase/assign</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#no.665-iterate-change-value-math-problem"><span class="nav-text">2.3.2. no.665 iterate &amp; change value (math problem)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#insert-interval"><span class="nav-text">2.3.3. 57. Insert Interval</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#linked-list"><span class="nav-text">2.4. linked list</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#no.21-iterate-merge-2-list"><span class="nav-text">2.4.1. no.21 iterate &amp; merge 2 list</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stack-1"><span class="nav-text">2.5. stack</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#push-pop"><span class="nav-text">2.5.1. 20. push &amp; pop</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xxx.-simplify-path"><span class="nav-text">2.5.2. xxx. Simplify Path</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xxx.-basic-calculator"><span class="nav-text">2.5.3. xxx. Basic Calculator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#section"><span class="nav-text">2.5.4. </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#remove-k-digits"><span class="nav-text">2.5.5. 402. Remove K Digits</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sum-of-subarray-minimums"><span class="nav-text">2.5.6. 907 Sum of Subarray Minimums</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pattern"><span class="nav-text">2.5.7. 456 132 Pattern</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#largest-rectangle-in-histogram"><span class="nav-text">2.5.8. Largest Rectangle in Histogram</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maximal-rectangle"><span class="nav-text">2.5.9. 85. Maximal Rectangle</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#remove-duplicate-letters"><span class="nav-text">2.5.10. Remove Duplicate Letters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#odd-even-jump"><span class="nav-text">2.5.11. 975 Odd Even Jump</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#trapping-rain-water"><span class="nav-text">2.5.12. 42. Trapping Rain Water</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#heap"><span class="nav-text">2.6. heap</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#the-skyline-problem-i-wouldnt-say-its-divideconcurd"><span class="nav-text">2.6.1. the skyline problem (i wouldn&#39;t say it&#39;s divide&amp;concurd)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find-k-th-smallest-pair-distance"><span class="nav-text">2.6.2. 719. Find K-th Smallest Pair Distance</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find-median-from-data-stream"><span class="nav-text">2.6.3. 295. Find Median from Data Stream</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#trapping-rain-water-ii"><span class="nav-text">2.6.4. 407. Trapping Rain Water II</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#k-th-smallest-prime-fraction"><span class="nav-text">2.6.5. 786. K-th Smallest Prime Fraction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#minimum-cost-to-hire-k-workers"><span class="nav-text">2.6.6. 857. Minimum Cost to Hire K Workers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#swim-in-rising-water"><span class="nav-text">2.6.7. 778. Swim in Rising Water</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#deque"><span class="nav-text">2.7. deque</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sliding-window-maximum"><span class="nav-text">2.7.1. 239. Sliding Window Maximum</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#maphash-table"><span class="nav-text">2.8. map(hash table)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#odd-even-jump-1"><span class="nav-text">2.8.1. 975. Odd Even Jump</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maximum-frequency-stack"><span class="nav-text">2.8.2. Maximum Frequency Stack</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#union-find"><span class="nav-text">2.9. union find</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#couples-holding-hands"><span class="nav-text">2.9.1. 751 Couples Holding Hands</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#redundant-connection-ii"><span class="nav-text">2.9.2. 685. Redundant Connection II</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bt"><span class="nav-text">2.10. bt</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#binary-tree-postorder-traversal"><span class="nav-text">2.10.1. Binary Tree Postorder Traversal</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bst"><span class="nav-text">2.11. bst</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#count-of-smaller-numbers-after-self-from-dc"><span class="nav-text">2.11.1. 315. Count of Smaller Numbers After Self (from D&amp;C)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sum-of-distances-in-tree"><span class="nav-text">2.11.2. 834. Sum of Distances in Tree</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#trie"><span class="nav-text">2.12. Trie</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#number-of-valid-words-for-each-puzzle"><span class="nav-text">2.12.1. 1178. Number of Valid Words for Each Puzzle</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#longest-univalue-path"><span class="nav-text">2.12.2. 687. Longest Univalue Path</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vertical-order-traversal-of-a-binary-tree"><span class="nav-text">2.12.3. 987. Vertical Order Traversal of a Binary Tree</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#graph"><span class="nav-text">2.13. graph</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#reachable-nodes-in-subdivided-graph"><span class="nav-text">2.13.1. 882. Reachable Nodes In Subdivided Graph</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#word-search-ii"><span class="nav-text">2.13.2. 212. Word Search II</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#divide-concur-basic-bottom-up"><span class="nav-text">2.14. divide &amp; concur (basic bottom-up)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#findi-j-findi-1-j-findi-j1"><span class="nav-text">2.14.1. 240. find(i, j) = find(i-1, j) || find(i, j+1)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kth-largest-element-in-an-array"><span class="nav-text">2.14.2. 215. Kth Largest Element in an Array</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#beautiful-array"><span class="nav-text">2.14.3. 932 beautiful array</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#count-of-range-sum"><span class="nav-text">2.14.4. Count of Range Sum</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reverse-pairs"><span class="nav-text">2.14.5. 493. Reverse Pairs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#permutation-sequence"><span class="nav-text">2.14.6. 60. Permutation Sequence</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#section-1"><span class="nav-text">2.14.7. </span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dynamic-programming"><span class="nav-text">2.15. dynamic programming</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sumi-j"><span class="nav-text">2.15.1. 303 sum(i, j)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maxsolutioni"><span class="nav-text">2.15.2. 198 maxsolution(i)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maxsumi-j"><span class="nav-text">2.15.3. 53. maxsum(i, j)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maxi-j"><span class="nav-text">2.15.4. 392. max(i, j)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maxi"><span class="nav-text">2.15.5. 91 max(i)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#continuous-subarray-sum"><span class="nav-text">2.15.6. 523. Continuous Subarray Sum</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#k-concatenation-maximum-sum"><span class="nav-text">2.15.7. 1191 K-Concatenation Maximum Sum</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#freedom-trail"><span class="nav-text">2.15.8. 514. Freedom Trail</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#valid-permutations-for-di-sequence"><span class="nav-text">2.15.9. 903. Valid Permutations for DI Sequence</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#burst-balloons"><span class="nav-text">2.15.10. 312. Burst Balloons</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#wildcard-matching"><span class="nav-text">2.15.11. 44 wildcard matching</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#regular-expression-matching"><span class="nav-text">2.15.12. 10 Regular Expression Matching</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#word-break-ii"><span class="nav-text">2.15.13. 140. Word Break II</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stickers-to-spell-word"><span class="nav-text">2.15.14. 691. Stickers to Spell Word</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#odd-even-jump-2"><span class="nav-text">2.15.15. 975. Odd Even Jump</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#minimum-number-of-refueling-stops"><span class="nav-text">2.15.16. 871. Minimum Number of Refueling Stops</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#race-car"><span class="nav-text">2.15.17. 818. Race Car</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#course-schedule-iii"><span class="nav-text">2.15.18. 630. Course Schedule III</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jump-game-ii"><span class="nav-text">2.15.19. Jump Game II</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maximum-profit-in-job-scheduling"><span class="nav-text">2.15.20. 1235. Maximum Profit in Job Scheduling</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#depth-first-search"><span class="nav-text">2.16. depth first search</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#addopeartion"><span class="nav-text">2.16.1. 282 addopeartion</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#count-of-smaller-numbers-after-self-from-dc-1"><span class="nav-text">2.16.2. 315. Count of Smaller Numbers After Self (from D&amp;C)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#freedom-trail-1"><span class="nav-text">2.16.3. 514. Freedom Trail</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#binary-watch"><span class="nav-text">2.16.4. 401 Binary Watch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#different-ways-to-add-parentheses"><span class="nav-text">2.16.5. Different Ways to Add Parentheses</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#upper-lower-letters"><span class="nav-text">2.16.6. upper lower letters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#restore-ip-addresses"><span class="nav-text">2.16.7. 93. Restore IP Addresses</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#additive-number"><span class="nav-text">2.16.8. 306 additive number</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#n-queens"><span class="nav-text">2.16.9. 51. N-Queens</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#permutations-ii"><span class="nav-text">2.16.10. 47. Permutations II</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gray-code"><span class="nav-text">2.16.11. 89. Gray Code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#palindrome-partitioning"><span class="nav-text">2.16.12. 131. Palindrome Partitioning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#letter-combinations-of-a-phone-number"><span class="nav-text">2.16.13. 17. Letter Combinations of a Phone Number</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#word-ladder-ii"><span class="nav-text">2.16.14. 126. Word Ladder II</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#wildcard-matching-1"><span class="nav-text">2.16.15. 44. Wildcard Matching</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sudoku-solver"><span class="nav-text">2.16.16. 37. Sudoku Solver</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stickers-to-spell-word-1"><span class="nav-text">2.16.17. Stickers to Spell Word</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#number-of-squareful-arrays"><span class="nav-text">2.16.18. 996. Number of Squareful Arrays</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tiling-a-rectangle-with-the-fewest-squares"><span class="nav-text">2.16.19. 1240. Tiling a Rectangle with the Fewest Squares</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unique-paths-iii"><span class="nav-text">2.16.20. 980. Unique Paths III</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#decoded-string-at-index"><span class="nav-text">2.16.21. 888. Decoded String at Index</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#swim-in-rising-water-1"><span class="nav-text">2.16.22. 778. Swim in Rising Water</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maximum-score-words-formed-by-letters"><span class="nav-text">2.16.23. 1255. Maximum Score Words Formed by Letters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#section-2"><span class="nav-text">2.16.24. </span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#breadth-first-search"><span class="nav-text">2.17. breadth first search</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#binary-watch-1"><span class="nav-text">2.17.1. 401 Binary Watch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#word-ladder-ii-1"><span class="nav-text">2.17.2. 126. Word Ladder II</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stickers-to-spell-word-2"><span class="nav-text">2.17.3. 691. Stickers to Spell Word</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shortest-path-to-get-all-keys"><span class="nav-text">2.17.4. 864. Shortest Path to Get All Keys</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#smallest-sufficient-team"><span class="nav-text">2.17.5. 1125. Smallest Sufficient Team</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maximum-width-of-binary"><span class="nav-text">2.17.6. 662. Maximum Width of Binary</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#binary-search"><span class="nav-text">2.18. binary search</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#divide-2-numbers"><span class="nav-text">2.18.1. 29 divide 2 numbers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ugly-number"><span class="nav-text">2.18.2. 1201 Ugly Number</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#powerx-n"><span class="nav-text">2.18.3. 50 power(x, n)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#search-in-rotated-sorted-array-ii"><span class="nav-text">2.18.4. 81. Search in Rotated Sorted Array II</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shortest-subarray-with-sum-at-least-k"><span class="nav-text">2.18.5. 862 shortest subarray with sum at least k</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#longest-duplicate-substring"><span class="nav-text">2.18.6. 1044. Longest Duplicate Substring</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#median-of-two-sorted-arrays"><span class="nav-text">2.18.7. 4. Median of Two Sorted Arrays</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find-k-th-smallest-pair-distance-1"><span class="nav-text">2.18.8. 719. Find K-th Smallest Pair Distance</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#greedy-search"><span class="nav-text">2.19. greedy search</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#wildcard-matching-2"><span class="nav-text">2.19.1. wildcard matching</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#remove-k-digits-1"><span class="nav-text">2.19.2. 402. Remove K Digits</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#remove-duplicate-letters-1"><span class="nav-text">2.19.3. Remove Duplicate Letters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#minimum-number-of-refueling-stops-1"><span class="nav-text">2.19.4. 871. Minimum Number of Refueling Stops</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ipo"><span class="nav-text">2.19.5. 502. IPO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#patching-array"><span class="nav-text">2.19.6. 330. Patching Array</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#course-schedule-iii-1"><span class="nav-text">2.19.7. 630. Course Schedule III</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#create-maximum-number"><span class="nav-text">2.19.8. 321. Create Maximum Number</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sorting"><span class="nav-text">2.20. sorting</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#maximum-gap"><span class="nav-text">2.20.1. 164. Maximum Gap</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#math"><span class="nav-text">2.21. math</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sum-of-subarray-minimums-1"><span class="nav-text">2.21.1. 907. Sum of Subarray Minimums</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pattern-1"><span class="nav-text">2.21.2. 456. 132 Pattern</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#couples-holding-hands-1"><span class="nav-text">2.21.3. 765. Couples Holding Hands</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#minimum-number-of-k-consecutive-bit-flips"><span class="nav-text">2.21.4. 995. Minimum Number of K Consecutive Bit Flips</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#three-equal-parts"><span class="nav-text">2.21.5. 927. Three Equal Parts</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#candy"><span class="nav-text">2.21.6. 135. Candy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#random-pick-with-blacklist"><span class="nav-text">2.21.7. 710. Random Pick with Blacklist</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#brutal"><span class="nav-text">2.22. brutal</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#binary-watch-2"><span class="nav-text">2.22.1. 401. Binary Watch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maximum-length-of-a-concatenated-string-with-unique-characters"><span class="nav-text">2.22.2. 1239. Maximum Length of a Concatenated String with Unique Characters</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
