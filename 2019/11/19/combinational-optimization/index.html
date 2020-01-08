@@ -291,7 +291,7 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;combinational-optimization&#x2F;IMG_0485.JPG">
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;combinational-optimization&#x2F;image-20191230152159210.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;combinational-optimization&#x2F;image-20191230152234377.png">
-<meta property="og:updated_time" content="2020-01-04T12:49:26.874Z">
+<meta property="og:updated_time" content="2020-01-08T12:20:35.780Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;combinational-optimization&#x2F;image-20191125141531700.png">
 
@@ -593,7 +593,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  3.8k
+                  3.9k
                 </span>
               
 
@@ -609,7 +609,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  21
+                  22
                 </span>
               
             </div>
@@ -991,12 +991,19 @@ best(s1,n) = best(best(s1;s2,n))
 <ul>
 <li><p><strong>Algorithm</strong>: 3 classic basic algorithms</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20191129133444477.png"></p></li>
-<li><p><strong>Algo</strong>: Dij, no negative weight, from 1 point to other point</p>
+<li><p><strong>Algorithm</strong>: Dijkstra, no negative weight, from 1 point to other point</p>
 <p>​ 1) choose a point with the smallest dis</p>
 <p>​ 2) choose the nearest neighbor ( smallest cj)</p>
 <p>​ 3) update all point cj</p>
 <p>​ 4) set the point as updated()</p>
-<p><strong>Note</strong>: actually a top-down implementation of bfs, using the feature of principle of optimality, 感觉像是DP算法的进一步优化版本，DP算法尽管有重叠子问题可以消除，但是dij算法还去掉了一些重叠子问题减少计算量（比如在第二个点固定的过程中就只考虑了第一个点的update，其他点都去掉了）</p></li>
+<p><strong>Proof</strong>: proof is easy.</p>
+<p><strong>Note</strong>: actually a top-down implementation of bfs, using the feature of principle of optimality, 感觉像是DP算法的进一步优化版本，DP算法尽管有重叠子问题可以消除，但是dij算法还去掉了一些重叠子问题减少计算量（比如在第二个点固定的过程中就只考虑了第一个点的update，其他点都去掉了）</p>
+<p><strong>Note</strong>: we can generalize the DP algorithm by fixing node by node.</p></li>
+<li><p><strong>Algorithm</strong>: Floyd, <code>D[i][j][k] means the the smallest distance between i and j considering only [1:k] nodes in bewteen</code></p>
+<p>​ 1) go from k = 1 -&gt; n</p>
+<p>​ 2) update i &amp; j (at kth level )</p>
+<p><strong>Proof</strong>: when k = m, you can prove that with m nodes in between, the update is valid. If not, after the update, there exists some node gg $$ [1, m], and <span class="math inline">\(i^*\to gg + gg \to j^* &lt; i \to gg + gg \to j\)</span> , so that either i-&gt;gg or gg-&gt;n is not the smallest path.</p>
+<p><strong>Note</strong>: intuition is if left is shortest path and right is shortest path then the middle is shortest path. we can generalize the DP algorithm by fixing layer by layer such that the update path only concerns k nodes.</p></li>
 </ul></li>
 </ul>
 <h4 id="take-out-problem-specific-shortest-path">1.3.4.2. take-out problem (specific shortest path)</h4>
@@ -1130,7 +1137,7 @@ best(s1,n) = best(best(s1;s2,n))
 <li><strong>Qua</strong>: =&gt; exist FPTAS</li>
 <li><strong>Qua</strong>: =&gt; NP-C</li>
 </ul></li>
-<li><p><strong>Algorithm</strong>: another loss function where we want "JUST IN TIME" : <span class="math inline">\(\sum_{n=1}^{\infty} T_j +E_j\)</span> where <span class="math inline">\(Ej= max(d_j-c_j, 0)\)</span></p></li>
+<li><p><strong>Algorithm</strong>: another loss function where we want &quot;JUST IN TIME&quot; : <span class="math inline">\(\sum_{n=1}^{\infty} T_j +E_j\)</span> where <span class="math inline">\(Ej= max(d_j-c_j, 0)\)</span></p></li>
 </ul></li>
 </ul>
 <h4 id="pm-cmax-cmin">1.3.8.2. Pm Cmax, Cmin</h4>
@@ -1407,7 +1414,7 @@ best(s1,n) = best(best(s1;s2,n))
 <h3 id="prove-in-np">2.2.1. 1) prove \(\in\) NP</h3>
 <ul>
 <li><p><strong>Def</strong>: prove</p>
-<p><img src="/Users/huangbenson/Library/Application%20Support/typora-user-images/image-20191118144712934.png"></p>
+<img src="/Users/huangbenson/Library/Application%20Support/typora-user-images/image-20191118144712934.png">
 <ul>
 <li><strong>solution</strong>:
 <ul>
@@ -1437,7 +1444,7 @@ best(s1,n) = best(best(s1;s2,n))
 <li><strong>solution</strong>:
 <ul>
 <li><p>xjt = 1 当第t辆车形为j</p></li>
-<li><p><span class="math inline">\(\sum_n xjt = nj j =1..k\)</span></p></li>
+<li><span class="math inline">\(\sum_n xjt = nj j =1..k\)</span></li>
 <li><p>sum j 1 to k sum t 1+sigma tp si + sigma xjt aij &lt;= ri for</p></li>
 </ul></li>
 </ul></li>
@@ -1544,12 +1551,12 @@ S_k &gt; (a^2 -1 )S_{k+1} \geq (a^3-a)S_k =&gt;contradiction
 <ul>
 <li><p><strong>Def</strong>: ...</p>
 <figure>
-<img src="/2019/11/19/combinational-optimization/IMG_0485.JPG" alt><figcaption>IMG_0485</figcaption>
+<img src="/2019/11/19/combinational-optimization/IMG_0485.JPG" alt="IMG_0485"><figcaption>IMG_0485</figcaption>
 </figure>
 <p><strong>Note</strong>: special case for p2 || cmax where c* = C</p>
 <ul>
 <li><p><strong>Qua</strong>: lb <span class="math inline">\(\geq\)</span> 4/3</p>
-<p><strong>Proof</strong>: note that c* = C so only "final shot" matters.</p>
+<p><strong>Proof</strong>: note that c* = C so only &quot;final shot&quot; matters.</p>
 <ol type="1">
 <li><p>since we want to prove 4/3, give intuition for 1/3</p></li>
 <li><p>1/3 + 1/3 + 2/3 + 2/3 / 1/3 + 1/3 + 1</p></li>
@@ -1615,7 +1622,7 @@ S_k &gt; (a^2 -1 )S_{k+1} \geq (a^3-a)S_k =&gt;contradiction
   <p><span>Title:</span><a href="/2019/11/19/combinational-optimization/">Combinational Optimization</a></p>
   <p><span>Author:</span><a href="/" title=" Benson 的personal blog">Benson</a></p>
   <p><span>PTime:</span>2019/11/19 - 12:11</p>
-  <p><span>LUpdate:</span>2020/01/04 - 20:01</p>
+  <p><span>LUpdate:</span>2020/01/08 - 20:01</p>
   <p><span>Link:</span><a href="/2019/11/19/combinational-optimization/" title="Combinational Optimization">https://steinsgate9.github.io/2019/11/19/combinational-optimization/</a>
     <span class="copy-path"  title="click to copy link"><i class="fa fa-clipboard" data-clipboard-text="https://steinsgate9.github.io/2019/11/19/combinational-optimization/"  aria-label="copy done！"></i></span>
   </p>
@@ -1690,8 +1697,8 @@ S_k &gt; (a^2 -1 )S_{k+1} \geq (a^3-a)S_k =&gt;contradiction
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/19/Convex_Optimization/" rel="next" title="Convex Optimization">
-                <i class="fa fa-chevron-left"></i> Convex Optimization
+              <a href="/2019/11/19/measure-theory/" rel="next" title="Measure Theory">
+                <i class="fa fa-chevron-left"></i> Measure Theory
               </a>
             
           </div>
@@ -1700,8 +1707,8 @@ S_k &gt; (a^2 -1 )S_{k+1} \geq (a^3-a)S_k =&gt;contradiction
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/19/compiler/" rel="prev" title="Compiler Principles">
-                Compiler Principles <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/19/database/" rel="prev" title="Database System">
+                Database System <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -1794,7 +1801,7 @@ S_k &gt; (a^2 -1 )S_{k+1} \geq (a^3-a)S_k =&gt;contradiction
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
