@@ -1,0 +1,2234 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.jpg?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.ico?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="title: CS Problems date: 2019-11-19 12:50:43 tags: algorithm categories: computer science toc: true copyright: true mathjax: true All problem">
+<meta property="og:type" content="article">
+<meta property="og:title" content="problems">
+<meta property="og:url" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;index.html">
+<meta property="og:site_name" content="BeNsoN">
+<meta property="og:description" content="title: CS Problems date: 2019-11-19 12:50:43 tags: algorithm categories: computer science toc: true copyright: true mathjax: true All problem">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191201231832080.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191201231851426.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191201232009449.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191201232607508.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129115455870.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129132350165.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129132441795.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129132551298.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129132600789.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202011950643.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129134849942.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202012413162.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129135505799.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129134242929.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129140208140.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129140357000.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129140423440.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129142026479.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129142046144.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129142129096.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;IMG_4922.JPG">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129142204067.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129142228601.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129121710110.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129121651628.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129122411264.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191216190900577.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202140547649.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202140704112.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129142408349.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129142427876.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220001043759.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220125401185.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220125352404.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220151808092.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220151830025.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220151952660.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220152034569.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220152044835.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220152208557.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220160921628.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220161203092.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220161209257.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220161230544.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220161239940.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220161324394.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220161354740.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220161443281.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220161451521.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191125132151583-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191125133133372-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191125140650699-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191125133323602-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191125133813023-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191125132125137-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191125132223931-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191125135801006-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191125135504726-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191125132302053-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191125140155649-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202132251638-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202133234540-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202133258642-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202133309750-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202133322281-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202133752123-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202134222547-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202135251243-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202135823826-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202135847679-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202135901436-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202143622270-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202143639476-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113140821355-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113140836325-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202143728100-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113194728809-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202150902493-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202150920451-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202151039282-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202151051936-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202152927610-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113143612063-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202153409765-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202153921675-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113145644379-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113150435090-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113151020226-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113151131038-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191209134123752-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191209133808902-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113151446385-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113153541130-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113151901718-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113153050512-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113153212757-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191209140109624-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191209140907161-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191209141513648-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191209141542578-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191209141752683-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113154512578-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113155159550-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113155228907-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113153616161-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113153127726-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113153223142-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113153447942-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191209150350412-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191209150713548-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191216151147887-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191209150841499-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191209150932812-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191209151006615-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191209152447015-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191209152522867-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113161008419-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191209153330865-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113161301261-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113161313670-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113161331625-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191216150831349-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191230134540610-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191230134620407-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191230134656994-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191230134815014-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;SteinsGate9.github.io&#x2F;source&#x2F;_posts&#x2F;combinational-optimization&#x2F;IMG_2806.JPG">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113171732161-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113171908670-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113171932417-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191230134852995-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191230134947114-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191230140723576-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191230135024658-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191230140748105-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191230140807506-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113182233155-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113182630618-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113191340453-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113193256409-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200113193327943-2189738.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129133426588.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129133444477.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216163536606.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216163701905.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216135431797.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216135405007.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216145708526.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216154023558.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216154031353.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216142110276.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216163445797.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200215195851066.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200215185049028.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200215220122368.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200215220143020.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200215233626966.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216002021695.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200215233830446.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200215233905979.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216003754336.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200215234610956.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216003909764.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216164625465.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216164633616.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216164615376.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216171650432.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216171907835.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216174041926.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216184405975.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216173425950.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216184238767.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216184325442.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216192615026.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216200341562.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216194920127.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216204230957.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216171510063.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216203504381.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216204017713.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200216204407865.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129141034226.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202112446362.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129141230833.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202113207607.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129141356475.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202130457082.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129141612669.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202131235916.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202120136169.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129120253355.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129125645660.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129130213835.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129130647311.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129130736813.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129140821921.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129140852337.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129133212851.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129133222251.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129133231163.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129133315946.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191202011517462.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129141529563.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191216191406089.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129141745506.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129141712195.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191129141914176.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220153404363.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220153414933.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220153503482.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220154232679.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220154438856.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220154557319.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220154638449.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220155105215.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220155432359.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220155458716.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220155517180.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220155529920.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20200220155601063.png">
+<meta property="og:updated_time" content="2020-02-20T11:37:20.485Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2020&#x2F;02&#x2F;20&#x2F;problems&#x2F;image-20191201231832080.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: 'FV65T83Q2V',
+      apiKey: '5008cf0478de4ac53102baceee722a4d',
+      indexName: 'steinsgate9',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://SteinsGate9.github.io/2020/02/20/problems/"/>
+
+
+
+
+
+  <title>problems | BeNsoN</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+<!--     <a href="https://github.com/SteinsGate9" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style> -->
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">BeNsoN</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Live Long, Play Hard.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" target="_blank" rel="noopener" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://SteinsGate9.github.io/2020/02/20/problems/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Benson">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://tva1.sinaimg.cn/large/006y8mN6gy1g96p07mbexj30uf0u0npd.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BeNsoN">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">problems</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-20T16:50:09+08:00">
+                2020-02-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">total read
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>times
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  3.8k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  22
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>title: CS Problems date: 2019-11-19 12:50:43 tags: algorithm categories: computer science toc: true copyright: true mathjax: true</p>
+<p>All problem</p>
+<a id="more"></a>
+<h1 id="general-optimization-problems">1. general optimization problems</h1>
+<h2 id="subset-sum">1.1. subset sum</h2>
+<ul>
+<li><p><strong>Def</strong>: decistion form</p>
+<p><img src="/2020/02/20/problems/image-20191201231832080.png"></p>
+<p><strong>Note</strong>: opt form, is a subproblem of backpack</p>
+<p>maximum</p>
+<p><img src="/2020/02/20/problems/image-20191201231851426.png"></p>
+<p>minimum</p>
+<p><img src="/2020/02/20/problems/image-20191201232009449.png"></p>
+<p>k-subsum</p>
+<p><img src="/2020/02/20/problems/image-20191201232607508.png"></p></li>
+</ul>
+<h2 id="backpack-problem">1.2. backpack problem</h2>
+<ul>
+<li><p><strong>Def</strong>: 0-1 backpack problem</p>
+<p><img src="/2020/02/20/problems/image-20191129115455870.png"></p></li>
+</ul>
+<h3 id="dp1">1.2.1. dp1</h3>
+<ul>
+<li><p><strong>Algo</strong>: dynamic programming</p>
+<p><img src="/2020/02/20/problems/image-20191129132350165.png"></p>
+<p><img src="/2020/02/20/problems/image-20191129132441795.png"></p>
+<ul>
+<li><p><strong>Qua</strong>: O(nC), pseudo-poly algorithm( if max number C is bounded by O(2^n), then the DP is polynomial, this is the definition of pseudo-poly)</p>
+<p>the input is n+logL, L = max(max pj, max wj, C)</p></li>
+</ul></li>
+</ul>
+<h3 id="dp2">1.2.2. dp2</h3>
+<ul>
+<li><p><strong>Algo</strong>: dynamic programming 2</p>
+<p><img src="/2020/02/20/problems/image-20191129132551298.png"></p>
+<p><img src="/2020/02/20/problems/image-20191129132600789.png"></p>
+<ul>
+<li><strong>Qua</strong>: O(nP), same as above</li>
+</ul></li>
+</ul>
+<h3 id="branch-bound">1.2.3. branch &amp; bound</h3>
+<ul>
+<li><p><strong>Algorithm</strong>: relaxation linear programming ( branch &amp; bound method )</p>
+<p>properties for relaxation problem</p>
+<p><img src="/2020/02/20/problems/image-20191202011950643.png"></p>
+<p>UB1: we use relation problem tp compute upper bound for non-relaxation, a fixed one, not optimal since we want it to be small.</p>
+<p><img src="/2020/02/20/problems/image-20191129134849942.png"></p>
+<p>UB2: we optimize the UB1</p>
+<p><img src="/2020/02/20/problems/image-20191202012413162.png"></p>
+<p>LB1:</p>
+<p><img src="/2020/02/20/problems/image-20191129135505799.png"></p>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; some constraint relaxation programming have to obey</p>
+<p><img src="/2020/02/20/problems/image-20191129134242929.png"></p></li>
+</ul></li>
+</ul>
+<h3 id="greedy">1.2.4. greedy</h3>
+<ul>
+<li><p><strong>Algorithm</strong>: greedy</p>
+<p><img src="/2020/02/20/problems/image-20191129140208140.png"></p>
+<p><strong>Note</strong>: the approximate ratio is <span class="math inline">\(\infty\)</span>, so we have to improve it</p></li>
+</ul>
+<h3 id="improved-greedy">1.2.5. improved greedy</h3>
+<ul>
+<li><p><strong>Algorithm</strong>: improving greedy method</p>
+<p><img src="/2020/02/20/problems/image-20191129140357000.png"></p>
+<ul>
+<li><p><strong>Qua</strong>: the approximate ratio is 2</p>
+<p><strong>Proof</strong>: using a upper bound (UB1)</p>
+<p><img src="/2020/02/20/problems/image-20191129140423440.png"></p></li>
+</ul></li>
+</ul>
+<h3 id="ptas">1.2.6. PTAS</h3>
+<ul>
+<li><p><strong>Algorithm</strong> : PTAS</p>
+<p><strong>Usage</strong>: ensembling <span class="math inline">\(2^k\)</span> possible solution together and output the best of them. 1) design a feasible bu t not optimal greedy solution 2) k is used to bound time &amp; maximize capability of greedy solution.</p>
+<p><img src="/2020/02/20/problems/image-20191129142026479.png"></p>
+<p><strong>Proof</strong>: separate the JK into 2 part by i0. the first part consist only intersection &amp; jk itself, because no samples exists only in J* before i0. the second part consist of 3 part. This construction is done by introducing i0, have nothing to do with Jk algorithm(only Jk indicate that Ja+beta is not empty since i0 can't be the largest )</p>
+<p><img src="/2020/02/20/problems/image-20191129142046144.png"></p>
+<p><strong>Note</strong>: this is a greedy solution. Key point of proof is Jkf have lower bound <span class="math inline">\(\alpha + \beta\)</span>, and use that lower bound with conditions provided by <span class="math inline">\(i_0\)</span>(密度&amp;重量）, we can finally prove the point.</p>
+<p><img src="/2020/02/20/problems/image-20191129142129096.png"></p>
+<p><strong>Note</strong>: fig</p>
+<figure>
+<img src="/2020/02/20/problems/IMG_4922.JPG" alt="IMG_4922"><figcaption>IMG_4922</figcaption>
+</figure></li>
+</ul>
+<h3 id="fptas">1.2.7. FPTAS</h3>
+<ul>
+<li><p><strong>Algorithm</strong>: FPTAS</p>
+<p><strong>Note</strong>: how to design a FPTAS =&gt; 1) design a unfeasible solution and make constraints 2) t is used to bound poly run time &amp; reduce MAX of instance(maximize the capability of DP in another way by making it feasible).</p>
+<p><img src="/2020/02/20/problems/image-20191129142204067.png"></p>
+<p><strong>Proof</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20191129142228601.png"></p>
+<p><strong>Note</strong>: 从一个伪多项式算法出发，设计一个P缩微的实例。（之所以不放C，是因为可行性有可能改变）从这个实例出发，从左上到右上到右下到左下，右上右下都是天然下界。</p></li>
+</ul>
+<h2 id="assignment-problem">1.3. assignment problem</h2>
+<ul>
+<li><p><strong>Def</strong>:assignment problem</p>
+<p><img src="/2020/02/20/problems/image-20191129121710110.png"></p>
+<p><img src="/2020/02/20/problems/image-20191129121651628.png"></p>
+<p><strong>Note</strong>: standard form</p>
+<p><img src="/2020/02/20/problems/image-20191129122411264.png"></p>
+<ul>
+<li><p><strong>Qua</strong>: P( special kind of integer programming is poly solvable, NP-hard is defined when n-&gt;inf)</p></li>
+<li><p><strong>Qua</strong>: equivalent to Bipartite Matching</p>
+<p><img src="/2020/02/20/problems/image-20191216190900577.png"></p></li>
+<li><p><strong>Qua</strong>: standardization, A is shown above, A is totally unimodular matrix</p></li>
+</ul></li>
+</ul>
+<h2 id="subset-partition-problem">1.4. subset partition problem</h2>
+<ul>
+<li><p><strong>Def</strong>: partition problem</p>
+<p>desicion version</p>
+<figure>
+<img src="/2020/02/20/problems/image-20191202140547649.png" alt="img"><figcaption>img</figcaption>
+</figure>
+<p>opt version</p>
+<figure>
+<img src="/2020/02/20/problems/image-20191202140704112.png" alt="img"><figcaption>img</figcaption>
+</figure></li>
+</ul>
+<h2 id="product-partition">1.5. product partition</h2>
+<ul>
+<li><p><strong>Def</strong>: product partition problem</p>
+<figure>
+<img src="/2020/02/20/problems/image-20191129142408349.png" alt="img"><figcaption>img</figcaption>
+</figure></li>
+<li><p><strong>Qua</strong>: NPC, have FPTAS</p>
+<figure>
+<img src="/2020/02/20/problems/image-20191129142427876.png" alt="img"><figcaption>img</figcaption>
+</figure></li>
+</ul>
+<h2 id="closest-point">1.6. closest point</h2>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200220001043759.png"></p></li>
+</ul>
+<h3 id="brutal">1.6.1. brutal</h3>
+<ul>
+<li><strong>Algorithm</strong>:
+<ul>
+<li><strong>Complexity</strong>: <span class="math inline">\(O(n^2)\)</span></li>
+</ul></li>
+</ul>
+<h3 id="divide-conquer">1.6.2. divide &amp; conquer</h3>
+<ul>
+<li><p><strong>Algorithm</strong>:</p>
+<p>https://blog.csdn.net/qq_22238021/article/details/78852337</p>
+<ul>
+<li><strong>Complexity</strong> : <span class="math inline">\(O(nlogn)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="activity-selection-max-span">1.7. activity selection (max span)</h2>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200220125401185.png"></p></li>
+</ul>
+<h3 id="dp">1.7.1. dp</h3>
+<ul>
+<li><p><strong>Algorithm</strong>: discretion <span class="math display">\[
+dp[i] = \max _{j=1-&gt;i-1} (dp[j]+span[i]) \text{ if j is compatible }
+\]</span></p>
+<ul>
+<li><strong>Complexity</strong> : <span class="math inline">\(O(n^2)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="activity-selection-max-size">1.8. activity selection (max size)</h2>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200220125352404.png"></p></li>
+</ul>
+<h3 id="dp-1">1.8.1. dp</h3>
+<ul>
+<li><p><strong>Algorithm</strong>: discretion <span class="math display">\[
+dp[i] = \max _{j=1-&gt;i-1} (dp[j]+1) \text{ if j is compatible }
+\]</span></p>
+<ul>
+<li><strong>Complexity</strong> : <span class="math inline">\(O(n^2)\)</span></li>
+</ul></li>
+</ul>
+<h3 id="dp2-1">1.8.2. dp2</h3>
+<ul>
+<li><p><strong>Algorithm</strong>: discretion <span class="math display">\[
+dp[i] = binarySearch_j (dp[j]+1) 
+\]</span></p>
+<ul>
+<li><strong>Complexity</strong> : <span class="math inline">\(O(n logn)\)</span></li>
+</ul></li>
+</ul>
+<h3 id="greedy-1">1.8.3. greedy</h3>
+<ul>
+<li><p><strong>Algorithm</strong>: greedy <span class="math display">\[
+dp[i] = dp[i-1]+1 \text{ if i is compatible } \\ \text{with max span of i-1}
+\]</span></p>
+<ul>
+<li><strong>Complexity</strong> : <span class="math inline">\(O(n)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="k-center">1.9. k-center</h2>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200220151808092.png"></p></li>
+</ul>
+<h3 id="greedy1">1.9.1. greedy1</h3>
+<ul>
+<li><p><strong>Algorithm</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200220151830025.png"></p></li>
+</ul>
+<h3 id="greedy2">1.9.2. greedy2</h3>
+<ul>
+<li><p><strong>Algorithm</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200220151952660.png"></p>
+<ul>
+<li><p><strong>Qua</strong>: ratio = 2</p>
+<p><img src="/2020/02/20/problems/image-20200220152034569.png"></p>
+<p><img src="/2020/02/20/problems/image-20200220152044835.png"></p></li>
+<li><p><strong>Qua</strong>: ratio <span class="math inline">\(&gt;=\)</span> 2</p>
+<p><img src="/2020/02/20/problems/image-20200220152208557.png"></p></li>
+</ul></li>
+</ul>
+<h2 id="hiring-problem">1.10. hiring problem</h2>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200220160921628.png"></p></li>
+</ul>
+<h3 id="brutal-1">1.10.1. brutal</h3>
+<ul>
+<li><p><strong>Algorithm</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200220161203092.png"></p>
+<ul>
+<li><p><strong>Qua</strong> :</p>
+<p><img src="/2020/02/20/problems/image-20200220161209257.png"></p></li>
+</ul></li>
+</ul>
+<h3 id="randomize">1.10.2. randomize</h3>
+<ul>
+<li><p><strong>Algorithm</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200220161230544.png"></p>
+<ul>
+<li><p><strong>Qua</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200220161239940.png"></p></li>
+</ul></li>
+</ul>
+<h2 id="permutation">1.11. permutation</h2>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200220161324394.png"></p></li>
+</ul>
+<h3 id="randomize-1">1.11.1. randomize</h3>
+<ul>
+<li><p><strong>Algorithm</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200220161354740.png"></p></li>
+</ul>
+<h2 id="online-hiring">1.12. online hiring</h2>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200220161443281.png"></p>
+<p><img src="/2020/02/20/problems/image-20200220161451521.png"></p></li>
+</ul>
+<h2 id="scheduling">1.13. scheduling</h2>
+<ul>
+<li><p><strong>Def</strong>: scheduling problem</p>
+<p><strong>Usage</strong>: representing scheduling problem in 3 elements</p>
+<p><img src="/2020/02/20/problems/image-20191125132151583-2189738.png"></p>
+<p><img src="/2020/02/20/problems/image-20191125133133372-2189738.png"></p>
+<p><img src="/2020/02/20/problems/image-20191125140650699-2189738.png"></p>
+<ul>
+<li><p><strong>Def</strong>: machine env ( <span class="math inline">\(\alpha\)</span> )</p>
+<p><img src="/2020/02/20/problems/image-20191125133323602-2189738.png"></p>
+<p><strong>Example</strong>: possible example of machine environment, note that parallel have no bounds on machine sequence, it's more like to make things more equal. And shop have bounds on sequences and shit have to be on multiple machines, it's more complicated.</p>
+<p><img src="/2020/02/20/problems/image-20191125133813023-2189738.png"></p>
+<p><strong>Note</strong>: mixed &amp; hybrid</p></li>
+<li><p><strong>Def</strong>: job characteristic ( <span class="math inline">\(\beta\)</span> )</p>
+<p><img src="/2020/02/20/problems/image-20191125132125137-2189738.png"></p>
+<p><strong>Note</strong>: more constraint</p>
+<p><img src="/2020/02/20/problems/image-20191125132223931-2189738.png"></p></li>
+<li><p><strong>Def</strong>: loss function ( <span class="math inline">\(\gamma\)</span> )</p>
+<p><img src="/2020/02/20/problems/image-20191125135801006-2189738.png"></p>
+<p><img src="/2020/02/20/problems/image-20191125135504726-2189738.png"></p></li>
+</ul></li>
+<li><p><strong>Def</strong>: gatt diagram</p>
+<p><strong>Usage</strong>: representing a possible solution</p>
+<p><img src="/2020/02/20/problems/image-20191125132302053-2189738.png"></p></li>
+<li><p><strong>Example</strong>: Santa problem</p>
+<p><strong>Usage</strong>: the simpliest scheduling problem ( without precedence )</p>
+<p><img src="/2020/02/20/problems/image-20191125140155649-2189738.png"></p></li>
+<li><p><strong>Example</strong>: parodox of scheduling problem</p>
+<p><strong>Usage</strong>: the cons for greedy algorithms: decrease job time &amp; increase machine number will not necessarily yield better result.</p>
+<p>P175</p></li>
+</ul>
+<h4 id="p1-cj-cmax-l1max-tj-uj">1.13.0.1. P1 Cj, Cmax, L1max, Tj, Uj</h4>
+<h5 id="c_max-or-sum_n1infty-c_j">1.13.0.1.1. \(C_{max}\) or \(\sum_{n=1}^{\infty} C_j\)</h5>
+<ul>
+<li><p><strong>Def</strong>: <span class="math inline">\(C_{max}\)</span> or <span class="math inline">\(\sum_{n=1}^{\infty} C_j\)</span></p>
+<ul>
+<li><p><strong>Algorithm</strong>: for <span class="math inline">\(\sum_{n=1}^{\infty} C_j\)</span>: SPT</p>
+<p><img src="/2020/02/20/problems/image-20191202132251638-2189738.png"></p></li>
+<li><p><strong>Algorithm</strong>: weighed sum cj <span class="math inline">\(\sum_{j=1}^{n} w_jc_j\)</span></p>
+<p><strong>Note</strong>:</p>
+<p>0.0) <span class="math inline">\(\sum_{n=1}^{\infty} wjcj = (w_1+...w_n)p1 + ...\)</span></p>
+<p>1.0) when n = 2, get solution <span class="math inline">\(w_2p_1\)</span> vs <span class="math inline">\(w_1p_2\)</span></p>
+<p>2.0) when n &gt; 2, insights from n =2, sort <span class="math inline">\(\frac{pj}{wj}\)</span></p>
+<p><strong>Proof</strong>:</p>
+<p>1.0) swapping 2 element i,j =&gt; contradiction,</p>
+<p>1.1) <strong>set i - j =-1 to make it easier.</strong>( this step is important since we only get information from i and j)</p></li>
+<li><p><strong>Algorithm</strong>: weighed functional sum of cj : <span class="math inline">\(\sum_{n=1}^{\infty} w_jg(c_j)\)</span></p>
+<ul>
+<li><p><strong>Qua</strong>; when g is convex: worst ratio = sup ...</p></li>
+<li><p><strong>Qua</strong>: when g is 分段linear: NPC</p></li>
+<li><p><strong>Qua</strong>: when g is <span class="math inline">\(x ^{\beta}\)</span> =&gt; i &lt;g j &amp; i &lt;l j</p></li>
+</ul></li>
+</ul></li>
+</ul>
+<h5 id="l1max-tj-uj">1.13.0.1.2. L1max, Tj, Uj</h5>
+<ul>
+<li><p><strong>Def</strong>: one machine problem: <span class="math inline">\(L_{max}\)</span> is the maximum of delay time. <span class="math inline">\(\sum_{n=1}^{\infty} U_j\)</span> is the total delayed objects. $ _{n=1}^{} T_j$ is the added delayed time.</p>
+<p><img src="/2020/02/20/problems/image-20191202133234540-2189738.png"></p>
+<ul>
+<li><p><strong>Algorithm</strong>: for <span class="math inline">\(L_{max}\)</span>: EDD</p>
+<p><img src="/2020/02/20/problems/image-20191202133258642-2189738.png"></p>
+<p><strong>Proof</strong>: By contradiction. Note that we only need to prove <span class="math inline">\(L_{max}\)</span> is not increasing, and only k, j, i changes in the <span class="math inline">\(\sigma&#39;\)</span> solution and everyone of them are bounded by the max($$) of the original.</p>
+<p><img src="/2020/02/20/problems/image-20191202133309750-2189738.png"></p>
+<p><img src="/2020/02/20/problems/image-20191202133322281-2189738.png"></p></li>
+<li><p><strong>Algorithm</strong>: for <span class="math inline">\(\sum_{n=1}^{\infty} U_j\)</span> : Moore-Hodgeson(EDD improve)</p>
+<p><img src="/2020/02/20/problems/image-20191202133752123-2189738.png"></p>
+<p><strong>Note</strong>: example of Moore-Hodgeson</p>
+<p><img src="/2020/02/20/problems/image-20191202134222547-2189738.png"></p></li>
+<li><p><strong>Algorithm</strong>: for <span class="math inline">\(\sum_{n=1}^{\infty} T_j\)</span></p>
+<p><img src="/2020/02/20/problems/image-20191202135251243-2189738.png"></p>
+<p><strong>Note</strong>: no resting time</p>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; exist pseudo - p algo</p></li>
+<li><p><strong>Qua</strong>: =&gt; exist FPTAS</p></li>
+<li><p><strong>Qua</strong>: =&gt; NP-C</p></li>
+</ul></li>
+<li><p><strong>Algorithm</strong>: another loss function where we want &quot;JUST IN TIME&quot; : <span class="math inline">\(\sum_{n=1}^{\infty} T_j +E_j\)</span> where <span class="math inline">\(Ej= max(d_j-c_j, 0)\)</span></p></li>
+</ul></li>
+</ul>
+<h4 id="pm-cmax-cmin">1.13.0.2. Pm Cmax, Cmin</h4>
+<ul>
+<li><p><strong>Def</strong>: multi-machine problem Pm</p>
+<p><strong>Note</strong>: Pm and P difference: whether m is a given input(P) or constant(Pm), the consequence of this is that when Pseudo-P algorithm in Pm is O(P^m), it is exponential in P since m is input.</p>
+<p><img src="/2020/02/20/problems/image-20191202135823826-2189738.png"></p>
+<ul>
+<li><p><strong>Qua</strong>: lower bound for <span class="math inline">\(C_{max}\)</span> <span class="math display">\[
+C_{max}\geq \sum_{i=1}^{n}p_i /m \\
+C_{max}  \geq \max  \limits_{i=[1,n]} pi
+\]</span></p></li>
+<li><p><strong>Qua</strong>: =&gt; NP-hard</p>
+<p><img src="/2020/02/20/problems/image-20191202135847679-2189738.png"></p>
+<p><strong>Proof</strong>: obvious</p>
+<p><img src="/2020/02/20/problems/image-20191202135901436-2189738.png"></p>
+<p>from 2 to Pm|| ..: adding p-2 dummy node with cj = C</p></li>
+<li><p><strong>Algorithm</strong>: LS</p>
+<p><strong>Note</strong>: the most important thing is when <span class="math inline">\(j_i\)</span> is placed on m machine, then other machines are not ready. <span class="math inline">\(\sum_{i=1}^{n-1} p_i \geq s_nm\)</span></p>
+<p><img src="/2020/02/20/problems/image-20191202143622270-2189738.png"></p>
+<ul>
+<li><p><strong>Qua</strong>: worst ratio <span class="math inline">\(=\)</span> 2- 1/m</p>
+<p><img src="/2020/02/20/problems/image-20191202143639476-2189738.png"></p>
+<p><strong>Proof</strong>: By contrast &amp; minimal conter example: extra information by introducing minimal counterexample instead of counterexample.</p>
+<p>1）first prove that Jn determine max span: exactly why we introduce minimal conterexample, this is intuitive since you can always cut the final element if the final element does not decide max span.</p>
+<p>which means <span class="math inline">\(Cls(I0) = s_n + p_n\)</span></p>
+<p><img src="/2020/02/20/problems/image-20200113140821355-2189738.png"></p>
+<p>2）then prove by lower bound of C*</p>
+<p><img src="/2020/02/20/problems/image-20200113140836325-2189738.png"></p>
+<p>3）tightness prove: find an example that have 2 - 1/m: consider LS's con, LS can fill in small items to small which makes things worse.</p>
+<p><img src="/2020/02/20/problems/image-20191202143728100-2189738.png"></p>
+<p><strong>Note</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200113194728809-2189738.png"></p></li>
+</ul></li>
+<li><p><strong>Algorithm</strong>: LPT(sorted LS)</p>
+<p><strong>Insight</strong>: from the worst case of above, that we do from large -&gt; small this time.</p>
+<p><strong>Note</strong>: note that the additional information is <span class="math inline">\(C^*(I) &lt;3p_n\)</span> =&gt; each lane has at most 2 items, since <span class="math inline">\(p_n\)</span> is the smallest item</p>
+<p><img src="/2020/02/20/problems/image-20191202150902493-2189738.png"></p>
+<ul>
+<li><p><strong>Qua</strong>: worst ratio</p>
+<p><img src="/2020/02/20/problems/image-20191202150920451-2189738.png"></p>
+<p><strong>Proof</strong>:</p>
+<p>1）LPT can exclude <span class="math inline">\(C^*(I) &lt; 3 p_n\)</span>, that if it suffice, at most 2 items is on each lane in optimal solution. So that leaves us <span class="math inline">\(C^*(I) \geq 3 p_n\)</span></p>
+<p><img src="/2020/02/20/problems/image-20191202151039282-2189738.png"></p>
+<p><img src="/2020/02/20/problems/image-20191202151051936-2189738.png"></p>
+<p>2）By construct, construct a LPT solution by transforming a optimal solution( one on one relationship between LPT with some optimal).</p>
+<p><img src="/2020/02/20/problems/image-20191202152927610-2189738.png"></p>
+<p>3）tightness proof</p>
+<p><img src="/2020/02/20/problems/image-20200113143612063-2189738.png"></p></li>
+</ul></li>
+</ul></li>
+<li><p><strong>Def</strong>: Pm||Cmin (maximization problem)</p>
+<ul>
+<li><p><strong>Algorithm</strong>: LS</p>
+<p><strong>Note</strong>: LS gives us <span class="math inline">\(L_i- p_{j_i} \leq L_m\)</span></p>
+<ul>
+<li><p><strong>Qua</strong>: worst ratio = m</p>
+<p><img src="/2020/02/20/problems/image-20191202153409765-2189738.png"></p>
+<p><strong>Proof</strong>:</p>
+<p>1）prove ratio $ $ m</p>
+<p>1.1) By provided condition: first prove lower bound for Cls: Lm</p>
+<p><img src="/2020/02/20/problems/image-20191202153921675-2189738.png"></p>
+<p><img src="/2020/02/20/problems/image-20200113145644379-2189738.png"></p>
+<p>1.2) By contradiction, second prove upper bound for C*</p>
+<p><img src="/2020/02/20/problems/image-20200113150435090-2189738.png"></p>
+<p>2）ratio <span class="math inline">\(\geq\)</span> m, same as LS Cmax, but swap 1 &amp; m</p>
+<p><img src="/2020/02/20/problems/image-20200113151020226-2189738.png"></p></li>
+</ul></li>
+<li><p><strong>Algorithm</strong>: LST</p>
+<ul>
+<li><strong>Qua</strong>: worst ratio = <span class="math inline">\(\frac{4m-2}{3m-1}\)</span></li>
+</ul></li>
+<li><p><strong>Qua</strong>: for every instance, there's not always a scheduling that satisty both optimal for Cmax &amp; Cmin. But is there an algorithm such that ratio_min &lt; <span class="math inline">\(\alpha\)</span> and ratio_max &lt; <span class="math inline">\(\beta\)</span> ?</p>
+<p><img src="/2020/02/20/problems/image-20200113151131038-2189738.png"></p></li>
+</ul></li>
+</ul>
+<h4 id="p-cmax">1.13.0.3. P Cmax</h4>
+<ul>
+<li><p><strong>Def</strong>: P||Cmax</p>
+<ul>
+<li><p><strong>Qua</strong>: strong NP-hard</p>
+<p><strong>Proof</strong>: 3-partition $ _p $ P||Cmax</p>
+<p><strong>Note</strong>: Pm||Cmax can not use this reduction since m in Pm is a constant .</p></li>
+</ul></li>
+</ul>
+<h4 id="f2-cmax">1.13.0.4. F2 Cmax</h4>
+<ul>
+<li><p><strong>Def</strong>: F2 Cmax</p>
+<p><img src="/2020/02/20/problems/image-20191209134123752-2189738.png"></p>
+<ul>
+<li><p><strong>Algorithm</strong>: Johnson</p>
+<p><strong>Note</strong>: why sort the second array?</p>
+<p><img src="/2020/02/20/problems/image-20191209133808902-2189738.png"></p>
+<p><strong>Note</strong>: fig</p>
+<p><img src="/2020/02/20/problems/image-20200113151446385-2189738.png"></p></li>
+</ul></li>
+</ul>
+<h4 id="f3-cmax">1.13.0.5. F3 Cmax</h4>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<ul>
+<li><p><strong>Qua</strong>: worst ratio &lt;= 5/3 or 3/2</p>
+<p><img src="/2020/02/20/problems/image-20200113153541130-2189738.png"></p></li>
+</ul></li>
+</ul>
+<h4 id="fm-cmax">1.13.0.6. Fm Cmax</h4>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<ul>
+<li><p><strong>Qua</strong>: possible lower / upper bound</p>
+<p><strong>Note</strong>: LB = max{dilation, congestion}. dilation = $max <em>{j=1}^{n}pji $ , congestion = $max </em>{i=1}^{m} pji $</p>
+<p>dilation is the max sum of item since every item have to finish all routine, congestion is the max sum of machine since machine have to finish given work.</p>
+<p><img src="/2020/02/20/problems/image-20200113151901718-2189738.png"></p></li>
+<li><p><strong>Qua</strong>: exists PTAS</p>
+<p><img src="/2020/02/20/problems/image-20200113153050512-2189738.png"></p></li>
+<li><p><strong>Qua</strong>: worst ratio &gt; 5/4</p>
+<p><img src="/2020/02/20/problems/image-20200113153212757-2189738.png"></p></li>
+<li><p><strong>Qua</strong>: worst ratio &lt;=2 / log....</p></li>
+</ul></li>
+</ul>
+<h4 id="o2-cmax">1.13.0.7. O2 Cmax</h4>
+<ul>
+<li><p><strong>Def</strong>: O2 Cmax</p>
+<p><img src="/2020/02/20/problems/image-20191209140109624-2189738.png"></p>
+<ul>
+<li><p><strong>Algorithm</strong>: johnson</p>
+<p><img src="/2020/02/20/problems/image-20191209140907161-2189738.png"></p>
+<ul>
+<li><p><strong>Qua</strong>: this is a feasible &amp; optimal solution</p>
+<p><strong>Proof</strong>:</p>
+<p>1）first prove that separatly they are feasible</p>
+<p><img src="/2020/02/20/problems/image-20191209141513648-2189738.png"></p>
+<p><img src="/2020/02/20/problems/image-20191209141542578-2189738.png"></p>
+<p>2）then we combine those 2 and prove that they are still feasible</p>
+<p><img src="/2020/02/20/problems/image-20191209141752683-2189738.png"></p>
+<p><img src="/2020/02/20/problems/image-20200113154512578-2189738.png"></p>
+<p>3）By equals lower bound(for min): prove optimal</p>
+<p><img src="/2020/02/20/problems/image-20200113155159550-2189738.png"></p>
+<p><img src="/2020/02/20/problems/image-20200113155228907-2189738.png"></p>
+<p>traverse through all possible solutions and get solution = lowerbound.</p></li>
+</ul></li>
+</ul></li>
+</ul>
+<h4 id="o3-cmax">1.13.0.8. O3 Cmax</h4>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<ul>
+<li><p><strong>Qua</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200113153616161-2189738.png"></p></li>
+</ul></li>
+</ul>
+<h4 id="om-cmax">1.13.0.9. Om Cmax</h4>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<ul>
+<li><p><strong>Qua</strong>: exist FPTAS</p>
+<p><img src="/2020/02/20/problems/image-20200113153127726-2189738.png"></p></li>
+<li><p><strong>Qua</strong>: worst ratio</p>
+<p><img src="/2020/02/20/problems/image-20200113153223142-2189738.png"></p></li>
+</ul></li>
+</ul>
+<h4 id="jm-cmax">1.13.0.10. Jm Cmax</h4>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<ul>
+<li><p><strong>Qua</strong>: worst ratio &gt;= ....</p>
+<p><img src="/2020/02/20/problems/image-20200113153447942-2189738.png"></p></li>
+</ul></li>
+</ul>
+<h4 id="rm-cmaxhw">1.13.0.11. Rm Cmax(hw)</h4>
+<ul>
+<li><p><strong>Def</strong>: ...</p>
+<ul>
+<li><p><strong>Qua</strong>: lb for some algo = m</p>
+<p><strong>Proof</strong>: <span class="math inline">\(\leq m\)</span> =&gt; ...</p>
+<p><span class="math inline">\(\geq m\)</span> =&gt; 1 and 1 + <span class="math inline">\(\epsilon\)</span></p></li>
+<li><p><strong>Qua</strong>: online lb</p>
+<p><strong>Proof</strong>: (1,1) =&gt; (1,2) &amp; (2,1)</p></li>
+</ul></li>
+</ul>
+<h2 id="bin-packing">1.14. bin-packing</h2>
+<ul>
+<li><p><strong>Def</strong>: bin-packing problem</p>
+<p><img src="/2020/02/20/problems/image-20191209150350412-2189738.png"></p>
+<ul>
+<li><p><strong>Qua</strong>: worst ratio <span class="math inline">\(\geq\)</span> 1.5</p>
+<p><img src="/2020/02/20/problems/image-20191209150713548-2189738.png"></p>
+<p><strong>Proof</strong>: By gap tech, bin<span class="math inline">\(\leq p\)</span> partition</p>
+<p><img src="/2020/02/20/problems/image-20191216151147887-2189738.png"></p></li>
+</ul>
+<h4 id="next-fit">1.14.0.1. next fit</h4></li>
+<li><p><strong>Algorithm</strong>: next fit ( influenced by sequence )</p>
+<p><strong>Note</strong>: fit =&gt; fill; not fit =&gt; new box</p>
+<p><img src="/2020/02/20/problems/image-20191209150841499-2189738.png"></p>
+<ul>
+<li><p><strong>Qua</strong>: worst ratio = 2</p>
+<p><strong>Proof</strong>:</p>
+<p>1）By constrast, ratio <span class="math inline">\(\leq\)</span> 2 ( from local =&gt; global )</p>
+<p><img src="/2020/02/20/problems/image-20191209150932812-2189738.png"></p>
+<p>2）ratio <span class="math inline">\(\geq\)</span> 2, consider to let every box as empty as possible(at least C/2)</p>
+<p><img src="/2020/02/20/problems/image-20191209151006615-2189738.png"></p></li>
+</ul></li>
+</ul>
+<h3 id="greedy-first-fit">1.14.1. greedy: first fit</h3>
+<ul>
+<li><p><strong>Algorithm</strong>: first fit</p>
+<p><strong>Note</strong>: 1 =&gt; j, fill the first fit or new bin</p>
+<p><img src="/2020/02/20/problems/image-20191209152447015-2189738.png"></p>
+<p><img src="/2020/02/20/problems/image-20191209152522867-2189738.png"></p>
+<ul>
+<li><p><strong>Qua</strong>: worst ratio = 1.7</p>
+<p><strong>Proof</strong>: proof is crazy, same idea: make boxes as empty as possible.</p>
+<p><img src="/2020/02/20/problems/image-20200113161008419-2189738.png"></p></li>
+</ul></li>
+</ul>
+<h3 id="greedy-first-fit-decreasing">1.14.2. greedy: first fit decreasing</h3>
+<ul>
+<li><p><strong>Algorithm</strong>: first fit decreasing (FFD)</p>
+<p><strong>Note</strong>: sort non-increasing + first fit, FFD provide sorting sequence which is very important.</p>
+<p><img src="/2020/02/20/problems/image-20191209153330865-2189738.png"></p>
+<ul>
+<li><p><strong>Qua</strong>: worst ratio = 1.5</p>
+<p><strong>Proof</strong>: want to get upperbound for l =&gt; upperbound for pj and j</p>
+<p>1）prove ratio <span class="math inline">\(\leq\)</span> 1.5</p>
+<p>1.1) By given FFD, prove upperbound for <span class="math inline">\(w_j\)</span></p>
+<p><img src="/2020/02/20/problems/image-20200113161301261-2189738.png"></p>
+<p>1.2) By given FF, prove upperbound for j</p>
+<p><img src="/2020/02/20/problems/image-20200113161313670-2189738.png"></p>
+<p>1.3) By, upperbound: finally prove it.</p>
+<p><img src="/2020/02/20/problems/image-20200113161331625-2189738.png"></p>
+<p>2）By l-l* lowerbound, which means trying hard to make them close: prove ratio <span class="math inline">\(\geq\)</span> 1.5</p>
+<p><img src="/2020/02/20/problems/image-20191216150831349-2189738.png"></p>
+<p><strong>Note</strong>: relaxation can be made =&gt; <span class="math inline">\(p_j \leq C/2\)</span> will suffice ( see slides )</p></li>
+</ul></li>
+</ul>
+<h2 id="online-ski-rental">1.15. online ski-rental</h2>
+<ul>
+<li><p><strong>Def</strong>: ski-rental problem</p>
+<p><img src="/2020/02/20/problems/image-20191230134540610-2189738.png"></p></li>
+</ul>
+<h3 id="greedy-strat-n">1.15.1. greedy: strat-N</h3>
+<ul>
+<li><p><strong>Algorithm</strong>: strat-N</p>
+<p><img src="/2020/02/20/problems/image-20191230134620407-2189738.png"></p>
+<ul>
+<li><p><strong>Qua</strong>: lb <span class="math inline">\(\leq\)</span> 2</p>
+<p><img src="/2020/02/20/problems/image-20191230134656994-2189738.png"></p></li>
+<li><p><strong>Qua</strong>: strat-N is the best of strat-K</p>
+<p><img src="/2020/02/20/problems/image-20191230134815014-2189738.png"></p>
+<p><strong>Note</strong>: draw a diagram with ratio on instance level</p>
+<p><img src="/2020/02/20/problems/SteinsGate9.github.io/source/_posts/combinational-optimization/IMG_2806.JPG" alt="IMG_2806" style="zoom: 33%;"></p></li>
+</ul></li>
+</ul>
+<h2 id="bin-covering">1.16. bin-covering</h2>
+<ul>
+<li><p><strong>Def</strong>: bin-covering problem</p>
+<p><img src="/2020/02/20/problems/image-20200113171732161-2189738.png"></p></li>
+</ul>
+<h3 id="greedy-next-fit">1.16.1. greedy: next fit</h3>
+<ul>
+<li><p><strong>Algorithm</strong>: NF</p>
+<p><strong>Proof</strong>: By contraction.</p>
+<p><img src="/2020/02/20/problems/image-20200113171908670-2189738.png"></p></li>
+<li><p><strong>Qua</strong>: ratio <span class="math inline">\(\geq\)</span> 2</p>
+<p><img src="/2020/02/20/problems/image-20200113171932417-2189738.png"></p></li>
+</ul>
+<h2 id="online-searching">1.17. online searching</h2>
+<ul>
+<li><p><strong>Def</strong>: online searching 1D</p>
+<p><img src="/2020/02/20/problems/image-20191230134852995-2189738.png"></p></li>
+</ul>
+<h3 id="greedy-linear-space">1.17.1. greedy: linear space</h3>
+<ul>
+<li><p><strong>Algorithm</strong>: linear pace</p>
+<p><img src="/2020/02/20/problems/image-20191230134947114-2189738.png"></p>
+<p><img src="/2020/02/20/problems/image-20191230140723576-2189738.png"></p>
+<p><strong>Note</strong>: linear pace 2</p>
+<p><img src="/2020/02/20/problems/image-20191230135024658-2189738.png"></p>
+<p><img src="/2020/02/20/problems/image-20191230140748105-2189738.png"></p></li>
+</ul>
+<h3 id="greedy-exp-space">1.17.2. greedy: exp space</h3>
+<ul>
+<li><p><strong>Algorithm</strong>: exp pace</p>
+<p><img src="/2020/02/20/problems/image-20191230140807506-2189738.png"></p></li>
+<li><p><strong>Qua</strong>: ratio <span class="math inline">\(\geq\)</span> 9</p>
+<p><img src="/2020/02/20/problems/image-20200113182233155-2189738.png"></p>
+<p><strong>Proof</strong>: By construction &amp; contradiction</p>
+<p><img src="/2020/02/20/problems/image-20200113182630618-2189738.png"></p></li>
+</ul>
+<h2 id="online-bin-packing">1.18. online bin-packing</h2>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<ul>
+<li><p><strong>Qua</strong>: ratio $$ 5/3</p>
+<p><strong>Note</strong>: note that we first give 6 1/6 -.., and it'll have to fit in 1. then give 6 1/3, it 'll have to fit in 4. then give 6 1/2, the optimal is 10, we get 5/3. 1）The whole process is about making local greedy optimal worse: 1/6 can be used in optimality but it is used to suffice local optimal. 2）The result is that we make ratio worse: First we get 1/1 =&gt; 4/3 =&gt; 10/6.</p>
+<p><img src="/2020/02/20/problems/image-20200113191340453-2189738.png"></p></li>
+</ul></li>
+</ul>
+<h2 id="online-scheduling">1.19. online scheduling</h2>
+<ul>
+<li><p><strong>Def</strong>: P2||Cmax</p>
+<ul>
+<li><p><strong>Qua</strong>: ratio <span class="math inline">\(\geq\)</span> 3/2</p>
+<p><strong>Note</strong>: the proof follows the same routine, since 1 can be used in 1 1 / 2, so we have to make it in local optimal solution and make it worse in global optimal solution.</p>
+<p><img src="/2020/02/20/problems/image-20200113193256409-2189738.png"></p></li>
+</ul></li>
+<li><p><strong>Def</strong>: P3 ||Cmax</p>
+<ul>
+<li><p><strong>Qua</strong>: ratio <span class="math inline">\(\geq\)</span> 5/3</p>
+<p><img src="/2020/02/20/problems/image-20200113193327943-2189738.png"></p></li>
+</ul></li>
+</ul>
+<h1 id="graph">2. graph</h1>
+<h2 id="shortest-path">2.1. shortest path</h2>
+<ul>
+<li><p><strong>Def</strong>: given</p>
+<p><img src="/2020/02/20/problems/image-20191129133426588.png"></p></li>
+<li><p><strong>Algorithm</strong>: 3 classic basic algorithms</p>
+<p><img src="/2020/02/20/problems/image-20191129133444477.png"></p></li>
+</ul>
+<h3 id="dp-dijkstra">2.1.1. dp: Dijkstra</h3>
+<ul>
+<li><p><strong>Usage</strong>: single source + positive</p>
+<p><img src="/2020/02/20/problems/image-20200216163536606.png"></p></li>
+<li><p><strong>Def</strong>: Dij</p>
+<p>​ 1) choose a point with the smallest dis</p>
+<p>​ 2) choose the nearest neighbor ( smallest cj)</p>
+<p>​ 3) update all point cj</p>
+<p>​ 4) set the point as updated()</p>
+<ul>
+<li><p><strong>Note</strong>: actually a top-down implementation of bfs, using the feature of principle of optimality, 感觉像是DP算法的进一步优化版本，DP算法尽管有重叠子问题可以消除，但是dij算法还去掉了一些重叠子问题减少计算量（比如在第二个点固定的过程中就只考虑了第一个点的update，其他点都去掉了）</p></li>
+<li><p><strong>Note</strong>: we can generalize the DP algorithm by fixing node by node.</p></li>
+</ul></li>
+<li><p><strong>Proof</strong>: proof is easy, but note the proof involves in trimming those larger than local smallest, this can not be used in longest path. You can see that the trimming actually trimmed other edges from updating other than the 'fixed' set. The conditions are <span class="math inline">\(c_ {ij} &gt; 0\)</span>. However in longest path, if and only if pj is non-increasing, or <span class="math inline">\(c_{ij} &lt;0\)</span>, this algorithm can be used. <span class="math display">\[
+p_j = min(p_{smaller set}+cij) \\
+p_j \text{ is non-decreasing}
+\]</span></p></li>
+<li><p><strong>Complexity</strong>: <span class="math inline">\(O(e·logv)\)</span>： 在核心代码部分，最复杂的是 while 循环和 for 循环嵌套的部分，while 循环最多循环 v 次（v 为顶点个数），for 循环执行次数与边的数目有关，假设顶点数 v 的最大边数是 e。</p>
+<p>for 循环中往优先队列中添加删除数据的复杂度为<code>O(log v)</code>。</p>
+<p><img src="/2020/02/20/problems/image-20200216163701905.png"></p></li>
+<li><p><strong>Qua</strong>: note that shortest path satisfy DP <span class="math display">\[
+r_i = \min \limits_{j \in N(i)} (P _{ij} + rj)
+\]</span></p>
+<ul>
+<li><strong>Proof</strong>: 1) when u-&gt;w-&gt;v and p'(u-&gt;w) is a shorter path than u-&gt;w, if p' have no overlap with w-&gt;v ,we simply replace u-&gt;w with p'</li>
+</ul>
+<p>​ 2) when u-&gt;w have overlap with w-&gt;v, we replace with u-&gt;x &amp; x-&gt;v where x is the overlapping point.</p>
+<ul>
+<li><strong>Note</strong>: that longest path can't prove by this procedure since u-&gt;x &amp; x-&gt; v is shorter not longer.</li>
+</ul></li>
+</ul>
+<h3 id="dp-floyd">2.1.2. dp: Floyd</h3>
+<ul>
+<li><p><strong>Usage</strong>: Floyd, all source, negative</p>
+<p><code>D[i][j][k] means the the smallest distance between i and j considering only [1:k] nodes in bewteen</code></p></li>
+<li><p><strong>Def</strong>: Floyd</p>
+<p>​ 1) go from k = 1 -&gt; n</p>
+<p>​ 2) update i &amp; j (at kth level )</p></li>
+<li><p><strong>Proof</strong>: when k = m, you can prove that with m nodes in between, the update is valid. If not, after the update, there exists some node gg $$ [1, m], and <span class="math inline">\(i^*\to gg + gg \to j^* &lt; i \to gg + gg \to j\)</span> , so that either i-&gt;gg or gg-&gt;n is not the smallest path.</p>
+<ul>
+<li><strong>Note</strong>: intuition is if left is shortest path and right is shortest path then the middle is shortest path. we can generalize the DP algorithm by fixing layer by layer such that the update path only concerns k nodes.</li>
+</ul></li>
+<li><p><strong>Complexity</strong>: $O(n^3) $</p></li>
+</ul>
+<h3 id="dp-bellman-ford">2.1.3. dp: Bellman-Ford</h3>
+<ul>
+<li><p><strong>Usage</strong>: single source + negative circle</p>
+<p><img src="/2020/02/20/problems/image-20200216135431797.png"></p></li>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200216135405007.png"></p>
+<ul>
+<li><strong>Note</strong>: every edge relaxation V-1 times, if can still relax =&gt; negative circle, if not return v.d</li>
+</ul></li>
+<li><p><strong>Proof</strong>: every round at least 1 edge is fixed, then we need at most n-1 round to fix everyone.</p>
+<p><img src="/2020/02/20/problems/image-20200216145708526.png"></p>
+<p><img src="/2020/02/20/problems/image-20200216154023558.png"></p>
+<p><img src="/2020/02/20/problems/image-20200216154031353.png"></p></li>
+<li><p><strong>Complexity</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200216142110276.png"></p></li>
+</ul>
+<h3 id="dp-dag">2.1.4. dp: DAG</h3>
+<ul>
+<li><p><strong>Usage</strong>: DAG + single source + negative</p></li>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200216163445797.png"></p></li>
+</ul>
+<h2 id="strongly-connected-components">2.2. strongly connected components</h2>
+<h3 id="dfs">2.2.1. dfs</h3>
+<ul>
+<li><p><strong>Usage</strong>: to find SCC</p></li>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200215195851066.png"></p></li>
+<li><p><strong>Theorem</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200215185049028.png"></p>
+<ul>
+<li><p><strong>Note</strong>: this theorem means we can draw a graph like this</p>
+<p><img src="/2020/02/20/problems/image-20200215220122368.png"></p></li>
+</ul></li>
+<li><p><strong>Theorem</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200215220143020.png"></p>
+<ul>
+<li><strong>Note</strong>: this theorem means abe = 4 cd = 3 h = 2 fg =1, high goes to low. which means we revert the graph, and start from high, then all pathes from high to low are cut, then we can find the components.</li>
+</ul></li>
+</ul>
+<h2 id="minimum-spanning-tree">2.3. minimum spanning tree</h2>
+<ul>
+<li><p><strong>Def</strong>: eliminate edge</p>
+<p><img src="/2020/02/20/problems/image-20200215233626966.png"></p></li>
+<li><p><strong>Def</strong>: 切割</p>
+<p><img src="/2020/02/20/problems/image-20200216002021695.png"></p>
+<ul>
+<li><p><strong>Theorem</strong>: safe edge</p>
+<p><img src="/2020/02/20/problems/image-20200215233830446.png"></p></li>
+</ul></li>
+</ul>
+<h3 id="other-kruskal">2.3.1. other: Kruskal</h3>
+<ul>
+<li><p><strong>Def</strong>: Kruskal</p>
+<p><img src="/2020/02/20/problems/image-20200215233905979.png"></p>
+<ul>
+<li><p><strong>Note</strong>: add edges with no circle</p></li>
+<li><p><strong>Complexity</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200216003754336.png"></p></li>
+</ul></li>
+</ul>
+<h3 id="other-prim">2.3.2. other: prim</h3>
+<ul>
+<li><p><strong>Def</strong>: prim</p>
+<p><img src="/2020/02/20/problems/image-20200215234610956.png"></p>
+<ul>
+<li><p><strong>Note</strong>: add node with min distant with current set.</p></li>
+<li><p><strong>Complexity</strong> :</p>
+<p><img src="/2020/02/20/problems/image-20200216003909764.png"></p></li>
+</ul></li>
+</ul>
+<h2 id="max-flow">2.4. max flow</h2>
+<ul>
+<li><p><strong>Def</strong>: flow network</p>
+<p><img src="/2020/02/20/problems/image-20200216164625465.png"></p>
+<p><img src="/2020/02/20/problems/image-20200216164633616.png"></p></li>
+<li><p><strong>Def</strong>: max flow problem</p>
+<p><img src="/2020/02/20/problems/image-20200216164615376.png"></p></li>
+<li><p><strong>Def</strong>: flow &amp; residual network</p>
+<p><img src="/2020/02/20/problems/image-20200216171650432.png"></p>
+<ul>
+<li><p><strong>Note</strong>: 同向相减，反向用总-同向</p>
+<p><img src="/2020/02/20/problems/image-20200216171907835.png"></p></li>
+<li><p><strong>Def</strong>: segment path</p>
+<p><img src="/2020/02/20/problems/image-20200216174041926.png"></p></li>
+<li><p><strong>Def</strong>: augmentation</p>
+<p><img src="/2020/02/20/problems/image-20200216184405975.png"></p>
+<ul>
+<li><p><strong>Theorem</strong>: =&gt; that f+f' is a flow</p>
+<p><img src="/2020/02/20/problems/image-20200216173425950.png"></p></li>
+</ul></li>
+</ul></li>
+<li><p><strong>Def</strong>: cut</p>
+<p><img src="/2020/02/20/problems/image-20200216184238767.png"></p>
+<ul>
+<li><p><strong>Note</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200216184325442.png"></p></li>
+<li><p><strong>Theorem</strong>: flow &amp; cut</p>
+<p><img src="/2020/02/20/problems/image-20200216192615026.png"></p></li>
+<li><p><strong>Theorem</strong>: max flow = min</p>
+<p><img src="/2020/02/20/problems/image-20200216200341562.png"></p>
+<p><img src="/2020/02/20/problems/image-20200216194920127.png"></p>
+<ul>
+<li><p><strong>Proof</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200216204230957.png"></p></li>
+<li><p><strong>Note</strong>: 给定 flow value = 任意 cut 流量 &lt;= 任意 cut 容量。所以如果有flow value达到最小cut容量，它必然是最大的。</p></li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 id="other-ford-fulkerson">2.4.1. other: Ford-Fulkerson</h3>
+<ul>
+<li><p><strong>Def</strong>: Ford-Fulkerson</p>
+<p><img src="/2020/02/20/problems/image-20200216171510063.png"></p>
+<p><img src="/2020/02/20/problems/image-20200216203504381.png"></p>
+<ul>
+<li><strong>Note</strong>: find possible path &amp; add it to the flow .</li>
+</ul></li>
+<li><p><strong>Complexity</strong> :</p>
+<p><img src="/2020/02/20/problems/image-20200216204017713.png"></p></li>
+</ul>
+<h3 id="bfs-edmonds-karp">2.4.2. bfs: Edmonds-Karp</h3>
+<ul>
+<li><p><strong>Usage</strong>: improved Ford</p>
+<p><img src="/2020/02/20/problems/image-20200216204407865.png"></p></li>
+<li><p><strong>Complexity</strong>: <span class="math inline">\(O(VE^2)\)</span></p></li>
+</ul>
+<h2 id="metric-tsp">2.5. metric TSP</h2>
+<ul>
+<li><p><strong>Def</strong>: metric tsp</p>
+<p><img src="/2020/02/20/problems/image-20191129141034226.png"></p></li>
+</ul>
+<h3 id="other-kruskal-1">2.5.1. other: Kruskal</h3>
+<ul>
+<li><p><strong>Algorithm</strong>: weighed smallest spanning tree method</p>
+<p><img src="/2020/02/20/problems/image-20191202112446362.png"></p>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; appximate ratio = 2</p>
+<p><img src="/2020/02/20/problems/image-20191129141230833.png"></p>
+<p><strong>Proof</strong>: we need to prove that 2xtree will always suffice to make it larger than Cdm. By that I mean the edges will always be enough to eliminate edges in Cdm. since the degree of nodes can't be three, we proved the point.</p>
+<p><strong>Note</strong>: Lt act like a LB for C*.</p>
+<p><img src="/2020/02/20/problems/image-20191202113207607.png"></p></li>
+<li><p><strong>Qua</strong>: =&gt; the best approximate ratio = 2</p>
+<p><strong>Proof</strong>: given an example of worst ratio</p>
+<p><img src="/2020/02/20/problems/image-20191129141356475.png"></p></li>
+</ul></li>
+</ul>
+<h3 id="other-christofidesspanningtreeminmatch">2.5.2. other: christofides(spanningtree+minmatch)</h3>
+<ul>
+<li><p><strong>Algorithm</strong>: christofides</p>
+<p><strong>Usage</strong>: note that euler tour can be redundunt on edges as long as you past every edge in the M+T</p>
+<p><img src="/2020/02/20/problems/image-20191202130457082.png"></p>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; ratio <span class="math inline">\(\leq\)</span> 3/2</p>
+<p><img src="/2020/02/20/problems/image-20191129141612669.png"></p>
+<p><strong>Proof</strong>: first we prove that T&lt; C, this is easy since we can erase edge from C and T&lt;C-edge&lt;C. Then we can see that Chr = M+T - Euler overlap &lt; M+T &lt; M + C. And C &gt; C - evenpoint &gt;= 2 * M . So M&lt;=C/2, Chr&lt; 3/2 C.</p>
+<p><strong>Note</strong>: C- evenpoint, and this is the lower bound of C which is very important.</p>
+<p><img src="/2020/02/20/problems/image-20191202131235916.png"></p></li>
+<li><p><strong>Qua</strong>：worst ratio <span class="math inline">\(\geq 3/2\)</span></p>
+<p><img src="/2020/02/20/problems/image-20191202120136169.png"></p></li>
+</ul></li>
+</ul>
+<h2 id="tsp-problem">2.6. tsp problem</h2>
+<ul>
+<li><p><strong>Def</strong>: tsp problem (same as assignment ) (this is not the final version)</p>
+<figure>
+<img src="/2020/02/20/problems/image-20191129120253355.png" alt="img"><figcaption>img</figcaption>
+</figure>
+<p><strong>Note</strong>: sub-tsp have to be mentioned. sub-tsp have to be mentioned, the problem can be separated into several small problems if the constraint is not mentioned.</p>
+<ul>
+<li><p><strong>Qua</strong>: first solution</p>
+<p><strong>Proof</strong>: since the only 2 conditions are: from 1 -&gt; 1 / 1-&gt; 1 + j -&gt; j, we eliminate the second condition.</p>
+<figure>
+<img src="/2020/02/20/problems/image-20191129125645660.png" alt="img"><figcaption>img</figcaption>
+</figure></li>
+<li><p><strong>Qua</strong>: second solution</p>
+<figure>
+<img src="/2020/02/20/problems/image-20191129130213835.png" alt="img"><figcaption>img</figcaption>
+</figure>
+<p><strong>Proof</strong>: note that the given condition makes that every</p>
+<p>=&gt;</p>
+<figure>
+<img src="/2020/02/20/problems/image-20191129130647311.png" alt="img"><figcaption>img</figcaption>
+</figure>
+<p>&lt;=</p>
+<figure>
+<img src="/2020/02/20/problems/image-20191129130736813.png" alt="img"><figcaption>img</figcaption>
+</figure></li>
+<li><p><strong>Qua</strong>: NP-C</p></li>
+<li><p><strong>Qua</strong>: no constant - ratio</p>
+<figure>
+<img src="/2020/02/20/problems/image-20191129140821921.png" alt="img"><figcaption>img</figcaption>
+</figure>
+<p><strong>Proof</strong>: using reduction to HC, which is a NPC problem, (gap technique)</p>
+<figure>
+<img src="/2020/02/20/problems/image-20191129140852337.png" alt="img"><figcaption>img</figcaption>
+</figure></li>
+<li><p><strong>Qua</strong>: no FPTA</p></li>
+</ul></li>
+</ul>
+<h2 id="take-out-problem-specific-shortest-path">2.7. take-out problem (specific shortest path)</h2>
+<ul>
+<li><p><strong>Def</strong>: a special form of shortest path,</p>
+<figure>
+<img src="/2020/02/20/problems/image-20191129133212851.png" alt="img"><figcaption>img</figcaption>
+</figure>
+<figure>
+<img src="/2020/02/20/problems/image-20191129133222251.png" alt="img"><figcaption>img</figcaption>
+</figure></li>
+</ul>
+<h3 id="dp-2">2.7.1. dp</h3>
+<ul>
+<li><p><strong>Algo</strong>: dynamic programming</p>
+<figure>
+<img src="/2020/02/20/problems/image-20191129133231163.png" alt="img"><figcaption>img</figcaption>
+</figure>
+<figure>
+<img src="/2020/02/20/problems/image-20191129133315946.png" alt="img"><figcaption>img</figcaption>
+</figure>
+<p>implementation( here min should be max and wjt = max里面的内容 )</p>
+<figure>
+<img src="/2020/02/20/problems/image-20191202011517462.png" alt="img"><figcaption>img</figcaption>
+</figure>
+<p><strong>Note</strong>: use special form of Dij algorithm to solve it. You can see that rj is non-increasing/ 直接加两个负号，-ri = min(-ri+l1)变成最短路问题（最短路问题l1验证必须为正）</p></li>
+</ul>
+<h2 id="minimum-matching">2.8. minimum matching</h2>
+<ul>
+<li><p><strong>Def</strong>: minimum matching</p>
+<p><strong>Usage</strong>: matching 问题简而言之就是找一个边集，使得任意顶点只有一条边。</p>
+<figure>
+<img src="/2020/02/20/problems/image-20191129141529563.png" alt="img"><figcaption>img</figcaption>
+</figure></li>
+</ul>
+<h2 id="vertex-cover">2.9. vertex cover</h2>
+<ul>
+<li><p><strong>Def</strong>: vertex cover</p>
+<figure>
+<img src="/2020/02/20/problems/image-20191216191406089.png" alt="img"><figcaption>img</figcaption>
+</figure>
+<figure>
+<img src="/2020/02/20/problems/image-20191129141745506.png" alt="img"><figcaption>img</figcaption>
+</figure>
+<ul>
+<li><p><strong>Qua</strong>: NPC</p>
+<p><strong>Proof</strong>: 3SAT VC</p>
+<figure>
+<img src="/2020/02/20/problems/image-20191129141712195.png" alt="img"><figcaption>img</figcaption>
+</figure>
+<p>=&gt; 通过给=1的顶点染色，然后给剩下三角形的两个染色，证明是VC</p>
+<p>&lt;= 先证明如果是VC上面必须有n个，下面也必须有2m个，又因为条件里有《n+2m，所以=n+2m个，然后就证完了。</p></li>
+</ul></li>
+</ul>
+<h3 id="linear-programming-relaxation-algorithm">2.9.1. linear programming: relaxation algorithm</h3>
+<ul>
+<li><p><strong>Algo</strong>: relaxation algorithms</p>
+<ul>
+<li><p><strong>Qua</strong>: =&gt; ratio 2</p>
+<p><strong>Proof</strong>: LP is natural lower bound.</p>
+<figure>
+<img src="/2020/02/20/problems/image-20191129141914176.png" alt="img"><figcaption>img</figcaption>
+</figure></li>
+</ul></li>
+</ul>
+<h3 id="random-local-search">2.9.2. random: local search</h3>
+<ul>
+<li><p><strong>Algorithm</strong> :</p>
+<p><img src="/2020/02/20/problems/image-20200220153404363.png"></p>
+<ul>
+<li><p><strong>Qua</strong>: ratio = bad</p>
+<p><img src="/2020/02/20/problems/image-20200220153414933.png"></p></li>
+</ul></li>
+</ul>
+<h3 id="random-metropolis">2.9.3. random: metropolis</h3>
+<ul>
+<li><p><strong>Algorithm</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200220153503482.png"></p></li>
+</ul>
+<h2 id="hopfield-network">2.10. hopfield network</h2>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200220154232679.png"></p></li>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200220154438856.png"></p></li>
+</ul>
+<h3 id="local-search">2.10.1. local search</h3>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200220154557319.png"></p>
+<ul>
+<li><p><strong>Qua</strong>: will terminate</p>
+<p><img src="/2020/02/20/problems/image-20200220154638449.png"></p></li>
+<li><p><strong>Complexity</strong> :</p>
+<p><img src="/2020/02/20/problems/image-20200220155105215.png"></p></li>
+</ul></li>
+</ul>
+<h2 id="max-cut">2.11. max cut</h2>
+<ul>
+<li><p><strong>Def</strong>;</p>
+<p><img src="/2020/02/20/problems/image-20200220155432359.png"></p></li>
+</ul>
+<h3 id="random-local-search-1">2.11.1. random: local search</h3>
+<ul>
+<li><p><strong>Algorithm</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200220155458716.png"></p>
+<ul>
+<li><p><strong>Qua</strong>: ratio = 2</p>
+<p><img src="/2020/02/20/problems/image-20200220155517180.png"></p></li>
+<li><p><strong>Qua</strong> :</p>
+<p><img src="/2020/02/20/problems/image-20200220155529920.png"></p></li>
+</ul></li>
+</ul>
+<h3 id="random-local-search-improvement">2.11.2. random: local search improvement</h3>
+<ul>
+<li><p><strong>Algorithm</strong>:</p>
+<p><img src="/2020/02/20/problems/image-20200220155601063.png"></p></li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+        
+      
+    </div>
+    
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Benson WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Benson Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/03/datastructure-algorithm/" rel="next" title="datastructure-algorithm">
+                <i class="fa fa-chevron-left"></i> datastructure-algorithm
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5dd409321289b452" async = "async" ></script>
+</div>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NzYxNi8yNDExNA"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="https://tva1.sinaimg.cn/large/006y8mN6gy1g96p07mbexj30uf0u0npd.jpg"
+                alt="Benson" />
+            
+              <p class="site-author-name" itemprop="name">Benson</p>
+              <p class="site-description motion-element" itemprop="description">Benson's personal blog, including stats, cs, math, among others.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="bensonuouououow@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-globe"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/bensonuouououo" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.instagram.com/bensonuouououo/" target="_blank" title="Instagram">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Instagram</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.alloyteam.com/nav/" title="Web前端导航" target="_blank">Web前端导航</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.chuangzaoshi.com/code" title="创造狮导航" target="_blank">创造狮导航</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.36zhen.com/t?id=3448" title="前端书籍资料" target="_blank">前端书籍资料</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://e.xitu.io/" title="掘金酱" target="_blank">掘金酱</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.v2ex.com/" title="V2EX" target="_blank">V2EX</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.v2ex.com/" title="印记中文" target="_blank">印记中文</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#general-optimization-problems"><span class="nav-text">1. general optimization problems</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#subset-sum"><span class="nav-text">1.1. subset sum</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#backpack-problem"><span class="nav-text">1.2. backpack problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#dp1"><span class="nav-text">1.2.1. dp1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dp2"><span class="nav-text">1.2.2. dp2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#branch-bound"><span class="nav-text">1.2.3. branch &amp; bound</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#greedy"><span class="nav-text">1.2.4. greedy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#improved-greedy"><span class="nav-text">1.2.5. improved greedy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ptas"><span class="nav-text">1.2.6. PTAS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fptas"><span class="nav-text">1.2.7. FPTAS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#assignment-problem"><span class="nav-text">1.3. assignment problem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#subset-partition-problem"><span class="nav-text">1.4. subset partition problem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#product-partition"><span class="nav-text">1.5. product partition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#closest-point"><span class="nav-text">1.6. closest point</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#brutal"><span class="nav-text">1.6.1. brutal</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#divide-conquer"><span class="nav-text">1.6.2. divide &amp; conquer</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#activity-selection-max-span"><span class="nav-text">1.7. activity selection (max span)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#dp"><span class="nav-text">1.7.1. dp</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#activity-selection-max-size"><span class="nav-text">1.8. activity selection (max size)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#dp-1"><span class="nav-text">1.8.1. dp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dp2-1"><span class="nav-text">1.8.2. dp2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#greedy-1"><span class="nav-text">1.8.3. greedy</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#k-center"><span class="nav-text">1.9. k-center</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#greedy1"><span class="nav-text">1.9.1. greedy1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#greedy2"><span class="nav-text">1.9.2. greedy2</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hiring-problem"><span class="nav-text">1.10. hiring problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#brutal-1"><span class="nav-text">1.10.1. brutal</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#randomize"><span class="nav-text">1.10.2. randomize</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#permutation"><span class="nav-text">1.11. permutation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#randomize-1"><span class="nav-text">1.11.1. randomize</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#online-hiring"><span class="nav-text">1.12. online hiring</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#scheduling"><span class="nav-text">1.13. scheduling</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#p1-cj-cmax-l1max-tj-uj"><span class="nav-text">1.13.0.1. P1 Cj, Cmax, L1max, Tj, Uj</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#c_max-or-sum_n1infty-c_j"><span class="nav-text">1.13.0.1.1. \(C_{max}\) or \(\sum_{n=1}^{\infty} C_j\)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#l1max-tj-uj"><span class="nav-text">1.13.0.1.2. L1max, Tj, Uj</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pm-cmax-cmin"><span class="nav-text">1.13.0.2. Pm Cmax, Cmin</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#p-cmax"><span class="nav-text">1.13.0.3. P Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#f2-cmax"><span class="nav-text">1.13.0.4. F2 Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#f3-cmax"><span class="nav-text">1.13.0.5. F3 Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fm-cmax"><span class="nav-text">1.13.0.6. Fm Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#o2-cmax"><span class="nav-text">1.13.0.7. O2 Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#o3-cmax"><span class="nav-text">1.13.0.8. O3 Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#om-cmax"><span class="nav-text">1.13.0.9. Om Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jm-cmax"><span class="nav-text">1.13.0.10. Jm Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rm-cmaxhw"><span class="nav-text">1.13.0.11. Rm Cmax(hw)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bin-packing"><span class="nav-text">1.14. bin-packing</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#next-fit"><span class="nav-text">1.14.0.1. next fit</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#greedy-first-fit"><span class="nav-text">1.14.1. greedy: first fit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#greedy-first-fit-decreasing"><span class="nav-text">1.14.2. greedy: first fit decreasing</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#online-ski-rental"><span class="nav-text">1.15. online ski-rental</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#greedy-strat-n"><span class="nav-text">1.15.1. greedy: strat-N</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bin-covering"><span class="nav-text">1.16. bin-covering</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#greedy-next-fit"><span class="nav-text">1.16.1. greedy: next fit</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#online-searching"><span class="nav-text">1.17. online searching</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#greedy-linear-space"><span class="nav-text">1.17.1. greedy: linear space</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#greedy-exp-space"><span class="nav-text">1.17.2. greedy: exp space</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#online-bin-packing"><span class="nav-text">1.18. online bin-packing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#online-scheduling"><span class="nav-text">1.19. online scheduling</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#graph"><span class="nav-text">2. graph</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#shortest-path"><span class="nav-text">2.1. shortest path</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#dp-dijkstra"><span class="nav-text">2.1.1. dp: Dijkstra</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dp-floyd"><span class="nav-text">2.1.2. dp: Floyd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dp-bellman-ford"><span class="nav-text">2.1.3. dp: Bellman-Ford</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dp-dag"><span class="nav-text">2.1.4. dp: DAG</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#strongly-connected-components"><span class="nav-text">2.2. strongly connected components</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#dfs"><span class="nav-text">2.2.1. dfs</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#minimum-spanning-tree"><span class="nav-text">2.3. minimum spanning tree</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#other-kruskal"><span class="nav-text">2.3.1. other: Kruskal</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#other-prim"><span class="nav-text">2.3.2. other: prim</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#max-flow"><span class="nav-text">2.4. max flow</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#other-ford-fulkerson"><span class="nav-text">2.4.1. other: Ford-Fulkerson</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bfs-edmonds-karp"><span class="nav-text">2.4.2. bfs: Edmonds-Karp</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#metric-tsp"><span class="nav-text">2.5. metric TSP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#other-kruskal-1"><span class="nav-text">2.5.1. other: Kruskal</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#other-christofidesspanningtreeminmatch"><span class="nav-text">2.5.2. other: christofides(spanningtree+minmatch)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tsp-problem"><span class="nav-text">2.6. tsp problem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#take-out-problem-specific-shortest-path"><span class="nav-text">2.7. take-out problem (specific shortest path)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#dp-2"><span class="nav-text">2.7.1. dp</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#minimum-matching"><span class="nav-text">2.8. minimum matching</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vertex-cover"><span class="nav-text">2.9. vertex cover</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#linear-programming-relaxation-algorithm"><span class="nav-text">2.9.1. linear programming: relaxation algorithm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#random-local-search"><span class="nav-text">2.9.2. random: local search</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#random-metropolis"><span class="nav-text">2.9.3. random: metropolis</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hopfield-network"><span class="nav-text">2.10. hopfield network</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#local-search"><span class="nav-text">2.10.1. local search</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#max-cut"><span class="nav-text">2.11. max cut</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#random-local-search-1"><span class="nav-text">2.11.1. random: local search</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#random-local-search-improvement"><span class="nav-text">2.11.2. random: local search improvement</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Benson</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      total visitors
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      people
+    </span>
+  
+
+  
+    <span class="site-pv">
+      total read
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      times
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.staticfile.org/MathJax/MathJax-2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

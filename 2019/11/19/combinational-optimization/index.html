@@ -324,7 +324,7 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;combinational-optimization&#x2F;image-20200114224215893.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;combinational-optimization&#x2F;image-20200114224227386.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;combinational-optimization&#x2F;image-20200114224242540.png">
-<meta property="og:updated_time" content="2020-02-19T09:11:06.409Z">
+<meta property="og:updated_time" content="2020-02-20T11:37:20.499Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;combinational-optimization&#x2F;image-20191125141531700.png">
 
@@ -626,7 +626,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  4.6k
+                  4.7k
                 </span>
               
 
@@ -857,9 +857,9 @@ best(s1,n) = best(best(s1;s2,n))
 <h3 id="approximation-method">1.2.4. approximation method</h3>
 <h4 id="computer-theory-1">1.2.4.1. computer theory</h4>
 <ul>
-<li>local search</li>
-<li>greedy</li>
-<li>relaxation</li>
+<li><p>local search</p></li>
+<li><p>greedy</p></li>
+<li><p>relaxation</p></li>
 </ul>
 <h2 id="specific-question">1.3. specific question</h2>
 <h3 id="subset-sum">1.3.1. subset sum</h3>
@@ -954,7 +954,6 @@ best(s1,n) = best(best(s1;s2,n))
 <p><strong>Note</strong>: 从一个伪多项式算法出发，设计一个P缩微的实例。（之所以不放C，是因为可行性有可能改变）从这个实例出发，从左上到右上到右下到左下，右上右下都是天然下界。</p></li>
 </ul>
 <h3 id="assignment-problem-tsp">1.3.3. assignment problem &amp; TSP</h3>
-<h4 id="assignment-problem">1.3.3.1. assignment problem</h4>
 <ul>
 <li><p><strong>Def</strong>:assignment problem</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20191129121710110.png"></p>
@@ -968,7 +967,7 @@ best(s1,n) = best(best(s1;s2,n))
 <li><p><strong>Qua</strong>: standardization, A is shown above, A is totally unimodular matrix</p></li>
 </ul></li>
 </ul>
-<h4 id="tsp-problem">1.3.3.2. tsp problem</h4>
+<h3 id="tsp-problem">1.3.4. tsp problem</h3>
 <ul>
 <li><p><strong>Def</strong>: tsp problem (same as assignment ) (this is not the final version)</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20191129120253355.png"></p>
@@ -992,12 +991,12 @@ best(s1,n) = best(best(s1;s2,n))
 <li><p><strong>Qua</strong>: no FPTAS</p></li>
 </ul></li>
 </ul>
-<h4 id="metric-tsp">1.3.3.3. metric TSP</h4>
+<h3 id="metric-tsp">1.3.5. metric TSP</h3>
 <ul>
 <li><p><strong>Def</strong>: metric tsp</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20191129141034226.png"></p></li>
 </ul>
-<h5 id="spanning-tree">1.3.3.3.1. spanning tree</h5>
+<h4 id="spanning-tree">1.3.5.1. spanning tree</h4>
 <ul>
 <li><p><strong>Algorithm</strong>: weighed smallest spanning tree method</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20191202112446362.png"></p>
@@ -1012,7 +1011,7 @@ best(s1,n) = best(best(s1;s2,n))
 <p><img src="/2019/11/19/combinational-optimization/image-20191129141356475.png"></p></li>
 </ul></li>
 </ul>
-<h5 id="christofides">1.3.3.3.2. christofides</h5>
+<h4 id="christofides">1.3.5.2. christofides</h4>
 <ul>
 <li><p><strong>Algorithm</strong>: christofides</p>
 <p><strong>Usage</strong>: note that euler tour can be redundunt on edges as long as you past every edge in the M+T</p>
@@ -1027,11 +1026,12 @@ best(s1,n) = best(best(s1;s2,n))
 <p><img src="/2019/11/19/combinational-optimization/image-20191202120136169.png"></p></li>
 </ul></li>
 </ul>
-<h3 id="shortest-path">1.3.4. shortest path</h3>
-<h4 id="naive-shortest-path">1.3.4.1. naive shortest path</h4>
+<h3 id="shortest-path">1.3.6. shortest path</h3>
 <ul>
 <li><p><strong>Def</strong>: given</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129133426588.png"></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129133426588.png"></p></li>
+</ul>
+<h4 id="dijkstra">1.3.6.1. Dijkstra</h4>
 <ul>
 <li><p><strong>Algorithm</strong>: 3 classic basic algorithms</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20191129133444477.png"></p></li>
@@ -1046,6 +1046,9 @@ p_j \text{ is non-decreasing}
 \]</span></p>
 <p><strong>Note</strong>: actually a top-down implementation of bfs, using the feature of principle of optimality, 感觉像是DP算法的进一步优化版本，DP算法尽管有重叠子问题可以消除，但是dij算法还去掉了一些重叠子问题减少计算量（比如在第二个点固定的过程中就只考虑了第一个点的update，其他点都去掉了）</p>
 <p><strong>Note</strong>: we can generalize the DP algorithm by fixing node by node.</p></li>
+</ul>
+<h4 id="floyd">1.3.6.2. Floyd</h4>
+<ul>
 <li><p><strong>Algorithm</strong>: Floyd, <code>D[i][j][k] means the the smallest distance between i and j considering only [1:k] nodes in bewteen</code></p>
 <p>​ 1) go from k = 1 -&gt; n</p>
 <p>​ 2) update i &amp; j (at kth level )</p>
@@ -1057,13 +1060,14 @@ r_i = \min \limits_{j \in N(i)} (P _{ij} + rj)
 <p><strong>Proof</strong>: 1) when u-&gt;w-&gt;v and p'(u-&gt;w) is a shorter path than u-&gt;w, if p' have no overlap with w-&gt;v ,we simply replace u-&gt;w with p'</p>
 <p>​ 2) when u-&gt;w have overlap with w-&gt;v, we replace with u-&gt;x &amp; x-&gt;v where x is the overlapping point.</p>
 <p><strong>Note</strong>: that longest path can't prove by this procedure since u-&gt;x &amp; x-&gt; v is shorter not longer.</p></li>
-</ul></li>
 </ul>
-<h4 id="take-out-problem-specific-shortest-path">1.3.4.2. take-out problem (specific shortest path)</h4>
+<h3 id="take-out-problem-specific-shortest-path">1.3.7. take-out problem (specific shortest path)</h3>
 <ul>
 <li><p><strong>Def</strong>: a special form of shortest path,</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20191129133212851.png"></p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191129133222251.png"></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191129133222251.png"></p></li>
+</ul>
+<h4 id="dp">1.3.7.1. dp</h4>
 <ul>
 <li><p><strong>Algo</strong>: dynamic programming</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20191129133231163.png"></p>
@@ -1071,15 +1075,14 @@ r_i = \min \limits_{j \in N(i)} (P _{ij} + rj)
 <p>implementation( here min should be max and wjt = max里面的内容 )</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20191202011517462.png"></p>
 <p><strong>Note</strong>: use special form of Dij algorithm to solve it. You can see that rj is non-increasing/ 直接加两个负号，-ri = min(-ri+l1)变成最短路问题（最短路问题l1验证必须为正）</p></li>
-</ul></li>
 </ul>
-<h3 id="minimum-matching">1.3.5. minimum matching</h3>
+<h3 id="minimum-matching">1.3.8. minimum matching</h3>
 <ul>
 <li><p><strong>Def</strong>: minimum matching</p>
 <p><strong>Usage</strong>: matching 问题简而言之就是找一个边集，使得任意顶点只有一条边。</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20191129141529563.png"></p></li>
 </ul>
-<h3 id="vertex-cover">1.3.6. vertex cover</h3>
+<h3 id="vertex-cover">1.3.9. vertex cover</h3>
 <ul>
 <li><strong>Def</strong>: vertex cover</li>
 </ul>
@@ -1091,6 +1094,9 @@ r_i = \min \limits_{j \in N(i)} (P _{ij} + rj)
 <p><img src="/2019/11/19/combinational-optimization/image-20191129141712195.png"></p>
 <p>=&gt; 通过给=1的顶点染色，然后给剩下三角形的两个染色，证明是VC</p>
 <p>&lt;= 先证明如果是VC上面必须有n个，下面也必须有2m个，又因为条件里有《n+2m，所以=n+2m个，然后就证完了。</p></li>
+</ul>
+<h4 id="relaxation-algorithm">1.3.9.1. relaxation algorithm</h4>
+<ul>
 <li><p><strong>Algo</strong>: relaxation algorithms</p>
 <ul>
 <li><p><strong>Qua</strong>: =&gt; ratio <span class="math inline">\(\leq\)</span> 2</p>
@@ -1098,8 +1104,8 @@ r_i = \min \limits_{j \in N(i)} (P _{ij} + rj)
 <p><img src="/2019/11/19/combinational-optimization/image-20191129141914176.png"></p></li>
 </ul></li>
 </ul>
-<h3 id="partition-problem">1.3.7. partition problem</h3>
-<h4 id="subset-partition">1.3.7.1. subset partition</h4>
+<h3 id="partition-problem">1.3.10. partition problem</h3>
+<h4 id="subset-partition">1.3.10.1. subset partition</h4>
 <ul>
 <li><p><strong>Def</strong>: partition problem</p>
 <p>desicion version</p>
@@ -1107,14 +1113,14 @@ r_i = \min \limits_{j \in N(i)} (P _{ij} + rj)
 <p>opt version</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20191202140704112.png"></p></li>
 </ul>
-<h4 id="product-partition">1.3.7.2. product partition</h4>
+<h4 id="product-partition">1.3.10.2. product partition</h4>
 <ul>
 <li><p><strong>Def</strong>: product partition problem</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20191129142408349.png"></p></li>
 <li><p><strong>Qua</strong>: NPC, have FPTAS</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20191129142427876.png"></p></li>
 </ul>
-<h3 id="scheduling">1.3.8. scheduling</h3>
+<h3 id="scheduling">1.3.11. scheduling</h3>
 <ul>
 <li><p><strong>Def</strong>: scheduling problem</p>
 <p><strong>Usage</strong>: representing scheduling problem in 3 elements</p>
@@ -1145,8 +1151,8 @@ r_i = \min \limits_{j \in N(i)} (P _{ij} + rj)
 <p><strong>Usage</strong>: the cons for greedy algorithms: decrease job time &amp; increase machine number will not necessarily yield better result.</p>
 <p>P175</p></li>
 </ul>
-<h4 id="p1-cj-cmax-l1max-tj-uj">1.3.8.1. P1 Cj, Cmax, L1max, Tj, Uj</h4>
-<h5 id="c_max-or-sum_n1infty-c_j">1.3.8.1.1. \(C_{max}\) or \(\sum_{n=1}^{\infty} C_j\)</h5>
+<h4 id="p1-cj-cmax-l1max-tj-uj">1.3.11.1. P1 Cj, Cmax, L1max, Tj, Uj</h4>
+<h5 id="c_max-or-sum_n1infty-c_j">1.3.11.1.1. \(C_{max}\) or \(\sum_{n=1}^{\infty} C_j\)</h5>
 <ul>
 <li><p><strong>Def</strong>: <span class="math inline">\(C_{max}\)</span> or <span class="math inline">\(\sum_{n=1}^{\infty} C_j\)</span></p>
 <ul>
@@ -1168,7 +1174,7 @@ r_i = \min \limits_{j \in N(i)} (P _{ij} + rj)
 </ul></li>
 </ul></li>
 </ul>
-<h5 id="l1max-tj-uj">1.3.8.1.2. L1max, Tj, Uj</h5>
+<h5 id="l1max-tj-uj">1.3.11.1.2. L1max, Tj, Uj</h5>
 <ul>
 <li><p><strong>Def</strong>: one machine problem: <span class="math inline">\(L_{max}\)</span> is the maximum of delay time. <span class="math inline">\(\sum_{n=1}^{\infty} U_j\)</span> is the total delayed objects. $ _{n=1}^{} T_j$ is the added delayed time.</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20191202133234540.png"></p>
@@ -1193,7 +1199,7 @@ r_i = \min \limits_{j \in N(i)} (P _{ij} + rj)
 <li><p><strong>Algorithm</strong>: another loss function where we want &quot;JUST IN TIME&quot; : <span class="math inline">\(\sum_{n=1}^{\infty} T_j +E_j\)</span> where <span class="math inline">\(Ej= max(d_j-c_j, 0)\)</span></p></li>
 </ul></li>
 </ul>
-<h4 id="pm-cmax-cmin">1.3.8.2. Pm Cmax, Cmin</h4>
+<h4 id="pm-cmax-cmin">1.3.11.2. Pm Cmax, Cmin</h4>
 <ul>
 <li><p><strong>Def</strong>: multi-machine problem Pm</p>
 <p><strong>Note</strong>: Pm and P difference: whether m is a given input(P) or constant(Pm), the consequence of this is that when Pseudo-P algorithm in Pm is O(P^m), it is exponential in P since m is input.</p>
@@ -1267,7 +1273,7 @@ C_{max}  \geq \max  \limits_{i=[1,n]} pi
 <p><img src="/2019/11/19/combinational-optimization/image-20200113151131038.png"></p></li>
 </ul></li>
 </ul>
-<h4 id="p-cmax">1.3.8.3. P Cmax</h4>
+<h4 id="p-cmax">1.3.11.3. P Cmax</h4>
 <ul>
 <li><p><strong>Def</strong>: P||Cmax</p>
 <ul>
@@ -1276,7 +1282,7 @@ C_{max}  \geq \max  \limits_{i=[1,n]} pi
 <p><strong>Note</strong>: Pm||Cmax can not use this reduction since m in Pm is a constant .</p></li>
 </ul></li>
 </ul>
-<h4 id="f2-cmax">1.3.8.4. F2 Cmax</h4>
+<h4 id="f2-cmax">1.3.11.4. F2 Cmax</h4>
 <ul>
 <li><p><strong>Def</strong>: F2 Cmax</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20191209134123752.png"></p>
@@ -1288,7 +1294,7 @@ C_{max}  \geq \max  \limits_{i=[1,n]} pi
 <p><img src="/2019/11/19/combinational-optimization/image-20200113151446385.png"></p></li>
 </ul></li>
 </ul>
-<h4 id="f3-cmax">1.3.8.5. F3 Cmax</h4>
+<h4 id="f3-cmax">1.3.11.5. F3 Cmax</h4>
 <ul>
 <li><p><strong>Def</strong>:</p>
 <ul>
@@ -1296,7 +1302,7 @@ C_{max}  \geq \max  \limits_{i=[1,n]} pi
 <p><img src="/2019/11/19/combinational-optimization/image-20200113153541130.png"></p></li>
 </ul></li>
 </ul>
-<h4 id="fm-cmax">1.3.8.6. Fm Cmax</h4>
+<h4 id="fm-cmax">1.3.11.6. Fm Cmax</h4>
 <ul>
 <li><p><strong>Def</strong>:</p>
 <ul>
@@ -1311,7 +1317,7 @@ C_{max}  \geq \max  \limits_{i=[1,n]} pi
 <li><p><strong>Qua</strong>: worst ratio &lt;=2 / log....</p></li>
 </ul></li>
 </ul>
-<h4 id="o2-cmax">1.3.8.7. O2 Cmax</h4>
+<h4 id="o2-cmax">1.3.11.7. O2 Cmax</h4>
 <ul>
 <li><p><strong>Def</strong>: O2 Cmax</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20191209140109624.png"></p>
@@ -1334,7 +1340,7 @@ C_{max}  \geq \max  \limits_{i=[1,n]} pi
 </ul></li>
 </ul></li>
 </ul>
-<h4 id="o3-cmax">1.3.8.8. O3 Cmax</h4>
+<h4 id="o3-cmax">1.3.11.8. O3 Cmax</h4>
 <ul>
 <li><p><strong>Def</strong>:</p>
 <ul>
@@ -1342,7 +1348,7 @@ C_{max}  \geq \max  \limits_{i=[1,n]} pi
 <p><img src="/2019/11/19/combinational-optimization/image-20200113153616161.png"></p></li>
 </ul></li>
 </ul>
-<h4 id="om-cmax">1.3.8.9. Om Cmax</h4>
+<h4 id="om-cmax">1.3.11.9. Om Cmax</h4>
 <ul>
 <li><p><strong>Def</strong>:</p>
 <ul>
@@ -1352,7 +1358,7 @@ C_{max}  \geq \max  \limits_{i=[1,n]} pi
 <p><img src="/2019/11/19/combinational-optimization/image-20200113153223142.png"></p></li>
 </ul></li>
 </ul>
-<h4 id="jm-cmax">1.3.8.10. Jm Cmax</h4>
+<h4 id="jm-cmax">1.3.11.10. Jm Cmax</h4>
 <ul>
 <li><p><strong>Def</strong>:</p>
 <ul>
@@ -1360,7 +1366,7 @@ C_{max}  \geq \max  \limits_{i=[1,n]} pi
 <p><img src="/2019/11/19/combinational-optimization/image-20200113153447942.png"></p></li>
 </ul></li>
 </ul>
-<h4 id="rm-cmaxhw">1.3.8.11. Rm Cmax(hw)</h4>
+<h4 id="rm-cmaxhw">1.3.11.11. Rm Cmax(hw)</h4>
 <ul>
 <li><p><strong>Def</strong>: ...</p>
 <ul>
@@ -1371,7 +1377,7 @@ C_{max}  \geq \max  \limits_{i=[1,n]} pi
 <p><strong>Proof</strong>: (1,1) =&gt; (1,2) &amp; (2,1)</p></li>
 </ul></li>
 </ul>
-<h3 id="bin-packing">1.3.9. bin-packing</h3>
+<h3 id="bin-packing">1.3.12. bin-packing</h3>
 <ul>
 <li><p><strong>Def</strong>: bin-packing problem</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20191209150350412.png"></p>
@@ -1380,8 +1386,8 @@ C_{max}  \geq \max  \limits_{i=[1,n]} pi
 <p><img src="/2019/11/19/combinational-optimization/image-20191209150713548.png"></p>
 <p><strong>Proof</strong>: By gap tech, bin<span class="math inline">\(\leq p\)</span> partition</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20191216151147887.png"></p>
-<p>​</p>
-<ul>
+<h4 id="next-fit">1.3.12.1. next fit</h4></li>
+</ul></li>
 <li><p><strong>Algorithm</strong>: next fit ( influenced by sequence )</p>
 <p><strong>Note</strong>: fit =&gt; fill; not fit =&gt; new box</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20191209150841499.png"></p>
@@ -1393,6 +1399,9 @@ C_{max}  \geq \max  \limits_{i=[1,n]} pi
 <p>2）ratio <span class="math inline">\(\geq\)</span> 2, consider to let every box as empty as possible(at least C/2)</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20191209151006615.png"></p></li>
 </ul></li>
+</ul>
+<h4 id="first-fit">1.3.12.2. first fit</h4>
+<ul>
 <li><p><strong>Algorithm</strong>: first fit</p>
 <p><strong>Note</strong>: 1 =&gt; j, fill the first fit or new bin</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20191209152447015.png"></p>
@@ -1402,6 +1411,9 @@ C_{max}  \geq \max  \limits_{i=[1,n]} pi
 <p><strong>Proof</strong>: proof is crazy, same idea: make boxes as empty as possible.</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20200113161008419.png"></p></li>
 </ul></li>
+</ul>
+<h4 id="first-fit-decreasing">1.3.12.3. first fit decreasing</h4>
+<ul>
 <li><p><strong>Algorithm</strong>: first fit decreasing (FFD)</p>
 <p><strong>Note</strong>: sort non-increasing + first fit, FFD provide sorting sequence which is very important.</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20191209153330865.png"></p>
@@ -1419,13 +1431,13 @@ C_{max}  \geq \max  \limits_{i=[1,n]} pi
 <p><img src="/2019/11/19/combinational-optimization/image-20191216150831349.png"></p>
 <p><strong>Note</strong>: relaxation can be made =&gt; <span class="math inline">\(p_j \leq C/2\)</span> will suffice ( see slides )</p></li>
 </ul></li>
-</ul></li>
-</ul></li>
 </ul>
-<h3 id="online-ski-rental">1.3.10. online ski-rental</h3>
+<h3 id="online-ski-rental">1.3.13. online ski-rental</h3>
 <ul>
 <li><p><strong>Def</strong>: ski-rental problem</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191230134540610.png"></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191230134540610.png"></p></li>
+</ul>
+<h4 id="strat-n">1.3.13.1. strat-N</h4>
 <ul>
 <li><p><strong>Algorithm</strong>: strat-N</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20191230134620407.png"></p>
@@ -1437,24 +1449,26 @@ C_{max}  \geq \max  \limits_{i=[1,n]} pi
 <p><strong>Note</strong>: draw a diagram with ratio on instance level</p>
 <p><img src="/2019/11/19/combinational-optimization/IMG_2806.JPG" alt="IMG_2806" style="zoom: 33%;"></p></li>
 </ul></li>
-</ul></li>
 </ul>
-<h3 id="bin-covering">1.3.11. bin-covering</h3>
+<h3 id="bin-covering">1.3.14. bin-covering</h3>
 <ul>
 <li><p><strong>Def</strong>: bin-covering problem</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20200113171732161.png"></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20200113171732161.png"></p></li>
+</ul>
+<h4 id="next-fit-1">1.3.14.1. next fit</h4>
 <ul>
 <li><p><strong>Algorithm</strong>: NF</p>
 <p><strong>Proof</strong>: By contraction.</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20200113171908670.png"></p></li>
 <li><p><strong>Qua</strong>: ratio <span class="math inline">\(\geq\)</span> 2</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20200113171932417.png"></p></li>
-</ul></li>
 </ul>
-<h3 id="online-searching">1.3.12. online searching</h3>
+<h3 id="online-searching">1.3.15. online searching</h3>
 <ul>
 <li><p><strong>Def</strong>: online searching 1D</p>
-<p><img src="/2019/11/19/combinational-optimization/image-20191230134852995.png"></p>
+<p><img src="/2019/11/19/combinational-optimization/image-20191230134852995.png"></p></li>
+</ul>
+<h4 id="linear-space">1.3.15.1. linear space</h4>
 <ul>
 <li><p><strong>Algorithm</strong>: linear pace</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20191230134947114.png"></p>
@@ -1462,15 +1476,17 @@ C_{max}  \geq \max  \limits_{i=[1,n]} pi
 <p><strong>Note</strong>: linear pace 2</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20191230135024658.png"></p>
 <p><img src="/2019/11/19/combinational-optimization/image-20191230140748105.png"></p></li>
+</ul>
+<h4 id="exp-space">1.3.15.2. exp space</h4>
+<ul>
 <li><p><strong>Algorithm</strong>: exp pace</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20191230140807506.png"></p></li>
 <li><p><strong>Qua</strong>: ratio <span class="math inline">\(\geq\)</span> 9</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20200113182233155.png"></p>
 <p><strong>Proof</strong>: By construction &amp; contradiction</p>
 <p><img src="/2019/11/19/combinational-optimization/image-20200113182630618.png"></p></li>
-</ul></li>
 </ul>
-<h3 id="online-bin-packing">1.3.13. online bin-packing</h3>
+<h3 id="online-bin-packing">1.3.16. online bin-packing</h3>
 <ul>
 <li><p><strong>Def</strong>:</p>
 <ul>
@@ -1479,7 +1495,7 @@ C_{max}  \geq \max  \limits_{i=[1,n]} pi
 <p><img src="/2019/11/19/combinational-optimization/image-20200113191340453.png"></p></li>
 </ul></li>
 </ul>
-<h3 id="online-scheduling">1.3.14. online scheduling</h3>
+<h3 id="online-scheduling">1.3.17. online scheduling</h3>
 <ul>
 <li><p><strong>Def</strong>: P2||Cmax</p>
 <ul>
@@ -1802,7 +1818,7 @@ S_k &gt; (a^2 -1 )S_{k+1} \geq (a^3-a)S_k =&gt;contradiction
   <p><span>Title:</span><a href="/2019/11/19/combinational-optimization/">Combinational Optimization</a></p>
   <p><span>Author:</span><a href="/" title=" Benson 的personal blog">Benson</a></p>
   <p><span>PTime:</span>2019/11/19 - 12:11</p>
-  <p><span>LUpdate:</span>2020/02/19 - 17:02</p>
+  <p><span>LUpdate:</span>2020/02/20 - 19:02</p>
   <p><span>Link:</span><a href="/2019/11/19/combinational-optimization/" title="Combinational Optimization">https://steinsgate9.github.io/2019/11/19/combinational-optimization/</a>
     <span class="copy-path"  title="click to copy link"><i class="fa fa-clipboard" data-clipboard-text="https://steinsgate9.github.io/2019/11/19/combinational-optimization/"  aria-label="copy done！"></i></span>
   </p>
@@ -1877,8 +1893,8 @@ S_k &gt; (a^2 -1 )S_{k+1} \geq (a^3-a)S_k =&gt;contradiction
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/19/computer_organize/" rel="next" title="Computer Organization">
-                <i class="fa fa-chevron-left"></i> Computer Organization
+              <a href="/2019/11/19/compiler/" rel="next" title="Compiler Principles">
+                <i class="fa fa-chevron-left"></i> Compiler Principles
               </a>
             
           </div>
@@ -1887,8 +1903,8 @@ S_k &gt; (a^2 -1 )S_{k+1} \geq (a^3-a)S_k =&gt;contradiction
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/19/compiler/" rel="prev" title="Compiler Principles">
-                Compiler Principles <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/19/Linear_Algebra/" rel="prev" title="Linear Algebra">
+                Linear Algebra <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -1981,7 +1997,7 @@ S_k &gt; (a^2 -1 )S_{k+1} \geq (a^3-a)S_k =&gt;contradiction
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2092,7 +2108,7 @@ S_k &gt; (a^2 -1 )S_{k+1} \geq (a^3-a)S_k =&gt;contradiction
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#linear-programming"><span class="nav-text">1. linear programming</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#linear-problem-types"><span class="nav-text">1.1. linear problem types</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#integer-programming"><span class="nav-text">1.1.1. integer programming</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#relaxation"><span class="nav-text">1.1.2. relaxation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#solution-to-linear-programming"><span class="nav-text">1.2. solution to linear programming</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#general-procedure-for-solving"><span class="nav-text">1.2.1. general procedure for solving</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linear-programming-method"><span class="nav-text">1.2.2. linear programming method</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#simplex-method"><span class="nav-text">1.2.2.1. simplex method</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#graphics-method"><span class="nav-text">1.2.2.2. graphics method</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cutting-plane-method"><span class="nav-text">1.2.2.3. cutting plane method</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#search-based-method"><span class="nav-text">1.2.3. search-based method</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#computer-theory"><span class="nav-text">1.2.3.1. computer theory</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#implementing-techs"><span class="nav-text">1.2.3.2. implementing techs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#method"><span class="nav-text">1.2.3.3. method</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#bfs"><span class="nav-text">1.2.3.3.1. bfs</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#dfs"><span class="nav-text">1.2.3.3.2. dfs</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#backtracking"><span class="nav-text">1.2.3.3.3. backtracking</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#dynamic-programming"><span class="nav-text">1.2.3.3.4. dynamic programming</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#branch-bound"><span class="nav-text">1.2.3.3.5. branch &amp; bound</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#greedy-search"><span class="nav-text">1.2.3.3.6. greedy search</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#a"><span class="nav-text">1.2.3.3.7. A*</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#b"><span class="nav-text">1.2.3.3.8. B*</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#d"><span class="nav-text">1.2.3.3.9. D*</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ida"><span class="nav-text">1.2.3.3.10. IDA*</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#approximation-method"><span class="nav-text">1.2.4. approximation method</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#computer-theory-1"><span class="nav-text">1.2.4.1. computer theory</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#specific-question"><span class="nav-text">1.3. specific question</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#subset-sum"><span class="nav-text">1.3.1. subset sum</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#backpack-problem"><span class="nav-text">1.3.2. backpack problem</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#dp1"><span class="nav-text">1.3.2.1. dp1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#dp2"><span class="nav-text">1.3.2.2. dp2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#branch-bound-1"><span class="nav-text">1.3.2.3. branch &amp; bound</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#greedy"><span class="nav-text">1.3.2.4. greedy</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#improving-greedy"><span class="nav-text">1.3.2.5. improving greedy</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ptas"><span class="nav-text">1.3.2.6. PTAS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fptas"><span class="nav-text">1.3.2.7. FPTAS</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#assignment-problem-tsp"><span class="nav-text">1.3.3. assignment problem &amp; TSP</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#assignment-problem"><span class="nav-text">1.3.3.1. assignment problem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tsp-problem"><span class="nav-text">1.3.3.2. tsp problem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#metric-tsp"><span class="nav-text">1.3.3.3. metric TSP</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#spanning-tree"><span class="nav-text">1.3.3.3.1. spanning tree</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#christofides"><span class="nav-text">1.3.3.3.2. christofides</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shortest-path"><span class="nav-text">1.3.4. shortest path</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#naive-shortest-path"><span class="nav-text">1.3.4.1. naive shortest path</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#take-out-problem-specific-shortest-path"><span class="nav-text">1.3.4.2. take-out problem (specific shortest path)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#minimum-matching"><span class="nav-text">1.3.5. minimum matching</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vertex-cover"><span class="nav-text">1.3.6. vertex cover</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#partition-problem"><span class="nav-text">1.3.7. partition problem</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#subset-partition"><span class="nav-text">1.3.7.1. subset partition</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#product-partition"><span class="nav-text">1.3.7.2. product partition</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scheduling"><span class="nav-text">1.3.8. scheduling</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#p1-cj-cmax-l1max-tj-uj"><span class="nav-text">1.3.8.1. P1 Cj, Cmax, L1max, Tj, Uj</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#c_max-or-sum_n1infty-c_j"><span class="nav-text">1.3.8.1.1. \(C_{max}\) or \(\sum_{n=1}^{\infty} C_j\)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#l1max-tj-uj"><span class="nav-text">1.3.8.1.2. L1max, Tj, Uj</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pm-cmax-cmin"><span class="nav-text">1.3.8.2. Pm Cmax, Cmin</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#p-cmax"><span class="nav-text">1.3.8.3. P Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#f2-cmax"><span class="nav-text">1.3.8.4. F2 Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#f3-cmax"><span class="nav-text">1.3.8.5. F3 Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fm-cmax"><span class="nav-text">1.3.8.6. Fm Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#o2-cmax"><span class="nav-text">1.3.8.7. O2 Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#o3-cmax"><span class="nav-text">1.3.8.8. O3 Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#om-cmax"><span class="nav-text">1.3.8.9. Om Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jm-cmax"><span class="nav-text">1.3.8.10. Jm Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rm-cmaxhw"><span class="nav-text">1.3.8.11. Rm Cmax(hw)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bin-packing"><span class="nav-text">1.3.9. bin-packing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#online-ski-rental"><span class="nav-text">1.3.10. online ski-rental</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bin-covering"><span class="nav-text">1.3.11. bin-covering</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#online-searching"><span class="nav-text">1.3.12. online searching</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#online-bin-packing"><span class="nav-text">1.3.13. online bin-packing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#online-scheduling"><span class="nav-text">1.3.14. online scheduling</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#course-homework"><span class="nav-text">2. course homework</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#specific-tsp-problem"><span class="nav-text">2.1. specific TSP problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#prove"><span class="nav-text">2.1.1. 1) prove</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prove-tsp"><span class="nav-text">2.1.2. 2) prove TSP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prove-1"><span class="nav-text">2.1.3. 3) prove</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#specific-sequencing-problem"><span class="nav-text">2.2. specific sequencing problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#prove-in-np"><span class="nav-text">2.2.1. 1) prove \(\in\) NP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prove-2"><span class="nav-text">2.2.2. 2) prove</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#write-in-linear-programming"><span class="nav-text">2.2.3. 3) write in linear programming</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#write-in-linear-programming-1"><span class="nav-text">2.2.4. 1) write in linear programming</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#write-in"><span class="nav-text">2.2.5. 2) write in</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#section"><span class="nav-text">2.2.6. 3）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#specific-assign-problem"><span class="nav-text">2.3. specific assign problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#write-in-integeral-programming"><span class="nav-text">2.3.1. 1) write in integeral programming</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#write-in-dp"><span class="nav-text">2.3.2. 2) write in DP</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#specific-clique-problem"><span class="nav-text">2.4. specific clique problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#prove-trivial"><span class="nav-text">2.4.1. 1) prove trivial</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prove-np-hard"><span class="nav-text">2.4.2. 2) prove NP-hard</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#give-a-algorithm-of-ratio-2"><span class="nav-text">2.4.3. 3) give a algorithm of ratio = 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prove-trivial-1"><span class="nav-text">2.4.4. 4) prove trivial</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#specific-subset-sum"><span class="nav-text">2.5. specific subset sum</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#give-an-algorithm"><span class="nav-text">2.5.1. 1) give an algorithm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prove-statement"><span class="nav-text">2.5.2. 2) prove statement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#give-an-alpha--algorithm"><span class="nav-text">2.5.3. 3) give an \(\alpha\)- algorithm</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#p2-cmax"><span class="nav-text">2.6. p2 || Cmax</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#section-1"><span class="nav-text">2.6.1. 2)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#section-2"><span class="nav-text">2.6.2. 3)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#section-3"><span class="nav-text">2.6.3. 4)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#exam"><span class="nav-text">3. exam</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概念"><span class="nav-text">3.1. 概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题"><span class="nav-text">3.1.1. 问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#时间复杂度"><span class="nav-text">3.1.1.1. 时间复杂度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复杂类"><span class="nav-text">3.1.1.2. 复杂类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例"><span class="nav-text">3.1.1.3. 实例</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#规模"><span class="nav-text">3.1.1.3.1. 规模</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#最大数"><span class="nav-text">3.1.1.3.2. 最大数</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#近似"><span class="nav-text">3.1.1.4. 近似</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#在线问题..."><span class="nav-text">3.1.1.4.1. 在线问题...</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法"><span class="nav-text">3.1.2. 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#近似-1"><span class="nav-text">3.1.2.1. 近似</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题-1"><span class="nav-text">3.2. 问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#背包"><span class="nav-text">3.2.1. 背包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tsp"><span class="nav-text">3.2.2. tsp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sat"><span class="nav-text">3.2.3. sat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#排序"><span class="nav-text">3.2.4. 排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#划分"><span class="nav-text">3.2.5. 划分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#装箱"><span class="nav-text">3.2.6. 装箱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子集合"><span class="nav-text">3.2.7. 子集合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定点覆盖"><span class="nav-text">3.2.8. 定点覆盖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#匹配"><span class="nav-text">3.2.9. 匹配</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在线"><span class="nav-text">3.2.10. 在线。。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法-1"><span class="nav-text">3.3. 算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法"><span class="nav-text">3.4. 方法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#linear-programming"><span class="nav-text">1. linear programming</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#linear-problem-types"><span class="nav-text">1.1. linear problem types</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#integer-programming"><span class="nav-text">1.1.1. integer programming</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#relaxation"><span class="nav-text">1.1.2. relaxation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#solution-to-linear-programming"><span class="nav-text">1.2. solution to linear programming</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#general-procedure-for-solving"><span class="nav-text">1.2.1. general procedure for solving</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linear-programming-method"><span class="nav-text">1.2.2. linear programming method</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#simplex-method"><span class="nav-text">1.2.2.1. simplex method</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#graphics-method"><span class="nav-text">1.2.2.2. graphics method</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cutting-plane-method"><span class="nav-text">1.2.2.3. cutting plane method</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#search-based-method"><span class="nav-text">1.2.3. search-based method</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#computer-theory"><span class="nav-text">1.2.3.1. computer theory</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#implementing-techs"><span class="nav-text">1.2.3.2. implementing techs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#method"><span class="nav-text">1.2.3.3. method</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#bfs"><span class="nav-text">1.2.3.3.1. bfs</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#dfs"><span class="nav-text">1.2.3.3.2. dfs</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#backtracking"><span class="nav-text">1.2.3.3.3. backtracking</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#dynamic-programming"><span class="nav-text">1.2.3.3.4. dynamic programming</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#branch-bound"><span class="nav-text">1.2.3.3.5. branch &amp; bound</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#greedy-search"><span class="nav-text">1.2.3.3.6. greedy search</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#a"><span class="nav-text">1.2.3.3.7. A*</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#b"><span class="nav-text">1.2.3.3.8. B*</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#d"><span class="nav-text">1.2.3.3.9. D*</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ida"><span class="nav-text">1.2.3.3.10. IDA*</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#approximation-method"><span class="nav-text">1.2.4. approximation method</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#computer-theory-1"><span class="nav-text">1.2.4.1. computer theory</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#specific-question"><span class="nav-text">1.3. specific question</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#subset-sum"><span class="nav-text">1.3.1. subset sum</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#backpack-problem"><span class="nav-text">1.3.2. backpack problem</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#dp1"><span class="nav-text">1.3.2.1. dp1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#dp2"><span class="nav-text">1.3.2.2. dp2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#branch-bound-1"><span class="nav-text">1.3.2.3. branch &amp; bound</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#greedy"><span class="nav-text">1.3.2.4. greedy</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#improving-greedy"><span class="nav-text">1.3.2.5. improving greedy</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ptas"><span class="nav-text">1.3.2.6. PTAS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fptas"><span class="nav-text">1.3.2.7. FPTAS</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#assignment-problem-tsp"><span class="nav-text">1.3.3. assignment problem &amp; TSP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tsp-problem"><span class="nav-text">1.3.4. tsp problem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#metric-tsp"><span class="nav-text">1.3.5. metric TSP</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#spanning-tree"><span class="nav-text">1.3.5.1. spanning tree</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#christofides"><span class="nav-text">1.3.5.2. christofides</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shortest-path"><span class="nav-text">1.3.6. shortest path</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#dijkstra"><span class="nav-text">1.3.6.1. Dijkstra</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#floyd"><span class="nav-text">1.3.6.2. Floyd</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#take-out-problem-specific-shortest-path"><span class="nav-text">1.3.7. take-out problem (specific shortest path)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#dp"><span class="nav-text">1.3.7.1. dp</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#minimum-matching"><span class="nav-text">1.3.8. minimum matching</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vertex-cover"><span class="nav-text">1.3.9. vertex cover</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#relaxation-algorithm"><span class="nav-text">1.3.9.1. relaxation algorithm</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#partition-problem"><span class="nav-text">1.3.10. partition problem</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#subset-partition"><span class="nav-text">1.3.10.1. subset partition</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#product-partition"><span class="nav-text">1.3.10.2. product partition</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scheduling"><span class="nav-text">1.3.11. scheduling</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#p1-cj-cmax-l1max-tj-uj"><span class="nav-text">1.3.11.1. P1 Cj, Cmax, L1max, Tj, Uj</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#c_max-or-sum_n1infty-c_j"><span class="nav-text">1.3.11.1.1. \(C_{max}\) or \(\sum_{n=1}^{\infty} C_j\)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#l1max-tj-uj"><span class="nav-text">1.3.11.1.2. L1max, Tj, Uj</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pm-cmax-cmin"><span class="nav-text">1.3.11.2. Pm Cmax, Cmin</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#p-cmax"><span class="nav-text">1.3.11.3. P Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#f2-cmax"><span class="nav-text">1.3.11.4. F2 Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#f3-cmax"><span class="nav-text">1.3.11.5. F3 Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fm-cmax"><span class="nav-text">1.3.11.6. Fm Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#o2-cmax"><span class="nav-text">1.3.11.7. O2 Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#o3-cmax"><span class="nav-text">1.3.11.8. O3 Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#om-cmax"><span class="nav-text">1.3.11.9. Om Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jm-cmax"><span class="nav-text">1.3.11.10. Jm Cmax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rm-cmaxhw"><span class="nav-text">1.3.11.11. Rm Cmax(hw)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bin-packing"><span class="nav-text">1.3.12. bin-packing</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#next-fit"><span class="nav-text">1.3.12.1. next fit</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#first-fit"><span class="nav-text">1.3.12.2. first fit</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#first-fit-decreasing"><span class="nav-text">1.3.12.3. first fit decreasing</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#online-ski-rental"><span class="nav-text">1.3.13. online ski-rental</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#strat-n"><span class="nav-text">1.3.13.1. strat-N</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bin-covering"><span class="nav-text">1.3.14. bin-covering</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#next-fit-1"><span class="nav-text">1.3.14.1. next fit</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#online-searching"><span class="nav-text">1.3.15. online searching</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#linear-space"><span class="nav-text">1.3.15.1. linear space</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#exp-space"><span class="nav-text">1.3.15.2. exp space</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#online-bin-packing"><span class="nav-text">1.3.16. online bin-packing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#online-scheduling"><span class="nav-text">1.3.17. online scheduling</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#course-homework"><span class="nav-text">2. course homework</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#specific-tsp-problem"><span class="nav-text">2.1. specific TSP problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#prove"><span class="nav-text">2.1.1. 1) prove</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prove-tsp"><span class="nav-text">2.1.2. 2) prove TSP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prove-1"><span class="nav-text">2.1.3. 3) prove</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#specific-sequencing-problem"><span class="nav-text">2.2. specific sequencing problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#prove-in-np"><span class="nav-text">2.2.1. 1) prove \(\in\) NP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prove-2"><span class="nav-text">2.2.2. 2) prove</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#write-in-linear-programming"><span class="nav-text">2.2.3. 3) write in linear programming</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#write-in-linear-programming-1"><span class="nav-text">2.2.4. 1) write in linear programming</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#write-in"><span class="nav-text">2.2.5. 2) write in</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#section"><span class="nav-text">2.2.6. 3）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#specific-assign-problem"><span class="nav-text">2.3. specific assign problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#write-in-integeral-programming"><span class="nav-text">2.3.1. 1) write in integeral programming</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#write-in-dp"><span class="nav-text">2.3.2. 2) write in DP</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#specific-clique-problem"><span class="nav-text">2.4. specific clique problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#prove-trivial"><span class="nav-text">2.4.1. 1) prove trivial</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prove-np-hard"><span class="nav-text">2.4.2. 2) prove NP-hard</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#give-a-algorithm-of-ratio-2"><span class="nav-text">2.4.3. 3) give a algorithm of ratio = 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prove-trivial-1"><span class="nav-text">2.4.4. 4) prove trivial</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#specific-subset-sum"><span class="nav-text">2.5. specific subset sum</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#give-an-algorithm"><span class="nav-text">2.5.1. 1) give an algorithm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prove-statement"><span class="nav-text">2.5.2. 2) prove statement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#give-an-alpha--algorithm"><span class="nav-text">2.5.3. 3) give an \(\alpha\)- algorithm</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#p2-cmax"><span class="nav-text">2.6. p2 || Cmax</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#section-1"><span class="nav-text">2.6.1. 2)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#section-2"><span class="nav-text">2.6.2. 3)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#section-3"><span class="nav-text">2.6.3. 4)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#exam"><span class="nav-text">3. exam</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概念"><span class="nav-text">3.1. 概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题"><span class="nav-text">3.1.1. 问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#时间复杂度"><span class="nav-text">3.1.1.1. 时间复杂度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复杂类"><span class="nav-text">3.1.1.2. 复杂类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例"><span class="nav-text">3.1.1.3. 实例</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#规模"><span class="nav-text">3.1.1.3.1. 规模</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#最大数"><span class="nav-text">3.1.1.3.2. 最大数</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#近似"><span class="nav-text">3.1.1.4. 近似</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#在线问题..."><span class="nav-text">3.1.1.4.1. 在线问题...</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法"><span class="nav-text">3.1.2. 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#近似-1"><span class="nav-text">3.1.2.1. 近似</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题-1"><span class="nav-text">3.2. 问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#背包"><span class="nav-text">3.2.1. 背包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tsp"><span class="nav-text">3.2.2. tsp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sat"><span class="nav-text">3.2.3. sat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#排序"><span class="nav-text">3.2.4. 排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#划分"><span class="nav-text">3.2.5. 划分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#装箱"><span class="nav-text">3.2.6. 装箱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子集合"><span class="nav-text">3.2.7. 子集合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定点覆盖"><span class="nav-text">3.2.8. 定点覆盖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#匹配"><span class="nav-text">3.2.9. 匹配</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在线"><span class="nav-text">3.2.10. 在线。。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法-1"><span class="nav-text">3.3. 算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法"><span class="nav-text">3.4. 方法</span></a></li></ol></li></ol></div>
             
 
           </div>
