@@ -138,7 +138,7 @@
 <meta property="og:site_name" content="BeNsoN">
 <meta property="og:description" content="Pytorch notes">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-20T11:37:20.488Z">
+<meta property="og:updated_time" content="2020-02-23T11:38:09.786Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -478,389 +478,458 @@
       
         <p>Pytorch notes</p>
 <a id="more"></a>
-<h1 id="tensor">1. tensor</h1>
-<h2 id="init">1.1. init</h2>
-<ul>
+<h1 id="tensor">1. tensor</h1><h2 id="init">1.1. init</h2><ul>
 <li><p>由基础类创建，tensor类型先 tensor 再requires_grad 再转类型，默认为int</p>
 <ul>
-<li><p>Torch.Tensor ，类，可用于初始化空的</p></li>
-<li><p>Torch.tensor ， 函数，可用于初始化非空</p></li>
+<li><p>Torch.Tensor ，类，可用于初始化空的</p>
+</li>
+<li><p>Torch.tensor ， 函数，可用于初始化非空</p>
+</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = torch.tensor([<span class="number">1.</span>,<span class="number">2</span>,<span class="number">3</span>], requires_grad=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = torch.FloatTensor([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]).requires_grads_()</span><br></pre></td></tr></table></figure></li>
-<li><p>其他函数创建：tensor其他函数默认floattensor requires_grad为false</p></li>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = torch.FloatTensor([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]).requires_grads_()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>其他函数创建：tensor其他函数默认floattensor requires_grad为false</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a= torch.zeros().float()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>scipy创建</p>
+</li>
+<li><p>由numpy转换：中途转换numpy的时候没办法再用torch.from_numpy（共享内存）FloatTensor等等</p>
+</li>
+<li><p>由别的tensor转换： 中途转换别的tensor的时候没办法再用Variable</p>
+</li>
 </ul>
-<p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a= torch.zeros().float()</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li><p>scipy创建</p></li>
-<li><p>由numpy转换：中途转换numpy的时候没办法再用torch.from_numpy（共享内存）FloatTensor等等</p></li>
-<li><p>由别的tensor转换： 中途转换别的tensor的时候没办法再用Variable</p></li>
-</ul>
-<h2 id="attributes">1.2. attributes</h2>
-<ul>
-<li><p>.shape</p></li>
-<li><p>.size()</p></li>
+<h2 id="attributes">1.2. attributes</h2><ul>
+<li><p>.shape </p>
+</li>
+<li><p>.size()</p>
+</li>
 <li><p>.type()查看tensor本身属于哪个类</p>
-<p>这两个一般是统一的。</p></li>
-<li><p>.layout 是决定是并不是 torch.strided torch.sparse (sparse spmm dense = dense/用.to_dense转化）</p></li>
-<li><p>.dype 是决定是什么类型和dtype一样 （主要float用于计算，long用于index/用.float转化，type_as(xx))）</p></li>
-<li><p>.device 是决定是什么类型cuda （一定要保证一致/用.cuda转化）</p></li>
+<p>  这两个一般是统一的。</p>
+</li>
+<li><p>.layout 是决定是并不是 torch.strided torch.sparse (sparse spmm dense = dense/用.to_dense转化）</p>
+</li>
+<li><p>.dype 是决定是什么类型和dtype一样 （主要float用于计算，long用于index/用.float转化，type_as(xx))）</p>
+</li>
+<li><p>.device 是决定是什么类型cuda （一定要保证一致/用.cuda转化）</p>
+</li>
 </ul>
-<h2 id="methods">1.3. methods</h2>
-<h3 id="tensor本身属性最大值等">1.3.1. tensor本身属性（最大值等）</h3>
-<ol start="20" type="1">
-<li>求最大值
-<ul>
-<li>.max()
-<ul>
+<h2 id="methods">1.3. methods</h2><h3 id="tensor本身属性（最大值等）">1.3.1. tensor本身属性（最大值等）</h3><ol>
+<li>求最大值    <ul>
+<li>.max()  <ul>
 <li>0表示值，1表示index</li>
-<li>来自 <a href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor.clamp" target="_blank" rel="noopener" class="uri">https://pytorch.org/docs/stable/tensors.html#torch.Tensor.clamp</a></li>
-</ul></li>
-</ul></li>
-<li>直接得到数字
+<li>来自 <a href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor.clamp" target="_blank" rel="noopener">https://pytorch.org/docs/stable/tensors.html#torch.Tensor.clamp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>直接得到数字</p>
 <ul>
 <li>.item()</li>
-</ul></li>
-<li>求非0坐标
+</ul>
+</li>
+<li><p>求非0坐标</p>
 <ul>
-<li>torch.nonzero()
-<ul>
+<li>torch.nonzero()<ul>
 <li>返回非0元素的坐标，shape由原tensor决定</li>
-</ul></li>
-</ul></li>
-<li>求非0值坐标
+</ul>
+</li>
+</ul>
+</li>
+<li><p>求非0值坐标   </p>
 <ul>
-<li>torch.nonzero = np.where(）</li>
+<li>torch.nonzero = np.where(） </li>
 <li>返回准确坐标1,2],[2,5]</li>
-</ul></li>
-<li>排序
+</ul>
+</li>
+<li><p>排序</p>
 <ul>
-<li>torch.sort()
-<ul>
+<li>torch.sort()<ul>
 <li>返回拍好序的坐标，shape由原长度决定</li>
-</ul></li>
-</ul></li>
-<li>求所有元素个数
-<ul>
-<li>torch.numel()
-<ul>
-<li>返回一个tensor变量内所有元素个数,可以理解为矩阵内元素的个数</li>
-</ul></li>
-</ul></li>
+</ul>
+</li>
+</ul>
+</li>
 </ol>
-<h3 id="从tensor取东西取某一部分">1.3.2. 从tensor取东西（取某一部分）</h3>
-<ol type="1">
+<ol>
+<li>求所有元素个数  <ul>
+<li>torch.numel() <ul>
+<li>返回一个tensor变量内所有元素个数,可以理解为矩阵内元素的个数</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="从tensor取东西（取某一部分）">1.3.2. 从tensor取东西（取某一部分）</h3><ol>
 <li><p>根据index，筛选</p>
 <ul>
 <li>[index_list,:]</li>
-</ul></li>
-<li>根据index，筛选（同上）
+</ul>
+</li>
+<li><p>根据index，筛选（同上）</p>
 <ul>
-<li>torch.index_select(x, 1, indices)
+<li>torch.index_select(x, 1, indices)<ul>
+<li>来自 <a href="https://blog.csdn.net/jacke121/article/details/83044660" target="_blank" rel="noopener">https://blog.csdn.net/jacke121/article/details/83044660</a> 、</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>根据mask，筛选，输出不是原shape   </p>
 <ul>
-<li>来自 <a href="https://blog.csdn.net/jacke121/article/details/83044660" target="_blank" rel="noopener" class="uri">https://blog.csdn.net/jacke121/article/details/83044660</a> 、</li>
-</ul></li>
-</ul></li>
-<li>根据mask，筛选，输出不是原shape
+<li><p>torch.masked_select(input, mask)</p>
+</li>
+<li><p>创建mask torch.ByteTensor(x&gt;0)</p>
+</li>
+</ul>
+</li>
+<li><p>根据条件，筛选或者更改</p>
 <ul>
-<li><p>torch.masked_select(input, mask)</p></li>
-<li><p>创建mask torch.ByteTensor(x&gt;0)</p></li>
-</ul></li>
-<li>根据条件，筛选或者更改
-<ul>
-<li>torch.where
+<li><p>torch.where</p>
 <ul>
 <li><p>例子：把矩阵x中大于5的变成5了</p>
-<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import torch</span><br><span class="line">x = torch.linspace(1, 27, steps=27).view(9, 3)  </span><br><span class="line">bbb = torch.where(x &gt; 5, torch.full_like(x, 5), x)</span><br></pre></td></tr></table></figure></p></li>
-</ul></li>
-</ul></li>
-<li>根据index，一行行或者一列列筛选（可超过原大小）
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import torch</span><br><span class="line">x = torch.linspace(1, 27, steps=27).view(9, 3)  </span><br><span class="line">bbb = torch.where(x &gt; 5, torch.full_like(x, 5), x)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>根据index，一行行或者一列列筛选（可超过原大小）</p>
 <ul>
-<li>torch.gather(xx ,1, longtensor([index]))<br>
-xxshape=（2，3），如果是dim=0，相当于一行一行选择（遗憾的是必须是shape保持一致），index的shape必须是（?,3），index的内容是选择列的位置。 如果dim=1，相当于一列列选择，index=（2，？）</li>
-</ul></li>
+<li>torch.gather(xx ,1, longtensor([index]))<br>xxshape=（2，3），如果是dim=0，相当于一行一行选择（遗憾的是必须是shape保持一致），index的shape必须是（?,3），index的内容是选择列的位置。<br>如果dim=1，相当于一列列选择，index=（2，？）</li>
+</ul>
+</li>
 </ol>
-<h3 id="tensor自身变化旋转resize等">1.3.3. tensor自身变化（旋转、resize等）</h3>
-<ol start="2" type="1">
-<li>维度旋转
+<h3 id="tensor自身变化（旋转、resize等）">1.3.3. tensor自身变化（旋转、resize等）</h3><ol>
+<li><p>维度旋转</p>
 <ul>
-<li>.permute(1,0,2)
-<ul>
+<li>.permute(1,0,2) <ul>
 <li>原不变。将原来第1维变为0维，同理，0→1,2→2</li>
-</ul></li>
-<li>.transpose(0,1)
-<ul>
+</ul>
+</li>
+<li>.transpose(0,1)  <ul>
 <li>原变。只能交换两个维度</li>
-</ul></li>
-</ul></li>
-<li>维度resize
+</ul>
+</li>
+</ul>
+</li>
+<li><p>维度resize</p>
 <ul>
-<li>.resize_()
-<ul>
+<li>.resize_()<ul>
 <li>原变</li>
-</ul></li>
-<li>.view()
-<ul>
+</ul>
+</li>
+<li>.view()<ul>
 <li>原不变，但是如果改变后者会变的。</li>
-</ul></li>
-<li>.reshape()
-<ul>
+</ul>
+</li>
+<li>.reshape()<ul>
 <li>原不一定</li>
-<li>.reshape() = .contiguous.view()</li>
-</ul></li>
-<li>.expand_as(a)
-<ul>
+<li>.reshape() =  .contiguous.view()</li>
+</ul>
+</li>
+<li>.expand_as(a)<ul>
 <li>原变</li>
 <li>注意要在维数为1的维度做这个操作。把这一维的东西放到所有这个维</li>
 <li>例子：(4,1).expand_as(4,2)</li>
-</ul></li>
-</ul></li>
-<li>去掉维度为1的
+</ul>
+</li>
+</ul>
+</li>
+<li><p>去掉维度为1的</p>
 <ul>
-<li><p>.squeeze()</p></li>
-<li><p>.unsqueeze()</p></li>
-</ul></li>
-<li>排序
+<li><p>.squeeze() </p>
+</li>
+<li><p>.unsqueeze() </p>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>排序</p>
 <ul>
-<li>.Sort()
+<li><p>.Sort()   </p>
 <ul>
-<li><p>0 是拍好序的值</p></li>
-<li><p>1 是index</p></li>
-</ul></li>
-</ul></li>
-<li>连续化（用于其他变化后）
+<li><p>0 是拍好序的值</p>
+</li>
+<li><p>1 是index</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>连续化（用于其他变化后）</p>
 <ul>
-<li>.contiguous()
-<ul>
-<li>contiguous：view只能用在contiguous的variable上。如果在view之前用了transpose, permute等，需要用contiguous()来返回一个contiguous copy。</li>
-<li>一种可能的解释是： 有些tensor并不是占用一整块内存，而是由不同的数据块组成，而tensor的view()操作依赖于内存是整块的，这时只需要执行contiguous()这个函数，把tensor变成在内存中连续分布的形式。</li>
+<li>.contiguous()<ul>
+<li>contiguous：view只能用在contiguous的variable上。如果在view之前用了transpose, permute等，需要用contiguous()来返回一个contiguous copy。 </li>
+<li>一种可能的解释是：<br>有些tensor并不是占用一整块内存，而是由不同的数据块组成，而tensor的view()操作依赖于内存是整块的，这时只需要执行contiguous()这个函数，把tensor变成在内存中连续分布的形式。 </li>
 <li>判断是否contiguous用torch.Tensor.is_contiguous()函数。</li>
-</ul></li>
-</ul></li>
-<li>四舍五入
+</ul>
+</li>
+</ul>
+</li>
+<li><p>四舍五入</p>
 <ul>
 <li>.ceil_()</li>
-</ul></li>
-<li>把tensor四舍五入区间内
+</ul>
+</li>
+<li><p>把tensor四舍五入区间内</p>
 <ul>
-<li>torch.clamp(loss, min=0)
-<ul>
+<li>torch.clamp(loss, min=0)  <ul>
 <li>把tensor归到一个区间内</li>
-</ul></li>
-</ul></li>
+</ul>
+</li>
+</ul>
+</li>
 </ol>
-<h3 id="往tensor填充东西">1.3.4. 往tensor填充东西</h3>
-<ol start="5" type="1">
-<li>全0化
-<ul>
+<h3 id="往tensor填充东西">1.3.4. 往tensor填充东西</h3><ol>
+<li>全0化<ul>
 <li>.zero_()</li>
-</ul></li>
-<li>填充
+</ul>
+</li>
+<li><p>填充</p>
 <ul>
 <li>.fill_()</li>
-</ul></li>
-<li>把一些tensor按index插入。
+</ul>
+</li>
+<li><p>把一些tensor按index插入。 </p>
 <ul>
-<li>index_copy_(dim, index, tensor)</li>
-</ul></li>
-<li>复杂
+<li>index_copy_(dim, index, tensor) </li>
+</ul>
+</li>
+<li><p>复杂</p>
 <ul>
 <li>.scatter_(a,b,c)</li>
-</ul></li>
-</ol>
-<h3 id="得到新tensor">1.3.5. 得到新tensor</h3>
-<ol start="6" type="1">
-<li>拷贝tensor
-<ul>
-<li>.copy_()/clone_()
-<ul>
-<li><p>this function is recorded in the computation graph. Gradients propagating to the cloned tensor will propagate to the original tensor, copy等于深拷贝，clone=浅拷贝，clone+detach=深拷贝。</p></li>
-<li><p>来自 <a href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor.clamp" target="_blank" rel="noopener" class="uri">https://pytorch.org/docs/stable/tensors.html#torch.Tensor.clamp</a></p></li>
-</ul></li>
-</ul></li>
-<li>重复在维度上几次
-<ul>
-<li>.repeat()
-<ul>
-<li>例子：repeat(2,5)在第一维度2次，第二维度5次</li>
-</ul></li>
-</ul></li>
-<li>拼接
-<ul>
-<li>torch.stack(sequence, dim=0, out=None)/<br>
+</ul>
 </li>
-<li>torch.cat()
+</ol>
+<h3 id="得到新tensor">1.3.5. 得到新tensor</h3><ol>
+<li><p>拷贝tensor</p>
 <ul>
-<li>做tensor的拼接。sequence表示Tensor列表，dim表示拼接的维度，注意这个函数和concatenate是不同的，torch的concatenate函数是torch.cat，是在已有的维度上拼接，而stack是建立一个新的维度，然后再在该纬度上进行拼接。 cat几何直观很显然，stack不需要几何直观。</li>
-</ul></li>
-</ul></li>
+<li><p>.copy_()/clone_()</p>
+<ul>
+<li><p>this function is recorded in the computation graph. Gradients propagating to the cloned tensor will propagate to the original tensor, copy等于深拷贝，clone=浅拷贝，clone+detach=深拷贝。</p>
+</li>
+<li><p>来自 <a href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor.clamp" target="_blank" rel="noopener">https://pytorch.org/docs/stable/tensors.html#torch.Tensor.clamp</a> </p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>重复在维度上几次</p>
+<ul>
+<li>.repeat()  <ul>
+<li>例子：repeat(2,5)在第一维度2次，第二维度5次</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>拼接 </p>
+<ul>
+<li>torch.stack(sequence, dim=0, out=None)/           </li>
+<li>torch.cat()<ul>
+<li>做tensor的拼接。sequence表示Tensor列表，dim表示拼接的维度，注意这个函数和concatenate是不同的，torch的concatenate函数是torch.cat，是在已有的维度上拼接，而stack是建立一个新的维度，然后再在该纬度上进行拼接。<br>cat几何直观很显然，stack不需要几何直观。</li>
+</ul>
+</li>
+</ul>
+</li>
 <li><p>返回相同shape 的1/0</p>
 <ul>
-<li>.eq_()</li>
-</ul></li>
+<li>.eq_() </li>
+</ul>
+</li>
 </ol>
-<h3 id="多个tensor相互作用">1.3.6. 多个tensor相互作用</h3>
-<ol start="12" type="1">
-<li>矩阵乘法
-<ul>
-<li>Torch. Mm(tensor,tensor)
-<ul>
+<h3 id="多个tensor相互作用">1.3.6. 多个tensor相互作用</h3><ol>
+<li>矩阵乘法    <ul>
+<li>Torch. Mm(tensor,tensor)<ul>
 <li>只能2d</li>
-</ul></li>
-<li>Torch.matmul(）
-<ul>
+</ul>
+</li>
+<li>Torch.matmul(）<ul>
 <li>可以多维tensor</li>
-</ul></li>
-</ul></li>
+</ul>
+</li>
+</ul>
+</li>
 </ol>
-<h3 id="tensorboard相关">1.3.7. tensorboard相关</h3>
-<ol start="15" type="1">
-<li>tensorboard相关
-<ul>
+<h3 id="tensorboard相关">1.3.7. tensorboard相关</h3><ol>
+<li>tensorboard相关           <ul>
 <li>Tensorboardx.SummaryWriter()</li>
 <li>Writer.add_scales()</li>
-</ul></li>
+</ul>
+</li>
 </ol>
-<h2 id="transform">1.4. transform</h2>
-<ul>
-<li><p>转换到np:</p>
-<p>.numpy() （只能是dense）要.data后再用Numpy</p></li>
+<h2 id="transform">1.4. transform</h2><ul>
+<li><p>转换到np: </p>
+<p>  .numpy() （只能是dense）要.data后再用Numpy</p>
+</li>
 <li><p>转换到scipy:</p>
-<p>.coomatrix(.numpy())</p></li>
+<p>  .coomatrix(.numpy())</p>
+</li>
 <li><p>坑</p>
 <ul>
-<li><p>可以和常数相加</p></li>
-<li><p>不能和tensor相加</p></li>
-</ul></li>
+<li><p>可以和常数相加</p>
+</li>
+<li><p>不能和tensor相加</p>
+</li>
 </ul>
-<h2 id="gradient">1.5. gradient</h2>
+</li>
+</ul>
+<h2 id="gradient">1.5. gradient</h2><ul>
+<li><strong>Def</strong>: gradient<br>类似二叉树， 只有叶子节点才有grads</li>
+</ul>
 <ul>
-<li><p><strong>Def</strong>: gradient 类似二叉树， 只有叶子节点才有grads</p></li>
 <li><p><strong>Def</strong>: 标量.backwards</p>
 <p>对树上所有节点求导,待求导向量k维，输入参数k维是权重，在哪个节点输出维度就是节点维度。</p>
 <p><strong>Example</strong>:</p>
-<p>假设在节点有n维，那么我们 这里得到的就是<span class="math inline">\([\frac{da}{dx_1}+\frac{db*2}{dx_1},...,xn]\)</span></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">res = [a,b]</span><br><span class="line"></span><br><span class="line">res.backwards(floattensor(1,2))</span><br></pre></td></tr></table></figure></li>
+<p>假设在节点有n维，那么我们 这里得到的就是$[\frac{da}{dx_1}+\frac{db*2}{dx_1},…,xn]$</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">res = [a,b]</span><br><span class="line"></span><br><span class="line">res.backwards(floattensor(1,2))</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
 <li><p><strong>Def</strong>: 向量backwards</p>
-<p>很多个标量backwards</p></li>
-<li><strong>Def</strong>: register_hook
+<p>很多个标量backwards</p>
+</li>
+</ul>
 <ul>
-<li>可以对module
+<li><p><strong>Def</strong>: register_hook</p>
 <ul>
+<li>可以对module<ul>
 <li>forward_hook 输入有两个，一个input，一个output，但是只能看，不能修改，没有输出。</li>
 <li>backward_hook 输入有两个，一个inputgrad，一个outputgrad，可以返回新的outputgrad作为修改。(注意只能hook到最后一个运算的位置上，而且是分开的比如linear就是先加后加。比如是a/4，那就有两个输入一个是a的导数，一个是4的导数none)（而且不用非要是torch里的运算，sum，求和之类的都可以）inputgrad是最终结果对input的导数，outputgrad是最终结果对output的导数。</li>
-</ul></li>
+</ul>
+</li>
 <li>可以对tensor，输入为该节点的导数，输出为你操作后相同维度的导数。</li>
-</ul></li>
-<li><strong>Overall</strong>
+</ul>
+</li>
+<li><p><strong>Overall</strong></p>
 <ul>
 <li>对tensor求导，可以用backward+.grad，精确。也可以用.register tensor，得到对所有能求导的variable的导数</li>
 <li>对module求导，就是对最后一个操作求导。</li>
-</ul></li>
-<li><p><strong>Details</strong>:</p>
+</ul>
+</li>
+</ul>
 <ul>
-<li>关于类型：
+<li><p><strong>Details</strong>: </p>
+<ul>
+<li><p>关于类型：</p>
 <ul>
 <li>一定要float tensor才能求导</li>
 <li>longtensor做加减乘除很危险，用float来做。</li>
-</ul></li>
-<li>关于inplace：
+</ul>
+</li>
+<li><p>关于inplace：</p>
 <ul>
-<li><p>一定要保证leaf节点不做inplace变换</p></li>
+<li><p>一定要保证leaf节点不做inplace变换</p>
+</li>
 <li><p>叶子结点，最后一步requires_grad_()才有用，也就是说先改值再变成可导的</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x = torch.tensor([<span class="number">2</span>, <span class="number">1.</span>]).view(<span class="number">2</span>, <span class="number">1</span>).requires_grad_()</span><br></pre></td></tr></table></figure></li>
-</ul></li>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x = torch.tensor([<span class="number">2</span>, <span class="number">1.</span>]).view(<span class="number">2</span>, <span class="number">1</span>).requires_grad_()</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
 <li><p>一定要保证中间过程不改变值</p>
 <ul>
-<li>如果有变量比如c = a*b，改变a，b都不行。/或者c = z<strong>2, z[0]=z[0]</strong>2.因为给z[0]的导数需要自己，但是自己改变了，因为对z求导是一起的，记录的是z的值，没有单独记录改变后的值。</li>
+<li>如果有变量比如c = a<em>b，改变a，b都不行。/或者c = z<em>*2, z[0]=z[0]</em></em>2.因为给z[0]的导数需要自己，但是自己改变了，因为对z求导是一起的，记录的是z的值，没有单独记录改变后的值。</li>
 <li>如果有变量比如c = a*b，改变c以后，a，b导数都为0</li>
-</ul></li>
-<li><p>关于求两次：retain_variables=True，用来计算第二次backwards；不同的output有不同的图，backward不能两次针对同样的output来做/</p></li>
-<li><p>关于累积：backwards 会累积grad</p></li>
-<li><p>关于复制：.clone 不共享内存，但是在图里，想象为分身。/.detach()共享内存，但是从图中删除，想象为拿出来单独用。一般用不到共享内存这个操作。/.numpy()直接彻底分离/.variable或者.tensor都是比较奇怪的用法，尽量避免。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">w = lin.weight</span><br><span class="line"></span><br><span class="line">w4 = torch.FloatTensor(lin.weight).requires_grad_() </span><br><span class="line"></span><br><span class="line">wv = torch.autograd.Variable(w, requires_grad=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">w1 = lin.weight.detach().requires_grad_()  </span><br><span class="line"></span><br><span class="line">\<span class="comment">## 共用值，不在图内（新起一个节点）。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">w3 = lin.weight.clone().detach_().requires_grad_() </span><br><span class="line"></span><br><span class="line">\<span class="comment">## 既不共用值，也不在图内（新起最安全）</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">w2 = lin.weight.clone().requires_grad_() </span><br><span class="line"></span><br><span class="line">w5 = torch.zeros_like(lin.weight).copy_(lin.weight).requires_grad_()</span><br><span class="line"></span><br><span class="line">\<span class="comment">## 不共用值(当backwards时候更新的不是自己的grad），在图内（最好不用）</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">.data.fill_()</span><br><span class="line"></span><br><span class="line">\<span class="comment">## data比较奇妙，和detach一样但是，他可以改变leafvaribale的inplace。一般会报错的东西，这里不会报错。</span></span><br></pre></td></tr></table></figure></li>
-</ul></li>
 </ul>
-<h1 id="parametervariable">2. parameter/variable</h1>
-<h2 id="paramter-variable-difference">2.1. paramter &amp; variable difference</h2>
-<ul>
+</li>
+<li><p>关于求两次：retain_variables=True，用来计算第二次backwards；不同的output有不同的图，backward不能两次针对同样的output来做/</p>
+</li>
+<li><p>关于累积：backwards 会累积grad</p>
+</li>
+<li><p>关于复制：.clone 不共享内存，但是在图里，想象为分身。/.detach()共享内存，但是从图中删除，想象为拿出来单独用。一般用不到共享内存这个操作。/.numpy()直接彻底分离/.variable或者.tensor都是比较奇怪的用法，尽量避免。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">w = lin.weight</span><br><span class="line"></span><br><span class="line">w4 = torch.FloatTensor(lin.weight).requires_grad_() </span><br><span class="line"></span><br><span class="line">wv = torch.autograd.Variable(w, requires_grad=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">w1 = lin.weight.detach().requires_grad_()  </span><br><span class="line"></span><br><span class="line">\<span class="comment">## 共用值，不在图内（新起一个节点）。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">w3 = lin.weight.clone().detach_().requires_grad_() </span><br><span class="line"></span><br><span class="line">\<span class="comment">## 既不共用值，也不在图内（新起最安全）</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">w2 = lin.weight.clone().requires_grad_() </span><br><span class="line"></span><br><span class="line">w5 = torch.zeros_like(lin.weight).copy_(lin.weight).requires_grad_()</span><br><span class="line"></span><br><span class="line">\<span class="comment">## 不共用值(当backwards时候更新的不是自己的grad），在图内（最好不用）</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">.data.fill_()</span><br><span class="line"></span><br><span class="line">\<span class="comment">## data比较奇妙，和detach一样但是，他可以改变leafvaribale的inplace。一般会报错的东西，这里不会报错。</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="parameter-variable">2. parameter/variable</h1><h2 id="paramter-amp-variable-difference">2.1. paramter &amp; variable difference</h2><ul>
 <li><p><strong>Note</strong>: nn.Parameter is a subclass of nn.Variable so most behaviors are the same.</p>
-<p>The most important difference is that if you use nn.Parameter in a nn.Module's constructor, it will be added into the modules parameters just like nn.Module object do.</p></li>
-<li><p><strong>Example</strong>:</p>
+<p>The most important difference is that if you use nn.Parameter in a nn.Module’s constructor, it will be added into the modules parameters just like nn.Module object do. </p>
+</li>
+</ul>
+<ul>
+<li><p><strong>Example</strong>: </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyModule</span><span class="params">(torch.nn.Module)</span>:</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line"></span><br><span class="line">​    super().__init__()</span><br><span class="line"></span><br><span class="line">​    self.variable = torch.autograd.Variable(torch.Tensor([<span class="number">5</span>]))</span><br><span class="line"></span><br><span class="line">​    self.parameter = torch.nn.Parameter(torch.Tensor([<span class="number">10</span>]))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">net = MyModule()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> param <span class="keyword">in</span> net.parameters():</span><br><span class="line"></span><br><span class="line">  print(param)</span><br></pre></td></tr></table></figure>
 <p>There’re no self.variable, only the self.parameter, and that means if we create optimizer with the net.parameters() as the first params and call optimizer.step(), only the self.parameter will be automatically optimized.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">output:</span><br><span class="line"></span><br><span class="line">Parameter containing:</span><br><span class="line"></span><br><span class="line">tensor([<span class="number">10.</span>], requires_grad=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">output:</span><br><span class="line"></span><br><span class="line">Parameter containing:</span><br><span class="line"></span><br><span class="line">tensor([<span class="number">10.</span>], requires_grad=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<p># module</p>
-<h2 id="method">2.2. method</h2>
-<ul>
+<h1 id="module">3. module</h1><h2 id="method">3.1. method</h2><ul>
 <li><p>对每个module儿子 释放f</p>
-<p>.apply（f）</p></li>
+<p>.apply（f）</p>
+</li>
 </ul>
-<h1 id="nn-f">3. nn &amp; F</h1>
-<h2 id="nn-methods">3.1. nn methods</h2>
-<ol type="1">
+<h1 id="nn-amp-F">4. nn &amp; F</h1><h2 id="nn-methods">4.1. nn methods</h2><ol>
 <li>做pipeline：要么就init里加入属性要么就 Add_module</li>
-<li>batchnorm层
+<li><p>batchnorm层</p>
 <ul>
-<li>nn.BatchNorm1d(x.size()[1]).cuda()
-<ul>
+<li>nn.BatchNorm1d(x.size()[1]).cuda()<ul>
 <li>要用torch.manualseed()否则会随机，而且要在import之后设置</li>
 <li>BatchNorm1d() = 在除了第一个维度做平均( a[0] [0~n]/ n )</li>
-</ul></li>
+</ul>
+</li>
 <li>BatchNorm2d() = 在除了前两个维度做平均( a[0][0] [0~n][0~n]/ n)</li>
-</ul></li>
-<li>lstm模型
+</ul>
+</li>
+<li><p>lstm模型   </p>
 <ul>
-<li>nn.lstm(）
+<li><p>nn.lstm(）</p>
 <ul>
-<li>解释：构建网络模型---输入矩阵特征数input_size、输出矩阵特征数hidden_size、层数num_layers)</li>
-<li><p>输入格式(seq_len, batch, input_size)</p></li>
-<li><p>h0(num_layers * num_directions, batch, hidden_size) c0(num_layers * num_directions, batch, hidden_size)</p></li>
-<li><p>输出数据格式： output(seq_len, batch, hidden_size * num_directions)</p></li>
-<li><p>hn(num_layers * num_directions, batch, hidden_size) cn(num_layers * num_directions, batch, hidden_size)</p></li>
-</ul></li>
-</ul></li>
-<li>conv层
+<li>解释：构建网络模型—-输入矩阵特征数input_size、输出矩阵特征数hidden_size、层数num_layers)</li>
+<li><p>输入格式(seq_len, batch, input_size)</p>
+</li>
+<li><p>h0(num_layers <em> num_directions, batch, hidden_size)<br>c0(num_layers </em> num_directions, batch, hidden_size)</p>
+</li>
+<li><p>输出数据格式：<br>output(seq_len, batch, hidden_size * num_directions)</p>
+</li>
+<li><p>hn(num_layers <em> num_directions, batch, hidden_size)<br>cn(num_layers </em> num_directions, batch, hidden_size)</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>conv层</p>
 <ul>
-<li>nn.conv1d (batch, m, n)
+<li><p>nn.conv1d (batch, m, n) </p>
 <ul>
-<li>解释：对 m 的纵列滑动 kernel_size = 纵列宽度（实际kernel是和input[m,n]相同大小的）</li>
-<li>输出向量 = [kernelsize能划几下, 1] Filters = 输出几个输出向量</li>
+<li>解释：对 m 的纵列滑动<br>kernel_size = 纵列宽度（实际kernel是和input[m,n]相同大小的）</li>
+<li>输出向量 = [kernelsize能划几下, 1]<br>Filters = 输出几个输出向量</li>
 <li>输出 = [filters, 输出向量]</li>
-</ul></li>
-<li>nn.conv2d (batch, c, m, n)
+</ul>
+</li>
+<li><p>nn.conv2d (batch, c, m, n) </p>
 <ul>
-<li>解释：对 m,n 的滑动 kernel_size = [x,x]实际kernel是和input[c,m,n]相同大小的）</li>
-<li>输出向量 = [c，kernelsize能划几下，能划几下] （注意是3层一起加） Filters = 输出几个输出向量</li>
-<li>输出 = [filters，输出向量]</li>
-</ul></li>
-<li>nn.conv3d (batch, m, n, c, d)</li>
-</ul></li>
-<li>把非参数放在state—dict里
+<li>解释：对 m,n 的滑动<br>kernel_size = [x,x]实际kernel是和input[c,m,n]相同大小的）</li>
+<li>输出向量 = [c，kernelsize能划几下，能划几下] （注意是3层一起加）<br>Filters = 输出几个输出向量</li>
+<li>输出 = [filters，输出向量] </li>
+</ul>
+</li>
+<li><p>nn.conv3d (batch, m, n, c, d)</p>
+</li>
+</ul>
+</li>
+<li><p>把非参数放在state—dict里    </p>
 <ul>
-<li>nn.register_buffer
-<ul>
+<li>nn.register_buffer    <ul>
 <li>解释：you want a stateful part of your model that is not a parameter, but you want it in your state_dict</li>
-</ul></li>
-</ul></li>
+</ul>
+</li>
+</ul>
+</li>
 </ol>
-<h2 id="f-methods">3.2. F methods</h2>
-<ol type="1">
-<li>交叉熵
-<ul>
-<li>F.cross_entropy（pred, label)
-<ul>
-<li>解释：pred是[batchsize, labels] Label 是[batchsize] Reduce='mean' 指把batchsize 的loss都average一下</li>
-</ul></li>
-</ul></li>
+<h2 id="F-methods">4.2. F methods</h2><ol>
+<li>交叉熵  <ul>
+<li>F.cross_entropy（pred, label)<ul>
+<li>解释：pred是[batchsize, labels]<br>Label 是[batchsize]<br>Reduce=’mean’ 指把batchsize 的loss都average一下</li>
+</ul>
+</li>
+</ul>
+</li>
 </ol>
-<h2 id="loss-function">3.3. loss function</h2>
-<p>https://blog.csdn.net/zhangxb35/article/details/72464152</p>
-<h1 id="torch-vision">4. torch vision</h1>
-<h2 id="detail">4.1. detail</h2>
-<h3 id="path-of-data">4.1.1. path of data</h3>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> torchvision.models</span><br><span class="line"></span><br><span class="line">~/.torch/models</span><br></pre></td></tr></table></figure>
+<h2 id="loss-function">4.3. loss function</h2><p><a href="https://blog.csdn.net/zhangxb35/article/details/72464152" target="_blank" rel="noopener">https://blog.csdn.net/zhangxb35/article/details/72464152</a> </p>
+<h1 id="torch-vision">5. torch vision</h1><h2 id="detail">5.1. detail</h2><h3 id="path-of-data">5.1.1. path of data</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> torchvision.models</span><br><span class="line"></span><br><span class="line">~/.torch/models</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -880,7 +949,7 @@ xxshape=（2，3），如果是dim=0，相当于一行一行选择（遗憾的�
   <p><span>Title:</span><a href="/2019/11/19/pytorch/">Pytorch</a></p>
   <p><span>Author:</span><a href="/" title=" Benson 的personal blog">Benson</a></p>
   <p><span>PTime:</span>2019/11/19 - 12:11</p>
-  <p><span>LUpdate:</span>2020/02/20 - 19:02</p>
+  <p><span>LUpdate:</span>2020/02/23 - 19:02</p>
   <p><span>Link:</span><a href="/2019/11/19/pytorch/" title="Pytorch">https://steinsgate9.github.io/2019/11/19/pytorch/</a>
     <span class="copy-path"  title="click to copy link"><i class="fa fa-clipboard" data-clipboard-text="https://steinsgate9.github.io/2019/11/19/pytorch/"  aria-label="copy done！"></i></span>
   </p>
@@ -955,8 +1024,8 @@ xxshape=（2，3），如果是dim=0，相当于一行一行选择（遗憾的�
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/19/regression-analysis/" rel="next" title="Regression Analysis">
-                <i class="fa fa-chevron-left"></i> Regression Analysis
+              <a href="/2019/11/19/sampling/" rel="next" title="Sampling Theory">
+                <i class="fa fa-chevron-left"></i> Sampling Theory
               </a>
             
           </div>
@@ -965,8 +1034,8 @@ xxshape=（2，3），如果是dim=0，相当于一行一行选择（遗憾的�
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/19/Math_analysis/" rel="prev" title="Mathematical Analysis">
-                Mathematical Analysis <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/19/python/" rel="prev" title="Python">
+                Python <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -1059,7 +1128,7 @@ xxshape=（2，3），如果是dim=0，相当于一行一行选择（遗憾的�
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1170,7 +1239,7 @@ xxshape=（2，3），如果是dim=0，相当于一行一行选择（遗憾的�
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#tensor"><span class="nav-text">1. tensor</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#init"><span class="nav-text">1.1. init</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#attributes"><span class="nav-text">1.2. attributes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#methods"><span class="nav-text">1.3. methods</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#tensor本身属性最大值等"><span class="nav-text">1.3.1. tensor本身属性（最大值等）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从tensor取东西取某一部分"><span class="nav-text">1.3.2. 从tensor取东西（取某一部分）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tensor自身变化旋转resize等"><span class="nav-text">1.3.3. tensor自身变化（旋转、resize等）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#往tensor填充东西"><span class="nav-text">1.3.4. 往tensor填充东西</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#得到新tensor"><span class="nav-text">1.3.5. 得到新tensor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多个tensor相互作用"><span class="nav-text">1.3.6. 多个tensor相互作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tensorboard相关"><span class="nav-text">1.3.7. tensorboard相关</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#transform"><span class="nav-text">1.4. transform</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gradient"><span class="nav-text">1.5. gradient</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#parametervariable"><span class="nav-text">2. parameter/variable</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#paramter-variable-difference"><span class="nav-text">2.1. paramter &amp; variable difference</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#method"><span class="nav-text">2.2. method</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nn-f"><span class="nav-text">3. nn &amp; F</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#nn-methods"><span class="nav-text">3.1. nn methods</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#f-methods"><span class="nav-text">3.2. F methods</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#loss-function"><span class="nav-text">3.3. loss function</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#torch-vision"><span class="nav-text">4. torch vision</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#detail"><span class="nav-text">4.1. detail</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#path-of-data"><span class="nav-text">4.1.1. path of data</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#tensor"><span class="nav-text">1. tensor</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#init"><span class="nav-text">1.1. init</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#attributes"><span class="nav-text">1.2. attributes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#methods"><span class="nav-text">1.3. methods</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#tensor本身属性（最大值等）"><span class="nav-text">1.3.1. tensor本身属性（最大值等）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从tensor取东西（取某一部分）"><span class="nav-text">1.3.2. 从tensor取东西（取某一部分）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tensor自身变化（旋转、resize等）"><span class="nav-text">1.3.3. tensor自身变化（旋转、resize等）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#往tensor填充东西"><span class="nav-text">1.3.4. 往tensor填充东西</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#得到新tensor"><span class="nav-text">1.3.5. 得到新tensor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多个tensor相互作用"><span class="nav-text">1.3.6. 多个tensor相互作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tensorboard相关"><span class="nav-text">1.3.7. tensorboard相关</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#transform"><span class="nav-text">1.4. transform</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gradient"><span class="nav-text">1.5. gradient</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#parameter-variable"><span class="nav-text">2. parameter/variable</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#paramter-amp-variable-difference"><span class="nav-text">2.1. paramter &amp; variable difference</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#module"><span class="nav-text">3. module</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#method"><span class="nav-text">3.1. method</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nn-amp-F"><span class="nav-text">4. nn &amp; F</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#nn-methods"><span class="nav-text">4.1. nn methods</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#F-methods"><span class="nav-text">4.2. F methods</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#loss-function"><span class="nav-text">4.3. loss function</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#torch-vision"><span class="nav-text">5. torch vision</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#detail"><span class="nav-text">5.1. detail</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#path-of-data"><span class="nav-text">5.1.1. path of data</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
