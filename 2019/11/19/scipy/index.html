@@ -138,7 +138,7 @@
 <meta property="og:site_name" content="BeNsoN">
 <meta property="og:description" content="Scipy notes">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-23T11:38:09.720Z">
+<meta property="og:updated_time" content="2020-02-28T15:26:18.777Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -439,7 +439,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  594
+                  649
                 </span>
               
 
@@ -455,7 +455,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  2
+                  3
                 </span>
               
             </div>
@@ -478,38 +478,42 @@
       
         <p>Scipy notes</p>
 <a id="more"></a>
-<h1 id="Matrix">1. Matrix</h1><h2 id="init">1.1. init</h2><p>1.Coo_matrix<br>sparse.coo_matrix((data, (r,c)), shape=(7,7)) r c 都是list，data也是list 加起来。<br>（适用于三种）</p>
-<p>2.csr_matrix<br>1、创建<br>  1）压缩法很麻烦</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>indptr = np.array([0, 2, 3, 6])<br>indices = np.array([0, 2, 2, 0, 1, 2])<br>data = np.array([1, 2, 3, 4, 5, 6])<br>csr_matrix((data, indices, indptr), shape=(3, 3)).toarray()<br>array([[1, 0, 2],<br> [0, 0, 3],<br> [4, 5, 6]])，</p>
-</blockquote>
-</blockquote>
-</blockquote>
+<h1 id="matrix">1. Matrix</h1>
+<h2 id="init">1.1. init</h2>
+<p>1.Coo_matrix sparse.coo_matrix((data, (r,c)), shape=(7,7)) r c 都是list，data也是list 加起来。 （适用于三种）</p>
+<p>2.csr_matrix 1、创建 1）压缩法很麻烦 &gt;&gt;&gt; indptr = np.array([0, 2, 3, 6]) &gt;&gt;&gt; indices = np.array([0, 2, 2, 0, 1, 2]) &gt;&gt;&gt; data = np.array([1, 2, 3, 4, 5, 6]) &gt;&gt;&gt; csr_matrix((data, indices, indptr), shape=(3, 3)).toarray() &gt;&gt;&gt; array([[1, 0, 2], &gt;&gt;&gt; [0, 0, 3], &gt;&gt;&gt; [4, 5, 6]])，</p>
 <pre><code>2）正常法 csr_matrix(data, row, col)
 
-3）空矩阵法
-</code></pre><p>csr_matrix((M, N), [dtype]))<br>    4）特殊矩阵法<br>eye(m[, n, k, dtype, format])：对角线为1的稀疏矩阵<br>identity(n[, dtype, format])：单位矩阵<br>diags(diagonals[, offsets, shape, format, dtype])：构造对角矩阵（含偏移量）<br>spdiags(data, diags, m, n[, format])：从矩阵中返回含偏移量的对角稀疏矩阵<br>hstack(blocks[, format, dtype]) Stack sparse matrices horizontally (column wise)<br>vstack(blocks[, format, dtype]) Stack sparse matrices vertically (row wise)</p>
-<p>3.CSC_matrix </p>
+3）空矩阵法</code></pre>
+<p>csr_matrix((M, N), [dtype])) 4）特殊矩阵法 eye(m[, n, k, dtype, format])：对角线为1的稀疏矩阵 identity(n[, dtype, format])：单位矩阵 diags(diagonals[, offsets, shape, format, dtype])：构造对角矩阵（含偏移量） spdiags(data, diags, m, n[, format])：从矩阵中返回含偏移量的对角稀疏矩阵 hstack(blocks[, format, dtype]) Stack sparse matrices horizontally (column wise) vstack(blocks[, format, dtype]) Stack sparse matrices vertically (row wise)</p>
+<p>3.CSC_matrix &gt;&gt;&gt; sparse.csc_matrix((3, 4), dtype=np.int8).toarray() &gt;&gt;&gt; array([[0, 0, 0, 0], &gt;&gt;&gt; [0, 0, 0, 0], &gt;&gt;&gt; [0, 0, 0, 0]], dtype=int8)</p>
 <blockquote>
 <blockquote>
 <blockquote>
-<p>sparse.csc_matrix((3, 4), dtype=np.int8).toarray()<br>array([[0, 0, 0, 0],<br> [0, 0, 0, 0],<br> [0, 0, 0, 0]], dtype=int8)</p>
-<p>row = np.array([0, 2, 2, 0, 1, 2])<br>col = np.array([0, 0, 1, 2, 2, 2])<br>data = np.array([1, 2, 3, 4, 5, 6])<br>sparse.csc_matrix((data, (row, col)), shape=(3, 3)).toarray()<br>array([[1, 0, 4],<br> [0, 0, 5],<br> [2, 3, 6]], dtype=int64)</p>
-<p>indptr = np.array([0, 2, 3, 6])<br>indices = np.array([0, 2, 2, 0, 1, 2])<br>data = np.array([1, 2, 3, 4, 5, 6])<br>sparse.csc_matrix((data, indices, indptr), shape=(3, 3)).toarray()<br>array([[1, 0, 4],<br> [0, 0, 5],<br> [2, 3, 6]])</p>
+<p>row = np.array([0, 2, 2, 0, 1, 2]) col = np.array([0, 0, 1, 2, 2, 2]) data = np.array([1, 2, 3, 4, 5, 6]) sparse.csc_matrix((data, (row, col)), shape=(3, 3)).toarray() array([[1, 0, 4], [0, 0, 5], [2, 3, 6]], dtype=int64)</p>
 </blockquote>
 </blockquote>
 </blockquote>
-<h2 id="transform">1.2. transform</h2><p>0、从np.array转入<br>Matrix(dense)</p>
-<p>1、转为np.array<br>test_x.data初始数据格式是int64<br>test_x.data = np.array(test_x.data, dtype=np.float64)<br>.toarray()</p>
-<p>2、转为np.matrix<br>.todense()</p>
-<p>3、转为另一种矩阵<br>Csr_matrix(另一种矩阵)<br>.tocoo()<br>.tocsr()<br>.tocsc()</p>
-<h2 id="methods">1.3. methods</h2><p>1、.get_shape()：返回稀疏矩阵的维度<br>2、.max([axis, out])：返回稀疏矩阵沿着某个轴的最大值<br>3、.reshape(self, shape[, order, copy])：将稀疏矩阵的维度重构<br>4、.diagonal([k])：返回第k个对角元素，但是在我的python3版本中k不起作用。<br>5、.dot(other)：与other矩阵的矩阵乘法</p>
-<p>6、 arcsin()：每个元素进行arcsin运算<br>7、floor()：每个元素进行floor运算<br>8、sqrt()：每个元素进行sqrt运算<br>9、maximum(other)：比较稀疏矩阵与other矩阵的每个元素，返回最大值<br>10、find(A)：返回稀疏矩阵A中的非零元的位置以及数值</p>
-<p>11、<br>issparse(x)：x是否为sparse类型<br>isspmatrix(x)：x是否为sparse类型<br>isspmatrix_csc(x)：x是否为csc_matrix类型<br>isspmatrix_csr(x)：x是否为csr_matrix类型<br>isspmatrix_bsr(x)：x是否为bsr_matrix类型<br>isspmatrix_lil(x)：x是否为lil_matrix类型<br>isspmatrix_dok(x)：x是否为dok_matrix类型<br>isspmatrix_coo(x)：x是否为coo_matrix类型<br>isspmatrix_dia(x)：x是否为dia_matrix类型</p>
-<p>12 .row (coo格式)<br>     .col</p>
-<h1 id="Misc">2. Misc</h1><h1 id="Linalg">3. Linalg</h1>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>indptr = np.array([0, 2, 3, 6]) indices = np.array([0, 2, 2, 0, 1, 2]) data = np.array([1, 2, 3, 4, 5, 6]) sparse.csc_matrix((data, indices, indptr), shape=(3, 3)).toarray() array([[1, 0, 4], [0, 0, 5], [2, 3, 6]])</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="transform">1.2. transform</h2>
+<p>0、从np.array转入 Matrix(dense)</p>
+<p>1、转为np.array test_x.data初始数据格式是int64 test_x.data = np.array(test_x.data, dtype=np.float64) .toarray()</p>
+<p>2、转为np.matrix .todense()</p>
+<p>3、转为另一种矩阵 Csr_matrix(另一种矩阵) .tocoo() .tocsr() .tocsc()</p>
+<h2 id="methods">1.3. methods</h2>
+<p>1、.get_shape()：返回稀疏矩阵的维度 2、.max([axis, out])：返回稀疏矩阵沿着某个轴的最大值 3、.reshape(self, shape[, order, copy])：将稀疏矩阵的维度重构 4、.diagonal([k])：返回第k个对角元素，但是在我的python3版本中k不起作用。 5、.dot(other)：与other矩阵的矩阵乘法</p>
+<p>6、 arcsin()：每个元素进行arcsin运算 7、floor()：每个元素进行floor运算 8、sqrt()：每个元素进行sqrt运算 9、maximum(other)：比较稀疏矩阵与other矩阵的每个元素，返回最大值 10、find(A)：返回稀疏矩阵A中的非零元的位置以及数值</p>
+<p>11、 issparse(x)：x是否为sparse类型 isspmatrix(x)：x是否为sparse类型 isspmatrix_csc(x)：x是否为csc_matrix类型 isspmatrix_csr(x)：x是否为csr_matrix类型 isspmatrix_bsr(x)：x是否为bsr_matrix类型 isspmatrix_lil(x)：x是否为lil_matrix类型 isspmatrix_dok(x)：x是否为dok_matrix类型 isspmatrix_coo(x)：x是否为coo_matrix类型 isspmatrix_dia(x)：x是否为dia_matrix类型</p>
+<p>12 .row (coo格式) .col</p>
+<h1 id="misc">2. Misc</h1>
+<h1 id="linalg">3. Linalg</h1>
+
       
     </div>
     
@@ -528,7 +532,7 @@
   <p><span>Title:</span><a href="/2019/11/19/scipy/">Numpy</a></p>
   <p><span>Author:</span><a href="/" title=" Benson 的personal blog">Benson</a></p>
   <p><span>PTime:</span>2019/11/19 - 12:11</p>
-  <p><span>LUpdate:</span>2020/02/23 - 19:02</p>
+  <p><span>LUpdate:</span>2020/02/28 - 23:02</p>
   <p><span>Link:</span><a href="/2019/11/19/scipy/" title="Numpy">https://steinsgate9.github.io/2019/11/19/scipy/</a>
     <span class="copy-path"  title="click to copy link"><i class="fa fa-clipboard" data-clipboard-text="https://steinsgate9.github.io/2019/11/19/scipy/"  aria-label="copy done！"></i></span>
   </p>
@@ -603,8 +607,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/19/regression-analysis/" rel="next" title="Regression Analysis">
-                <i class="fa fa-chevron-left"></i> Regression Analysis
+              <a href="/2019/11/19/stochastic-process/" rel="next" title="Stochastic Process">
+                <i class="fa fa-chevron-left"></i> Stochastic Process
               </a>
             
           </div>
@@ -613,8 +617,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/19/sampling/" rel="prev" title="Sampling Theory">
-                Sampling Theory <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/19/regression-analysis/" rel="prev" title="Regression Analysis">
+                Regression Analysis <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -818,7 +822,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Matrix"><span class="nav-text">1. Matrix</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#init"><span class="nav-text">1.1. init</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#transform"><span class="nav-text">1.2. transform</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#methods"><span class="nav-text">1.3. methods</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Misc"><span class="nav-text">2. Misc</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Linalg"><span class="nav-text">3. Linalg</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#matrix"><span class="nav-text">1. Matrix</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#init"><span class="nav-text">1.1. init</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#transform"><span class="nav-text">1.2. transform</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#methods"><span class="nav-text">1.3. methods</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#misc"><span class="nav-text">2. Misc</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#linalg"><span class="nav-text">3. Linalg</span></a></li></ol></div>
             
 
           </div>

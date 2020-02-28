@@ -138,7 +138,7 @@
 <meta property="og:site_name" content="BeNsoN">
 <meta property="og:description" content="Python notes">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-23T11:38:09.746Z">
+<meta property="og:updated_time" content="2020-02-28T15:26:18.789Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -439,7 +439,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  499
+                  505
                 </span>
               
 
@@ -455,7 +455,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  1
+                  2
                 </span>
               
             </div>
@@ -478,67 +478,71 @@
       
         <p>Python notes</p>
 <a id="more"></a>
-<h1 id="data-structures">1. data structures</h1><h1 id="parameter-passing">2. parameter passing</h1><ul>
-<li><p>修改传进的可变参数时，会对外部对象产生影响，修改不可变参数时则不会影响。</p>
-</li>
-<li><p>参数默认值是在函数定义时确定，所以一定要注意不要设置为一个可变对象，如果是可变的话，每次都会默认使用它。</p>
-</li>
-</ul>
-<h1 id="useful-wheels">3. useful wheels</h1><h2 id="OS">3.1. OS</h2><h3 id="methods">3.1.1. methods</h3><ol>
-<li>最外层模块的地址<ul>
-<li>os.getcwd() <ul>
-<li>解释：a调用b，在a中运行得到的是a的地址。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>最后运行模块的地址 </p>
+<h1 id="data-structures">1. data structures</h1>
+<h1 id="parameter-passing">2. parameter passing</h1>
 <ul>
-<li>os.path.realpath(<strong>file</strong>) = <ul>
+<li><p>修改传进的可变参数时，会对外部对象产生影响，修改不可变参数时则不会影响。</p></li>
+<li><p>参数默认值是在函数定义时确定，所以一定要注意不要设置为一个可变对象，如果是可变的话，每次都会默认使用它。</p></li>
+</ul>
+<h1 id="useful-wheels">3. useful wheels</h1>
+<h2 id="os">3.1. OS</h2>
+<h3 id="methods">3.1.1. methods</h3>
+<ol type="1">
+<li>最外层模块的地址
+<ul>
+<li>os.getcwd()
+<ul>
+<li>解释：a调用b，在a中运行得到的是a的地址。</li>
+</ul></li>
+</ul></li>
+<li>最后运行模块的地址
+<ul>
+<li>os.path.realpath(<strong>file</strong>) =
+<ul>
 <li>解释：a调用b，在a中巡行得到的是b的地址</li>
-<li>实际项目：sys.path.append(‘%s/../s2v_lib’%os.path.dirname(os.path.realpath(<strong>file</strong>)))</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>最后运行模块的地址前一项</p>
+<li>实际项目：sys.path.append('%s/../s2v_lib'%os.path.dirname(os.path.realpath(<strong>file</strong>)))</li>
+</ul></li>
+</ul></li>
+<li>最后运行模块的地址前一项
 <ul>
 <li>os.path.dirname = xx</li>
-</ul>
-</li>
+</ul></li>
 <li>地址是调用main.py所名下的地址</li>
 </ol>
-<h2 id="PIL">3.2. PIL</h2><h3 id="shape">3.2.1. shape</h3><p>read: 3 224 224 rgb</p>
-<p>plt.imshow : 224 224 3 </p>
-<p>pil from array 224 224 3 </p>
-<h2 id="matplotlib">3.3. matplotlib</h2><ol>
-<li>起到切换作用<ul>
-<li>plt.figure(1) <ul>
-<li>切换到figure 1子图  </li>
-</ul>
-</li>
-<li>plt.subplot(212)<ul>
-<li>仍旧是当前图</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>标题</p>
+<h2 id="pil">3.2. PIL</h2>
+<h3 id="shape">3.2.1. shape</h3>
+<p>read: 3 224 224 rgb</p>
+<p>plt.imshow : 224 224 3</p>
+<p>pil from array 224 224 3</p>
+<h2 id="matplotlib">3.3. matplotlib</h2>
+<ol type="1">
+<li>起到切换作用
 <ul>
-<li><p>plt.title(‘z=xy’)</p>
-<p>缺省资源<br>缺省是指无主动指明的情况下，系统自动提供的资源。</p>
+<li>plt.figure(1)
+<ul>
+<li>切换到figure 1子图<br>
 </li>
+</ul></li>
+<li>plt.subplot(212)
+<ul>
+<li>仍旧是当前图</li>
+</ul></li>
+</ul></li>
+<li>标题
+<ul>
+<li>plt.title('z=xy')</li>
 </ul>
-</li>
+缺省资源 缺省是指无主动指明的情况下，系统自动提供的资源。</li>
 </ol>
 <p>画图板的缺省是：figure(1)</p>
 <p>图形区的缺省是：subplot(111)</p>
-<p>就近原则<br>就近原则：在每个函数操作时对上一层资源的依赖遵守最近原则，举例如下：</p>
+<p>就近原则 就近原则：在每个函数操作时对上一层资源的依赖遵守最近原则，举例如下：</p>
 <p>subplot()作用在最近使用的画图板上，有可能是缺省的画图板figure(1)。</p>
 <p>axes()作用在最近使用的画图板上，有可能是缺省的画图板figure(1)。</p>
 <p>axis()作用在最近使用的图形区上，可能来自subplot、axes等</p>
 <p>plot()作用在最近使用的图形区上，可能来自subplot、axes等</p>
-<h2 id="setuptools">3.4. setuptools</h2><p>setuptools是Python distutils增强版的集合，它可以帮助我们更简单的创建和分发Python包，尤其是拥有依赖关系的。用户在使用setuptools创建的包时，并不需要已安装setuptools，只要一个启动模块即可。<br>简单来说，打包一个package。</p>
+<h2 id="setuptools">3.4. setuptools</h2>
+<p>setuptools是Python distutils增强版的集合，它可以帮助我们更简单的创建和分发Python包，尤其是拥有依赖关系的。用户在使用setuptools创建的包时，并不需要已安装setuptools，只要一个启动模块即可。 简单来说，打包一个package。</p>
 
       
     </div>
@@ -558,7 +562,7 @@
   <p><span>Title:</span><a href="/2019/11/19/python/">Python</a></p>
   <p><span>Author:</span><a href="/" title=" Benson 的personal blog">Benson</a></p>
   <p><span>PTime:</span>2019/11/19 - 12:11</p>
-  <p><span>LUpdate:</span>2020/02/23 - 19:02</p>
+  <p><span>LUpdate:</span>2020/02/28 - 23:02</p>
   <p><span>Link:</span><a href="/2019/11/19/python/" title="Python">https://steinsgate9.github.io/2019/11/19/python/</a>
     <span class="copy-path"  title="click to copy link"><i class="fa fa-clipboard" data-clipboard-text="https://steinsgate9.github.io/2019/11/19/python/"  aria-label="copy done！"></i></span>
   </p>
@@ -848,7 +852,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#data-structures"><span class="nav-text">1. data structures</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#parameter-passing"><span class="nav-text">2. parameter passing</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#useful-wheels"><span class="nav-text">3. useful wheels</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#OS"><span class="nav-text">3.1. OS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#methods"><span class="nav-text">3.1.1. methods</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PIL"><span class="nav-text">3.2. PIL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#shape"><span class="nav-text">3.2.1. shape</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#matplotlib"><span class="nav-text">3.3. matplotlib</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#setuptools"><span class="nav-text">3.4. setuptools</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#data-structures"><span class="nav-text">1. data structures</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#parameter-passing"><span class="nav-text">2. parameter passing</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#useful-wheels"><span class="nav-text">3. useful wheels</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#os"><span class="nav-text">3.1. OS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#methods"><span class="nav-text">3.1.1. methods</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pil"><span class="nav-text">3.2. PIL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#shape"><span class="nav-text">3.2.1. shape</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#matplotlib"><span class="nav-text">3.3. matplotlib</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#setuptools"><span class="nav-text">3.4. setuptools</span></a></li></ol></li></ol></div>
             
 
           </div>

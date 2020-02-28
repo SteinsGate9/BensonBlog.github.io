@@ -247,7 +247,7 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;database&#x2F;image-20200219154450166.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;database&#x2F;image-20200219160020902.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;database&#x2F;image-20200219160036456.png">
-<meta property="og:updated_time" content="2020-02-23T11:38:09.882Z">
+<meta property="og:updated_time" content="2020-02-28T15:26:18.841Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;database&#x2F;image-20200217165102663.png">
 
@@ -588,48 +588,45 @@
       
         <p>Database System course notes.</p>
 <a id="more"></a>
-<h1 id="relation-model">1. relation model</h1><h2 id="schema-amp-instance">1.1. schema &amp; instance</h2><ul>
-<li><p><strong>Def</strong>: dabase table(instance)</p>
-<p><img src="/2019/11/19/database/image-20200217165102663.png" alt></p>
+<h1 id="relation-model">1. relation model</h1>
+<h2 id="schema-instance">1.1. schema &amp; instance</h2>
 <ul>
-<li><p><strong>Def</strong>: relation instance </p>
-<p><img src="/2019/11/19/database/image-20200217165159080.png" alt></p>
-</li>
-<li><p><strong>Def</strong>: domain is range of attribute</p>
-</li>
-</ul>
-</li>
-<li><p><strong>Def</strong>: database schema </p>
-<p><img src="/2019/11/19/database/image-20200217165447557.png" alt></p>
+<li><p><strong>Def</strong>: dabase table(instance)</p>
+<p><img src="/2019/11/19/database/image-20200217165102663.png"></p>
+<ul>
+<li><p><strong>Def</strong>: relation instance</p>
+<p><img src="/2019/11/19/database/image-20200217165159080.png"></p></li>
+<li><p><strong>Def</strong>: domain is range of attribute</p></li>
+</ul></li>
+<li><p><strong>Def</strong>: database schema</p>
+<p><img src="/2019/11/19/database/image-20200217165447557.png"></p>
 <ul>
 <li><p><strong>Def</strong>: superkey (is a set)</p>
-<p><img src="/2019/11/19/database/image-20200217165733925.png" alt></p>
-</li>
+<p><img src="/2019/11/19/database/image-20200217165733925.png"></p></li>
 <li><p><strong>Def</strong>: candidate key (is a set)</p>
-<p><img src="/2019/11/19/database/image-20200217165811029.png" alt></p>
-</li>
+<p><img src="/2019/11/19/database/image-20200217165811029.png"></p></li>
 <li><p><strong>Def</strong>：primary key ()</p>
-<p><img src="/2019/11/19/database/image-20200217171114422.png" alt></p>
+<p><img src="/2019/11/19/database/image-20200217171114422.png"></p>
 <ul>
-<li><strong>Note</strong>: pk $\in$ candidate $\in$ super</li>
+<li><strong>Note</strong>: pk <span class="math inline">\(\in\)</span> candidate <span class="math inline">\(\in\)</span> super</li>
+</ul></li>
+<li><p><strong>Def</strong>: foreign key</p>
+<p><img src="/2019/11/19/database/image-20200217171231465.png"></p></li>
+</ul></li>
 </ul>
-</li>
-<li><p><strong>Def</strong>: foreign key </p>
-<p><img src="/2019/11/19/database/image-20200217171231465.png" alt></p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="schema-diagram">1.2. schema diagram</h2><ul>
-<li><p><strong>Def</strong>: schema diagram </p>
-<p><img src="/2019/11/19/database/image-20200217171631522.png" alt></p>
-</li>
-</ul>
-<h1 id="SQL">2. SQL</h1><h2 id="basic-structure">2.1. basic structure</h2><h3 id="create">2.1.1. create</h3><ul>
-<li><p><strong>Def</strong>: create table </p>
-<p>CREATE TABLE Persons<br>(<br>PersonID int,<br>LastName varchar(255), <em>constraint_name</em><br>FirstName varchar(255), <em>constraint_name</em><br>Address varchar(255), <em>constraint_name</em><br>City varchar(255) <em>constraint_name</em><br>); </p>
+<h2 id="schema-diagram">1.2. schema diagram</h2>
 <ul>
-<li><p><strong>Note</strong>: constraint </p>
+<li><p><strong>Def</strong>: schema diagram</p>
+<p><img src="/2019/11/19/database/image-20200217171631522.png"></p></li>
+</ul>
+<h1 id="sql">2. SQL</h1>
+<h2 id="basic-structure">2.1. basic structure</h2>
+<h3 id="create">2.1.1. create</h3>
+<ul>
+<li><p><strong>Def</strong>: create table</p>
+<p>CREATE TABLE Persons ( PersonID int, LastName varchar(255), <em>constraint_name</em> FirstName varchar(255), <em>constraint_name</em> Address varchar(255), <em>constraint_name</em> City varchar(255) <em>constraint_name</em> );</p>
+<ul>
+<li><p><strong>Note</strong>: constraint</p>
 <p>在 SQL 中，我们有如下约束：</p>
 <ul>
 <li><strong>NOT NULL</strong> - 指示某列不能存储 NULL 值。</li>
@@ -638,73 +635,67 @@
 <li><strong>FOREIGN KEY</strong> - 保证一个表中的数据匹配另一个表中的值的参照完整性。</li>
 <li><strong>CHECK</strong> - 保证列中的值符合指定的条件。</li>
 <li><strong>DEFAULT</strong> - 规定没有给列赋值时的默认值。</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Def</strong>: create index</p>
+<p><strong>CREATE</strong> <strong>UNIQUE</strong> <strong>INDEX</strong> index_name <strong>ON</strong> table_name (column_name)</p></li>
 </ul>
-</li>
-</ul>
-</li>
-<li><p><strong>Def</strong>: create index </p>
-<p><strong>CREATE</strong> <strong>UNIQUE</strong> <strong>INDEX</strong> index_name<br><strong>ON</strong> table_name (column_name)</p>
-</li>
-</ul>
-<h3 id="select">2.1.2. select</h3><ul>
-<li><p><strong>Def</strong>: </p>
+<h3 id="select">2.1.2. select</h3>
+<ul>
+<li><p><strong>Def</strong>:</p>
 <p><strong>SELECT</strong> [<strong>DISTINCT</strong>/<strong>ALL</strong>] <em>column_name</em> <strong>AS</strong> <em>alias_name</em>,<em>column_name</em></p>
 <p><strong>FROM</strong> <em>table_name</em></p>
 <p>[<strong>WHERE</strong>] <em>column_name operator(</em></p>
-<p>​        <strong>BETWEEN</strong> <em>value1</em> AND <em>value2</em>/</p>
-<p>​        <strong>LIKE</strong> <em>pattern</em>/</p>
-<p>​        <strong>IN</strong> (<em>value1</em>,<em>value2</em>,…))  [<strong>AND</strong>/<strong>OR</strong>]</p>
-<p>(when aggregate) [<strong>GROUP</strong> <strong>BY</strong>] column_name; </p>
+<p>​ <strong>BETWEEN</strong> <em>value1</em> AND <em>value2</em>/</p>
+<p>​ <strong>LIKE</strong> <em>pattern</em>/</p>
+<p>​ <strong>IN</strong> (<em>value1</em>,<em>value2</em>,...)) [<strong>AND</strong>/<strong>OR</strong>]</p>
+<p>(when aggregate) [<strong>GROUP</strong> <strong>BY</strong>] column_name;</p>
 <p>(when group by and deal with aggregated attributes) [<strong>HAVING</strong>] SUM(access_log.count) &gt; 200;</p>
 <p>[<strong>ORDER BY</strong>] <em>column_name</em>,<em>column_name</em> ASC|DESC;</p>
 <p>[<strong>LIMIT</strong>] 2;</p>
 <p>[<strong>INTO</strong>] <em>newtable</em> [IN <em>externaldb</em>]</p>
 <ul>
-<li><p><strong>Note</strong>: all / some </p>
-</li>
-<li><p><strong>Note</strong>: exist </p>
-<p>一种通俗的可以理解为：将外查询表的每一行，代入内查询作为检验，如果内查询返回的结果取非空值，则EXISTS子句返回TRUE，这一行行可作为外查询的结果行，否则不能作为结果。<strong>结论:exists()适合B表比A表数据大的情况</strong>. <strong>当A表数据与B表数据一样大时,in与exists效率差不多,可任选一个使用.</strong></p>
-</li>
-<li><p><strong>Note</strong>: unique s</p>
-</li>
+<li><p><strong>Note</strong>: all / some</p></li>
+<li><p><strong>Note</strong>: exist</p>
+<p>一种通俗的可以理解为：将外查询表的每一行，代入内查询作为检验，如果内查询返回的结果取非空值，则EXISTS子句返回TRUE，这一行行可作为外查询的结果行，否则不能作为结果。<strong>结论:exists()适合B表比A表数据大的情况</strong>. <strong>当A表数据与B表数据一样大时,in与exists效率差不多,可任选一个使用.</strong></p></li>
+<li><p><strong>Note</strong>: unique s</p></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="insert">2.1.3. insert</h3><ul>
-<li><p><strong>Def</strong>:</p>
-<p><strong>INSERT INTO</strong> <em>table_name</em> (<em>column1</em>,<em>column2</em>,<em>column3</em>,…)<br><strong>VALUES</strong> (<em>value1</em>,<em>value2</em>,<em>value3</em>,…);</p>
-</li>
-</ul>
-<h3 id="update">2.1.4. update</h3><ul>
-<li><p><strong>Def</strong>: </p>
-<p><strong>UPDATE</strong> <em>table_name</em><br><strong>SET</strong> <em>column1</em>=<em>value1</em>,<em>column2</em>=<em>value2</em>,…<br><strong>WHERE</strong> <em>some_column</em>=<em>some_value</em> [<strong>AND</strong>/<strong>OR</strong>]</p>
-</li>
-</ul>
-<h3 id="delete">2.1.5. delete</h3><ul>
-<li><p><strong>Def</strong>: </p>
-<p><strong>DELETE FROM</strong> <em>table_name</em><br><strong>WHERE</strong> <em>some_column</em>=<em>some_value</em> [<strong>AND</strong>/<strong>OR</strong>]</p>
-</li>
-</ul>
-<h3 id="join">2.1.6. join</h3><ul>
-<li><p><strong>Def</strong>: join </p>
-<p>[<strong>INNER</strong>] JOIN access_log<br><strong>ON</strong> Websites.id=access_log.site_id;</p>
+<h3 id="insert">2.1.3. insert</h3>
 <ul>
-<li><p><strong>Note</strong>: </p>
-<p>要注意，<strong>在执行完join  on之后就会形成一张临时的中间表，</strong>然后针对临时表在进行where筛选、之后分组、排序、分页等操作，这样就<strong>将连表查询条件和数据过滤条件严格分开</strong>，不可以将连表查询条件写在where子句中，以下内容为其他博客通用模板，确实简单明了易懂。inner join = where</p>
-<p><img src="/2019/11/19/database/image-20200217175125085.png" alt></p>
-</li>
+<li><p><strong>Def</strong>:</p>
+<p><strong>INSERT INTO</strong> <em>table_name</em> (<em>column1</em>,<em>column2</em>,<em>column3</em>,...) <strong>VALUES</strong> (<em>value1</em>,<em>value2</em>,<em>value3</em>,...);</p></li>
 </ul>
-</li>
+<h3 id="update">2.1.4. update</h3>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<p><strong>UPDATE</strong> <em>table_name</em> <strong>SET</strong> <em>column1</em>=<em>value1</em>,<em>column2</em>=<em>value2</em>,... <strong>WHERE</strong> <em>some_column</em>=<em>some_value</em> [<strong>AND</strong>/<strong>OR</strong>]</p></li>
 </ul>
-<h3 id="alter">2.1.7. alter</h3><ul>
-<li><p><strong>Def</strong>: </p>
+<h3 id="delete">2.1.5. delete</h3>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<p><strong>DELETE FROM</strong> <em>table_name</em> <strong>WHERE</strong> <em>some_column</em>=<em>some_value</em> [<strong>AND</strong>/<strong>OR</strong>]</p></li>
+</ul>
+<h3 id="join">2.1.6. join</h3>
+<ul>
+<li><p><strong>Def</strong>: join</p>
+<p>[<strong>INNER</strong>] JOIN access_log <strong>ON</strong> Websites.id=access_log.site_id;</p>
+<ul>
+<li><p><strong>Note</strong>:</p>
+<p>要注意，<strong>在执行完join on之后就会形成一张临时的中间表，</strong>然后针对临时表在进行where筛选、之后分组、排序、分页等操作，这样就<strong>将连表查询条件和数据过滤条件严格分开</strong>，不可以将连表查询条件写在where子句中，以下内容为其他博客通用模板，确实简单明了易懂。inner join = where</p>
+<p><img src="/2019/11/19/database/image-20200217175125085.png"></p></li>
+</ul></li>
+</ul>
+<h3 id="alter">2.1.7. alter</h3>
+<ul>
+<li><p><strong>Def</strong>:</p>
 <p><strong>ALTER</strong> <strong>TABLE</strong> Persons</p>
 <p><strong>ADD</strong> DateOfBirth date(type)</p>
-<p><strong>DROP</strong> COLUMN DateOfBirth</p>
-</li>
+<p><strong>DROP</strong> COLUMN DateOfBirth</p></li>
 </ul>
-<h3 id="functions">2.1.8. functions</h3><ul>
-<li><p><strong>Def</strong>: aggregate   函数计算从列中取得的值，返回一个单一的值。</p>
+<h3 id="functions">2.1.8. functions</h3>
+<ul>
+<li><strong>Def</strong>: aggregate 函数计算从列中取得的值，返回一个单一的值。
 <ul>
 <li>AVG() - 返回平均值</li>
 <li>COUNT() - 返回行数</li>
@@ -713,9 +704,8 @@
 <li>MAX() - 返回最大值</li>
 <li>MIN() - 返回最小值</li>
 <li>SUM() - 返回总和</li>
-</ul>
-</li>
-<li><p><strong>Def</strong>: SQL Scalar 函数基于输入值，返回一个单一的值。</p>
+</ul></li>
+<li><strong>Def</strong>: SQL Scalar 函数基于输入值，返回一个单一的值。
 <ul>
 <li>UCASE() - 将某个字段转换为大写</li>
 <li>LCASE() - 将某个字段转换为小写</li>
@@ -725,390 +715,321 @@
 <li>ROUND() - 对某个数值字段进行指定小数位数的四舍五入</li>
 <li>NOW() - 返回当前的系统日期和时间</li>
 <li>FORMAT() - 格式化某个字段的显示方式</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h2 id="transaction">2.2. transaction</h2><ul>
-<li><p><strong>Def</strong>: </p>
-<p><img src="/2019/11/19/database/image-20200217212152295.png" alt></p>
-</li>
-</ul>
-<h2 id="function">2.3. function</h2><h2 id="trigger">2.4. trigger</h2><h2 id="algebra">2.5. algebra</h2><h1 id="database-design">3. database design</h1><h2 id="E-R">3.1. E-R</h2><h3 id="entity">3.1.1. entity</h3><ul>
-<li><p><strong>Def</strong>: entity </p>
-<p><img src="/2019/11/19/database/image-20200217213958664.png" alt></p>
+<h2 id="transaction">2.2. transaction</h2>
 <ul>
-<li><p><strong>Def</strong>: </p>
-<p><img src="/2019/11/19/database/image-20200217214013748.png" alt></p>
-</li>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200217212152295.png"></p></li>
 </ul>
-</li>
-</ul>
-<h3 id="relationship">3.1.2. relationship</h3><ul>
-<li><p><strong>Def</strong>: relationship </p>
-<p><img src="/2019/11/19/database/image-20200217214027897.png" alt></p>
-<p><img src="/2019/11/19/database/image-20200217214111840.png" alt></p>
+<h2 id="function">2.3. function</h2>
+<h2 id="trigger">2.4. trigger</h2>
+<p>## algebra</p>
+<h1 id="database-design">3. database design</h1>
+<h2 id="e-r">3.1. E-R</h2>
+<h3 id="entity">3.1.1. entity</h3>
 <ul>
-<li><p><strong>Def</strong>: </p>
-<p><img src="/2019/11/19/database/image-20200217214159900.png" alt></p>
-</li>
-<li><p><strong>Def</strong>: mapping cardinality </p>
-<p><img src="/2019/11/19/database/image-20200217215319592.png" alt></p>
+<li><p><strong>Def</strong>: entity</p>
+<p><img src="/2019/11/19/database/image-20200217213958664.png"></p>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200217214013748.png"></p></li>
+</ul></li>
+</ul>
+<h3 id="relationship">3.1.2. relationship</h3>
+<ul>
+<li><p><strong>Def</strong>: relationship</p>
+<p><img src="/2019/11/19/database/image-20200217214027897.png"></p>
+<p><img src="/2019/11/19/database/image-20200217214111840.png"></p>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200217214159900.png"></p></li>
+<li><p><strong>Def</strong>: mapping cardinality</p>
+<p><img src="/2019/11/19/database/image-20200217215319592.png"></p>
 <ul>
 <li><p><strong>Note</strong> :</p>
-<p><img src="/2019/11/19/database/image-20200217215347214.png" alt></p>
-</li>
+<p><img src="/2019/11/19/database/image-20200217215347214.png"></p></li>
+</ul></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="attributes">3.1.3. attributes</h3><ul>
-<li><p><strong>Def</strong>: </p>
-<p><img src="/2019/11/19/database/image-20200217214236264.png" alt></p>
+<h3 id="attributes">3.1.3. attributes</h3>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200217214236264.png"></p>
 <ul>
 <li><p><strong>Note</strong>:</p>
-<p><img src="/2019/11/19/database/image-20200217214256099.png" alt></p>
-</li>
+<p><img src="/2019/11/19/database/image-20200217214256099.png"></p></li>
 </ul>
-</li>
+<p><img src="/2019/11/19/database/image-20200217214310186.png"></p>
+<p><img src="/2019/11/19/database/image-20200217214322855.png"></p></li>
 </ul>
-<p>  <img src="/2019/11/19/database/image-20200217214310186.png" alt></p>
-<p>  <img src="/2019/11/19/database/image-20200217214322855.png" alt></p>
-<h3 id="E-R-map">3.1.4. E-R map</h3><ul>
-<li><p><strong>Def</strong>: </p>
-<p><img src="/2019/11/19/database/image-20200217215813739.png" alt></p>
-<p><img src="/2019/11/19/database/image-20200217215834518.png" alt></p>
-<p><img src="/2019/11/19/database/image-20200217215849282.png" alt></p>
-</li>
-<li><p><strong>Def</strong>; </p>
-<p><img src="/2019/11/19/database/image-20200217222556466.png" alt></p>
+<h3 id="e-r-map">3.1.4. E-R map</h3>
 <ul>
-<li><p><strong>Qua</strong>; </p>
-<p><img src="/2019/11/19/database/image-20200217222608776.png" alt></p>
-</li>
-<li><p><strong>Qua</strong>: </p>
-<p><img src="/2019/11/19/database/image-20200217223248278.png" alt></p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p><strong>Note</strong>: </p>
-<p><img src="/2019/11/19/database/image-20200217222858691.png" alt></p>
-</li>
-</ul>
-<h3 id="relation-model-amp-E-R-model">3.1.5. relation model &amp; E-R model</h3><h4 id="simple-a-amp-strong-e">3.1.5.1. simple_a &amp; strong_e</h4><ul>
-<li><p><strong>Def</strong>: </p>
-<p><img src="/2019/11/19/database/image-20200218132212801.png" alt></p>
-</li>
-</ul>
-<h4 id="multi-a-amp-string-a">3.1.5.2. multi_a &amp; string_a</h4><ul>
 <li><p><strong>Def</strong>:</p>
-<p><img src="/2019/11/19/database/image-20200218133129421.png" alt></p>
-</li>
+<p><img src="/2019/11/19/database/image-20200217215813739.png"></p>
+<p><img src="/2019/11/19/database/image-20200217215834518.png"></p>
+<p><img src="/2019/11/19/database/image-20200217215849282.png"></p></li>
+<li><p><strong>Def</strong>;</p>
+<p><img src="/2019/11/19/database/image-20200217222556466.png"></p>
+<ul>
+<li><p><strong>Qua</strong>;</p>
+<p><img src="/2019/11/19/database/image-20200217222608776.png"></p></li>
+<li><p><strong>Qua</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200217223248278.png"></p></li>
+<li><p><strong>Note</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200217222858691.png"></p></li>
+</ul></li>
+</ul>
+<h3 id="relation-model-e-r-model">3.1.5. relation model &amp; E-R model</h3>
+<h4 id="simple_a-strong_e">3.1.5.1. simple_a &amp; strong_e</h4>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200218132212801.png"></p></li>
+</ul>
+<h4 id="multi_a-string_a">3.1.5.2. multi_a &amp; string_a</h4>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200218133129421.png"></p></li>
 <li><p><strong>Def</strong>: with multi_v , create another relationship</p>
-<p><img src="/2019/11/19/database/image-20200218133150087.png" alt></p>
-</li>
+<p><img src="/2019/11/19/database/image-20200218133150087.png"></p></li>
 </ul>
-<h4 id="weak-entity">3.1.5.3. weak entity</h4><ul>
-<li><p><strong>Def</strong>: </p>
-<p><img src="/2019/11/19/database/image-20200218133957560.png" alt></p>
-</li>
+<h4 id="weak-entity">3.1.5.3. weak entity</h4>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200218133957560.png"></p></li>
 </ul>
-<h4 id="relationship-1">3.1.5.4. relationship</h4><ul>
-<li><p><strong>Def</strong>: </p>
-<p><img src="/2019/11/19/database/image-20200218142603238.png" alt></p>
-<p><img src="/2019/11/19/database/image-20200218142614233.png" alt></p>
+<h4 id="relationship-1">3.1.5.4. relationship</h4>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200218142603238.png"></p>
+<p><img src="/2019/11/19/database/image-20200218142614233.png"></p>
 <ul>
 <li><p><strong>Note</strong>：weak relationship is not necessary</p>
-<p><img src="/2019/11/19/database/image-20200218145504299.png" alt></p>
-</li>
-<li><p><strong>Note</strong>:  combination </p>
-<p><img src="/2019/11/19/database/image-20200218145607090.png" alt></p>
-</li>
+<p><img src="/2019/11/19/database/image-20200218145504299.png"></p></li>
+<li><p><strong>Note</strong>: combination</p>
+<p><img src="/2019/11/19/database/image-20200218145607090.png"></p></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h2 id="decomposition">3.2. decomposition</h2><h3 id="why">3.2.1. why?</h3><ul>
-<li><p><strong>Def</strong> : failed decomposition </p>
-<p><img src="/2019/11/19/database/image-20200218151345408.png" alt></p>
-</li>
-</ul>
-<h3 id="1nf">3.2.2. 1nf</h3><ul>
-<li><p><strong>Def</strong>: </p>
-<p><img src="/2019/11/19/database/image-20200218151614210.png" alt></p>
+<h2 id="decomposition">3.2. decomposition</h2>
+<h3 id="why">3.2.1. why?</h3>
 <ul>
-<li><p><strong>Note</strong>: </p>
-<p><img src="/2019/11/19/database/image-20200218151745309.png" alt></p>
-<p><img src="/2019/11/19/database/image-20200218172117867.png" alt></p>
-</li>
+<li><p><strong>Def</strong> : failed decomposition</p>
+<p><img src="/2019/11/19/database/image-20200218151345408.png"></p></li>
 </ul>
-</li>
-</ul>
-<h3 id="dependency">3.2.3. dependency</h3><ul>
-<li><p><strong>Def</strong>: candidate key</p>
+<h3 id="nf">3.2.2. 1nf</h3>
 <ul>
-<li><p><strong>Qua</strong>: how to get </p>
-<p><img src="/2019/11/19/database/image-20200218204520914.png" alt></p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p><strong>Def</strong>: dependency </p>
-<p><img src="/2019/11/19/database/image-20200218152615961.png" alt></p>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200218151614210.png"></p>
 <ul>
 <li><p><strong>Note</strong>:</p>
-<p><img src="/2019/11/19/database/image-20200218161045190.png" alt></p>
-</li>
+<p><img src="/2019/11/19/database/image-20200218151745309.png"></p>
+<p><img src="/2019/11/19/database/image-20200218172117867.png"></p></li>
+</ul></li>
 </ul>
-</li>
-</ul>
+<h3 id="dependency">3.2.3. dependency</h3>
 <ul>
-<li><p><strong>Def</strong>: partial </p>
-<p><img src="/2019/11/19/database/image-20200218171502877.png" alt></p>
-</li>
-</ul>
+<li><p><strong>Def</strong>: candidate key</p>
 <ul>
-<li><p><strong>Def</strong>: extraneous </p>
-<p><img src="/2019/11/19/database/image-20200218181417199.png" alt></p>
+<li><p><strong>Qua</strong>: how to get</p>
+<p><img src="/2019/11/19/database/image-20200218204520914.png"></p></li>
+</ul></li>
+<li><p><strong>Def</strong>: dependency</p>
+<p><img src="/2019/11/19/database/image-20200218152615961.png"></p>
 <ul>
-<li><p><strong>Qua</strong>: how to check </p>
-<p><img src="/2019/11/19/database/image-20200218181425896.png" alt></p>
-<p><img src="/2019/11/19/database/image-20200218181447340.png" alt></p>
-</li>
-</ul>
-</li>
-</ul>
+<li><p><strong>Note</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200218161045190.png"></p></li>
+<li><p><strong>Def</strong>: partial</p>
+<p><img src="/2019/11/19/database/image-20200218171502877.png"></p></li>
+<li><p><strong>Def</strong>: extraneous</p>
+<p><img src="/2019/11/19/database/image-20200218181417199.png"></p>
 <ul>
-<li><p><strong>Def</strong>: dependency set </p>
+<li><p><strong>Qua</strong>: how to check</p>
+<p><img src="/2019/11/19/database/image-20200218181425896.png"></p>
+<p><img src="/2019/11/19/database/image-20200218181447340.png"></p></li>
+</ul></li>
+</ul></li>
+<li><p><strong>Def</strong>: dependency set</p>
 <ul>
 <li><p><strong>Def</strong>: logical imply</p>
-<p><img src="/2019/11/19/database/image-20200218175155923.png" alt></p>
-</li>
+<p><img src="/2019/11/19/database/image-20200218175155923.png"></p></li>
 <li><p><strong>Def</strong>: axiom</p>
-<p><img src="/2019/11/19/database/image-20200218175249349.png" alt></p>
-</li>
+<p><img src="/2019/11/19/database/image-20200218175249349.png"></p></li>
 <li><p><strong>Def</strong>: closure (true power of original)</p>
-<p><img src="/2019/11/19/database/image-20200218161508102.png" alt></p>
-<p><img src="/2019/11/19/database/image-20200218180609892.png" alt></p>
-</li>
-<li><p><strong>Def</strong>: min cover </p>
-<p><img src="/2019/11/19/database/image-20200218204005023.png" alt></p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
+<p><img src="/2019/11/19/database/image-20200218161508102.png"></p>
+<p><img src="/2019/11/19/database/image-20200218180609892.png"></p></li>
+<li><p><strong>Def</strong>: min cover</p>
+<p><img src="/2019/11/19/database/image-20200218204005023.png"></p></li>
 <li><p><strong>Def</strong>: canonical cover (equivalent to original)</p>
-<p><img src="/2019/11/19/database/image-20200218183205338.png" alt></p>
-<ul>
-<li><p><strong>Qua</strong>: </p>
-<p><img src="/2019/11/19/database/image-20200218183411029.png" alt></p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="decomposition-1">3.2.4. decomposition</h3><ul>
-<li><p><strong>Def</strong> : lossy decomposition </p>
-<p><img src="/2019/11/19/database/image-20200218200226825.png" alt></p>
-<ul>
-<li><p><strong>Qua</strong>: </p>
-<p><img src="/2019/11/19/database/image-20200218183641394.png" alt></p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p><strong>Def</strong>: keep dependency </p>
-<p><img src="/2019/11/19/database/image-20200218183752438.png" alt></p>
+<p><img src="/2019/11/19/database/image-20200218183205338.png"></p>
 <ul>
 <li><p><strong>Qua</strong>:</p>
-<p><img src="/2019/11/19/database/image-20200218202101396.png" alt></p>
-<p><img src="/2019/11/19/database/image-20200218202311847.png" alt></p>
-</li>
-<li><p><strong>Qua</strong>: </p>
-<p><img src="/2019/11/19/database/image-20200218202025319.png" alt></p>
-<p><img src="/2019/11/19/database/image-20200218202320744.png" alt></p>
-</li>
+<p><img src="/2019/11/19/database/image-20200218183411029.png"></p></li>
+</ul></li>
+</ul></li>
 </ul>
-</li>
+<h3 id="decomposition-1">3.2.4. decomposition</h3>
+<ul>
+<li><p><strong>Def</strong> : lossy decomposition</p>
+<p><img src="/2019/11/19/database/image-20200218200226825.png"></p>
+<ul>
+<li><p><strong>Qua</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200218183641394.png"></p></li>
+</ul></li>
+<li><p><strong>Def</strong>: keep dependency</p>
+<p><img src="/2019/11/19/database/image-20200218183752438.png"></p>
+<ul>
+<li><p><strong>Qua</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200218202101396.png"></p>
+<p><img src="/2019/11/19/database/image-20200218202311847.png"></p></li>
+<li><p><strong>Qua</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200218202025319.png"></p>
+<p><img src="/2019/11/19/database/image-20200218202320744.png"></p></li>
+</ul></li>
 </ul>
-<h3 id="2nf">3.2.5. 2nf</h3><ul>
+<h3 id="nf-1">3.2.5. 2nf</h3>
+<ul>
 <li><p><strong>Def</strong> :</p>
-<p><img src="/2019/11/19/database/image-20200218173139414.png" alt></p>
+<p><img src="/2019/11/19/database/image-20200218173139414.png"></p>
 <ul>
-<li><p><strong>Qua</strong>: how to check </p>
-<p><img src="/2019/11/19/database/image-20200218173819854.png" alt></p>
-</li>
+<li><p><strong>Qua</strong>: how to check</p>
+<p><img src="/2019/11/19/database/image-20200218173819854.png"></p></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="3nf">3.2.6. 3nf</h3><ul>
+<h3 id="nf-2">3.2.6. 3nf</h3>
+<ul>
 <li><p><strong>Def</strong>:</p>
-<p><img src="/2019/11/19/database/image-20200218170838510.png" alt></p>
-<p><img src="/2019/11/19/database/image-20200218173158314.png" alt></p>
+<p><img src="/2019/11/19/database/image-20200218170838510.png"></p>
+<p><img src="/2019/11/19/database/image-20200218173158314.png"></p>
 <ul>
-<li><p><strong>Note</strong>; third rule = no transitive dependencies </p>
-<p><img src="/2019/11/19/database/image-20200218174313446.png" alt></p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p><strong>Note</strong>: </p>
-<p><img src="/2019/11/19/database/image-20200218170847256.png" alt></p>
-</li>
-<li><p><strong>Qua</strong>: decomposition </p>
-<p><img src="/2019/11/19/database/image-20200218203423938.png" alt></p>
-</li>
-</ul>
-<ul>
-<li><p><strong>Qua</strong>: how to check </p>
+<li><p><strong>Note</strong>; third rule = no transitive dependencies</p>
+<p><img src="/2019/11/19/database/image-20200218174313446.png"></p></li>
+<li><p><strong>Note</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200218170847256.png"></p></li>
+<li><p><strong>Qua</strong>: decomposition</p>
+<p><img src="/2019/11/19/database/image-20200218203423938.png"></p></li>
+<li><p><strong>Qua</strong>: how to check</p>
 <p>或者定义</p>
-<p><img src="/2019/11/19/database/image-20200218203756960.png" alt></p>
-</li>
+<p><img src="/2019/11/19/database/image-20200218203756960.png"></p></li>
+</ul></li>
 </ul>
-<h3 id="BCNF">3.2.7. BCNF</h3><ul>
-<li><p><strong>Def</strong>: </p>
-<p><img src="/2019/11/19/database/image-20200218161522323.png" alt></p>
-<p><img src="/2019/11/19/database/image-20200218173251313.png" alt></p>
-<p><img src="/2019/11/19/database/image-20200218174830326.png" alt></p>
+<h3 id="bcnf">3.2.7. BCNF</h3>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200218161522323.png"></p>
+<p><img src="/2019/11/19/database/image-20200218173251313.png"></p>
+<p><img src="/2019/11/19/database/image-20200218174830326.png"></p>
 <ul>
 <li><p><strong>Qua</strong>: decomposition (不一定保持依赖)</p>
-<p><img src="/2019/11/19/database/image-20200218165656287.png" alt></p>
-<p><img src="/2019/11/19/database/image-20200218203247520.png" alt></p>
-</li>
-<li><p><strong>Qua</strong>: how to check </p>
-<p><img src="/2019/11/19/database/image-20200218203226054.png" alt></p>
-<p><img src="/2019/11/19/database/image-20200218203213007.png" alt></p>
-</li>
+<p><img src="/2019/11/19/database/image-20200218165656287.png"></p>
+<p><img src="/2019/11/19/database/image-20200218203247520.png"></p></li>
+<li><p><strong>Qua</strong>: how to check</p>
+<p><img src="/2019/11/19/database/image-20200218203226054.png"></p>
+<p><img src="/2019/11/19/database/image-20200218203213007.png"></p></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h1 id="transaction-1">4. transaction</h1><ul>
-<li><p><strong>Def</strong>: </p>
-<p><img src="/2019/11/19/database/image-20200218214027227.png" alt></p>
-</li>
+<h1 id="transaction-1">4. transaction</h1>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200218214027227.png"></p></li>
 <li><p><strong>Def</strong>: level</p>
-<p><img src="/2019/11/19/database/image-20200218232754475.png" alt></p>
-<p><img src="/2019/11/19/database/image-20200218232803221.png" alt></p>
-</li>
-</ul>
+<p><img src="/2019/11/19/database/image-20200218232754475.png"></p>
+<p><img src="/2019/11/19/database/image-20200218232803221.png"></p></li>
+<li><p><strong>Def</strong>: transaction</p>
+<p><img src="/2019/11/19/database/image-20200218214344714.png"></p>
 <ul>
-<li><p><strong>Def</strong>: transaction </p>
-<p><img src="/2019/11/19/database/image-20200218214344714.png" alt></p>
+<li><p><strong>Note</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200218214354405.png"></p></li>
+</ul></li>
+</ul>
+<h2 id="schedule">4.1. schedule</h2>
 <ul>
-<li><p><strong>Note</strong>: </p>
-<p><img src="/2019/11/19/database/image-20200218214354405.png" alt></p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="schedule">4.1. schedule</h2><ul>
-<li><p><strong>Def</strong>: </p>
-<p><img src="/2019/11/19/database/image-20200218214842924.png" alt></p>
-</li>
-</ul>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200218214842924.png"></p></li>
+<li><p><strong>Def</strong>: equivalent to serial</p>
+<p><img src="/2019/11/19/database/image-20200218215107728.png"></p>
 <ul>
-<li><p><strong>Def</strong>: equivalent to serial </p>
-<p><img src="/2019/11/19/database/image-20200218215107728.png" alt></p>
+<li><p><strong>Note</strong>: serial = no conflict, so equivalent is important</p></li>
+<li><p><strong>Qua</strong>: serialization sequence &amp; serialization detection</p>
+<p><img src="/2019/11/19/database/image-20200218230911766.png"></p></li>
+</ul></li>
+</ul>
+<h2 id="lock">4.2. lock</h2>
 <ul>
-<li><p><strong>Note</strong>: serial = no conflict, so equivalent is important </p>
-</li>
-<li><p><strong>Qua</strong>: serialization sequence &amp; serialization detection </p>
-<p><img src="/2019/11/19/database/image-20200218230911766.png" alt></p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="lock">4.2. lock</h2><ul>
 <li><p><strong>Def</strong> : types</p>
-<p><img src="/2019/11/19/database/image-20200218234413472.png" alt></p>
-</li>
+<p><img src="/2019/11/19/database/image-20200218234413472.png"></p></li>
 <li><p><strong>Def</strong> :</p>
-<p><img src="/2019/11/19/database/image-20200218234430289.png" alt></p>
-</li>
+<p><img src="/2019/11/19/database/image-20200218234430289.png"></p></li>
 </ul>
-<h3 id="2-phase">4.2.1. 2-phase</h3><ul>
-<li><p><strong>Def</strong>: no dead lock </p>
-<p><img src="/2019/11/19/database/image-20200218235015588.png" alt></p>
-</li>
-<li><p><strong>Def</strong>: serialization </p>
-<p><img src="/2019/11/19/database/image-20200218235217783.png" alt></p>
+<h3 id="phase">4.2.1. 2-phase</h3>
 <ul>
-<li><p><strong>Note</strong>: </p>
-<p><img src="/2019/11/19/database/image-20200218235415862.png" alt></p>
-<p><img src="/2019/11/19/database/image-20200219151002896.png" alt></p>
-<p><img src="/2019/11/19/database/image-20200219151047495.png" alt></p>
-</li>
-</ul>
-</li>
-</ul>
+<li><p><strong>Def</strong>: no dead lock</p>
+<p><img src="/2019/11/19/database/image-20200218235015588.png"></p></li>
+<li><p><strong>Def</strong>: serialization</p>
+<p><img src="/2019/11/19/database/image-20200218235217783.png"></p>
 <ul>
-<li><p><strong>Def</strong>: serialization + no cascade </p>
-<p><img src="/2019/11/19/database/image-20200218235238690.png" alt></p>
-</li>
+<li><p><strong>Note</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200218235415862.png"></p>
+<p><img src="/2019/11/19/database/image-20200219151002896.png"></p>
+<p><img src="/2019/11/19/database/image-20200219151047495.png"></p></li>
+</ul></li>
+<li><p><strong>Def</strong>: serialization + no cascade</p>
+<p><img src="/2019/11/19/database/image-20200218235238690.png"></p></li>
 <li><p><strong>Def</strong>: serialization + no cascade + no deadlock</p>
-<p><img src="/2019/11/19/database/image-20200218235255839.png" alt></p>
-</li>
+<p><img src="/2019/11/19/database/image-20200218235255839.png"></p></li>
 </ul>
-<h3 id="graph">4.2.2. graph</h3><ul>
+<h3 id="graph">4.2.2. graph</h3>
+<ul>
 <li><p><strong>Def</strong>: serialization + no deadlock</p>
 <p>given a graph = given a protocol = design n ways to implement lock sequences</p>
-<p><img src="/2019/11/19/database/image-20200218235720190.png" alt></p>
-<p><img src="/2019/11/19/database/image-20200218235700992.png" alt></p>
-</li>
+<p><img src="/2019/11/19/database/image-20200218235720190.png"></p>
+<p><img src="/2019/11/19/database/image-20200218235700992.png"></p></li>
 </ul>
-<h3 id="deadlock">4.2.3. deadlock</h3><h4 id="prevention">4.2.3.1. prevention</h4><ul>
-<li><p><strong>Def</strong>: </p>
-<p><img src="/2019/11/19/database/image-20200219000303924.png" alt></p>
-</li>
-<li><p><strong>Def</strong>: </p>
-<p><img src="/2019/11/19/database/image-20200219000314826.png" alt></p>
-</li>
-<li><p><strong>Def</strong>:</p>
-<p><img src="/2019/11/19/database/image-20200219000327106.png" alt></p>
-</li>
-</ul>
-<h4 id="detection">4.2.3.2. detection</h4><ul>
-<li><p><strong>Def</strong>:</p>
-<p><img src="/2019/11/19/database/image-20200219000359227.png" alt></p>
-</li>
-</ul>
-<h4 id="recover">4.2.3.3. recover</h4><ul>
-<li><p><strong>Def</strong>: </p>
-<p><img src="/2019/11/19/database/image-20200219000417935.png" alt></p>
-</li>
-</ul>
-<h3 id="timestamp">4.2.4. timestamp</h3><ul>
-<li><p><strong>Def</strong>: </p>
-<p><img src="/2019/11/19/database/image-20200219143131967.png" alt></p>
+<h3 id="deadlock">4.2.3. deadlock</h3>
+<h4 id="prevention">4.2.3.1. prevention</h4>
 <ul>
-<li><p><strong>Qua</strong>: serialization + no deadlock </p>
-<p><img src="/2019/11/19/database/image-20200219143241514.png" alt></p>
-<p><img src="/2019/11/19/database/image-20200219151016402.png" alt></p>
-<p><img src="/2019/11/19/database/image-20200219151032939.png" alt></p>
-</li>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200219000303924.png"></p></li>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200219000314826.png"></p></li>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200219000327106.png"></p></li>
 </ul>
-</li>
+<h4 id="detection">4.2.3.2. detection</h4>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200219000359227.png"></p></li>
 </ul>
-<h2 id="recover-1">4.3. recover</h2><h3 id="storage">4.3.1. storage</h3><ul>
+<h4 id="recover">4.2.3.3. recover</h4>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200219000417935.png"></p></li>
+</ul>
+<h3 id="timestamp">4.2.4. timestamp</h3>
+<ul>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200219143131967.png"></p>
+<ul>
+<li><p><strong>Qua</strong>: serialization + no deadlock</p>
+<p><img src="/2019/11/19/database/image-20200219143241514.png"></p>
+<p><img src="/2019/11/19/database/image-20200219151016402.png"></p>
+<p><img src="/2019/11/19/database/image-20200219151032939.png"></p></li>
+</ul></li>
+</ul>
+<h2 id="recover-1">4.3. recover</h2>
+<h3 id="storage">4.3.1. storage</h3>
+<ul>
 <li><p><strong>Def</strong>：</p>
-<p><img src="/2019/11/19/database/image-20200219154307592.png" alt></p>
-</li>
-<li><p><strong>Def</strong>: </p>
-<p><img src="/2019/11/19/database/image-20200219154439573.png" alt></p>
-<p><img src="/2019/11/19/database/image-20200219154450166.png" alt></p>
-</li>
+<p><img src="/2019/11/19/database/image-20200219154307592.png"></p></li>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200219154439573.png"></p>
+<p><img src="/2019/11/19/database/image-20200219154450166.png"></p></li>
 </ul>
-<h3 id="log">4.3.2. log</h3><ul>
-<li><p><strong>Def</strong>: log </p>
-<p><img src="/2019/11/19/database/image-20200219160020902.png" alt></p>
-</li>
-<li><p><strong>Def</strong>: </p>
-<p><img src="/2019/11/19/database/image-20200219160036456.png" alt></p>
-</li>
+<h3 id="log">4.3.2. log</h3>
+<ul>
+<li><p><strong>Def</strong>: log</p>
+<p><img src="/2019/11/19/database/image-20200219160020902.png"></p></li>
+<li><p><strong>Def</strong>:</p>
+<p><img src="/2019/11/19/database/image-20200219160036456.png"></p></li>
 </ul>
 
       
@@ -1129,7 +1050,7 @@
   <p><span>Title:</span><a href="/2019/11/19/database/">Database System</a></p>
   <p><span>Author:</span><a href="/" title=" Benson 的personal blog">Benson</a></p>
   <p><span>PTime:</span>2019/11/19 - 12:11</p>
-  <p><span>LUpdate:</span>2020/02/23 - 19:02</p>
+  <p><span>LUpdate:</span>2020/02/28 - 23:02</p>
   <p><span>Link:</span><a href="/2019/11/19/database/" title="Database System">https://steinsgate9.github.io/2019/11/19/database/</a>
     <span class="copy-path"  title="click to copy link"><i class="fa fa-clipboard" data-clipboard-text="https://steinsgate9.github.io/2019/11/19/database/"  aria-label="copy done！"></i></span>
   </p>
@@ -1204,8 +1125,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/19/Complexity_Theory/" rel="next" title="Complexity Theory">
-                <i class="fa fa-chevron-left"></i> Complexity Theory
+              <a href="/2019/11/19/operating_system/" rel="next" title="operating_system">
+                <i class="fa fa-chevron-left"></i> operating_system
               </a>
             
           </div>
@@ -1214,8 +1135,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/19/measure-theory/" rel="prev" title="Measure Theory">
-                Measure Theory <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/19/Convex_Optimization/" rel="prev" title="Convex Optimization">
+                Convex Optimization <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -1419,7 +1340,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#relation-model"><span class="nav-text">1. relation model</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#schema-amp-instance"><span class="nav-text">1.1. schema &amp; instance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#schema-diagram"><span class="nav-text">1.2. schema diagram</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SQL"><span class="nav-text">2. SQL</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#basic-structure"><span class="nav-text">2.1. basic structure</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#create"><span class="nav-text">2.1.1. create</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#select"><span class="nav-text">2.1.2. select</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#insert"><span class="nav-text">2.1.3. insert</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#update"><span class="nav-text">2.1.4. update</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#delete"><span class="nav-text">2.1.5. delete</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#join"><span class="nav-text">2.1.6. join</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#alter"><span class="nav-text">2.1.7. alter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#functions"><span class="nav-text">2.1.8. functions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#transaction"><span class="nav-text">2.2. transaction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#function"><span class="nav-text">2.3. function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#trigger"><span class="nav-text">2.4. trigger</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#algebra"><span class="nav-text">2.5. algebra</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#database-design"><span class="nav-text">3. database design</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#E-R"><span class="nav-text">3.1. E-R</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#entity"><span class="nav-text">3.1.1. entity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#relationship"><span class="nav-text">3.1.2. relationship</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#attributes"><span class="nav-text">3.1.3. attributes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#E-R-map"><span class="nav-text">3.1.4. E-R map</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#relation-model-amp-E-R-model"><span class="nav-text">3.1.5. relation model &amp; E-R model</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#simple-a-amp-strong-e"><span class="nav-text">3.1.5.1. simple_a &amp; strong_e</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#multi-a-amp-string-a"><span class="nav-text">3.1.5.2. multi_a &amp; string_a</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#weak-entity"><span class="nav-text">3.1.5.3. weak entity</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#relationship-1"><span class="nav-text">3.1.5.4. relationship</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#decomposition"><span class="nav-text">3.2. decomposition</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#why"><span class="nav-text">3.2.1. why?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1nf"><span class="nav-text">3.2.2. 1nf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dependency"><span class="nav-text">3.2.3. dependency</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#decomposition-1"><span class="nav-text">3.2.4. decomposition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2nf"><span class="nav-text">3.2.5. 2nf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3nf"><span class="nav-text">3.2.6. 3nf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BCNF"><span class="nav-text">3.2.7. BCNF</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#transaction-1"><span class="nav-text">4. transaction</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#schedule"><span class="nav-text">4.1. schedule</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lock"><span class="nav-text">4.2. lock</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-phase"><span class="nav-text">4.2.1. 2-phase</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#graph"><span class="nav-text">4.2.2. graph</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#deadlock"><span class="nav-text">4.2.3. deadlock</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#prevention"><span class="nav-text">4.2.3.1. prevention</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#detection"><span class="nav-text">4.2.3.2. detection</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#recover"><span class="nav-text">4.2.3.3. recover</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#timestamp"><span class="nav-text">4.2.4. timestamp</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#recover-1"><span class="nav-text">4.3. recover</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#storage"><span class="nav-text">4.3.1. storage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#log"><span class="nav-text">4.3.2. log</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#relation-model"><span class="nav-text">1. relation model</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#schema-instance"><span class="nav-text">1.1. schema &amp; instance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#schema-diagram"><span class="nav-text">1.2. schema diagram</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sql"><span class="nav-text">2. SQL</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#basic-structure"><span class="nav-text">2.1. basic structure</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#create"><span class="nav-text">2.1.1. create</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#select"><span class="nav-text">2.1.2. select</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#insert"><span class="nav-text">2.1.3. insert</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#update"><span class="nav-text">2.1.4. update</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#delete"><span class="nav-text">2.1.5. delete</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#join"><span class="nav-text">2.1.6. join</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#alter"><span class="nav-text">2.1.7. alter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#functions"><span class="nav-text">2.1.8. functions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#transaction"><span class="nav-text">2.2. transaction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#function"><span class="nav-text">2.3. function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#trigger"><span class="nav-text">2.4. trigger</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#database-design"><span class="nav-text">3. database design</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#e-r"><span class="nav-text">3.1. E-R</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#entity"><span class="nav-text">3.1.1. entity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#relationship"><span class="nav-text">3.1.2. relationship</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#attributes"><span class="nav-text">3.1.3. attributes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#e-r-map"><span class="nav-text">3.1.4. E-R map</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#relation-model-e-r-model"><span class="nav-text">3.1.5. relation model &amp; E-R model</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#simple_a-strong_e"><span class="nav-text">3.1.5.1. simple_a &amp; strong_e</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#multi_a-string_a"><span class="nav-text">3.1.5.2. multi_a &amp; string_a</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#weak-entity"><span class="nav-text">3.1.5.3. weak entity</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#relationship-1"><span class="nav-text">3.1.5.4. relationship</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#decomposition"><span class="nav-text">3.2. decomposition</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#why"><span class="nav-text">3.2.1. why?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nf"><span class="nav-text">3.2.2. 1nf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dependency"><span class="nav-text">3.2.3. dependency</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#decomposition-1"><span class="nav-text">3.2.4. decomposition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nf-1"><span class="nav-text">3.2.5. 2nf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nf-2"><span class="nav-text">3.2.6. 3nf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bcnf"><span class="nav-text">3.2.7. BCNF</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#transaction-1"><span class="nav-text">4. transaction</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#schedule"><span class="nav-text">4.1. schedule</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lock"><span class="nav-text">4.2. lock</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#phase"><span class="nav-text">4.2.1. 2-phase</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#graph"><span class="nav-text">4.2.2. graph</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#deadlock"><span class="nav-text">4.2.3. deadlock</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#prevention"><span class="nav-text">4.2.3.1. prevention</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#detection"><span class="nav-text">4.2.3.2. detection</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#recover"><span class="nav-text">4.2.3.3. recover</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#timestamp"><span class="nav-text">4.2.4. timestamp</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#recover-1"><span class="nav-text">4.3. recover</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#storage"><span class="nav-text">4.3.1. storage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#log"><span class="nav-text">4.3.2. log</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
