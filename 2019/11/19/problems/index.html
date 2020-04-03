@@ -282,7 +282,6 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;problems&#x2F;image-20191129133426588.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;problems&#x2F;image-20191129133444477.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;problems&#x2F;image-20200216163536606.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;problems&#x2F;image-20200216163701905.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;problems&#x2F;image-20200216135431797.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;problems&#x2F;image-20200216135405007.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;problems&#x2F;image-20200216145708526.png">
@@ -359,7 +358,7 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;problems&#x2F;image-20200220155529920.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;problems&#x2F;image-20200220155601063.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;problems&#x2F;image-20200225225658223.png">
-<meta property="og:updated_time" content="2020-02-28T15:26:18.801Z">
+<meta property="og:updated_time" content="2020-04-03T13:35:54.657Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;steinsgate9.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;problems&#x2F;image-20191201231832080.png">
 
@@ -661,7 +660,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  3.8k
+                  3.9k
                 </span>
               
 
@@ -677,7 +676,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  22
+                  23
                 </span>
               
             </div>
@@ -1372,7 +1371,12 @@ p_j \text{ is non-decreasing}
 \]</span></p></li>
 <li><p><strong>Complexity</strong>: <span class="math inline">\(O(e·logv)\)</span>： 在核心代码部分，最复杂的是 while 循环和 for 循环嵌套的部分，while 循环最多循环 v 次（v 为顶点个数），for 循环执行次数与边的数目有关，假设顶点数 v 的最大边数是 e。</p>
 <p>for 循环中往优先队列中添加删除数据的复杂度为<code>O(log v)</code>。</p>
-<p><img src="/2019/11/19/problems/image-20200216163701905.png"></p></li>
+<ul>
+<li><p>复杂度 = v个extractmin；E个decreasekey</p></li>
+<li>数组 = O(V * V + E * 1) = O(V*V + E)</li>
+<li>二叉堆 = O(V * lgv + E * lgv) = O((V+E)lgv)</li>
+<li><p>斐波那契堆 = O(V<em>lgv + E </em> 1) = O(Vlgv + E)</p></li>
+</ul></li>
 <li><p><strong>Qua</strong>: note that shortest path satisfy DP <span class="math display">\[
 r_i = \min \limits_{j \in N(i)} (P _{ij} + rj)
 \]</span></p>
@@ -1747,7 +1751,7 @@ r_i = \min \limits_{j \in N(i)} (P _{ij} + rj)
   <p><span>Title:</span><a href="/2019/11/19/problems/">CS problems</a></p>
   <p><span>Author:</span><a href="/" title=" Benson 的personal blog">Benson</a></p>
   <p><span>PTime:</span>2019/11/19 - 12:11</p>
-  <p><span>LUpdate:</span>2020/02/28 - 23:02</p>
+  <p><span>LUpdate:</span>2020/04/03 - 21:04</p>
   <p><span>Link:</span><a href="/2019/11/19/problems/" title="CS problems">https://steinsgate9.github.io/2019/11/19/problems/</a>
     <span class="copy-path"  title="click to copy link"><i class="fa fa-clipboard" data-clipboard-text="https://steinsgate9.github.io/2019/11/19/problems/"  aria-label="copy done！"></i></span>
   </p>
@@ -1822,8 +1826,8 @@ r_i = \min \limits_{j \in N(i)} (P _{ij} + rj)
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/19/regression-analysis/" rel="next" title="Regression Analysis">
-                <i class="fa fa-chevron-left"></i> Regression Analysis
+              <a href="/2019/11/19/scipy/" rel="next" title="Numpy">
+                <i class="fa fa-chevron-left"></i> Numpy
               </a>
             
           </div>
@@ -1832,8 +1836,8 @@ r_i = \min \limits_{j \in N(i)} (P _{ij} + rj)
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/19/pytorch/" rel="prev" title="Pytorch">
-                Pytorch <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/19/sampling/" rel="prev" title="Sampling Theory">
+                Sampling Theory <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -1926,7 +1930,7 @@ r_i = \min \limits_{j \in N(i)} (P _{ij} + rj)
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
